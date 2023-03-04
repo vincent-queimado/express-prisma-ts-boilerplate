@@ -14,7 +14,7 @@ import handleError from '../middlewares/http_error_handler/error_handler';
 
 const jsonLimit = '5mb';
 const publicLogs = './logs';
-const publicFavicon = './public/assets/images/favicons/favicon.png';
+const publicFavicon = './public/assets/images/favicons/favicon.ico';
 
 export default () => {
     const app = express();
