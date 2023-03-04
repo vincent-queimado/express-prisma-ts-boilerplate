@@ -1,0 +1,49 @@
+2023-03-04 09:08:40 | ERROR | Http server error - Received kill signal, shutting down gracefully (SHUTDOWN)
+2023-03-04 09:13:03 | ERROR | uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/config/app/_index.ts[0m:[93m8[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'DotenvParseOutput | undefined' is not assignable to type 'IProcessEnv'.
+  Type 'undefined' is not assignable to type 'IProcessEnv'.
+
+[7m8[0m const processEnv: IProcessEnv = env;
+[7m [0m [91m      ~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/config/app/_index.ts[0m:[93m8[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'DotenvParseOutput | undefined' is not assignable to type 'IProcessEnv'.
+  Type 'undefined' is not assignable to type 'IProcessEnv'.
+
+[7m8[0m const processEnv: IProcessEnv = env;
+[7m [0m [91m      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1280:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1089:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:930:12)
+    at Module.require (node:internal/modules/cjs/loader:1113:19)
+2023-03-04 09:13:15 | ERROR | uncaughtException: ⨯ Unable to compile TypeScript:
+[96msrc/config/app/_index.ts[0m:[93m8[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'DotenvConfigOutput' is not assignable to type 'IProcessEnv'.
+  Index signature for type 'string' is missing in type 'DotenvConfigOutput'.
+
+[7m8[0m const processEnv: IProcessEnv = env;
+[7m [0m [91m      ~~~~~~~~~~[0m
+
+TSError: ⨯ Unable to compile TypeScript:
+[96msrc/config/app/_index.ts[0m:[93m8[0m:[93m7[0m - [91merror[0m[90m TS2322: [0mType 'DotenvConfigOutput' is not assignable to type 'IProcessEnv'.
+  Index signature for type 'string' is missing in type 'DotenvConfigOutput'.
+
+[7m8[0m const processEnv: IProcessEnv = env;
+[7m [0m [91m      ~~~~~~~~~~[0m
+
+    at createTSError (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\node_modules\ts-node\src\index.ts:859:12)
+    at reportTSError (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\node_modules\ts-node\src\index.ts:863:19)
+    at getOutput (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\node_modules\ts-node\src\index.ts:1077:36)
+    at Object.compile (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\node_modules\ts-node\src\index.ts:1433:41)
+    at Module.m._compile (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\node_modules\ts-node\src\index.ts:1617:30)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1280:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\node_modules\ts-node\src\index.ts:1621:12)
+    at Module.load (node:internal/modules/cjs/loader:1089:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:930:12)
+    at Module.require (node:internal/modules/cjs/loader:1113:19)

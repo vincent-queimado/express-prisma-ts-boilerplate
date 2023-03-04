@@ -1,0 +1,30 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 7
+    },
+    "auditLog": "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\api-melibee-v3\\logs\\.303b42c0f52b2f93acdb414c01e74c76e1918958-audit.json",
+    "files": [
+        {
+            "date": 1677667202635,
+            "name": "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\api-melibee-v3\\logs\\info-2023-03-01-00.log",
+            "hash": "9879107db6dd4fd4051b5874dd9e548c3b5f2b7045136fb935137c80cffa339c"
+        },
+        {
+            "date": 1677744492725,
+            "name": "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\api-melibee-v3\\logs\\info-2023-03-02-00.log",
+            "hash": "daabc94b2857cf88cedf2912e93fe129804c63c5719951b0dd4ab05c4381117c"
+        },
+        {
+            "date": 1677884669409,
+            "name": "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\api-melibee-v3\\logs\\info-2023-03-03-00.log",
+            "hash": "0ec6ae4e0bbd920a8eb88b00a1e38d5e4c72e536f56a5d48ac3ffbb2b54f0e4d"
+        },
+        {
+            "date": 1677931678988,
+            "name": "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\api-melibee-v3\\logs\\info-2023-03-04-00.log",
+            "hash": "aef409df4ab1bf0dfcd5762a887b5e6c0d017a384ec752e0dd2fd959e632df5d"
+        }
+    ],
+    "hashType": "sha256"
+}

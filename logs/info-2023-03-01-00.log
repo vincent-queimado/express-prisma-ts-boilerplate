@@ -1,0 +1,100 @@
+2023-03-01 07:40:02 | INFO | Api starting MELIBEE v1.0.1
+2023-03-01 07:40:02 | INFO | Api running in development environment
+2023-03-01 07:40:02 | INFO | Api started at 2023-03-01 07:40
+2023-03-01 07:40:02 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-01 07:40:14 | ERROR | Http server error - Received kill signal, shutting down gracefully (SHUTDOWN)
+2023-03-01 07:40:19 | INFO | Api starting MELIBEE v1.0.1
+2023-03-01 07:40:19 | INFO | Api running in development environment
+2023-03-01 07:40:19 | INFO | Api started at 2023-03-01 07:40
+2023-03-01 07:40:19 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-01 07:41:33 | INFO | Api starting MELIBEE v1.0.1
+2023-03-01 07:41:33 | INFO | Api running in development environment
+2023-03-01 07:41:33 | INFO | Api started at 2023-03-01 07:41
+2023-03-01 07:41:33 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-01 07:42:08 | INFO | Api starting MELIBEE v1.0.1
+2023-03-01 07:42:08 | INFO | Api running in development environment
+2023-03-01 07:42:08 | INFO | Api started at 2023-03-01 07:42
+2023-03-01 07:42:08 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-01 07:42:21 | INFO | Api starting MELIBEE v1.0.1
+2023-03-01 07:42:21 | INFO | Api running in development environment
+2023-03-01 07:42:21 | INFO | Api started at 2023-03-01 07:42
+2023-03-01 07:42:22 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-01 07:42:29 | INFO | HTTP request from ::1 GET / 500 142 - 3.218 ms
+2023-03-01 07:42:29 | INFO | HTTP request from ::1 GET / 500 142 - 1.277 ms
+2023-03-01 07:44:28 | INFO | Api starting MELIBEE v1.0.1
+2023-03-01 07:44:28 | INFO | Api running in development environment
+2023-03-01 07:44:28 | INFO | Api started at 2023-03-01 07:44
+2023-03-01 07:44:28 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-01 07:45:26 | INFO | Api starting MELIBEE v1.0.1
+2023-03-01 07:45:26 | INFO | Api running in development environment
+2023-03-01 07:45:26 | INFO | Api started at 2023-03-01 07:45
+2023-03-01 07:45:26 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-01 07:46:23 | INFO | Api starting MELIBEE v1.0.1
+2023-03-01 07:46:23 | INFO | Api running in development environment
+2023-03-01 07:46:23 | INFO | Api started at 2023-03-01 07:46
+2023-03-01 07:46:23 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-01 07:48:56 | INFO | Api starting MELIBEE v1.0.1
+2023-03-01 07:48:56 | INFO | Api running in development environment
+2023-03-01 07:48:56 | INFO | Api started at 2023-03-01 07:48
+2023-03-01 07:48:56 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-01 07:49:19 | INFO | HTTP request from ::1 GET /gfdgf 500 142 - 3.097 ms
+2023-03-01 07:49:19 | INFO | HTTP request from ::1 GET /gfdgf 500 142 - 0.975 ms
+2023-03-01 07:50:07 | INFO | Api starting MELIBEE v1.0.1
+2023-03-01 07:50:07 | INFO | Api running in development environment
+2023-03-01 07:50:07 | INFO | Api started at 2023-03-01 07:50
+2023-03-01 07:50:07 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-01 07:50:08 | INFO | HTTP request from ::1 GET /gfdgf 500 1561 - 13.787 ms
+2023-03-01 07:50:08 | INFO | HTTP request from ::1 GET /gfdgf 500 1561 - 2.770 ms
+2023-03-01 07:53:30 | INFO | Api starting MELIBEE v1.0.1
+2023-03-01 07:53:30 | INFO | Api running in development environment
+2023-03-01 07:53:30 | INFO | Api started at 2023-03-01 07:53
+2023-03-01 07:53:30 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-01 07:53:34 | INFO | HTTP request from ::1 GET /gfdgf 500 79 - 2.978 ms
+2023-03-01 07:53:34 | INFO | HTTP request from ::1 GET /gfdgf 500 79 - 0.845 ms
+2023-03-01 07:54:12 | INFO | Api starting MELIBEE v1.0.1
+2023-03-01 07:54:12 | INFO | Api running in development environment
+2023-03-01 07:54:12 | INFO | Api started at 2023-03-01 07:54
+2023-03-01 07:54:12 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-01 07:54:13 | INFO | HTTP request from ::1 GET /gfdgf 500 79 - 1.877 ms
+2023-03-01 07:54:13 | INFO | HTTP request from ::1 GET /gfdgf 500 79 - 0.586 ms
+2023-03-01 07:54:13 | INFO | HTTP request from ::1 GET /favicon.ico 200 73882 - 2.710 ms
+2023-03-01 07:54:20 | INFO | HTTP request from ::1 GET /gfdgf 500 79 - 0.454 ms
+2023-03-01 07:54:20 | INFO | HTTP request from ::1 GET /gfdgf 500 79 - 1.055 ms
+2023-03-01 07:54:45 | INFO | HTTP request from ::1 GET /gfdgf 500 79 - 0.508 ms
+2023-03-01 07:54:45 | INFO | HTTP request from ::1 GET /gfdgf 500 79 - 0.502 ms
+2023-03-01 07:54:50 | INFO | HTTP request from ::1 GET /gfdgf 500 79 - 0.445 ms
+2023-03-01 07:54:50 | INFO | HTTP request from ::1 GET /gfdgf 500 79 - 0.271 ms
+2023-03-01 07:55:07 | INFO | Api starting MELIBEE v1.0.1
+2023-03-01 07:55:07 | INFO | Api running in development environment
+2023-03-01 07:55:07 | INFO | Api started at 2023-03-01 07:55
+2023-03-01 07:55:07 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-01 07:55:09 | INFO | HTTP request from ::1 GET /gfdgf 500 79 - 2.958 ms
+2023-03-01 07:55:09 | INFO | HTTP request from ::1 GET /gfdgf 500 79 - 2.564 ms
+2023-03-01 16:49:53 | INFO | Api starting MELIBEE v1.0.1
+2023-03-01 16:49:53 | INFO | Api running in development environment
+2023-03-01 16:49:53 | INFO | Api started at 2023-03-01 16:49
+2023-03-01 16:49:53 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-01 16:50:10 | INFO | HTTP request from ::1 GET /gfdgf 500 79 - 3.492 ms
+2023-03-01 16:50:10 | INFO | HTTP request from ::1 GET /gfdgf 500 79 - 1.020 ms
+2023-03-01 16:50:14 | INFO | HTTP request from ::1 GET /logs 301 175 - 2.333 ms
+2023-03-01 16:50:14 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function
+2023-03-01 16:51:40 | INFO | HTTP request from ::1 GET /logs/ - - - - ms
+2023-03-01 16:51:40 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function
+2023-03-01 16:52:16 | ERROR | Http server error - Received kill signal, shutting down gracefully (SHUTDOWN)
+2023-03-01 16:52:16 | INFO | HTTP request from ::1 GET /logs/ - - - - ms
+2023-03-01 16:52:20 | INFO | Api starting MELIBEE v1.0.1
+2023-03-01 16:52:20 | INFO | Api running in development environment
+2023-03-01 16:52:20 | INFO | Api started at 2023-03-01 16:52
+2023-03-01 16:52:20 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-01 16:52:20 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function
+2023-03-01 16:52:24 | INFO | HTTP request from ::1 GET /logs/ - - - - ms
+2023-03-01 16:52:24 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function
+2023-03-01 17:13:46 | INFO | HTTP request from ::1 GET /logs/ - - - - ms
+2023-03-01 20:47:07 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function
+2023-03-01 20:48:10 | INFO | HTTP request from ::1 GET /logs/ - - - - ms
+2023-03-01 20:48:16 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function
+2023-03-01 20:48:22 | INFO | HTTP request from ::1 GET /logs/ - - - - ms
+2023-03-01 20:48:53 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function
+2023-03-01 20:49:26 | INFO | HTTP request from ::1 GET /logs/ - - - - ms
+2023-03-01 20:50:27 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function
+2023-03-01 20:50:29 | INFO | HTTP request from ::1 GET /logs/ - - - - ms

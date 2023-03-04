@@ -1,0 +1,35 @@
+2023-03-01 07:40:14 | ERROR | Http server error - Received kill signal, shutting down gracefully (SHUTDOWN)
+2023-03-01 16:49:24 | ERROR | uncaughtException: Cannot find module '../presenters/logs/index.js'
+Require stack:
+- C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\src\app\controllers\logs.ts
+- C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\src\routes\default.ts
+- C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\src\server\app.ts
+- C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\src\server\server.ts
+- C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\src\index.ts
+Error: Cannot find module '../presenters/logs/index.js'
+Require stack:
+- C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\src\app\controllers\logs.ts
+- C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\src\routes\default.ts
+- C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\src\server\app.ts
+- C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\src\server\server.ts
+- C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\src\index.ts
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1047:15)
+    at Function.Module._resolveFilename.sharedData.moduleResolveFilenameHook.installedValue [as _resolveFilename] (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\node_modules\@cspotcode\source-map-support\source-map-support.js:811:30)
+    at Function.Module._load (node:internal/modules/cjs/loader:893:27)
+    at Module.require (node:internal/modules/cjs/loader:1113:19)
+    at require (node:internal/modules/cjs/helpers:103:18)
+    at Object.<anonymous> (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\src\app\controllers\logs.ts:2:1)
+    at Module._compile (node:internal/modules/cjs/loader:1226:14)
+    at Module.m._compile (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\node_modules\ts-node\src\index.ts:1618:23)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1280:10)
+    at Object.require.extensions.<computed> [as .ts] (C:\Users\Vincent Jean\Documents\NodeJs\api-melibee-v3\node_modules\ts-node\src\index.ts:1621:12)
+2023-03-01 16:50:14 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function
+2023-03-01 16:51:40 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function
+2023-03-01 16:52:16 | ERROR | Http server error - Received kill signal, shutting down gracefully (SHUTDOWN)
+2023-03-01 16:52:16 | ERROR | Http server error - Closed out remaining connections (SHUTDOWN)
+2023-03-01 16:52:20 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function
+2023-03-01 16:52:24 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function
+2023-03-01 20:47:07 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function
+2023-03-01 20:48:16 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function
+2023-03-01 20:48:53 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function
+2023-03-01 20:50:27 | ERROR | Erro ao listar os arquivos de logs de API. res.render is not a function

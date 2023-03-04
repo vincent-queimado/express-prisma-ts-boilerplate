@@ -1,0 +1,182 @@
+2023-03-03 20:04:45 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:04:45 | INFO | Api running in development environment
+2023-03-03 20:04:45 | INFO | Api started at 2023-03-03 20:04
+2023-03-03 20:04:45 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:29:03 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:29:03 | INFO | Api running in development environment
+2023-03-03 20:29:03 | INFO | Api started at 2023-03-03 20:29
+2023-03-03 20:29:03 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:31:18 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:31:18 | INFO | Api running in development environment
+2023-03-03 20:31:18 | INFO | Api started at 2023-03-03 20:31
+2023-03-03 20:31:18 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:31:45 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:31:45 | INFO | Api running in development environment
+2023-03-03 20:31:45 | INFO | Api started at 2023-03-03 20:31
+2023-03-03 20:31:45 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:32:37 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:32:37 | INFO | Api running in development environment
+2023-03-03 20:32:37 | INFO | Api started at 2023-03-03 20:32
+2023-03-03 20:32:37 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:33:13 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:33:13 | INFO | Api running in development environment
+2023-03-03 20:33:13 | INFO | Api started at 2023-03-03 20:33
+2023-03-03 20:33:13 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:37:31 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:37:31 | INFO | Api running in development environment
+2023-03-03 20:37:31 | INFO | Api started at 2023-03-03 20:37
+2023-03-03 20:37:31 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:37:37 | ERROR | Http server error - Received kill signal, shutting down gracefully (SHUTDOWN)
+2023-03-03 20:37:43 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:37:43 | INFO | Api running in development environment
+2023-03-03 20:37:43 | INFO | Api started at 2023-03-03 20:37
+2023-03-03 20:37:43 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:38:35 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:38:35 | INFO | Api running in development environment
+2023-03-03 20:38:35 | INFO | Api started at 2023-03-03 20:38
+2023-03-03 20:38:36 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:42:25 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:42:25 | INFO | Api running in development environment
+2023-03-03 20:42:25 | INFO | Api started at 2023-03-03 20:42
+2023-03-03 20:42:25 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:42:25 | INFO | Api status: Ready (listening on localhost:5432)
+2023-03-03 20:43:13 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:43:13 | INFO | Api running in development environment
+2023-03-03 20:43:13 | INFO | Api started at 2023-03-03 20:43
+2023-03-03 20:43:13 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:43:13 | INFO | Api status: Ready (listening on localhost:5432)
+2023-03-03 20:43:56 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:43:56 | INFO | Api running in development environment
+2023-03-03 20:43:56 | INFO | Api started at 2023-03-03 20:43
+2023-03-03 20:43:56 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:43:56 | INFO | Database connection has been established successfully.
+2023-03-03 20:45:30 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:45:30 | INFO | Api running in development environment
+2023-03-03 20:45:30 | INFO | Api started at 2023-03-03 20:45
+2023-03-03 20:45:30 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:45:30 | INFO | Database connection has been established successfully.
+2023-03-03 20:46:00 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:46:00 | INFO | Api running in development environment
+2023-03-03 20:46:00 | INFO | Api started at 2023-03-03 20:46
+2023-03-03 20:46:00 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:46:00 | INFO | Database connection has been established successfully.
+2023-03-03 20:46:35 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:46:35 | INFO | Api running in development environment
+2023-03-03 20:46:35 | INFO | Api started at 2023-03-03 20:46
+2023-03-03 20:46:35 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:46:36 | INFO | Database connection has been established successfully.
+2023-03-03 20:46:50 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:46:50 | INFO | Api running in development environment
+2023-03-03 20:46:50 | INFO | Api started at 2023-03-03 20:46
+2023-03-03 20:46:50 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:46:50 | INFO | Database connection has been established successfully.
+2023-03-03 20:47:29 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:47:29 | INFO | Api running in development environment
+2023-03-03 20:47:29 | INFO | Api started at 2023-03-03 20:47
+2023-03-03 20:47:29 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:47:29 | INFO | Database connection has been established successfully.
+2023-03-03 20:47:55 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:47:55 | INFO | Api running in development environment
+2023-03-03 20:47:55 | INFO | Api started at 2023-03-03 20:47
+2023-03-03 20:47:55 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:47:55 | INFO | Database connection has been established successfully.
+2023-03-03 20:49:31 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:49:31 | INFO | Api running in development environment
+2023-03-03 20:49:31 | INFO | Api started at 2023-03-03 20:49
+2023-03-03 20:49:31 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:49:31 | INFO | Database connection has been established successfully.
+2023-03-03 20:50:07 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 20:50:07 | INFO | Api running in development environment
+2023-03-03 20:50:07 | INFO | Api started at 2023-03-03 20:50
+2023-03-03 20:50:07 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 20:50:07 | INFO | Database connection has been established successfully.
+2023-03-03 21:23:20 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 21:23:20 | INFO | Api running in development environment
+2023-03-03 21:23:20 | INFO | Api started at 2023-03-03 21:23
+2023-03-03 21:23:20 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 21:23:20 | INFO | Database connection has been established successfully.
+2023-03-03 21:36:26 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 21:36:26 | INFO | Api running in development environment
+2023-03-03 21:36:26 | INFO | Api started at 2023-03-03 21:36
+2023-03-03 21:36:26 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 21:36:27 | INFO | Database connection has been established successfully.
+2023-03-03 21:36:48 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 21:36:48 | INFO | Api running in development environment
+2023-03-03 21:36:48 | INFO | Api started at 2023-03-03 21:36
+2023-03-03 21:36:48 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 21:41:32 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 21:41:32 | INFO | Api running in development environment
+2023-03-03 21:41:32 | INFO | Api started at 2023-03-03 21:41
+2023-03-03 21:41:32 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 21:42:34 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 21:42:34 | INFO | Api running in development environment
+2023-03-03 21:42:34 | INFO | Api started at 2023-03-03 21:42
+2023-03-03 21:42:34 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 21:43:18 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 21:43:18 | INFO | Api running in development environment
+2023-03-03 21:43:18 | INFO | Api started at 2023-03-03 21:43
+2023-03-03 21:43:18 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 21:45:40 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 21:45:40 | INFO | Api running in development environment
+2023-03-03 21:45:40 | INFO | Api started at 2023-03-03 21:45
+2023-03-03 21:45:40 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 21:59:55 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 21:59:55 | INFO | Api running in development environment
+2023-03-03 21:59:55 | INFO | Api started at 2023-03-03 21:59
+2023-03-03 21:59:55 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 22:03:47 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 22:03:47 | INFO | Api running in development environment
+2023-03-03 22:03:47 | INFO | Api started at 2023-03-03 22:03
+2023-03-03 22:03:47 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 22:04:04 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 22:04:04 | INFO | Api running in development environment
+2023-03-03 22:04:04 | INFO | Api started at 2023-03-03 22:04
+2023-03-03 22:04:04 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 22:04:44 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 22:04:44 | INFO | Api running in development environment
+2023-03-03 22:04:44 | INFO | Api started at 2023-03-03 22:04
+2023-03-03 22:04:44 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 22:06:24 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 22:06:24 | INFO | Api running in development environment
+2023-03-03 22:06:24 | INFO | Api started at 2023-03-03 22:06
+2023-03-03 22:06:24 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 22:07:49 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 22:07:49 | INFO | Api running in development environment
+2023-03-03 22:07:49 | INFO | Api started at 2023-03-03 22:07
+2023-03-03 22:07:49 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 22:10:51 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 22:10:51 | INFO | Api running in development environment
+2023-03-03 22:10:51 | INFO | Api started at 2023-03-03 22:10
+2023-03-03 22:10:51 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 22:11:09 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 22:11:09 | INFO | Api running in development environment
+2023-03-03 22:11:09 | INFO | Api started at 2023-03-03 22:11
+2023-03-03 22:11:09 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 22:12:09 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 22:12:09 | INFO | Api running in development environment
+2023-03-03 22:12:09 | INFO | Api started at 2023-03-03 22:12
+2023-03-03 22:12:09 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 22:13:04 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 22:13:04 | INFO | Api running in development environment
+2023-03-03 22:13:04 | INFO | Api started at 2023-03-03 22:13
+2023-03-03 22:13:04 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 22:13:05 | ERROR | Http server error - Received kill signal, shutting down gracefully (SHUTDOWN)
+2023-03-03 22:17:14 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 22:17:14 | INFO | Api running in development environment
+2023-03-03 22:17:14 | INFO | Api started at 2023-03-03 22:17
+2023-03-03 22:17:15 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 22:17:16 | ERROR | Http server error - Received kill signal, shutting down gracefully (SHUTDOWN)
+2023-03-03 22:23:28 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 22:23:28 | INFO | Api running in undefined environment
+2023-03-03 22:23:28 | INFO | Api started at 2023-03-03 22:23
+2023-03-03 22:23:28 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 22:23:40 | ERROR | Http server error - Received kill signal, shutting down gracefully (SHUTDOWN)
+2023-03-03 22:23:45 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 22:23:45 | INFO | Api running in undefined environment
+2023-03-03 22:23:45 | INFO | Api started at 2023-03-03 22:23
+2023-03-03 22:23:45 | INFO | Api status: Ready (listening on localhost:3344)
+2023-03-03 22:25:09 | ERROR | Http server error - Received kill signal, shutting down gracefully (SHUTDOWN)
+2023-03-03 22:25:15 | INFO | Api starting MELIBEE v1.0.1
+2023-03-03 22:25:15 | INFO | Api running in production environment
+2023-03-03 22:25:15 | INFO | Api started at 2023-03-03 22:25
+2023-03-03 22:25:15 | INFO | Api status: Ready (listening on localhost:3344)
