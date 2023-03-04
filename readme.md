@@ -21,15 +21,11 @@ Para realizar a instalação do projeto, segue o passo a passo abaixo.
   npm install
 ```
 
-3. Configuração das variavéis de ambiente
-
-O comando abaixo irá copiar o modelo de arquivo de variáveis de ambiente necessário a inicialização do projeto local.
+3. Configuração das variavéis de ambiente. O comando abaixo irá copiar o modelo de arquivo de variáveis de ambiente necessário a inicialização do projeto local.
 
 ```bash
 cp .env.example .env
 # abre o arquivo .env e altera as variáveis desejadas
 ```
 
-Antes de executar o projeto, será necessário configurar um banco de dados SQL suportado pelo ORM Sequelize (Oracle, Postgres, MySQL, MariaDB, SQLite, SQL Server, e mais).
-
-Obs.: É possível criar uma aplicação na plataforma Heroku (criação de conta grátis https://signup.heroku.com/), e em seguida adicionar o recurso (add-on) de banco de dados tal como "Heroku Posgres".
+4. Criação de banco de dados. Será necessário configurar um banco de dados SQL suportado pelo ORM Sequelize (Oracle, Postgres, MySQL, MariaDB, SQLite, SQL Server, e mais) para armazenamento de dados.
