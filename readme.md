@@ -1,8 +1,8 @@
 <img src="https://github.com/vincent-queimado/boilerplate-api/blob/main/public/assets/images/logo.png?raw=true" alt="Logo" height="100px"/>
 
-# Boilerplate Typescrypt + Express + Sequelize + Jest
+# Aplicação back-end REST API com NodeJS, em Typescript + Express + Sequelize + Jest
 
-Aplicação back-end REST API com NodeJS, em Typescript, utilizando o framework Express além de pacotes essenciais na construção de um projeto base tal como o suporte a bancos de dados via ORM Sequelize, a cobertura de testes unitários via JEST, a padronização de código Eslint/Prettier, a gestão de arquivos de logs rotativos a partir de Winston, entre vários outros recursos.
+Boilerplate de aplicação back-end REST API com NodeJS, em Typescript, utilizando o framework Express além de pacotes essenciais na construção de um projeto base tal como o suporte a bancos de dados via ORM Sequelize, a cobertura de testes unitários via JEST, a padronização de código Eslint/Prettier, a gestão de arquivos de logs rotativos a partir de Winston, entre vários outros recursos.
 
 ## Instalação
 
