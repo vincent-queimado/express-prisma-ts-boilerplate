@@ -1,4 +1,3 @@
-/* eslint-disable no-underscore-dangle */
 import cors from 'cors';
 import path from 'path';
 import helmet from 'helmet';

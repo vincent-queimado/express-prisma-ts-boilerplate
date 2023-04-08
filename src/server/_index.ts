@@ -4,7 +4,7 @@ import colorTxt from 'ansi-colors';
 import pkg from '../../package.json';
 import server from './http_server';
 import logger from './../utils/winston_file_logger/winston/logger';
-import { dbconnection} from '../database/sqlz/db/sequelize';
+import { dbconnection } from '../database/sqlz/db/sequelize';
 
 const startup = () => {
     /* eslint-disable no-console */
