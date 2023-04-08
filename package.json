@@ -19,6 +19,7 @@
     "prettier",
     "winston",
     "api",
+    "crud",
     "orm",
     "boilerplate"
   ],

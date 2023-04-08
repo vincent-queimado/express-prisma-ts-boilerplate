@@ -1,6 +1,6 @@
 <img src="https://github.com/vincent-queimado/boilerplate-api/blob/main/public/assets/images/logo.png?raw=true" alt="Logo" height="100px"/>
 
-# Aplicação back-end REST API com NodeJS, em Typescript + Express + Sequelize + Jest
+# NodeJs boilerplate for creating an Express Rest API back-end application with Typescript (Express + Sequelize + Jest)
 
 This project is a boilerplate for creating an Express Rest API back-end application with Typescript.
 Use of libraries like Sequelize ORM, log management with Morgan/Winston (console logs and rotating log files), unit test coverage with Jest, data validation schemes with Zod, JWT authentication, and other essential packages to start a new project.
