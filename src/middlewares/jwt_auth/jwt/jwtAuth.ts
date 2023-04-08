@@ -28,14 +28,13 @@ export default async (req: Request) => {
     return { success: true, data: user };
 };
 
-const verifyToken = (token: string): { error: any; payload: any } => {
+const verifyToken = (token: string) => {
     const result = jwt.verify(token, config.jwt.secret, (err: any, decoded: any) => {
         if (err) {
             return { error: err.message || err, payload: null };
         }
         return { error: null, payload: decoded };
     });
-    const error = result.error;
-    const payload = result.payload;
-    return { error: '1', payload: '' };
+
+    return { error: result.error, payload: result.decoded };
 };

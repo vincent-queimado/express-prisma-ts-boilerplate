@@ -11,7 +11,7 @@ const jwt = (req: Request, res: Response, next: any) => {
             if (!result.success) {
                 res.status(result.httpStatusCode).json(result.data);
             } else {
-                req.user = result.data;
+                req.body.user = result.data;
                 next();
             }
         })
@@ -29,7 +29,7 @@ const jwtUsers = (req: Request, res: Response, next: any) => {
             if (!result.success) {
                 res.status(result.httpStatusCode).json(result.data);
             } else {
-                req.user = result.data;
+                req.body.user = result.data;
                 next();
             }
         })

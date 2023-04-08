@@ -1,8 +1,8 @@
 import jwt from 'jsonwebtoken';
-import { Response, Request } from 'express';
+import { Request } from 'express';
 import config from '../../../config/app/_index';
 import httpMsg from '../../../utils/http_messages/http_msg';
-import userExist from '../../../app/services/users/exist';
+import userExist from '../../../api/services/users/exist';
 
 export default async (req: Request) => {
     const authHeader = await req.headers.authorization;
@@ -40,5 +40,6 @@ const verifyToken = (token: string) => {
         }
         return { error: null, payload: decoded };
     });
-    return result;
+
+    return { error: result.error, payload: result.decoded };
 };

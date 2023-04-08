@@ -1,5 +1,5 @@
 {
-  "name": "typescript-express-boilerplate",
+  "name": "express-typescript-boilerplate",
   "version": "1.0.1",
   "description": "Boilerplate para iniciar um projeto de API Node.js em Typescript com Express, ORM Sequelize, Winston para gestão de logs em arquivos rotativos e Jest para testes unitários.",
   "author": {

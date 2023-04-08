@@ -2,9 +2,9 @@ import express from 'express';
 
 // import Auth from '../middlewares/jwt_auth/auth';
 
-// import CtrlUsers from '../app/controllers/users';
-// import CtrlUserMe from '../app/controllers/users_me';
-import CtrlUserAuth from '../app/controllers/users_auth';
+// import CtrlUsers from '../api/controllers/users';
+// import CtrlUserMe from '../api/controllers/users_me';
+import CtrlUserAuth from '../api/controllers/users_auth';
 
 const router = express.Router();
 

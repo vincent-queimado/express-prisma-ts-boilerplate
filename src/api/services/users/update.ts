@@ -1,4 +1,4 @@
-import User from '../../../database/models/users';
+import User from '../../models/users';
 import logger from '../../../utils/winston_file_logger/winston/logger';
 
 export default async (id: number, data: any) => {

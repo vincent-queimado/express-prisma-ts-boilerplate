@@ -1,6 +1,6 @@
 import express from 'express';
-import CtrlCommons from '../app/controllers/commons';
-import CtrlLogs from '../app/controllers/logs';
+import CtrlCommons from '../api/controllers/commons';
+import CtrlLogs from '../api/controllers/logs';
 
 const router = express.Router();
 

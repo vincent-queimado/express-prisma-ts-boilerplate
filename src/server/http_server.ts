@@ -54,7 +54,7 @@ const createServer = (app: any, serverSsl: any) => {
 const onListening = (host: string, port: number) => {
     /* eslint-disable no-console */
     console.log(
-        colorTxt.white(`-> Listening on ${host}:${port}`),
+        colorTxt.white(`-> Listening on server: ${host}:${port}`),
         /* eslint-enable no-console */
     );
     logger.info(`Api status: Ready (listening on ${host}:${port})`);

@@ -3,7 +3,7 @@ import { Request } from 'express';
 import config from '../../../config/app/_index';
 import httpMsg from '../../../utils/http_messages/http_msg';
 
-module.exports = async (req: Request) => {
+export default async (req: Request) => {
     const authHeader = req.headers.authorization;
     const token = authHeader && authHeader.split(' ')[1];
     let user;
@@ -26,12 +26,20 @@ module.exports = async (req: Request) => {
     return { success: true, data: user };
 };
 
-function verifyToken(token: string) {
+const verifyToken = (token: string) => {
     const result = jwt.verify(token, config.jwt.secret, (err: any, decoded: any) => {
+        const res: any = {};
+
         if (err) {
-            return { error: err.message || err, payload: null };
+            res.error = err.message;
+            res.payload = null;
+            return res;
         }
-        return { error: null, payload: decoded };
+
+        res.error = err.message;
+        res.payload = decoded;
+        return res;
     });
-    return result;
-}
+
+    return { error: result.error, payload: result.decoded };
+};

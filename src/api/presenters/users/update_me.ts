@@ -11,7 +11,8 @@ export default async (id: number, data: any) => {
     }
 
     // Data filter
-    const dataFiltered = {};
+    const dataFiltered: any = {};
+
     if (data.name) {
         dataFiltered.name = data.name;
     }
