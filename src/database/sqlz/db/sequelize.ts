@@ -23,7 +23,7 @@ const sequelize = new Sequelize(database, username, password, {
     logging,
 });
 
-const connection = async () => {
+const dbconnection = async () => {
     sequelize
         .authenticate()
         .then(() => {
@@ -42,4 +42,4 @@ const connection = async () => {
         });
 };
 
-export { connection, sequelize, Sequelize, DataTypes };
+export { dbconnection, sequelize, Sequelize, DataTypes };
