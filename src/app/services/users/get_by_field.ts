@@ -1,4 +1,4 @@
-import db from '../../../database/models/_index';
+import User from '../../../database/models/users';
 import logger from '../../../utils/winston_file_logger/winston/logger';
 
 export default (data: any, dataBy: any, excludeFields: any, findDeleted: any) => {
@@ -40,8 +40,7 @@ export default (data: any, dataBy: any, excludeFields: any, findDeleted: any) =>
         return { success: false, data: null, error: 'Failed to find account by field.' };
     }
 
-    const result = db.user
-        .findOne(options)
+    const result = User.findOne(options)
         .then((res: any) => ({ success: true, data: res, error: null }))
         .catch((error: any) => {
             logger.error(`Failed to find account. DB Error: ${error}`);

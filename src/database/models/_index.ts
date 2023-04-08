@@ -1,5 +1,5 @@
 import colorTxt from 'ansi-colors';
-import { Sequelize } from 'sequelize';
+import { Sequelize, DataTypes } from 'sequelize';
 
 import config from '../../config/database/_index';
 import logger from '../../utils/winston_file_logger/winston/logger';
@@ -23,21 +23,23 @@ const sequelize = new Sequelize(database, username, password, {
     logging,
 });
 
-sequelize
-    .authenticate()
-    .then(() => {
-        /* eslint-disable no-console */
-        console.log(
-            colorTxt.white(`-> Database connected on ${host}:${port}`),
+const connectDB = async () => {
+    sequelize
+        .authenticate()
+        .finally(() => {
+            /* eslint-disable no-console */
+            console.log(
+                colorTxt.white(`-> Database connected on ${host}:${port}`),
+                /* eslint-enable no-console */
+            );
+            logger.info(`Database connection has been established successfully.`);
+        })
+        .catch((err) => {
+            /* eslint-disable no-console */
+            console.log(colorTxt.red('-> Unable to connect to the database'));
             /* eslint-enable no-console */
-        );
-        logger.info(`Database connection has been established successfully.`);
-    })
-    .catch((err) => {
-        /* eslint-disable no-console */
-        console.log(colorTxt.red('-> Unable to connect to the database'));
-        /* eslint-enable no-console */
-        logger.info(`Unable to connect to the database: ${err})`);
-    });
+            logger.info(`Unable to connect to the database: ${err})`);
+        });
+};
 
-export { Sequelize, sequelize };
+export { connectDB, sequelize, Sequelize, DataTypes };

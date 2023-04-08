@@ -1,19 +1,20 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "target": "es2017",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
-    "lib": ["es6"],                                      /* Specify a set of bundled library declaration files that describe the target runtime environment. */
-    "module": "commonjs",                                /* Specify what module code is generated. */                                  /* Specify multiple folders that act like './node_modules/@types'. */
-    "types": ["node", "jest"],                           /* Specify type package names to be included without being referenced in a source file. */                          /* List of file name suffixes to search when resolving a module. */
-    "resolveJsonModule": true,                           /* Enable importing .json files. */
+    "target": "es2017",
+    "lib": ["es6"],
+    "module": "commonjs",                                
+    "types": ["node", "jest"],
+    "resolveJsonModule": true,
     "moduleResolution": "node",
-    "allowJs": true,                                     /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */                                /* Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output. */
-    "outDir": "./build",                                 /* Specify an output folder for all emitted files. */
-    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
-    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
-    "strict": true,                                      /* Enable all strict type-checking options. */
-    "noImplicitAny": true,                               /* Enable error reporting for expressions and declarations with an implied 'any' type. */                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+    "allowJs": true,
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "skipLibCheck": true,
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]

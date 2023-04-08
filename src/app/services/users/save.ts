@@ -1,15 +1,12 @@
-import Sequelize from 'sequelize';
-
-import db from '../../../database/models/_index';
+import User from '../../../database/models/users';
 import logger from '../../../utils/winston_file_logger/winston/logger';
 
 export default (datas: any) => {
-    const result = db.user
-        .create(datas)
+    const result = User.create(datas)
         .then((res: any) => ({ success: true, data: res, error: null }))
-        .catch(Sequelize.ValidationError, (error: any) => {
-            logger.error(`Failed to create account. DB Error: ${error.errors[0].message}`);
-            return { success: false, data: null, error: error.errors[0].message };
+        .catch((error: any) => {
+            logger.error(`Failed to create account. DB Error: ${error.message}`);
+            return { success: false, data: null, error: error.message };
         })
         .catch((error: any) => {
             logger.error(`Failed to create account. DB Error: ${error}`);

@@ -1,9 +1,9 @@
 import express from 'express';
 
-import Auth from '../middlewares/jwt_auth/auth';
+// import Auth from '../middlewares/jwt_auth/auth';
 
-import CtrlUsers from '../app/controllers/users';
-import CtrlUserMe from '../app/controllers/users_me';
+// import CtrlUsers from '../app/controllers/users';
+// import CtrlUserMe from '../app/controllers/users_me';
 import CtrlUserAuth from '../app/controllers/users_auth';
 
 const router = express.Router();
@@ -21,11 +21,11 @@ router.get('/auth/signout', CtrlUserAuth.signout);
 // router.post('/auth/forgotpassword/reset', CtrlUserAuth.forgotPasswordReset);
 
 // User Profile
-router.get('/me/show', Auth.jwtUsers, CtrlUserMe.showMe);
-router.patch('/me/update', Auth.jwtUsers, CtrlUserMe.updateMe);
-router.patch('/me/delete', Auth.jwtUsers, CtrlUserMe.deleteMe);
+// router.get('/me/show', Auth.jwtUsers, CtrlUserMe.showMe);
+// router.patch('/me/update', Auth.jwtUsers, CtrlUserMe.updateMe);
+// router.patch('/me/delete', Auth.jwtUsers, CtrlUserMe.deleteMe);
 
 // List of All Users
-router.get('/users', CtrlUsers.showAll);
+// router.get('/users', CtrlUsers.showAll);
 
 export default router;

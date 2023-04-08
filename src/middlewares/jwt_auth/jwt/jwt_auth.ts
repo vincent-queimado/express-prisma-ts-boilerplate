@@ -1,10 +1,9 @@
-const jwt = require('jsonwebtoken');
-const config = require('@config/app');
-const httpMsg = require('@utils/http_handler/http_msg');
+import jwt from 'jsonwebtoken';
+import { Request } from 'express';
+import config from '../../../config/app/_index';
+import httpMsg from '../../../utils/http_messages/http_msg';
 
-const conf = config[process.env.NODE_ENV];
-
-module.exports = async (req) => {
+module.exports = async (req: Request) => {
     const authHeader = req.headers.authorization;
     const token = authHeader && authHeader.split(' ')[1];
     let user;
@@ -27,8 +26,8 @@ module.exports = async (req) => {
     return { success: true, data: user };
 };
 
-function verifyToken(token) {
-    const result = jwt.verify(token, conf.session.secret, (err, decoded) => {
+function verifyToken(token: string) {
+    const result = jwt.verify(token, config.jwt.secret, (err: any, decoded: any) => {
         if (err) {
             return { error: err.message || err, payload: null };
         }

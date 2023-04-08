@@ -1,20 +1,15 @@
-import Sequelize from 'sequelize';
-
-import db from '../../../database/models/_index';
+import User from '../../../database/models/users';
 import logger from '../../../utils/winston_file_logger/winston/logger';
 
 export default async (id: number, data: any) => {
-    const result = await db.user
-        .update(data, {
-            where: { id },
-            // returning: true,
-            // plain: true,
-        })
+    const result = await User.update(data, {
+        where: { id },
+        // returning: true,
+        // plain: true,
+    })
         .then((res: any) => ({ success: true, data: res, error: null }))
-        .catch(Sequelize.ValidationError, (error: any) => {
-            logger.error(
-                `Failed to update account. DB Validation Error: ${error.errors[0].message}`,
-            );
+        .catch((error: any) => {
+            logger.error(`Failed to update account. DB Validation Error: ${error.message}`);
 
             if (error.errors[0].type === 'unique violation') {
                 return { success: false, data: null, error: 'ACCOUNT_ALREADY_EXIST' };

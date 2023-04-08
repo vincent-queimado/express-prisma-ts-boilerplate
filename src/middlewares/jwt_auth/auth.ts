@@ -1,8 +1,10 @@
+import { Response, Request } from 'express';
+
 import presenter from './jwt/_index';
 import logger from '../../utils/winston_file_logger/winston/logger';
 
 // Auth validate token without checking user in database (not recommended)
-const jwt = (req: any, res: any, next: any) => {
+const jwt = (req: Request, res: Response, next: any) => {
     presenter
         .jwt(req)
         .then((result: any) => {
@@ -20,7 +22,7 @@ const jwt = (req: any, res: any, next: any) => {
 };
 
 // Auth validate token with checking if Storekeepers exist in database
-const jwtUsers = (req: any, res: any, next: any) => {
+const jwtUsers = (req: Request, res: Response, next: any) => {
     presenter
         .jwtUsers(req)
         .then((result: any) => {

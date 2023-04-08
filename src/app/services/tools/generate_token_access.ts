@@ -1,9 +1,7 @@
 import jwt from 'jsonwebtoken';
-import config from '../../../config/server';
+import config from '../../../config/app/_index';
 
 export default async (id: number, name: string, email: string, avatar: string) => {
-    const conf = config[process.env.NODE_ENV];
-
     const token = jwt.sign(
         {
             id,
@@ -11,9 +9,9 @@ export default async (id: number, name: string, email: string, avatar: string) =
             email,
             avatar,
         },
-        conf.jwt.secret,
+        config.jwt.secret,
         {
-            expiresIn: conf.jwt.expiredIn,
+            expiresIn: config.jwt.expiredIn,
         },
     );
 

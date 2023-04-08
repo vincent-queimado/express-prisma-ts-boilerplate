@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
-import nodemailer from './nodemailer.js';
-import configEmail from '../../../config/email/config_email.js';
-import globalUrl from '../../url/globalurl.js';
+import nodemailer from './nodemailer';
+import config from '../../../config/email/_index';
+import globalUrl from '../../../utils/global_http_url/globalurl';
 
 const htmlTemplate = '../templates/welcome.html';
 const htmlFileEncoding = 'utf-8';
@@ -10,12 +10,9 @@ const htmlFileEncoding = 'utf-8';
 const emailSubject = 'Melibee - Seja bem-vindo(a)';
 const emailText = 'Seja bem-vindo(a)';
 
-const env = process.env.NODE_ENV || 'development';
-const confEmail = configEmail[env];
-
-export default async (data) => {
+export default async (data: any) => {
     const uname = data.name;
-    const uppercaseWords = (str) => str.replace(/^(.)|\s+(.)/g, (c) => c.toUpperCase());
+    const uppercaseWords = (str: string) => str.replace(/^(.)|\s+(.)/g, (c) => c.toUpperCase());
     let username = uname.split(' ')[0];
     username = uppercaseWords(data.name);
 
@@ -30,7 +27,7 @@ export default async (data) => {
     htmlText = htmlText.replace('{{url}}', url);
 
     const options = {
-        from: confEmail.smtp_user,
+        from: config.smtp.user,
         to: data.email,
         text: emailText,
         subject: emailSubject,

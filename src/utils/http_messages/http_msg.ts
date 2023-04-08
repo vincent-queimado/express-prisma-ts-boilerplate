@@ -1,5 +1,5 @@
 export default {
-    http200(data) {
+    http200(data: any) {
         const params = {
             success: true,
             message: 'Sucesso',
@@ -7,7 +7,7 @@ export default {
         };
         return { httpStatusCode: 200, data: params };
     },
-    http201(data) {
+    http201(data: any) {
         const params = {
             success: true,
             message: 'Criado com sucesso',
@@ -15,7 +15,7 @@ export default {
         };
         return { httpStatusCode: 201, data: params };
     },
-    http204(data) {
+    http204(data: any) {
         const params = {
             success: true,
             message: 'Excluído com sucesso',
@@ -23,7 +23,7 @@ export default {
         };
         return { httpStatusCode: 204, data: params };
     },
-    http401(error) {
+    http401(error: any) {
         const params = {
             success: false,
             message: 'Acesso não autorizado',
@@ -31,7 +31,7 @@ export default {
         };
         return { httpStatusCode: 401, data: params };
     },
-    http422(customMsg, error) {
+    http422(customMsg: string, error: any) {
         const params = {
             success: false,
             message: customMsg || 'Falha',

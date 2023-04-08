@@ -1,44 +1,9 @@
-import { Model, Optional, DataTypes } from 'sequelize';
-import { sequelize } from './_index';
+import * as bcrypt from 'bcryptjs';
+import { sequelize, DataTypes } from './_index';
 
 const model = 'User';
 
-interface UserAttributes {
-    id: string;
-    name: string;
-    phone: string;
-    avatar: string;
-    email: string;
-    accountName: string;
-    accountLocationState: string;
-    accountType: string;
-    google_signin: boolean;
-    google_given_name: string;
-    google_family_name: string;
-    google_locale: string;
-    google_avatar: string;
-    password: string;
-    signupConfirmationComplete: boolean;
-    signupConfirmationToken: string;
-    resetPasswordToken: string;
-    enabled: boolean;
-    deleted: boolean;
-    deletedAt: Date;
-}
-
-/*
-  We have to declare the UserCreationAttributes to
-  tell Sequelize and TypeScript that the property id,
-  in this case, is optional to be passed at creation time
-*/
-type UserCreationAttributes = Optional<UserAttributes, 'id'>;
-
-interface UserInstance extends Model<UserAttributes, UserCreationAttributes>, UserAttributes {
-    createdAt?: Date;
-    updatedAt?: Date;
-}
-
-const User = sequelize.define<UserInstance>(model, {
+const User = sequelize.define(model, {
     id: {
         field: 'id',
         type: DataTypes.UUID,
@@ -148,5 +113,18 @@ const User = sequelize.define<UserInstance>(model, {
         type: DataTypes.DATE,
     },
 });
+
+User.beforeCreate((user: any) => {
+    return hashPassword(user);
+});
+
+User.beforeUpdate((user: any) => {
+    return hashPassword(user);
+});
+
+const hashPassword = (user: any) => {
+    const salt = bcrypt.genSaltSync(10);
+    user.set('password', bcrypt.hashSync(user.password, salt));
+};
 
 export default User;

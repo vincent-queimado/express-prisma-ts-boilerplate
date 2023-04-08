@@ -7,7 +7,7 @@ import servFindOneUser from '../../services/users/get_by_field';
 const errCode = 'ERROR_USER_FORGOT_PASSWORD_REQUEST';
 
 export default async (data: any) => {
-    const dataFiltered = {};
+    const dataFiltered: any = {};
 
     // Check User data
     if (!data.email) {

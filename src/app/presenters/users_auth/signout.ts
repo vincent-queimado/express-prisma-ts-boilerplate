@@ -30,7 +30,7 @@ export default async (data: any) => {
     if (!resultCreatePassword.success || !resultCreatePassword.data) {
         return httpMsg.http422('Error to generate User password.', errCode);
     }
-    this.data.password = resultCreatePassword.data;
+    data.password = resultCreatePassword.data;
 
     // Create new User
     const resultCreateNewUser = await servCreateUser(data);

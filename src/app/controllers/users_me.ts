@@ -1,7 +1,8 @@
+import { Response, Request } from 'express';
 import presenter from '../presenters/users/_index';
 import logger from '../../utils/winston_file_logger/winston/logger';
 
-const showMe = (req: any, res: any, next: any) => {
+const showMe = (req: Request, res: Response, next: any) => {
     presenter
         .showMe(req.user.id)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
@@ -11,7 +12,7 @@ const showMe = (req: any, res: any, next: any) => {
         });
 };
 
-const updateMe = (req: any, res: any, next: any) => {
+const updateMe = (req: Request, res: Response, next: any) => {
     presenter
         .updateMe(req.user.id, req.body)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
@@ -21,7 +22,7 @@ const updateMe = (req: any, res: any, next: any) => {
         });
 };
 
-const deleteMe = (req: any, res: any, next: any) => {
+const deleteMe = (req: Request, res: Response, next: any) => {
     presenter
         .deleteMe(req.user.id)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))

@@ -1,8 +1,9 @@
+import { Response, Request } from 'express';
 import pkg from '../../../package.json';
 import presenter from '../presenters/logs/_index';
 import logger from '../../utils/winston_file_logger/winston/logger';
 
-const listar = (req: any, res: any, next: any) => {
+const listar = (req: Request, res: Response, next: any) => {
     presenter
         .listar()
         .then((result: any) => {

@@ -1,5 +1,5 @@
-import 'winston-daily-rotate-file';
 import winston from 'winston';
+import DailyRotateFile from 'winston-daily-rotate-file';
 import logsPath from 'app-root-path';
 
 const path = logsPath.resolve('/logs/');
@@ -22,28 +22,28 @@ const customInfo = winston.format.combine(
 
 const logger = winston.createLogger({
     transports: [
-        new winston.transports.DailyRotateFile({
+        new DailyRotateFile({
             frequency: '24h',
-            name: 'error',
+            // name: 'error',
             level: 'error',
             dirname: `${path}/`,
             filename: 'error-%DATE%.log',
             datePattern: 'YYYY-MM-DD-HH',
             handleExceptions: true,
-            prepend: true,
+            // prepend: true,
             zippedArchive: false,
             maxSize: '5m',
             maxFiles: '7d',
             format: custom,
         }),
-        new winston.transports.DailyRotateFile({
+        new DailyRotateFile({
             frequency: '24h',
-            name: 'info',
+            // name: 'info',
             level: 'info',
             dirname: `${path}/`,
             filename: 'info-%DATE%.log',
             datePattern: 'YYYY-MM-DD-HH',
-            prepend: true,
+            // prepend: true,
             zippedArchive: false,
             maxSize: '5m',
             maxFiles: '7d',
@@ -58,10 +58,10 @@ const logger = winston.createLogger({
     exitOnError: false,
 });
 
-logger.stream = {
-    write(message) {
-        logger.info(message);
-    },
-};
+// logger.stream = {
+//     write: function (message) {
+//         logger.info(message);
+//     },
+// };
 
 export default logger;

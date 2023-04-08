@@ -85,7 +85,7 @@ const requiredDatas = async (datas: any) => {
     if (!datas.accountLocationState) return { success: false, msgError: msgErrorDataMissing };
     if (!datas.password) return { success: false, msgError: msgErrorDataMissing };
 
-    return { success: true, msgError: null };
+    return { success: true, msgError: '' };
 };
 
 const getUser = async (email: string) => {
@@ -102,14 +102,14 @@ const getUser = async (email: string) => {
         return {
             success: true,
             data: null,
-            msgError: null,
+            msgError: '',
         };
 
     if (result.data && !result.data.dataValues.signupConfirmationComplete)
         return {
             success: true,
             data: result.data.dataValues,
-            msgError: null,
+            msgError: '',
         };
 
     if (result.data && result.data.dataValues.signupConfirmationComplete)
@@ -128,7 +128,7 @@ const createUser = async (datas: any) => {
     if (!result.success || !result.data)
         return { success: false, data: null, msgError: msgErrorSaveUser };
 
-    return { success: true, data: result.data, msgError: null };
+    return { success: true, data: result.data, msgError: '' };
 };
 
 const updateUser = async (id: number, datas: any) => {
@@ -141,7 +141,7 @@ const updateUser = async (id: number, datas: any) => {
 
     if (result.data < 1) return { success: false, data: null, msgError: msgErrorUserNotFound };
 
-    return { success: true, data: result.data, msgError: null };
+    return { success: true, data: result.data, msgError: '' };
 };
 
 const hashUserPassword = async (password: string) => {
@@ -150,10 +150,10 @@ const hashUserPassword = async (password: string) => {
     const resultHashPassword = await servHashPassword(pwd);
 
     if (!resultHashPassword.success || !resultHashPassword.data) {
-        return httpMsg.http422(msgErrorHashPassword, errCode);
+        return { success: false, data: null, msgError: msgErrorHashPassword };
     }
 
     pwd = resultHashPassword.data;
 
-    return { success: true, data: pwd, msgError: null };
+    return { success: true, data: pwd, msgError: '' };
 };

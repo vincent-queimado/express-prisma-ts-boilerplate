@@ -1,18 +1,17 @@
 import jwt from 'jsonwebtoken';
-import config from '../../../config/server.js';
-import httpMsg from '../../../utils/http_handler/http_msg.js';
-import userExist from '../../../app/services/accounts/_exist.js';
+import { Response, Request } from 'express';
+import config from '../../../config/app/_index';
+import httpMsg from '../../../utils/http_messages/http_msg';
+import userExist from '../../../app/services/users/exist';
 
-const conf = config[process.env.NODE_ENV];
-
-export default async (req) => {
+export default async (req: Request) => {
     const authHeader = await req.headers.authorization;
     const token = authHeader && authHeader.split(' ')[1];
     let user;
 
     if (!token) return httpMsg.http401('Invalid token');
 
-    const verified = await verifyToken(token);
+    const verified = verifyToken(token);
 
     if (verified.error) return httpMsg.http401('Invalid token');
 
@@ -26,7 +25,7 @@ export default async (req) => {
     }
 
     // Check existing User
-    const exist = await await userExist(verified.payload.id);
+    const exist = await userExist(verified.payload.id);
     if (!exist.data) {
         return httpMsg.http401('Invalid token');
     }
@@ -34,8 +33,8 @@ export default async (req) => {
     return { success: true, data: user };
 };
 
-const verifyToken = (token) => {
-    const result = jwt.verify(token, conf.session.secret, (err, decoded) => {
+const verifyToken = (token: string) => {
+    const result = jwt.verify(token, config.jwt.secret, (err: any, decoded: any) => {
         if (err) {
             return { error: err.message || err, payload: null };
         }

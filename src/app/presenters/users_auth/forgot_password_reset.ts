@@ -50,7 +50,7 @@ export default async (data: any) => {
     if (!resultHashPassword.success || !resultHashPassword.data) {
         return httpMsg.http422('Error to hash the user password.', errCode);
     }
-    this.data.password = resultHashPassword.data;
+    data.password = resultHashPassword.data;
 
     // Update signup confirmation status
     const result = await servUpdateUser(resultFindUser.data.id, { password: data.password });

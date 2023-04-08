@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import nodemailer from 'nodemailer';
-import configEmail from '../../../config/email/config_email.js';
-import logger from '../../logging/winston/logger.js';
-import globalUrl from '../../url/globalurl.js';
+import config from '../../../config/email/_index';
+import logger from '../../winston_file_logger/winston/logger';
+import globalUrl from '../../global_http_url/globalurl';
 
 const htmlTemplate = '../templates/email-verification.html';
 const htmlFileEncoding = 'utf-8';
@@ -12,26 +12,23 @@ const errorSendEmail = 'Error to send e-mail.';
 const emailSubject = 'Melibee - Confirmação de cadastro';
 const emailText = 'E-mail de confirmação de cadastro.';
 
-const env = process.env.NODE_ENV || 'development';
-const confEmail = configEmail[env];
-
-export default async (data) => {
+export default async (data: any) => {
     const transporter = nodemailer.createTransport({
-        service: confEmail.smtp.service,
+        // service: config.smtp.service,
         auth: {
-            type: confEmail.auth.type,
-            user: confEmail.smtp.user,
-            pass: confEmail.smtp.password,
-            clientId: confEmail.oauth.clientId,
-            clientSecret: confEmail.oauth.clientSecret,
-            refreshToken: confEmail.oauth.refreshToken,
+            // type: config.auth.type,
+            user: config.smtp.user,
+            pass: config.smtp.password,
+            clientId: config.oauth.clientId,
+            clientSecret: config.oauth.clientSecret,
+            refreshToken: config.oauth.refreshToken,
         },
-        debug: confEmail.debug.debug,
-        logger: confEmail.debug.logger,
+        debug: config.debug.debug,
+        logger: config.debug.logger,
     });
 
     const uname = data.name;
-    const uppercaseWords = (str) => str.replace(/^(.)|\s+(.)/g, (c) => c.toUpperCase());
+    const uppercaseWords = (str: string) => str.replace(/^(.)|\s+(.)/g, (c) => c.toUpperCase());
     let username = uname.split(' ')[0];
     username = uppercaseWords(data.name);
 
@@ -48,7 +45,7 @@ export default async (data) => {
     htmlText = htmlText.replace('{{url}}', url);
 
     const mailOptions = {
-        from: confEmail.smtp_user,
+        from: config.smtp.user,
         to: data.email,
         text: emailText,
         subject: emailSubject,
@@ -58,7 +55,7 @@ export default async (data) => {
     const sender = await transporter
         .sendMail(mailOptions)
         .then(() => ({ success: true }))
-        .catch((err) => {
+        .catch((err: any) => {
             logger.error(`${errorSendEmail} ${err}`);
             return { success: false };
         });

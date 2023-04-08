@@ -48,7 +48,7 @@ const requiredDatas = async (datas: any) => {
     if (!datas.email) return { success: false, msgError: msgErrorDataMissing };
     if (!datas.token) return { success: false, msgError: msgErrorDataMissing };
 
-    return { success: true, msgError: null };
+    return { success: true, msgError: '' };
 };
 
 const getUser = async (email: string) => {
@@ -74,7 +74,7 @@ const getUser = async (email: string) => {
         return {
             success: true,
             data: result.data,
-            msgError: null,
+            msgError: '',
         };
 
     return { success: false, data: null, msgError: msgErrorCheckUser };
@@ -90,12 +90,12 @@ const updateUser = async (id: number, datas: any) => {
 
     if (result.data < 1) return { success: false, data: null, msgError: msgErrorUserNotFound };
 
-    return { success: true, data: result.data, msgError: null };
+    return { success: true, data: result.data, msgError: '' };
 };
 
 const checkToken = async (token: string, signupToken: string) => {
     if (token === signupToken) {
-        return { success: true, msgError: null };
+        return { success: true, msgError: '' };
     }
     return { success: false, msgError: msgErrorCheckToken };
 };

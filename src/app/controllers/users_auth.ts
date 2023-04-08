@@ -1,7 +1,8 @@
+import { Response, Request } from 'express';
 import presenter from '../presenters/users_auth/_index';
 import logger from '../../utils/winston_file_logger/winston/logger';
 
-const signin = (req: any, res: any, next: any) => {
+const signin = (req: Request, res: Response, next: any) => {
     presenter
         .signin(req.body)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
@@ -11,7 +12,7 @@ const signin = (req: any, res: any, next: any) => {
         });
 };
 
-const signout = (req: any, res: any, next: any) => {
+const signout = (req: Request, res: Response, next: any) => {
     presenter
         .signout(req.body)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
@@ -21,7 +22,7 @@ const signout = (req: any, res: any, next: any) => {
         });
 };
 
-const signup = (req: any, res: any, next: any) => {
+const signup = (req: Request, res: Response, next: any) => {
     presenter
         .signup(req.body)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
@@ -31,7 +32,7 @@ const signup = (req: any, res: any, next: any) => {
         });
 };
 
-const signupConfirm = (req: any, res: any, next: any) => {
+const signupConfirm = (req: Request, res: Response, next: any) => {
     presenter
         .signupConfirm(req.query)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
@@ -41,7 +42,7 @@ const signupConfirm = (req: any, res: any, next: any) => {
         });
 };
 
-// const forgotPasswordRequest = (req: any, res: any, next: any) => {
+// const forgotPasswordRequest = (req: Request, res: Response, next: any) => {
 //     presenter
 //         .forgotPasswordRequest(req.body)
 //         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
@@ -51,7 +52,7 @@ const signupConfirm = (req: any, res: any, next: any) => {
 //         });
 // };
 
-// const forgotPasswordReset = (req: any, res: any, next: any) => {
+// const forgotPasswordReset = (req: Request, res: Response, next: any) => {
 //     presenter
 //         .forgotPasswordReset(req.body)
 //         .then((result: any) => res.status(result.httpStatusCode).json(result.data))

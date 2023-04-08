@@ -7,7 +7,7 @@ import favicon from 'serve-favicon';
 import bodyParser from 'body-parser';
 
 import routes from '../routes/default';
-// import apiRoutes from '../routes/routes.js';
+import apiRoutes from '../routes/routes';
 
 import morganMiddleware from '../middlewares/morgan_logger/morgan_middleware';
 import handleError from '../middlewares/http_error_handler/error_handler';
@@ -34,7 +34,7 @@ export default () => {
     app.use('/logs', express.static(publicLogs, { dotfiles: 'allow' }));
 
     app.use('/', routes);
-    // app.use('/api/v1/', apiRoutes);
+    app.use('/api/v1/', apiRoutes);
 
     app.set('view engine', 'ejs');
     app.set('views', path.join(__dirname, '../app/views'));
