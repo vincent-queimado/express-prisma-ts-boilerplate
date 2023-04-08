@@ -2,7 +2,9 @@
 
 # Aplicação back-end REST API com NodeJS, em Typescript + Express + Sequelize + Jest
 
-Boilerplate de aplicação back-end REST API com NodeJS, em Typescript, utilizando o framework Express além de pacotes essenciais na construção de um projeto base tal como o suporte a bancos de dados via ORM Sequelize, a cobertura de testes unitários via JEST, a padronização de código Eslint/Prettier, a gestão de arquivos de logs rotativos a partir de Winston, entre vários outros recursos.
+This project is a boilerplate for creating an Express Rest API back-end application with Typescript.
+Use of libraries like Sequelize ORM, log management with Morgan/Winston (console logs and rotating log files), unit test coverage with Jest, data validation schemes with Zod, JWT authentication, and other essential packages to start a new project.
+The architecture resembles the basic MVC model, despite having extra layers to facilitate support and customization of the project. We integrated the Prettier and Eslint tools into the project to help us automate type-checking during Typescript code development.
 
 ## Instalação
 
