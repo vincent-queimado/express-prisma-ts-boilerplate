@@ -34,12 +34,19 @@ export default async (req: Request) => {
 };
 
 const verifyToken = (token: string) => {
-    const result = jwt.verify(token, config.jwt.secret, (err: any, decoded: any) => {
+    const result: any = jwt.verify(token, config.jwt.secret, (err: any, decoded: any) => {
+        const res: any = {};
+
         if (err) {
-            return { error: err.message || err, payload: null };
+            res.error = err.message;
+            res.payload = null;
+            return res;
         }
-        return { error: null, payload: decoded };
+
+        res.error = err.message;
+        res.payload = decoded;
+        return res;
     });
 
-    return { error: result.error, payload: result.decoded };
+    return result;
 };

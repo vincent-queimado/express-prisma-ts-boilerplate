@@ -37,7 +37,7 @@ export default () => {
     app.use('/api/v1/', apiRoutes);
 
     app.set('view engine', 'ejs');
-    app.set('views', path.join(__dirname, '../app/views'));
+    app.set('views', path.join(__dirname, '../api/views'));
 
     app.get('*', (req, res, next) => {
         next();

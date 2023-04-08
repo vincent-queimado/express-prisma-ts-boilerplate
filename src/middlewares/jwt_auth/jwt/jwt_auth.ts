@@ -27,7 +27,7 @@ export default async (req: Request) => {
 };
 
 const verifyToken = (token: string) => {
-    const result = jwt.verify(token, config.jwt.secret, (err: any, decoded: any) => {
+    const result: any = jwt.verify(token, config.jwt.secret, (err: any, decoded: any) => {
         const res: any = {};
 
         if (err) {
@@ -41,5 +41,5 @@ const verifyToken = (token: string) => {
         return res;
     });
 
-    return { error: result.error, payload: result.decoded };
+    return result;
 };

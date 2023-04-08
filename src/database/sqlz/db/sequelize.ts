@@ -26,7 +26,7 @@ const sequelize = new Sequelize(database, username, password, {
 const connection = async () => {
     sequelize
         .authenticate()
-        .finally(() => {
+        .then(() => {
             /* eslint-disable no-console */
             console.log(
                 colorTxt.white(`-> Connected on database: ${host}:${port}`),
