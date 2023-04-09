@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme-header.png?raw=true" alt="Logo" height="100px"/>
+  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme-header.png?raw=true" alt="readme-header"/>
 </div>
 
 <div align="center">
