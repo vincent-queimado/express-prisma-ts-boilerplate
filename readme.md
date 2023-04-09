@@ -3,18 +3,18 @@
 </div>
 
 <div align="center">
-  <h1>RESTful API Node Server Boilerplate<br/>(Express + Typescript + Sequelize + Jest)</h1>
+  <h1>Express RESTful API Boilerplate Using TypeScript<br/>(Express + Typescript + Sequelize + Jest)</h1>
 </div>
 
 <p align="center">
   <b>A simple Node.js RESTful API service boilerplate using Express with code written in TypeScript.</b></br>
-  <span>A boilerplate/starter project for quickly building RESTful APIs using Node.js, Express, Typescrypt and Sequelize.</span></br>
+  <span>A starter project for quickly building RESTful APIs using Node.js, Express, Typescrypt and Sequelize.</span></br>
   <sub>Made with ❤️ by <a href="https://github.com/vincent-queimado">Vincent Jean</a></sub>
 </p>
 
 <br />
 
-[![npm version](https://img.shields.io/node/v/:packageName)]
+[![node](https://img.shields.io/node/v/typescript-express-boilerplate.svg)](https://github.com/vincent-queimado/typescript-express-boilerplate)
 
 ![divider](./public/assets/images/readme-divider.png)
 
