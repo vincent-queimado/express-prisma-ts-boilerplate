@@ -1,16 +1,22 @@
-<img src="https://github.com/vincent-queimado/boilerplate-api/blob/main/public/assets/images/logo.png?raw=true" alt="Logo" height="100px"/>
-
 <div align="center">
-  <h1> NodeJs boilerplate for creating an Express Rest API back-end application with Typescript</h1>
+  <img src="https://github.com/vincent-queimado/boilerplate-api/blob/main/public/assets/images/logo.png?raw=true" alt="Logo" height="100px"/>
 </div>
 
 <div align="center">
-  <strong> Typescript + Express + Sequelize + Jest</strong>
+  <h1>RESTful API Node Server Boilerplate (Express + Typescript + Sequelize + Jest)</h1>
 </div>
+
+<p align="center">
+  <b>A simple Node.js RESTful API service boilerplate using Express with code written in TypeScript.</b></br>
+  <span>A boilerplate/starter project for quickly building RESTful APIs using Node.js, Express, Typescrypt and Sequelize.</span></br>
+  <sub>Made with ❤️ by <a href="https://github.com/vincent-queimado">Vincent Jean</a></sub>
+</p>
 
 <br />
 
 [![npm version](https://img.shields.io/npm/v/express-validator.svg)](https://www.npmjs.com/package/express-validator)
+
+![divider](./w3tec-divider.png)
 
 <div align="center">
   This project is a boilerplate for creating an Express Rest API back-end application with Typescript.
