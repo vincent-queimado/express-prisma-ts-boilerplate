@@ -14,8 +14,6 @@
 
 <br />
 
-[![node](https://img.shields.io/node/v/typescript-express-boilerplate.svg)](https://github.com/vincent-queimado/typescript-express-boilerplate)
-
 ![divider](./public/assets/images/readme-divider.png)
 
 <div align="center">
