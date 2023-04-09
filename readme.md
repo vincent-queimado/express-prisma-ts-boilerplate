@@ -38,15 +38,13 @@ To install the project, follow the steps below.
 
 ### Step 3 - Configuration of environment variables
 
-<br />
-The command below will copy the template environment variables file needed to initialize the local project.
+The command below will copy the template environment variables file needed to initialize the local project.<br />
+After renaming the file, open it and change the desired variables
 
 ```bash
 cp .env.example .env
-# abre o arquivo .env e altera as variáveis desejadas
 ```
 
 ### Step 4 - Database creation
 
-<br />
-Será necessário configurar um banco de dados SQL suportado pelo ORM Sequelize (Oracle, Postgres, MySQL, MariaDB, SQLite, SQL Server, e mais) para armazenamento de dados.
+You will need to configure a SQL database supported by ORM Sequelize (Oracle, Postgres, MySQL, MariaDB, SQLite, SQL Server, and more) for data storage.
