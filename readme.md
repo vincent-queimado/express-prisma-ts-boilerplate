@@ -3,8 +3,7 @@
 </div>
 
 <div align="center">
-  <h1>RESTful API Node Server Boilerplate</h1>
-  <h1>(Express + Typescript + Sequelize + Jest)</h1>
+  <h1>RESTful API Node Server Boilerplate<br/>(Express + Typescript + Sequelize + Jest)</h1>
 </div>
 
 <p align="center">
