@@ -14,9 +14,9 @@
 
 <br />
 
-[![npm version](https://img.shields.io/npm/v/express-validator.svg)](https://www.npmjs.com/package/express-validator)
+[![npm version](https://img.shields.io/node/v/:packageName)]
 
-![divider](./w3tec-divider.png)
+![divider](./readme-divider.png)
 
 <div align="center">
   This project is a boilerplate for creating an Express Rest API back-end application with Typescript.
