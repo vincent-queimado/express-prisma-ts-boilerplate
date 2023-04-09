@@ -16,7 +16,7 @@
 
 [![npm version](https://img.shields.io/node/v/:packageName)]
 
-![divider](./readme-divider.png)
+![divider](./public/assets/images/readme-divider.png)
 
 <div align="center">
   This project is a boilerplate for creating an Express Rest API back-end application with Typescript.
