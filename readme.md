@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/vincent-queimado/boilerplate-api/blob/main/public/assets/images/logo.png?raw=true" alt="Logo" height="100px"/>
+  <img src="https://github.com/vincent-queimado/boilerplate-api/blob/main/public/assets/images/readme-header.png?raw=true" alt="Logo" height="100px"/>
 </div>
 
 <div align="center">
