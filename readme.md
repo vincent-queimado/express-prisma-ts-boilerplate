@@ -7,8 +7,7 @@
 </div>
 
 <p align="center">
-  <b>A simple Node.js RESTful API service boilerplate using Express with code written in TypeScript.</b></br>
-  <span>A starter project for quickly building RESTful APIs using Node.js, Express, Typescrypt and Sequelize.</span></br>
+  <span>A starter project written in TypeScript for quickly building Express RESTful APIs using ORM, loggers, validator and more.</span></br>
   <sub>Made with ❤️ by <a href="https://github.com/vincent-queimado">Vincent Jean</a></sub>
 </p>
 
