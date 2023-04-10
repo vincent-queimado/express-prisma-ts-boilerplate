@@ -28,7 +28,7 @@ The architecture resembles the basic MVC model, despite having extra layers to f
 
 To install the project, follow the steps below.
 
-#### Step 1 - Download or clone the repo
+#### Step 1 - Fork and clone the git repository
 
 First, open your terminal and type the necessary commands to download the project and access it.
 
@@ -47,14 +47,13 @@ $ npm install
 
 #### Step 3 - Configure your project variables
 
-The command below will copy the template environment variables file needed to initialize your project.<br />
-After renaming the file, open it and change the desired variables:
+In the new folder you will find a `.env.example` file, duplicate it and rename it to `.env` only. The command below will copy the template environment variables file needed to initialize your project.<br />
 
 ```bash
 $ cp .env.example .env
 ```
 
-Important, remember to change the variable values ​​according to your project:
+After renaming the file, open it and change the desired variables ​​according to your project:
 
 ```bash
 #.env
