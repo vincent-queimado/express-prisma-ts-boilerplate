@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <h1>Express RESTful API Boilerplate Using TypeScript<br/>(Express + Typescript + Sequelize + Jest)</h1>
+  <h1>Express RESTful API boilerplate using TypeScript<br/>(Express + Typescript + Sequelize + Jest)</h1>
 </div>
 
 <p align="center">
@@ -49,32 +49,32 @@ cp .env.example .env
 
 You will need to configure a SQL database supported by ORM Sequelize (Oracle, Postgres, MySQL, MariaDB, SQLite, SQL Server, and more) for data storage.
 
-Antes de executar o projeto, será necessário realizar uma migration através do ORM Sequelize. Dessa forma serão criadas a primeiras tabelas do projeto. Ao realizar a comando de reset, será chamado o seed do ORM, populando assim algumas tabelas:
+Before running the project, it will be necessary to perform a migration through ORM Sequelize. In this way, the first tables of the project will be created. When executing the reset command, the ORM seed will be called, thus populating some tables:
 
-Comando de execução de migration:
+Migration run command:
 
 ```bash
 npm run migrate
 ```
 
-Comando de reinicialização de tabelas e dados:
+Command to undo migrations and run again:
 
 ```bash
 npm run migrate:reset
 ```
 
-### Step5 - Execução do projeto
+### Step 5 - Run the project
 
-Executando localmente em ambiente de desenvolvimento:
+Running locally in development environment:
 
 ```bash
 npm run start:dev
 ```
 
-Executando em ambiente de produção (o código será compilado com babel na pasta dist e executado):
+Running in a production environment (the code will be transpiled in the build folder and executed):
 
 ```bash
 npm run start
 ```
 
-Ao executar localmente, por padrão a API será acessível na url http://localhost:3344.
+When running locally, by default the API will be accessible at url http://localhost:3344.
