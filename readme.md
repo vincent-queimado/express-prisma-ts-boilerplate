@@ -16,10 +16,10 @@
 ## About the boilerplate
 
 This project is a simple and complete boilerplate written in TypeScript to quickly create an Express Rest API.<br />
-Use of libraries like Sequelize ORM, log management with Morgan/Winston (logging HTTP requests and rotating log files), unit test coverage with Jest, data validation schemas with Zod, JWT authentication, and other essential packages to start a new project.<br />
+Use of libraries like Sequelize ORM, log management with Morgan/Winston (logging HTTP requests and rotating log files), unit test coverage with Jest, data validation schemas with Zod, JWT authentication, and other essential packages to start a new custom project.<br />
 The architecture resembles the basic MVC model, despite having extra layers to facilitate support and customization of the project. We integrated the Prettier and Eslint tools into the project to help us automate type-checking during Typescript code development.
 
-## how to run the project?
+## How to run the project?
 
 To install the project, follow the steps below.
 
@@ -28,8 +28,8 @@ To install the project, follow the steps below.
 First, open your terminal and type the necessary commands to download the project and access it.
 
 ```bash
-git clone https://github.com/vincent-queimado/typescript-express-boilerplate.git
-cd typescript-express-boilerplate
+$ git clone https://github.com/vincent-queimado/typescript-express-boilerplate.git
+$ cd typescript-express-boilerplate
 ```
 
 #### Step 2 - Install the project dependencies
@@ -37,7 +37,7 @@ cd typescript-express-boilerplate
 Second, make sure you install all the necessary dependencies to run the project:
 
 ```bash
-npm install
+$ npm install
 ```
 
 #### Step 3 - Configures the main variables of your project
@@ -46,12 +46,13 @@ The command below will copy the template environment variables file needed to in
 After renaming the file, open it and change the desired variables:
 
 ```bash
-cp .env.example .env
+$ cp .env.example .env
 ```
 
 Important, remember to change the variable values ​​according to your project:
 
 ```bash
+#.env
 APP_URL_HOST='localhost'
 APP_URL_PORT='3344'
 APP_URL_SSL='false'
@@ -67,13 +68,13 @@ Before running the project, it will be necessary to perform a migration through 
 Migration run command:
 
 ```bash
-npm run migrate
+$ npm run migrate
 ```
 
 Command to undo migrations and run again:
 
 ```bash
-npm run migrate:reset
+$ npm run migrate:reset
 ```
 
 Obs.: Initially, the project assumes that we will use the Postgres database by default, but feel free to change the connection data to the database of your choice.
@@ -83,13 +84,15 @@ Obs.: Initially, the project assumes that we will use the Postgres database by d
 Running locally in development environment:
 
 ```bash
-npm run start:dev
+# development (watch mode)
+$ npm run start:dev
 ```
 
 Running in a production environment (the code will be transpiled in the build folder and executed):
 
 ```bash
-npm run start
+# production mode
+$ npm run start
 ```
 
 When running locally, by default the API will be accessible at url http://localhost:3344.
