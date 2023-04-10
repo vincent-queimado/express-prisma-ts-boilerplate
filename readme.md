@@ -23,7 +23,7 @@ The architecture resembles the basic MVC model, despite having extra layers to f
 
 To install the project, follow the steps below.
 
-### Step 1 - Fork, then download or clone the repo:
+### Step 1 - Download or clone the repo
 
 ```bash
   git clone https://github.com/vincent-queimado/typescript-express-boilerplate.git
@@ -36,7 +36,7 @@ To install the project, follow the steps below.
   npm install
 ```
 
-### Step 3 - Configuration of environment variables
+### Step 3 - Configures the main variables of the project
 
 The command below will copy the template environment variables file needed to initialize the local project.<br />
 After renaming the file, open it and change the desired variables
@@ -45,7 +45,7 @@ After renaming the file, open it and change the desired variables
 cp .env.example .env
 ```
 
-### Step 4 - Database creation
+### Step 4 - Configure a database
 
 You will need to configure a SQL database supported by ORM Sequelize (Oracle, Postgres, MySQL, MariaDB, SQLite, SQL Server, and more) for data storage.
 
