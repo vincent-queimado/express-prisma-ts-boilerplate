@@ -7,7 +7,7 @@
 </div>
 
 <p align="center">
-  <span>A starter project written in TypeScript for quickly building Express RESTful APIs using ORM, loggers, schema validator, authentication, unit test coverage, and much more..</span></br>
+  <span>A starter project written in TypeScript for quickly building Express RESTful APIs using ORM, loggers, schema validator, authentication, unit test coverage, and much more.</span></br>
   <sub>Made with ❤️ by <a href="https://github.com/vincent-queimado">Vincent Jean</a></sub>
 </p>
 
@@ -40,7 +40,7 @@ Second, make sure you install all the necessary dependencies to run the project:
 $ npm install
 ```
 
-#### Step 3 - Configures the main variables of your project
+#### Step 3 - Configure your project variables
 
 The command below will copy the template environment variables file needed to initialize your project.<br />
 After renaming the file, open it and change the desired variables:
