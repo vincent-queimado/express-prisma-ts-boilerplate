@@ -40,10 +40,10 @@ Second, make sure you install all the necessary dependencies to run the project:
 npm install
 ```
 
-### Step 3 - Configures the main variables of the project
+### Step 3 - Configures the main variables of your project
 
-The command below will copy the template environment variables file needed to initialize the local project.<br />
-After renaming the file, open it and change the desired variables
+The command below will copy the template environment variables file needed to initialize your project.<br />
+After renaming the file, open it and change the desired variables:
 
 ```bash
 cp .env.example .env
@@ -58,7 +58,7 @@ APP_URL_SSL='false'
 ...
 ```
 
-### Step 4 - Configure a database
+### Step 4 - Configure your database
 
 You will need to configure a SQL database supported by ORM Sequelize (Oracle, Postgres, MySQL, MariaDB, SQLite, SQL Server, and more) for data storage.
 
@@ -75,6 +75,8 @@ Command to undo migrations and run again:
 ```bash
 npm run migrate:reset
 ```
+
+Obs.: Initially, the project assumes that we will use the Postgres database by default, but feel free to change the connection data to the database of your choice.
 
 ### Step 5 - Run the project
 
