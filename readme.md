@@ -13,7 +13,7 @@
 
 ![divider](./public/assets/images/readme-divider.png)
 
-## Introduction
+## About the boilerplate
 
 This project is a starter project written in TypeScript for quickly building an Express Rest API.<br />
 Use of libraries like Sequelize ORM, log management with Morgan/Winston (logging HTTP requests and rotating log files), unit test coverage with Jest, data validation schemas with Zod, JWT authentication, and other essential packages to start a new project.<br />
@@ -32,7 +32,7 @@ git clone https://github.com/vincent-queimado/typescript-express-boilerplate.git
 cd typescript-express-boilerplate
 ```
 
-### Step 2 - Install the project dependencies
+#### Step 2 - Install the project dependencies
 
 Second, make sure you install all the necessary dependencies to run the project:
 
@@ -40,7 +40,7 @@ Second, make sure you install all the necessary dependencies to run the project:
 npm install
 ```
 
-### Step 3 - Configures the main variables of your project
+#### Step 3 - Configures the main variables of your project
 
 The command below will copy the template environment variables file needed to initialize your project.<br />
 After renaming the file, open it and change the desired variables:
@@ -58,7 +58,7 @@ APP_URL_SSL='false'
 ...
 ```
 
-### Step 4 - Configure your database
+#### Step 4 - Configure your database
 
 You will need to configure a SQL database supported by ORM Sequelize (Oracle, Postgres, MySQL, MariaDB, SQLite, SQL Server, and more) for data storage.
 
@@ -78,7 +78,7 @@ npm run migrate:reset
 
 Obs.: Initially, the project assumes that we will use the Postgres database by default, but feel free to change the connection data to the database of your choice.
 
-### Step 5 - Finally, run the project
+#### Step 5 - Finally, run the project
 
 Running locally in development environment:
 
