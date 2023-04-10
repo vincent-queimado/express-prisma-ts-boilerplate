@@ -114,3 +114,37 @@ The API ships with several convenience commands (runnable via `npm`):
 -   `npm run migrate:undo`: run undo migration
 -   `npm run migrate:reset`: run new migration after undo migration
 -   `npm run seed`: populate database
+
+## Scope of structure
+
+API service structure summary:
+
+```
+build\                    # Transpiled TypeScript code to Javasccript
+docs\                     # Documentation / Postman collection / Readme assets
+logs\                     # Log files (generate with Winston packages)
+node_modules\             # NodeJS packages
+public\                   # Public ressources
+src\                      # Sources
+ |--api\                  # Custom MVC model with extra layers
+     |--controllers\      # Controllers
+     |--models\           # Models
+     |--presenters\       # Presenters
+     |--services\         # Services
+ |--config\               # Environment variables and configuration related things
+     |--app\              # App configuration file
+     |--database\         # Database configuration file
+     |--email\            # Email configuration file
+ |--database\             # Database connection drivers and migration files
+     |--sql\              # Sequelize ORM
+         |--db\           # Database connection
+         |--migrations\   # Database migration
+         |--seeders\      # Database seeders
+ |--middlewares\          # Middlewares (JWT auth, data validation schema, Morgan, other middlewares)
+     |--schemas\          # Data validation schema
+ |--server\               # Express server
+ |--routes\               # Custom Routes
+ |--utils\                # Utility handler, logger, mailer, etc..
+ |--app.js                # Entry point
+tests\                    # unit test coverage with Jest
+```
