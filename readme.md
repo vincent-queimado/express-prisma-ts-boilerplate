@@ -48,3 +48,33 @@ cp .env.example .env
 ### Step 4 - Database creation
 
 You will need to configure a SQL database supported by ORM Sequelize (Oracle, Postgres, MySQL, MariaDB, SQLite, SQL Server, and more) for data storage.
+
+Antes de executar o projeto, será necessário realizar uma migration através do ORM Sequelize. Dessa forma serão criadas a primeiras tabelas do projeto. Ao realizar a comando de reset, será chamado o seed do ORM, populando assim algumas tabelas:
+
+Comando de execução de migration:
+
+```bash
+npm run migrate
+```
+
+Comando de reinicialização de tabelas e dados:
+
+```bash
+npm run migrate:reset
+```
+
+### Step5 - Execução do projeto
+
+Executando localmente em ambiente de desenvolvimento:
+
+```bash
+npm run start:dev
+```
+
+Executando em ambiente de produção (o código será compilado com babel na pasta dist e executado):
+
+```bash
+npm run start
+```
+
+Ao executar localmente, por padrão a API será acessível na url http://localhost:3344.
