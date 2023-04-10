@@ -19,6 +19,11 @@ This project is a simple and complete boilerplate written in TypeScript to quick
 Use of libraries like Sequelize ORM, log management with Morgan/Winston (logging HTTP requests and rotating log files), unit test coverage with Jest, data validation schemas with Zod, JWT authentication, and other essential packages to start a new custom project.<br />
 The architecture resembles the basic MVC model, despite having extra layers to facilitate support and customization of the project. We integrated the Prettier and Eslint tools into the project to help us automate type-checking during Typescript code development.
 
+## Prerequisites
+
+-   [Node.js](https://nodejs.org/): ^18.0.0
+-   [NPM](https://npmjs.org/) or any other Node.js package manager
+
 ## How to run the project?
 
 To install the project, follow the steps below.
