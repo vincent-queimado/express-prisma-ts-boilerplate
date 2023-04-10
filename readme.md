@@ -26,14 +26,14 @@ To install the project, follow the steps below.
 ### Step 1 - Download or clone the repo
 
 ```bash
-  git clone https://github.com/vincent-queimado/typescript-express-boilerplate.git
-  cd typescript-express-boilerplate
+git clone https://github.com/vincent-queimado/typescript-express-boilerplate.git
+cd typescript-express-boilerplate
 ```
 
 ### Step 2 - Install the project dependencies
 
 ```bash
-  npm install
+npm install
 ```
 
 ### Step 3 - Configures the main variables of the project
@@ -43,6 +43,15 @@ After renaming the file, open it and change the desired variables
 
 ```bash
 cp .env.example .env
+```
+
+Change the values ​​of the variables according to your project:
+
+```bash
+APP_URL_HOST='localhost'
+APP_URL_PORT='3344'
+APP_URL_SSL='false'
+...
 ```
 
 ### Step 4 - Configure a database
