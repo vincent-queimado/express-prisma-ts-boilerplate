@@ -78,7 +78,7 @@ npm run migrate:reset
 
 Obs.: Initially, the project assumes that we will use the Postgres database by default, but feel free to change the connection data to the database of your choice.
 
-### Step 5 - Run the project
+### Step 5 - Finally, run the project
 
 Running locally in development environment:
 
