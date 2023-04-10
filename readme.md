@@ -100,3 +100,17 @@ $ npm run start
 ```
 
 When running locally, by default the API will be accessible at url http://localhost:3344.
+
+## More scripts
+
+The API ships with several convenience commands (runnable via `npm`):
+
+-   `npm run lint`: run code linting
+-   `npm run lint:fix`: automatically fix lint problems
+-   `npm run format`: automatically fix prettier problems
+-   `npm run test`: run functional tests (this requires that the server be running)
+-   `npm run test:watch`: run functional tests in watch mode
+-   `npm run migrate`: run migration
+-   `npm run migrate:undo`: run undo migration
+-   `npm run migrate:reset`: run new migration after undo migration
+-   `npm run seed`: populate database
