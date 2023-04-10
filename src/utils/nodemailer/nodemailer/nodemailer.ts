@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
-import config from '../../../config/email/_index';
-import logger from '../../winston_file_logger/winston/logger';
+import config from '@config/email/_index';
+import logger from '@utils/winston_file_logger/winston/logger';
 
 const errorSendEmail = 'Error to send e-mail.';
 

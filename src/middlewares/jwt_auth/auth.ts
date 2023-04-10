@@ -1,7 +1,7 @@
 import { Response, Request } from 'express';
 
 import presenter from './jwt/_index';
-import logger from '../../utils/winston_file_logger/winston/logger';
+import logger from '@utils/winston_file_logger/winston/logger';
 
 // Auth validate token without checking user in database (not recommended)
 const jwt = (req: Request, res: Response, next: any) => {

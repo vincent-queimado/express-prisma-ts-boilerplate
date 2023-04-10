@@ -1,8 +1,8 @@
 import colorTxt from 'ansi-colors';
 import { Sequelize, DataTypes } from 'sequelize';
 
-import config from '../../../config/database/_index';
-import logger from '../../../utils/winston_file_logger/winston/logger';
+import config from '@config/database/_index';
+import logger from '@utils/winston_file_logger/winston/logger';
 
 const database = config.database;
 const username = config.username;

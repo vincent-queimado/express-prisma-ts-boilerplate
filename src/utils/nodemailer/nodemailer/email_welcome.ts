@@ -1,8 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import nodemailer from './nodemailer';
-import config from '../../../config/email/_index';
-import globalUrl from '../../../utils/global_http_url/globalurl';
+import config from '@config/email/_index';
+import globalUrl from '@utils/global_http_url/globalurl';
 
 const htmlTemplate = '../templates/welcome.html';
 const htmlFileEncoding = 'utf-8';

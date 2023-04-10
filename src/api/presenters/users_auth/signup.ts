@@ -1,11 +1,11 @@
 import randtoken from 'rand-token';
 
-import httpMsg from '../../../utils/http_messages/http_msg';
-import servCreateUser from '../../services/users/save';
-import servUpdateUser from '../../services/users/update';
-import servFindOneUser from '../../services/users/get_by_field';
-import servHashPassword from '../../services/tools/generate_hash_password';
-import sendEmail from '../../../utils/nodemailer/nodemailer/email_verification';
+import httpMsg from '@utils/http_messages/http_msg';
+import servCreateUser from '@services/users/save';
+import servUpdateUser from '@services/users/update';
+import servFindOneUser from '@services/users/get_by_field';
+import servHashPassword from '@services/tools/generate_hash_password';
+import sendEmail from '@utils/nodemailer/nodemailer/email_verification';
 
 const errCode = 'ERROR_USER_SIGNUP';
 

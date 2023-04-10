@@ -1,4 +1,4 @@
-import config from '../../config/app/_index';
+import config from '@config/app/_index';
 
 export default () => {
     let url;

@@ -1,9 +1,9 @@
 import fs from 'fs';
 import path from 'path';
 import nodemailer from 'nodemailer';
-import config from '../../../config/email/_index';
-import logger from '../../winston_file_logger/winston/logger';
-import globalUrl from '../../global_http_url/globalurl';
+import config from '@config/email/_index';
+import logger from '@utils/winston_file_logger/winston/logger';
+import globalUrl from '@utils/global_http_url/globalurl';
 
 const htmlTemplate = '../templates/email-verification.html';
 const htmlFileEncoding = 'utf-8';

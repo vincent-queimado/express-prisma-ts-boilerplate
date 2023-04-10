@@ -15,7 +15,52 @@
     "noImplicitAny": true,
     "removeComments": true,
     "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@config/*": [
+        "./src/config/*"
+      ],
+      "@server/*": [
+        "./src/server/*"
+      ],
+      "@routes/*": [
+        "./src/routes/*"
+      ],
+      "@middlewares/*": [
+        "./src/middlewares/*"
+      ],
+      "@database/*": [
+        "./src/database/*"
+      ],
+      "@controllers/*": [
+        "./src/api/controllers/*"
+      ],
+      "@models/*": [
+        "./src/api/models/*"
+      ],
+      "@presenters/*": [
+        "./src/api/presenters/*"
+      ],
+      "@services/*": [
+        "./src/api/services/*"
+      ],
+      "@views/*": [
+        "./src/api/views/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@packagejson": [
+        "package.json"
+      ]
+    },
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "coverage",
+    "dist",
+    "doc",
+    "logs",
+    "node_modules"
+  ]
 }

@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import config from '../../../config/app/_index';
+import config from '@config/app/_index';
 
 export default async (id: number, name: string, email: string, avatar: string) => {
     const token = jwt.sign(

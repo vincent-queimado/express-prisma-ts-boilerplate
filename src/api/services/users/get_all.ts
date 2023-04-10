@@ -1,5 +1,5 @@
-import User from '../../models/users';
-import logger from '../../../utils/winston_file_logger/winston/logger';
+import User from '@models/users';
+import logger from '@utils/winston_file_logger/winston/logger';
 
 export default () => {
     const result = User.findAll()

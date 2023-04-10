@@ -1,10 +1,10 @@
 // import moment from 'moment';
 
-// import config from '../../../config/app/_index';
-import httpMsg from '../../../utils/http_messages/http_msg';
-import servUpdateUser from '../../services/users/update';
-import servFindOneUser from '../../services/users/get_by_field';
-import servHashPassword from '../../services/tools/generate_hash_password';
+// import config from '@config/app/_index';
+import httpMsg from '@utils/http_messages/http_msg';
+import servUpdateUser from '@services/users/update';
+import servFindOneUser from '@services/users/get_by_field';
+import servHashPassword from '@services/tools/generate_hash_password';
 
 const errCode = 'ERROR_USER_FORGOT_PASSWORD_RESET';
 

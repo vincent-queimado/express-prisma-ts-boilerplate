@@ -1,4 +1,4 @@
-import pkg from '../../../../package.json';
+import pkg from '@packagejson';
 
 export default () => {
     const data = {

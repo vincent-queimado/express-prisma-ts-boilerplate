@@ -1,5 +1,5 @@
-import httpMsg from '../../../utils/http_messages/http_msg';
-import findOne from '../../services/users/get_by_field.js';
+import httpMsg from '@utils/http_messages/http_msg';
+import findOne from '@services/users/get_by_field.js';
 
 const errCode = 'ERROR_USER_FIND_ME';
 

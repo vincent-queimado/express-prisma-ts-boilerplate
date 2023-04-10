@@ -1,5 +1,5 @@
-import User from '../../models/users';
-import logger from '../../../utils/winston_file_logger/winston/logger';
+import User from '@models/users';
+import logger from '@utils/winston_file_logger/winston/logger';
 
 export default (data: any, dataBy: any, excludeFields: any, findDeleted: any) => {
     let options = {};

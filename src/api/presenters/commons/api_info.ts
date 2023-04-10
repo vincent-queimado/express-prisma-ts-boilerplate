@@ -1,6 +1,6 @@
-import logger from '../../../utils/winston_file_logger/winston/logger';
-import httpMsg from '../../../utils/http_messages/http_msg';
-import apiInfo from '../../services/commons/api_info';
+import logger from '@utils/winston_file_logger/winston/logger';
+import httpMsg from '@utils/http_messages/http_msg';
+import apiInfo from '@services/commons/api_info';
 
 const lblErr = 'API Info error';
 

@@ -1,6 +1,6 @@
 import { Response, Request } from 'express';
-import presenter from '../presenters/users/_index';
-import logger from '../../utils/winston_file_logger/winston/logger';
+import presenter from '@presenters/users/_index';
+import logger from '@utils/winston_file_logger/winston/logger';
 
 const showMe = (req: Request, res: Response, next: any) => {
     presenter

@@ -1,5 +1,5 @@
 import * as bcrypt from 'bcryptjs';
-import { sequelize, DataTypes } from '../../database/sqlz/db/sequelize';
+import { sequelize, DataTypes } from '@database/sqlz/db/sequelize';
 
 const model = 'User';
 

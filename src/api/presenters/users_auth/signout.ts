@@ -1,7 +1,7 @@
-import httpMsg from '../../../utils/http_messages/http_msg';
-import servCreateUser from '../../services/users/save';
-import servFindOneUser from '../../services/users/get_by_field';
-import servCreatePassword from '../../services/tools/generate_password';
+import httpMsg from '@utils/http_messages/http_msg';
+import servCreateUser from '@services/users/save';
+import servFindOneUser from '@services/users/get_by_field';
+import servCreatePassword from '@services/tools/generate_password';
 
 const errCode = 'ERROR_USER_AUTH_SIGNOUT';
 

@@ -1,4 +1,4 @@
-import servHashPassword from './generate_hash_password';
+import servHashPassword from '@services/tools/generate_hash_password';
 
 export default async () => {
     const passwordLength = 8;

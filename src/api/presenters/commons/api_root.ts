@@ -1,6 +1,6 @@
-import logger from '../../../utils/winston_file_logger/winston/logger';
-import httpMsg from '../../../utils/http_messages/http_msg';
-import apiRoot from '../../services/commons/api_root';
+import logger from '@utils/winston_file_logger/winston/logger';
+import httpMsg from '@utils/http_messages/http_msg';
+import apiRoot from '@services/commons/api_root';
 
 const lblErr = 'Root error';
 

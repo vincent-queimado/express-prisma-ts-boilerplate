@@ -5,11 +5,11 @@ import express from 'express';
 import favicon from 'serve-favicon';
 import bodyParser from 'body-parser';
 
-import routes from '../routes/default';
-import apiRoutes from '../routes/routes';
+import routes from '@routes/default';
+import apiRoutes from '@routes/routes';
 
-import morganMiddleware from '../middlewares/morgan_logger/morgan_middleware';
-import handleError from '../middlewares/http_error_handler/error_handler';
+import morganMiddleware from '@middlewares/morgan_logger/morgan_middleware';
+import handleError from '@middlewares/http_error_handler/error_handler';
 
 const jsonLimit = '5mb';
 const publicLogs = './logs';

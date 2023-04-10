@@ -1,7 +1,7 @@
-import httpMsg from '../../../utils/http_messages/http_msg';
-import servUpdateUser from '../../services/users/update';
-import servFindOneUser from '../../services/users/get_by_field';
-import sendEmail from '../../../utils/nodemailer/nodemailer/email_welcome';
+import httpMsg from '@utils/http_messages/http_msg';
+import servUpdateUser from '@services/users/update';
+import servFindOneUser from '@services/users/get_by_field';
+import sendEmail from '@utils/nodemailer/nodemailer/email_welcome';
 
 const errCode = 'ERROR_USER_SIGNUP_CONFIRMATION';
 

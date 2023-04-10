@@ -1,6 +1,6 @@
-import httpMsg from '../../../utils/http_messages/http_msg';
-import servUpdateUser from '../../services/users/update';
-import servHashPassword from '../../services/tools/generate_hash_password';
+import httpMsg from '@utils/http_messages/http_msg';
+import servUpdateUser from '@services/users/update';
+import servHashPassword from '@services/tools/generate_hash_password';
 
 const errCode = 'ERROR_USER_UPDATE_ME';
 

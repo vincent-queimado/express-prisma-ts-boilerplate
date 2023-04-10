@@ -2,5 +2,5 @@
     "watch": ["src"],
     "ext": ".ts,.js",
     "ignore": [],
-    "exec": "npx cross-env NODE_ENV=development ts-node ./src/app.ts"
+    "exec": "npx cross-env NODE_ENV=development ts-node -r tsconfig-paths/register ./src/app.ts"
   }

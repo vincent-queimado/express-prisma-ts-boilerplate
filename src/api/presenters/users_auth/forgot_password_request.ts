@@ -1,8 +1,8 @@
 import randtoken from 'rand-token';
 
-import httpMsg from '../../../utils/http_messages/http_msg';
-import servUpdateUser from '../../services/users/update';
-import servFindOneUser from '../../services/users/get_by_field';
+import httpMsg from '@utils/http_messages/http_msg';
+import servUpdateUser from '@services/users/update';
+import servFindOneUser from '@services/users/get_by_field';
 
 const errCode = 'ERROR_USER_FORGOT_PASSWORD_REQUEST';
 
