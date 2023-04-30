@@ -66,7 +66,7 @@ If you want to continue with the PostgreSQL database but don't have the software
 
 <div align="center">
   <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-tool.jpeg?raw=true" 
-  width="500"
+  width="650"
   alt="pgAdmin-tool"/>
 </div>
 
