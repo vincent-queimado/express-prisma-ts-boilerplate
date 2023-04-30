@@ -31,17 +31,17 @@
     "scripts": {
         "build": "rimraf ./build && tsc",
         "start": "npm run build && cross-env NODE_ENV=production node build/src/app.js",
-        "start:dev": "npx nodemon",
-        "lint:check": "npx eslint src/**/*.ts",
-        "lint:fix": "npx eslint --fix src/**/*.ts",
-        "prettier:check": "npx prettier --check \"src/**/*.{js,ts}\"",
-        "prettier:write": "npx prettier --write \"src/**/*.{js,ts}\"",
+        "start:dev": "nodemon",
+        "lint:check": "eslint src/**/*.ts",
+        "lint:fix": "eslint --fix src/**/*.ts",
+        "prettier:check": "prettier --check \"src/**/*.{js,ts}\"",
+        "prettier:write": "prettier --write \"src/**/*.{js,ts}\"",
         "test": "jest -i",
         "test:watch": "jest --watch",
         "migrate": "npm run build && npx sequelize db:migrate --env \"development\"",
         "seed": "npm run build && npx sequelize db:seed:all",
         "migrate:undo": "npx sequelize db:migrate:undo:all",
-        "migrate:reset": "npm rum migrate:undo && npm run migrate && npm run seed",
+        "migrate:reset": "migrate:undo && migrate && seed",
         "husky:prepare": "husky install && npx husky add .husky/pre-commit \"npx lint-staged\""
     },
     "devDependencies": {
@@ -60,6 +60,9 @@
         "@types/uuid": "^9.0.1",
         "@typescript-eslint/eslint-plugin": "^5.53.0",
         "@typescript-eslint/parser": "^5.53.0",
+        "commitizen": "^4.3.0",
+        "cz-conventional-changelog": "^3.3.0",
+        "cz-git": "^1.6.1",
         "eslint": "^8.35.0",
         "eslint-config-prettier": "^8.6.0",
         "eslint-plugin-jest": "^27.2.1",
@@ -111,10 +114,16 @@
             "pre-commit": "lint-staged"
         }
     },
+    "config": {
+        "commitizen": {
+          "path": "cz-conventional-changelog"
+        }
+    },
     "lint-staged": {
         "src/**/*.{ts, js}": [
             "npm run lint:fix",
-            "npm run prettier:write"
+            "npm run prettier:write",
+            "git-cz"
         ]
     }
 }
