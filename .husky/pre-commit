@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-FORCE_COLOR=0 npx lint-staged
+echo 'running pre-commiting checks...'
+npx lint-staged
