@@ -13,7 +13,7 @@
 
 ![divider](./public/assets/images/readme-divider.png)
 
-## About the boilerplate
+## :blue_heart: About the boilerplate
 
 This project is a simple and complete boilerplate written in TypeScript to quickly create an Express Rest API.<br />
 Use of libraries like Sequelize ORM, log management with Morgan/Winston (logging HTTP requests and rotating log files), unit test coverage with Jest, data validation schemas with Zod, JWT authentication, and other essential packages to start a new custom project.<br />
@@ -28,10 +28,10 @@ The architecture resembles the basic MVC model, despite having extra layers to f
 -   [Prettier](https://prettier.io/)
 -   [Jest](https://jestjs.io/pt-BR/)
 -   [Husky](https://github.com/typicode/husky)
--   [lint-staged](https://github.com/okonet/lint-staged)
+-   [Lint-staged](https://github.com/okonet/lint-staged)
 -   [commitizen](https://github.com/commitizen/cz-cli)
 
-## Getting Started
+## :zap: Getting Started
 
 To install the project, follow the steps below.
 
