@@ -61,9 +61,7 @@ $ npm install
 
 #### Step 3 - Create a Database
 
-##### Option 1 - Download pgAdmin (web based administration tool for PostgreSQL)
-
-###### Install PgAdmin
+#### Option 1 - Download and install pgAdmin (web based administration tool for PostgreSQL)
 
 You will need to configure an SQL database supported by the project's ORM in order to perform the data storage. By default the boilerplate uses a demo connection to the PostgreSql database, but it can be changed to another database supported by the Prisma ORM. If you want to install another database, skip steps 3 and 4.
 
@@ -77,7 +75,7 @@ If you want to continue with the PostgreSQL database but don't have the software
   alt="pgAdmin-tool"/>
 </div>
 
-###### Create a PostgreSQL server instance
+##### Create a PostgreSQL server instance
 
 Run `pgAdmin`. Right-click on the item Servers, select `Create` -> `Server` and provide the connection to your PostgreSQL instance configured in the pgAdmin installation step. In the default PostgreSQL setup, the administrator user is postgres with an empty password. In the connection tab be sure to have the host set to localhost. Click `Save` afterwards.
 
@@ -87,7 +85,7 @@ Run `pgAdmin`. Right-click on the item Servers, select `Create` -> `Server` and 
   alt="pgAdmin-create-server-instance"/>
 </div>
 
-### Option 2 - Heroku plugin
+#### Option 2 - Heroku Postgres add-on
 
 #### Step 5 - Configure your project variables
 
