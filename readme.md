@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme-header.png?raw=true" alt="readme-header"/>
+  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/readme-header.png?raw=true" alt="readme-header"/>
 </div>
 
 <div align="center">
@@ -11,7 +11,7 @@
   <sub>Made with ❤️ by <a href="https://github.com/vincent-queimado">Vincent Jean</a></sub>
 </p>
 
-![divider](./public/assets/images/readme-divider.png)
+![divider](https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/readme-divider.png)
 
 ## :blue_heart: About the boilerplate
 
@@ -67,7 +67,9 @@ If you do not already have the software, download PostgreSQL and pgAdmin and ins
 Run pgAdmin. Right-click on the item Servers, select Create -> Server and provide the connection to your PostgreSQL instance set up in step 1. In the default PostgreSQL setup, the administrator user is postgres with an empty password. In the connection tab be sure to have the host set to localhost. Click Save afterwards.
 
 <div align="center">
-  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/psql_create_server.png" alt="readme-header"/>
+  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/psql_create_server.png?raw=true" 
+  width="200"
+  alt="readme-header"/>
 </div>
 
 #### Configure your project variables
