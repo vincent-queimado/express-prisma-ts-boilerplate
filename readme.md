@@ -22,6 +22,7 @@ The architecture resembles the basic MVC model, despite having extra layers to f
 ## :rocket: Technologies
 
 -   [Node.js](https://nodejs.org/en/)
+-   [Express](https://expressjs.com/)
 -   [TypeScript](https://www.typescriptlang.org/)
 -   [ESLint](https://eslint.org/)
 -   [Prettier](https://prettier.io/)
