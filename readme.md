@@ -47,7 +47,7 @@ $ git clone https://github.com/vincent-queimado/typescript-express-boilerplate.g
 
 #### Step 2 - Install the project dependencies
 
-Second, in your terminal, make sure you install all the necessary dependencies to run the project:
+Second, in your terminal, make sure you install all the necessary dependencies to run the project.
 
 > [NodeJS](https://nodejs.dev/) is required
 
@@ -58,11 +58,17 @@ $ npm install
 
 #### Step 3 - Download pgAdmin for the PostgreSQL Database (web based administration tool for PostgreSQL)
 
-You will need to configure an SQL database supported by the project's ORM in order to perform the data storage.By default the boilerplate uses a demo connection to the PostgreSql database, but it can be changed to another database supported by the ORM
+You will need to configure an SQL database supported by the project's ORM in order to perform the data storage.By default the boilerplate uses a demo connection to the PostgreSql database, but it can be changed to another database supported by the ORM. If you want to install another database, skip steps 3 and 4.
 
 If you want to continue with the PostgreSQL database but don't have the software yet, then download PostgreSQL and pgAdmin now and install them.
 
-[PostgreSQL](https://www.postgresql.org/download/) downloads page
+[PostgreSQL](https://www.postgresql.org/download/) downloads page.
+
+<div align="center">
+  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-tool.jpg?raw=true" 
+  width="380"
+  alt="pgAdmin-tool"/>
+</div>
 
 #### Step 4 - Create a PostgreSQL server instance
 
