@@ -108,14 +108,13 @@
     },
     "husky": {
         "hooks": {
-          "pre-commit": "lint-staged"
+            "pre-commit": "lint-staged"
         }
     },
     "lint-staged": {
         "*.ts": [
             "npm run lint:fix",
-            "npm run prettier:write",
-            "git add"
+            "npm run prettier:write"
         ]
     }
 }
