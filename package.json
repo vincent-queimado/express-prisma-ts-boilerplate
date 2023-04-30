@@ -63,7 +63,7 @@
         "@typescript-eslint/eslint-plugin": "^5.53.0",
         "@typescript-eslint/parser": "^5.53.0",
         "commitizen": "4.3.0",
-        "cz-conventional-changelog": "3.3.0",
+        "cz-conventional-changelog": "^3.3.0",
         "cz-git": "^1.6.1",
         "eslint": "^8.35.0",
         "eslint-config-prettier": "^8.6.0",
@@ -120,12 +120,15 @@
     },
     "config": {
         "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
+            "path": "cz-conventional-changelog"
         }
     },
     "lint-staged": {
-        "src/**/*.{ts, js, json, md}": [
+        "*.{ts, js}": [
             "npm run lint:fix",
+            "npm run prettier:write"
+        ],
+        "*.{json, md}": [
             "npm run prettier:write"
         ]
     }
