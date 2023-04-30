@@ -29,36 +29,47 @@ The architecture resembles the basic MVC model, despite having extra layers to f
 -   [Jest](https://jestjs.io/pt-BR/)
 -   [Husky](https://github.com/typicode/husky)
 -   [lint-staged](https://github.com/okonet/lint-staged)
--   [commitlint](https://github.com/conventional-changelog/commitlint)
 -   [commitizen](https://github.com/commitizen/cz-cli)
 
-## Prerequisites
-
--   [Node.js](https://nodejs.org/): ^18.0.0
--   [NPM](https://npmjs.org/) or any other Node.js package manager
-
-## Getting Start
+## Getting Started
 
 To install the project, follow the steps below.
 
-#### Step 1 - Fork and clone the git repository
+#### Clone the Git repository
 
 First, open your terminal and type the necessary commands to download the project and access it.
 
+> [NodeJS](https://nodejs.dev/) is required
+
 ```bash
 $ git clone https://github.com/vincent-queimado/typescript-express-boilerplate.git
-$ cd typescript-express-boilerplate
 ```
 
-#### Step 2 - Install the project dependencies
+#### Install the project dependencies
 
 Second, make sure you install all the necessary dependencies to run the project:
 
 ```bash
+$ cd typescript-express-boilerplate
 $ npm install
 ```
 
-#### Step 3 - Configure your project variables
+#### Download pgAdmin for the PostgreSQL Database (web based administration tool for PostgreSQL)
+
+If you do not already have the software, download PostgreSQL and pgAdmin and install them.
+
+[PostgreSQL](https://www.postgresql.org/download/) downloads page
+
+#### Create a PostgreSQL server instance
+
+Run pgAdmin. Right-click on the item Servers, select Create -> Server and provide the connection to your PostgreSQL instance set up in step 1. In the default PostgreSQL setup, the administrator user is postgres with an empty password. In the connection tab be sure to have the host set to localhost. Click Save afterwards.
+
+required fields:
+
+-   name
+-   HOST name/address
+
+#### Configure your project variables
 
 In the new folder you will find a `.env.example` file, duplicate it and rename it to `.env` only. The command below will copy the template environment variables file needed to initialize your project.<br />
 
@@ -76,7 +87,7 @@ APP_URL_SSL='false'
 ...
 ```
 
-#### Step 4 - Configure your database
+#### Configure your database
 
 You will need to configure a SQL database supported by ORM Sequelize (Oracle, Postgres, MySQL, MariaDB, SQLite, SQL Server, and more) for data storage.
 

@@ -46,11 +46,9 @@
         "migrate:reset": "migrate:undo && migrate && seed",
         "husky:prepare": "husky install && npx husky add .husky/pre-commit \"npx lint-staged\"",
         "precommit": "lint-staged",
-        "commit": "git add . && cz"
+        "commit": "git add . && git-cz"
     },
     "devDependencies": {
-        "@commitlint/cli": "^17.6.1",
-        "@commitlint/config-conventional": "^17.6.1",
         "@types/bcryptjs": "^2.4.2",
         "@types/cors": "^2.8.13",
         "@types/express": "^4.17.17",
@@ -68,7 +66,6 @@
         "@typescript-eslint/parser": "^5.53.0",
         "commitizen": "4.3.0",
         "cz-conventional-changelog": "^3.3.0",
-        "cz-git": "^1.6.1",
         "eslint": "^8.35.0",
         "eslint-config-prettier": "^8.6.0",
         "eslint-plugin-jest": "^27.2.1",
@@ -116,9 +113,9 @@
         "winston": "^3.8.2",
         "winston-daily-rotate-file": "^4.7.1"
     },
-    "config": {
-        "commitizen": {
-            "path": "cz-conventional-changelog"
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
         }
     },
     "lint-staged": {
@@ -129,5 +126,10 @@
         "**/*.{json, md}": [
             "npm run prettier:write"
         ]
+    },
+    "config": {
+        "commitizen": {
+            "path": "cz-conventional-changelog"
+        }
     }
 }
