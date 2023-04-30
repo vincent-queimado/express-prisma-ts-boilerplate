@@ -1,8 +1,15 @@
+# Nodejs
+node_modules
 package-lock.json
-node_modules/
-coverage/
-build/
-logs/
+
+# Build
+build
+
+# Unit Test
+coverage
+
+# Logs
+logs
 
 # Keep environment variables out of version control
 .env

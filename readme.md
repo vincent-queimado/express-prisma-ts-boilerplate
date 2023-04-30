@@ -19,6 +19,18 @@ This project is a simple and complete boilerplate written in TypeScript to quick
 Use of libraries like Sequelize ORM, log management with Morgan/Winston (logging HTTP requests and rotating log files), unit test coverage with Jest, data validation schemas with Zod, JWT authentication, and other essential packages to start a new custom project.<br />
 The architecture resembles the basic MVC model, despite having extra layers to facilitate support and customization of the project. We integrated the Prettier and Eslint tools into the project to help us automate type-checking during Typescript code development.
 
+## :rocket: Technologies
+
+-   [Node.js](https://nodejs.org/en/)
+-   [TypeScript](https://www.typescriptlang.org/)
+-   [ESLint](https://eslint.org/)
+-   [Prettier](https://prettier.io/)
+-   [Jest](https://jestjs.io/pt-BR/)
+-   [Husky](https://github.com/typicode/husky)
+-   [lint-staged](https://github.com/okonet/lint-staged)
+-   [commitlint](https://github.com/conventional-changelog/commitlint)
+-   [commitizen](https://github.com/commitizen/cz-cli)
+
 ## Prerequisites
 
 -   [Node.js](https://nodejs.org/): ^18.0.0
