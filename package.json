@@ -62,14 +62,15 @@
         "@types/uuid": "^9.0.1",
         "@typescript-eslint/eslint-plugin": "^5.53.0",
         "@typescript-eslint/parser": "^5.53.0",
-        "commitizen": "^4.3.0",
-        "cz-conventional-changelog": "^3.3.0",
+        "commitizen": "4.3.0",
+        "cz-conventional-changelog": "3.3.0",
         "cz-git": "^1.6.1",
         "eslint": "^8.35.0",
         "eslint-config-prettier": "^8.6.0",
         "eslint-plugin-jest": "^27.2.1",
         "eslint-plugin-prettier": "^4.2.1",
         "husky": "^8.0.3",
+        "init": "0.1.2",
         "jest": "^29.4.3",
         "lint-staged": "^13.1.4",
         "nodemon": "^2.0.20",
@@ -113,16 +114,18 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run lint-staged"
+            "pre-commit": "npm run lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
         }
     },
     "config": {
         "commitizen": {
-          "path": "cz-conventional-changelog"
+            "path": "./node_modules/cz-conventional-changelog"
         }
     },
     "lint-staged": {
-        "src/**/*.{ts, js}": [
+        "src/**/*.{ts, js, json, md}": [
             "npm run lint:fix",
             "npm run prettier:write"
         ]
