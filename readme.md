@@ -65,8 +65,8 @@ If you want to continue with the PostgreSQL database but don't have the software
 [PostgreSQL](https://www.postgresql.org/download/) downloads page.
 
 <div align="center">
-  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-tool.jpg?raw=true" 
-  width="380"
+  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-tool.jpeg?raw=true" 
+  width="500"
   alt="pgAdmin-tool"/>
 </div>
 
