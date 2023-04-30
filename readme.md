@@ -24,7 +24,7 @@ The architecture resembles the basic MVC model, despite having extra layers to f
 -   [Node.js](https://nodejs.org/): ^18.0.0
 -   [NPM](https://npmjs.org/) or any other Node.js package manager
 
-## How to run the project?
+## Getting start
 
 To install the project, follow the steps below.
 
