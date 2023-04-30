@@ -16,20 +16,23 @@
 ## :blue_heart: About the boilerplate
 
 This project is a simple and complete boilerplate written in TypeScript to quickly create an Express Rest API.<br />
-Use of libraries like Sequelize ORM, log management with Morgan/Winston (logging HTTP requests and rotating log files), unit test coverage with Jest, data validation schemas with Zod, JWT authentication, and other essential packages to start a new custom project.<br />
+Use of libraries like Prisma ORM, log management with Morgan/Winston (logging HTTP requests and rotating log files), unit test coverage with Jest, data validation schemas with Zod, JWT authentication, and other essential packages to start a new custom project.<br />
 The architecture resembles the basic MVC model, despite having extra layers to facilitate support and customization of the project. We integrated the Prettier and Eslint tools into the project to help us automate type-checking during Typescript code development.
+
+This repo is functionality complete.
 
 ## :rocket: Technologies
 
 -   [Node.js](https://nodejs.org/en/)
 -   [Express](https://expressjs.com/)
 -   [TypeScript](https://www.typescriptlang.org/)
+-   [Prisma](https://www.prisma.io/docs/getting-started)
 -   [ESLint](https://eslint.org/)
 -   [Prettier](https://prettier.io/)
 -   [Jest](https://jestjs.io/pt-BR/)
 -   [Husky](https://github.com/typicode/husky)
 -   [Lint-staged](https://github.com/okonet/lint-staged)
--   [commitizen](https://github.com/commitizen/cz-cli)
+-   [Commitizen](https://github.com/commitizen/cz-cli)
 
 ## :zap: Getting Started
 
@@ -62,7 +65,7 @@ You will need to configure an SQL database supported by the project's ORM in ord
 
 If you want to continue with the PostgreSQL database but don't have the software yet, then download PostgreSQL and pgAdmin now and install them.
 
-[PostgreSQL](https://www.postgresql.org/download/) downloads page.
+> [PostgreSQL](https://www.postgresql.org/download/) is required
 
 <div align="center">
   <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-tool.jpeg?raw=true" 
@@ -183,3 +186,7 @@ src\                      # Sources
  |--app.js                # Entry point
 tests\                    # unit test coverage with Jest
 ```
+
+## Deploy to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
