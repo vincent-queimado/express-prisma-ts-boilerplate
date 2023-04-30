@@ -64,10 +64,9 @@ If you do not already have the software, download PostgreSQL and pgAdmin and ins
 
 Run pgAdmin. Right-click on the item Servers, select Create -> Server and provide the connection to your PostgreSQL instance set up in step 1. In the default PostgreSQL setup, the administrator user is postgres with an empty password. In the connection tab be sure to have the host set to localhost. Click Save afterwards.
 
-required fields:
-
--   name
--   HOST name/address
+<div align="center">
+  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/psql_create_server.png" alt="readme-header"/>
+</div>
 
 #### Configure your project variables
 
