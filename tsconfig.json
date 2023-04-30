@@ -1,66 +1,37 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "target": "es2017",
-    "lib": ["es6"],
-    "module": "commonjs",                                
-    "types": ["node", "jest"],
-    "resolveJsonModule": true,
-    "moduleResolution": "node",
-    "allowJs": true,
-    "outDir": "./build",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "removeComments": true,
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@config/*": [
-        "./src/config/*"
-      ],
-      "@server/*": [
-        "./src/server/*"
-      ],
-      "@routes/*": [
-        "./src/routes/*"
-      ],
-      "@middlewares/*": [
-        "./src/middlewares/*"
-      ],
-      "@database/*": [
-        "./src/database/*"
-      ],
-      "@controllers/*": [
-        "./src/api/controllers/*"
-      ],
-      "@models/*": [
-        "./src/api/models/*"
-      ],
-      "@presenters/*": [
-        "./src/api/presenters/*"
-      ],
-      "@services/*": [
-        "./src/api/services/*"
-      ],
-      "@views/*": [
-        "./src/api/views/*"
-      ],
-      "@utils/*": [
-        "./src/utils/*"
-      ],
-      "@packagejson": [
-        "package.json"
-      ]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "target": "es2017",
+        "lib": ["es6"],
+        "module": "commonjs",
+        "types": ["node", "jest"],
+        "resolveJsonModule": true,
+        "moduleResolution": "node",
+        "allowJs": true,
+        "outDir": "./build",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "skipLibCheck": true,
+        "baseUrl": ".",
+        "paths": {
+            "@config/*": ["./src/config/*"],
+            "@server/*": ["./src/server/*"],
+            "@routes/*": ["./src/routes/*"],
+            "@middlewares/*": ["./src/middlewares/*"],
+            "@database/*": ["./src/database/*"],
+            "@controllers/*": ["./src/api/controllers/*"],
+            "@models/*": ["./src/api/models/*"],
+            "@presenters/*": ["./src/api/presenters/*"],
+            "@services/*": ["./src/api/services/*"],
+            "@views/*": ["./src/api/views/*"],
+            "@utils/*": ["./src/utils/*"],
+            "@doc/*": ["./doc/*"],
+            "@packagejson": ["package.json"]
+        }
     },
-  },
-  "include": ["src/**/*"],
-  "exclude": [
-    "coverage",
-    "dist",
-    "doc",
-    "logs",
-    "node_modules"
-  ]
+    "include": ["src/**/*"],
+    "exclude": ["coverage", "dist", "doc", "logs", "tests", "node_modules"]
 }

@@ -14,7 +14,7 @@ export default async () => {
     let serverConnections: any;
     serverConnections = [];
 
-    const server = await createServer(app(), serverSsl);
+    const server = createServer(app(), serverSsl);
 
     server.listen(serverPort);
 
