@@ -114,8 +114,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "npm run lint-staged",
-            "prepare-commit-msg": "git cz --hook || true"
+            "pre-commit": "npm run lint-staged"
         }
     },
     "config": {
