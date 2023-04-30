@@ -44,7 +44,7 @@
         "migrate:reset": "migrate:undo && migrate && seed",
         "husky:prepare": "husky install && npx husky add .husky/pre-commit \"npx lint-staged\"",
         "precommit": "lint-staged",
-        "commit": "git-cz"
+        "commit": "git add . && git-cz"
     },
     "devDependencies": {
         "@types/bcryptjs": "^2.4.2",
