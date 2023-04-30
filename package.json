@@ -42,7 +42,9 @@
         "seed": "npm run build && npx sequelize db:seed:all",
         "migrate:undo": "npx sequelize db:migrate:undo:all",
         "migrate:reset": "migrate:undo && migrate && seed",
-        "husky:prepare": "husky install && npx husky add .husky/pre-commit \"npx lint-staged\""
+        "husky:prepare": "husky install && npx husky add .husky/pre-commit \"npx lint-staged\"",
+        "precommit": "lint-staged",
+        "commit": "git-cz"
     },
     "devDependencies": {
         "@types/bcryptjs": "^2.4.2",
@@ -111,7 +113,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged"
+            "pre-commit": "npm run lint-staged"
         }
     },
     "config": {
@@ -122,8 +124,7 @@
     "lint-staged": {
         "src/**/*.{ts, js}": [
             "npm run lint:fix",
-            "npm run prettier:write",
-            "git-cz"
+            "npm run prettier:write"
         ]
     }
 }
