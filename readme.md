@@ -35,7 +35,7 @@ The architecture resembles the basic MVC model, despite having extra layers to f
 
 To install the project, follow the steps below.
 
-#### Clone the Git repository
+#### Step 1 - Clone the Git repository
 
 First, open your terminal and type the necessary command to download the project and access it.
 
@@ -45,7 +45,7 @@ First, open your terminal and type the necessary command to download the project
 $ git clone https://github.com/vincent-queimado/typescript-express-boilerplate.git
 ```
 
-#### Install the project dependencies
+#### Step 2 - Install the project dependencies
 
 Second, in your terminal, make sure you install all the necessary dependencies to run the project:
 
@@ -56,23 +56,25 @@ $ cd typescript-express-boilerplate
 $ npm install
 ```
 
-#### Download pgAdmin for the PostgreSQL Database (web based administration tool for PostgreSQL)
+#### Step 3 - Download pgAdmin for the PostgreSQL Database (web based administration tool for PostgreSQL)
 
-If you do not already have the software, download PostgreSQL and pgAdmin and install them.
+You will need to configure an SQL database supported by the project's ORM in order to perform the data storage.By default the boilerplate uses a demo connection to the PostgreSql database, but it can be changed to another database supported by the ORM
+
+If you want to continue with the PostgreSQL database but don't have the software yet, then download PostgreSQL and pgAdmin now and install them.
 
 [PostgreSQL](https://www.postgresql.org/download/) downloads page
 
-#### Create a PostgreSQL server instance
+#### Step 4 - Create a PostgreSQL server instance
 
 Run `pgAdmin`. Right-click on the item Servers, select `Create` -> `Server` and provide the connection to your PostgreSQL instance configured in the pgAdmin installation step. In the default PostgreSQL setup, the administrator user is postgres with an empty password. In the connection tab be sure to have the host set to localhost. Click `Save` afterwards.
 
 <div align="center">
   <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/psql_create_server.png?raw=true" 
-  width="400"
-  alt="readme-header"/>
+  width="380"
+  alt="pgAdmin-create-server-instance"/>
 </div>
 
-#### Configure your project variables
+#### Step 5 - Configure your project variables
 
 In the new folder you will find a `.env.example` file, duplicate it and rename it to `.env` only. The command below will copy the template environment variables file needed to initialize your project.<br />
 
