@@ -83,6 +83,12 @@ Running locally in development environment:
 # development (watch mode)
 $ npm run start:dev
 ```
+When running locally, by default the API will be accessible at url http://localhost:3344 as illustrated below.
+<div align="left">
+  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/api-running.png?raw=true" 
+  width="450"
+  alt="console-api-running"/>
+</div>
 
 Running in a production environment (the code will be transpiled in the build folder and executed):
 
@@ -90,14 +96,6 @@ Running in a production environment (the code will be transpiled in the build fo
 # production mode
 $ npm run start
 ```
-
-When running locally, by default the API will be accessible at url http://localhost:3344.
-
-<div align="left">
-  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/api-running.png?raw=true" 
-  width="450"
-  alt="console-api-running"/>
-</div>
 
 ## :electric_plug: Configure a Database
 
