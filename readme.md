@@ -92,7 +92,7 @@ When running locally, by default the API will be accessible at url http://localh
 
 <div align="left">
   <kbd>
-    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/api-running.png?raw=true" 
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/readme-api-running.png?raw=true" 
     width="450"
     alt="console-api-running"/>
   </kbd>
@@ -147,7 +147,7 @@ Run `pgAdmin`. Right-click on the item `Servers`, select `Create` -> `Server` an
 
 <div align="left">
   <kbd>
-    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgadmin-database.png?raw=true" 
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgadmin-create-database.png?raw=true" 
     width="380"
     alt="pgadmin-create-database"/>
   </kbd>
