@@ -114,7 +114,7 @@ You will need to configure an SQL database supported by the project's ORM in ord
 
 If you want to continue with the PostgreSQL database but don't already have the software, download pgAdmin now or use the Heroku Posgres cloud add-on.
 
-### Option 1 - From the PostgreSQL web based administration tool (pgAdmin)
+### Option 1 - Create your database from the pgAdmin tool
 
 #### Download and install pgAdmin
 
@@ -133,20 +133,24 @@ Download and install the [pgAdmin](https://www.pgadmin.org/download/) tool for [
 Run `pgAdmin`. Right-click on the item Servers, select `Create` -> `Server` and provide the connection to your PostgreSQL instance configured in the pgAdmin installation step. In the default PostgreSQL setup, the administrator user is postgres with an empty password. In the connection tab be sure to have the host set to localhost. Click `Save` afterwards.
 
 <div align="left">
-  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-create-server.png?raw=true" 
-  width="380"
-  alt="pgAdmin-create-server-instance"/>
+  <kbd>
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-create-server.png?raw=true" 
+    width="380"
+    alt="pgAdmin-create-server-instance"/>
+  </kbd>
 </div>
 <br/>
 
-### Option 2 - From Heroku Postgres add-on
+### Option 2 - Create your database from Heroku Postgres add-on
 
 [Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) is a managed SQL database service provided directly by [Heroku](https://signup.heroku.com/)
 
 <div align="left">
-  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/heroku/heroku-postgres-add-on.png?raw=true" 
-  width="380"
-  alt="heroku-postgres-add-on"/>
+  <kbd>
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/heroku/heroku-postgres-add-on.png?raw=true" 
+    width="380"
+    alt="heroku-postgres-add-on"/>
+  </kbd>
 </div>
 
 The first step to creating a free PostgreSQL database is to log in to Heroku.
