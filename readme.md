@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <h1>Express RESTful API boilerplate using TypeScript<br/>(Express + Typescript + Sequelize + Jest)</h1>
+  <h1>Express RESTful API boilerplate using TypeScript<br/>(Express + Typescript + Prisma + Jest)</h1>
 </div>
 
 <p align="center">
