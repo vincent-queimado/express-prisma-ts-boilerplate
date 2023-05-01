@@ -118,7 +118,7 @@ If you want to continue with the PostgreSQL database but don't already have the 
 
 Download and install the [pgAdmin](https://www.pgadmin.org/download/) tool for [PostgreSQL](https://www.postgresql.org/download/) database management.
 
-<div align="center">
+<div align="left">
   <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-tool.jpeg?raw=true" 
   width="650"
   alt="pgAdmin-tool"/>
@@ -128,7 +128,7 @@ Download and install the [pgAdmin](https://www.pgadmin.org/download/) tool for [
 
 Run `pgAdmin`. Right-click on the item Servers, select `Create` -> `Server` and provide the connection to your PostgreSQL instance configured in the pgAdmin installation step. In the default PostgreSQL setup, the administrator user is postgres with an empty password. In the connection tab be sure to have the host set to localhost. Click `Save` afterwards.
 
-<div align="center">
+<div align="left">
   <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/psql_create_server.png?raw=true" 
   width="380"
   alt="pgAdmin-create-server-instance"/>
@@ -137,10 +137,17 @@ Run `pgAdmin`. Right-click on the item Servers, select `Create` -> `Server` and 
 
 ### Option 2 - From Heroku Postgres add-on
 
-Log into Heroku. The first step to creating a free PostgreSQL database is to log in to Heroku. ...
-Create a new Heroku app. Once logged in to Heroku, navigate to the personal app dashboard to create a new Heroku app. ...
-Add a PostgreSQL database. ...
-Access the database credentials.
+[Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) is a managed SQL database service provided directly by [Heroku](https://signup.heroku.com/)
+
+<div align="left">
+  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/heroku-postgres-add-on.png?raw=true" 
+  width="380"
+  alt="heroku-postgres-add-on"/>
+</div>
+
+The first step to creating a free PostgreSQL database is to log in to Heroku.
+Once logged in to Heroku, navigate to the personal app dashboard to create a new Heroku app.
+Add a PostgreSQL database and Access the database credentials.
 
 ## Initialize your database
 
