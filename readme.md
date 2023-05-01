@@ -30,10 +30,14 @@ This repo is functionality complete.
 [![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)](https://eslint.org/)
 [![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)](https://prettier.io/)
 
--   [Jest](https://jestjs.io/pt-BR/)
--   [Husky](https://github.com/typicode/husky)
--   [Lint-staged](https://github.com/okonet/lint-staged)
--   [Commitizen](https://github.com/commitizen/cz-cli)
+[![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
+[![Husky](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)](https://github.com/typicode/husky)
+[![Lint-staged](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)](https://github.com/okonet/lint-staged)
+[![Commitizen](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)](https://github.com/commitizen/cz-cli)
+
+
+https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white
+
 
 ## :zap: Getting Started
 
