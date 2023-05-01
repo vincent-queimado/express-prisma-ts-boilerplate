@@ -141,7 +141,7 @@ Run `pgAdmin`. Right-click on the item Servers, select `Create` -> `Server` and 
 </div>
 <br/>
 
-### Option 2 - Create your database from Heroku Postgres add-on
+### Option 2 - Create your database from Heroku with Heroku Postgres add-on
 
 [Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) is a managed SQL database service provided directly by the cloud plataform [Heroku], bypassing all those infrastructure headaches(https://signup.heroku.com/).
 
