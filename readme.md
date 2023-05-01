@@ -89,7 +89,7 @@ When running locally, by default the API will be accessible at url http://localh
   width="450"
   alt="console-api-running"/>
 </div>
-
+</br>
 Running in a production environment (the code will be transpiled in the build folder and executed):
 
 ```bash
