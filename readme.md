@@ -128,7 +128,6 @@ If you want to continue with the PostgreSQL database but don't have the software
 </div>
   
 </details>
-<br/>
 <details>
 <summary>
   <strong>Create a PostgreSQL server instance</strong>
