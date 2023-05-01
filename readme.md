@@ -22,7 +22,7 @@ Use of libraries like **Prisma ORM**, log management with **Morgan/Winston** (lo
 The architecture resembles the basic MVC model, despite having extra layers to facilitate support and customization of the project. We integrated the Prettier and Eslint tools into the project to help us automate type-checking during Typescript code development.
 
 This repo is functionality complete.
-<br/>
+<br/><br/>
 
 
 
