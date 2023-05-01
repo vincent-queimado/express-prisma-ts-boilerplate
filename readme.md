@@ -56,7 +56,7 @@ $ git clone https://github.com/vincent-queimado/typescript-express-boilerplate.g
 
 ### Step 2 - Install the project dependencies
 
-Second, to run this application, you'll need [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. Make sure you install all the necessary dependencies to run the project from your command line:
+To run this application, you'll need [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. Make sure you install all the necessary dependencies to run the project from your command line:
 
 ```bash
 $ cd typescript-express-boilerplate
@@ -65,7 +65,7 @@ $ npm install
 
 ### Step 3 - Configure your project variables
 
-In the new folder you will find a `.env.example` file, duplicate it and rename it to `.env` only. The command below will copy the template environment variables file needed to initialize your project.<br />
+In the project folder you will find a `.env.example` file, duplicate it and rename it to `.env` only. The command below will copy the template environment variables file needed to initialize your project.<br />
 
 ```bash
 $ cp .env.example .env
