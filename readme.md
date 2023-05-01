@@ -122,9 +122,9 @@ Download and install the [pgAdmin](https://www.pgadmin.org/download/) tool for [
 
 <div align="left">
   <kbd>
-    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-tool.jpeg?raw=true" 
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgadmin-tool.jpeg?raw=true" 
     width="650"
-    alt="pgAdmin-tool"/>
+    alt="pgadmin-tool"/>
   </kbd>
 </div>
   
@@ -134,9 +134,22 @@ Run `pgAdmin`. Right-click on the item `Servers`, select `Create` -> `Server` an
 
 <div align="left">
   <kbd>
-    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-create-server.png?raw=true" 
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgadmin-create-server.png?raw=true" 
     width="380"
-    alt="pgAdmin-create-server-instance"/>
+    alt="pgadmin-create-server-instance"/>
+  </kbd>
+</div>
+<br/>
+
+#### Create a PostgreSQL database
+
+Run `pgAdmin`. Right-click on the item `Servers`, select `Create` -> `Server` and provide the connection to your PostgreSQL instance configured in the pgAdmin installation step. On the connection tab, make sure you have filled in the host as localhost as well as the access credentials. Click `Save` afterwards.
+
+<div align="left">
+  <kbd>
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgadmin-database.png?raw=true" 
+    width="380"
+    alt="pgadmin-create-database"/>
   </kbd>
 </div>
 <br/>
