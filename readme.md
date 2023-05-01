@@ -122,7 +122,7 @@ Download and install the [pgAdmin](https://www.pgadmin.org/download/) tool for [
 
 <div align="left">
   <kbd>
-    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgadmin-tool.jpeg?raw=true" 
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgadmin/pgadmin-tool.jpeg?raw=true" 
     width="650"
     alt="pgadmin-tool"/>
   </kbd>
@@ -134,7 +134,7 @@ Run `pgAdmin`. Right-click on the item `Servers`, select `Create` -> `Server` an
 
 <div align="left">
   <kbd>
-    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgadmin-create-server.png?raw=true" 
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgadmin/pgadmin-create-server.png?raw=true" 
     width="380"
     alt="pgadmin-create-server-instance"/>
   </kbd>
@@ -147,7 +147,7 @@ Run `pgAdmin`. Right-click on the item `Servers`, select `Create` -> `Server` an
 
 <div align="left">
   <kbd>
-    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgadmin-create-database.png?raw=true" 
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgadmin/pgadmin-create-database.png?raw=true" 
     width="380"
     alt="pgadmin-create-database"/>
   </kbd>
