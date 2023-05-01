@@ -121,6 +121,7 @@ Download and install the [pgAdmin](https://www.pgadmin.org/download/) tool for [
 <div align="left">
   <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-tool.jpeg?raw=true" 
   width="650"
+  style="border: 1px solid #ddd";
   alt="pgAdmin-tool"/>
 </div>
   
