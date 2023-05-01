@@ -77,7 +77,7 @@ APP_URL_SSL='false'
 
 ### Step 4 - Finally, run the project
 
-Running locally in development environment:
+Running locally in development environment:</br>
 
 ```bash
 # development (watch mode)
@@ -90,7 +90,8 @@ When running locally, by default the API will be accessible at url http://localh
   alt="console-api-running"/>
 </div>
 </br>
-Running in a production environment (the code will be transpiled in the build folder and executed):
+
+Running in a production environment (the code will be transpiled in the build folder and executed):</br>
 
 ```bash
 # production mode
