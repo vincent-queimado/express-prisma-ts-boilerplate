@@ -23,7 +23,7 @@ This repo is functionality complete.
 
 ## :rocket: Technologies
 
--   [Node.js](https://nodejs.org/en/) <img src="https://img.shields.io/static/v1?label=Blog&message=Rocketseat&color=7159c1&style=for-the-badge&logo=ghost"/>
+-   [Node.js](https://nodejs.org/en/) <img src="https://img.shields.io/static/v1?label=Blog&message=Rocketseat&color=7159c1&style=for-the-badge&logo=dotenv"/>
 -   [Express](https://expressjs.com/)
 -   [TypeScript](https://www.typescriptlang.org/)
 -   [Prisma](https://www.prisma.io/docs/getting-started)
