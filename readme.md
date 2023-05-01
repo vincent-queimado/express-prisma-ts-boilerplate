@@ -130,7 +130,7 @@ Download and install the [pgAdmin](https://www.pgadmin.org/download/) tool for [
   
 #### Create a PostgreSQL server instance
 
-Run `pgAdmin`. Right-click on the item `Servers`, select `Create` -> `Server` and provide the connection to your PostgreSQL instance configured in the pgAdmin installation step. In the default PostgreSQL setup, the administrator user is postgres with an empty password. In the connection tab be sure to have the host set to localhost. Click `Save` afterwards.
+Run `pgAdmin`. Right-click on the item `Servers`, select `Create` -> `Server` and provide the connection to your PostgreSQL instance configured in the pgAdmin installation step. On the connection tab, make sure you have filled in the host as localhost as well as the access credentials. Click `Save` afterwards.
 
 <div align="left">
   <kbd>
