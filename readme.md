@@ -24,7 +24,6 @@ The architecture resembles the basic MVC model, despite having extra layers to f
 This repo is functionality complete.
 <br/><br/>
 
-
 ## :rocket: Technologies
 
 [![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/)
@@ -39,7 +38,6 @@ This repo is functionality complete.
 [![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
 [![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)](https://jwt.io/)
 <br/><br/>
-
 
 ## :zap: Getting Started
 
@@ -89,7 +87,9 @@ Running locally in `development` environment:</br>
 # development (watch mode)
 $ npm run start:dev
 ```
+
 When running locally, by default the API will be accessible at url http://localhost:3344 as illustrated below.
+
 <div align="left">
   <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/api-running.png?raw=true" 
   width="450"
@@ -103,8 +103,8 @@ Running in a `production environment` (the code will be transpiled in the build 
 # production mode
 $ npm run start
 ```
-<br/>
 
+<br/>
 
 ## :electric_plug: Create your database
 
@@ -129,7 +129,7 @@ Download and install the [pgAdmin](https://www.pgadmin.org/download/) tool for [
 Run `pgAdmin`. Right-click on the item Servers, select `Create` -> `Server` and provide the connection to your PostgreSQL instance configured in the pgAdmin installation step. In the default PostgreSQL setup, the administrator user is postgres with an empty password. In the connection tab be sure to have the host set to localhost. Click `Save` afterwards.
 
 <div align="left">
-  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/psql_create_server.png?raw=true" 
+  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-create-server.png?raw=true" 
   width="380"
   alt="pgAdmin-create-server-instance"/>
 </div>
@@ -140,7 +140,7 @@ Run `pgAdmin`. Right-click on the item Servers, select `Create` -> `Server` and 
 [Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) is a managed SQL database service provided directly by [Heroku](https://signup.heroku.com/)
 
 <div align="left">
-  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/heroku-postgres-add-on.png?raw=true" 
+  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/heroku/heroku-postgres-add-on.png?raw=true" 
   width="380"
   alt="heroku-postgres-add-on"/>
 </div>
