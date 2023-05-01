@@ -25,7 +25,6 @@ This repo is functionality complete.
 <br/><br/>
 
 
-
 ## :rocket: Technologies
 
 [![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/)
@@ -39,7 +38,7 @@ This repo is functionality complete.
 [![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)](https://nodemon.io/)
 [![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
 [![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)](https://jwt.io/)
-<br/>
+<br/><br/>
 
 
 ## :zap: Getting Started
@@ -104,6 +103,8 @@ Running in a production environment (the code will be transpiled in the build fo
 # production mode
 $ npm run start
 ```
+<br/><br/>
+
 
 ## :electric_plug: Configure a Database
 
