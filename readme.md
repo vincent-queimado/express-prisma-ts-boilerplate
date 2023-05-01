@@ -28,10 +28,10 @@ This repo is functionality complete.
 [nodejs]: https://nodejs.org/en/
 [nodejs-shield]: https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white
 
-[![][black-shield]][black]
+[![][expressjs-shield]][expressjs]
 
-[black]: https://expressjs.com/
-[black-shield]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
+[expressjs]: https://expressjs.com/
+[expressjs-shield]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
 
 -   [TypeScript](https://www.typescriptlang.org/)
 -   [Prisma](https://www.prisma.io/docs/getting-started)
