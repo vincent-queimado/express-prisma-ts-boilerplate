@@ -27,12 +27,8 @@ This repo is functionality complete.
 
 [![][black-shield]][black]
 
-[black]: http://github.com/psf/black
-[black-shield]: https://img.shields.io/badge/code%20style-black-black.svg?style=for-the-badge&labelColor=gray
-
-[![][shield]][uri]
-[shield]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
-[uri]: https://expressjs.com/
+[black]: https://expressjs.com/
+[black-shield]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&labelColor=%2361DAFB
 
 -   [TypeScript](https://www.typescriptlang.org/)
 -   [Prisma](https://www.prisma.io/docs/getting-started)
