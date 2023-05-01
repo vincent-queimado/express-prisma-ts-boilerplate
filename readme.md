@@ -106,7 +106,7 @@ $ npm run start
 
 <details>
 <summary>
-<strongDownload and install pgAdmin</strong>
+  <strong>Download and install pgAdmin</strong>
 </summary>
   
 You will need to configure an SQL database supported by the project's ORM in order to perform the data storage. By default the boilerplate uses a demo connection to the PostgreSql database, but it can be changed to another database supported by the Prisma ORM. If you want to install another database, skip steps 3 and 4.
