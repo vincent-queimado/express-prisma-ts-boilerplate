@@ -24,7 +24,11 @@ This repo is functionality complete.
 ## :rocket: Technologies
 
 -   [Node.js](https://nodejs.org/en/) <img src="https://img.shields.io/static/v1?label=&message=NodeJs&color=7159c1&style=plastic&logo=nodedotjs"/>
--   [Express](https://expressjs.com/) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)(https://expressjs.com/)
+
+[![][shield]][uri]
+[shield]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
+[uri]: https://expressjs.com/
+
 -   [TypeScript](https://www.typescriptlang.org/)
 -   [Prisma](https://www.prisma.io/docs/getting-started)
 -   [ESLint](https://eslint.org/)
