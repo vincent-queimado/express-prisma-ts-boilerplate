@@ -114,11 +114,8 @@ If you want to continue with the PostgreSQL database but don't already have the 
 
 ### Option 1 - From the PostgreSQL web based administration tool (pgAdmin)
 
-<details>
-<summary>
-  <strong>Download and install pgAdmin</strong>
-</summary>
-<br/>
+#### Download and install pgAdmin
+
 Download and install the [pgAdmin](https://www.pgadmin.org/download/) tool for [PostgreSQL](https://www.postgresql.org/download/) database management.
 
 <div align="center">
@@ -127,12 +124,8 @@ Download and install the [pgAdmin](https://www.pgadmin.org/download/) tool for [
   alt="pgAdmin-tool"/>
 </div>
   
-</details>
-<details>
-<summary>
-  <strong>Create a PostgreSQL server instance</strong>
-</summary>
-<br/>
+#### Create a PostgreSQL server instance
+
 Run `pgAdmin`. Right-click on the item Servers, select `Create` -> `Server` and provide the connection to your PostgreSQL instance configured in the pgAdmin installation step. In the default PostgreSQL setup, the administrator user is postgres with an empty password. In the connection tab be sure to have the host set to localhost. Click `Save` afterwards.
 
 <div align="center">
@@ -140,8 +133,6 @@ Run `pgAdmin`. Right-click on the item Servers, select `Create` -> `Server` and 
   width="380"
   alt="pgAdmin-create-server-instance"/>
 </div>
-  
-</details>
 <br/>
 
 ### Option 2 - From Heroku Postgres add-on
