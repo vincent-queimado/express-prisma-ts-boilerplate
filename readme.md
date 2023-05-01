@@ -23,10 +23,7 @@ This repo is functionality complete.
 
 ## :rocket: Technologies
 
-[![][nodejs-shield]][nodejs-uri]
-
-[nodejs-uri]: https://nodejs.org/en/
-[nodejs-shield]: https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white
+[![][https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white]][https://nodejs.org/en/]
 
 [![][expressjs-shield]][expressjs]
 
