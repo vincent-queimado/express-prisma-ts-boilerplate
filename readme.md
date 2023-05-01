@@ -119,10 +119,11 @@ If you want to continue with the PostgreSQL database but don't already have the 
 Download and install the [pgAdmin](https://www.pgadmin.org/download/) tool for [PostgreSQL](https://www.postgresql.org/download/) database management.
 
 <div align="left">
-  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-tool.jpeg?raw=true" 
-  width="650"
-  style="border: 1px solid #ddd";
-  alt="pgAdmin-tool"/>
+  <kbd>
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-tool.jpeg?raw=true" 
+    width="650"
+    alt="pgAdmin-tool"/>
+  <kbd>
 </div>
   
 #### Create a PostgreSQL server instance
