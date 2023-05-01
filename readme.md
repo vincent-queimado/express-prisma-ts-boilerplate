@@ -103,7 +103,7 @@ Running in a `production environment` (the code will be transpiled in the build 
 # production mode
 $ npm run start
 ```
-<br/><br/>
+<br/>
 
 
 ## :electric_plug: Configure a Database
@@ -130,7 +130,10 @@ If you want to continue with the PostgreSQL database but don't have the software
 </details>
 <br/>
 
-#### Create a PostgreSQL server instance
+<details>
+<summary>
+  <strong>Create a PostgreSQL server instance</strong>
+</summary>
 
 Run `pgAdmin`. Right-click on the item Servers, select `Create` -> `Server` and provide the connection to your PostgreSQL instance configured in the pgAdmin installation step. In the default PostgreSQL setup, the administrator user is postgres with an empty password. In the connection tab be sure to have the host set to localhost. Click `Save` afterwards.
 
@@ -139,6 +142,9 @@ Run `pgAdmin`. Right-click on the item Servers, select `Create` -> `Server` and 
   width="380"
   alt="pgAdmin-create-server-instance"/>
 </div>
+  
+</details>
+<br/>
 
 ### Option 2 - From Heroku Postgres add-on
 
