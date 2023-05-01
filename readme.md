@@ -121,7 +121,7 @@ If you want to continue with the PostgreSQL database but don't have the software
 <br/>
 You will need to configure an SQL database supported by the project's ORM in order to perform the data storage. By default the boilerplate uses a demo connection to the PostgreSql database, but it can be changed to another database supported by the Prisma ORM. If you want to install another database, skip steps 3 and 4.
 
-If you want to continue with the PostgreSQL database but don't have the software yet, then download PostgreSQL and pgAdmin now and install them.
+If you want to continue with the PostgreSQL database but don't already have the software, download pgAdmin now or use the Heroku Posgres cloud add-on.
 
 > [PostgreSQL](https://www.postgresql.org/download/) is required
 
