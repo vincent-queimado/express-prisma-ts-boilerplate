@@ -99,7 +99,7 @@ When running locally, by default the API will be accessible at url http://localh
 </div>
 </br>
 
-Running in a `production environment` (the code will be transpiled in the build folder and executed):</br>
+Running in a `production` environment (the code will be transpiled in the build folder and executed):</br>
 
 ```bash
 # production mode
@@ -143,7 +143,7 @@ Run `pgAdmin`. Right-click on the item Servers, select `Create` -> `Server` and 
 
 ### Option 2 - Create your database from Heroku Postgres add-on
 
-[Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) is a managed SQL database service provided directly by [Heroku](https://signup.heroku.com/)
+[Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) is a managed SQL database service provided directly by the cloud plataform [Heroku], bypassing all those infrastructure headaches(https://signup.heroku.com/).
 
 <div align="left">
   <kbd>
@@ -153,9 +153,9 @@ Run `pgAdmin`. Right-click on the item Servers, select `Create` -> `Server` and 
   </kbd>
 </div>
 
-The first step to creating a free PostgreSQL database is to log in to Heroku.
-Once logged in to Heroku, navigate to the personal app dashboard to create a new Heroku app.
-Add a PostgreSQL database and Access the database credentials.
+Go to your Heroku account. If you have an account in Heroku, you can log in [here](https://id.heroku.com/login). If you need to setup a new one go [here](https://signup.heroku.com/login). They also offer a `free` tier.
+
+Click to the Dashboard menu dropdown on your left. Select Databases.
 
 ## Initialize your database
 
