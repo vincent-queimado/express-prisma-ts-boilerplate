@@ -25,6 +25,11 @@ This repo is functionality complete.
 
 -   [Node.js](https://nodejs.org/en/) <img src="https://img.shields.io/static/v1?label=&message=NodeJs&color=7159c1&style=plastic&logo=nodedotjs"/>
 
+[![][black-shield]][black]
+
+[black]: http://github.com/psf/black
+[black-shield]: https://img.shields.io/badge/code%20style-black-black.svg?style=for-the-badge&labelColor=gray
+
 [![][shield]][uri]
 [shield]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB
 [uri]: https://expressjs.com/
