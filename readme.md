@@ -96,7 +96,7 @@ $ npm run start
 
 When running locally, by default the API will be accessible at url http://localhost:3344.
 
-## Configure a Database
+## :electric_plug: Configure a Database
 
 ### Option 1 - From the PostgreSQL web based administration tool (pgAdmin)
 
