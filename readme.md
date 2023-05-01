@@ -93,7 +93,7 @@ $ npm run start
 
 When running locally, by default the API will be accessible at url http://localhost:3344.
 
-<div align="center">
+<div align="left">
   <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/api-running.png?raw=true" 
   width="450"
   alt="console-api-running"/>
