@@ -91,9 +91,11 @@ $ npm run start:dev
 When running locally, by default the API will be accessible at url http://localhost:3344 as illustrated below.
 
 <div align="left">
-  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/api-running.png?raw=true" 
-  width="450"
-  alt="console-api-running"/>
+  <kbd>
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/api-running.png?raw=true" 
+    width="450"
+    alt="console-api-running"/>
+  </kbd>
 </div>
 </br>
 
@@ -123,7 +125,7 @@ Download and install the [pgAdmin](https://www.pgadmin.org/download/) tool for [
     <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-tool.jpeg?raw=true" 
     width="650"
     alt="pgAdmin-tool"/>
-  <kbd>
+  </kbd>
 </div>
   
 #### Create a PostgreSQL server instance
