@@ -28,7 +28,7 @@ This repo is functionality complete.
 [![][black-shield]][black]
 
 [black]: https://expressjs.com/
-[black-shield]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&labelColor=%2361DAFB
+[black-shield]: https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&&logoColor=%2361DAFB&labelColor=%2361DAFB
 
 -   [TypeScript](https://www.typescriptlang.org/)
 -   [Prisma](https://www.prisma.io/docs/getting-started)
