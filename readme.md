@@ -110,7 +110,7 @@ $ npm run start
 
 You will need to configure an SQL database supported by the project's ORM in order to perform the data storage. By default the boilerplate uses a demo connection to the **PostgreSql database**, but it can be changed to another database supported by the [Prisma ORM](https://www.prisma.io/stack). If you want to install another database, skip this section.
 
-If you want to continue with the PostgreSQL database but don't have the software yet, then download PostgreSQL and pgAdmin now and install them.
+If you want to continue with the PostgreSQL database but don't already have the software, download pgAdmin now or use the Heroku Posgres cloud add-on.
 
 ### Option 1 - From the PostgreSQL web based administration tool (pgAdmin)
 
@@ -119,11 +119,7 @@ If you want to continue with the PostgreSQL database but don't have the software
   <strong>Download and install pgAdmin</strong>
 </summary>
 <br/>
-You will need to configure an SQL database supported by the project's ORM in order to perform the data storage. By default the boilerplate uses a demo connection to the PostgreSql database, but it can be changed to another database supported by the Prisma ORM. If you want to install another database, skip steps 3 and 4.
-
-If you want to continue with the PostgreSQL database but don't already have the software, download pgAdmin now or use the Heroku Posgres cloud add-on.
-
-> [PostgreSQL](https://www.postgresql.org/download/) is required
+Download and install the [pgAdmin](https://www.pgadmin.org/download/) tool for [PostgreSQL](https://www.postgresql.org/download/) database management.
 
 <div align="center">
   <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgAdmin/pgAdmin-tool.jpeg?raw=true" 
