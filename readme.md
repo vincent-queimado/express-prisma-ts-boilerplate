@@ -41,9 +41,7 @@ To install the project, follow the steps below.
 
 ### Step 1 - Clone the Git repository
 
-First, open your terminal and type the necessary command to download the project and access it.
-
-> [Git](https://git-scm.com/downloads/) is required
+First, to clone and run this application, you'll need [Git](https://git-scm.com/downloads) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
 $ git clone https://github.com/vincent-queimado/typescript-express-boilerplate.git
