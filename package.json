@@ -1,7 +1,7 @@
 {
     "name": "express-typescript-boilerplate",
     "version": "1.0.1",
-    "description": "This project is a boilerplate for creating an Express Rest API back-end application with Typescript. Use of libraries like Sequelize ORM, log management with Morgan/Winston, unit tests with Jest, validation schemas with Zod, JWT authentication, and other essential packages to start a new project.",
+    "description": "This project is a boilerplate for creating an Express Rest API back-end application with Typescript. Use of libraries like Prisma ORM, log management with Morgan/Winston, unit tests with Jest, validation schemas with Zod, JWT authentication, and other essential packages to start a new project.",
     "author": {
         "name": "Vincent Jean",
         "email": "vincent.queimado@gmail.com",
@@ -15,7 +15,7 @@
         "nodejs",
         "express",
         "typescript",
-        "sequelize",
+        "prisma",
         "jest",
         "eslint",
         "prettier",
@@ -76,9 +76,8 @@
         "lint-staged": "^13.1.4",
         "nodemon": "^2.0.20",
         "prettier": "^2.8.4",
-        "prisma": "^4.13.0",
+        "prisma": "^4.14.0",
         "rimraf": "^4.1.2",
-        "sequelize-cli": "^6.6.0",
         "supertest": "^6.3.3",
         "ts-jest": "^29.0.5",
         "ts-node": "^10.9.1",
@@ -86,6 +85,7 @@
         "typescript": "^4.9.5"
     },
     "dependencies": {
+        "@prisma/client": "^4.14.0",
         "ansi-colors": "^4.1.3",
         "app-root-path": "^3.1.0",
         "bcryptjs": "^2.4.3",
@@ -104,7 +104,6 @@
         "pg": "^8.9.0",
         "pg-hstore": "^2.3.4",
         "rand-token": "^1.0.1",
-        "sequelize": "^6.29.0",
         "serve-favicon": "^2.5.0",
         "swagger-autogen": "^2.23.1",
         "swagger-jsdoc": "^6.2.8",

@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/readme-header.png?raw=true" alt="readme-header"/>
+  <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/readme-header.png?raw=true" alt="readme-header"/>
 </div>
 
 <div align="center">
@@ -11,7 +11,7 @@
   <sub>Made with ❤️ by <a href="https://github.com/vincent-queimado">Vincent Jean</a></sub>
 </p>
 
-![divider](https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/readme-divider.png)
+![divider](https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/readme-divider.png)
 
 ## :blue_heart: About the boilerplate
 
@@ -29,7 +29,7 @@ This repo is functionality complete.
 [![Node.js](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/)
 [![Expressjs](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)](https://expressjs.com/)
 [![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)](https://www.prisma.io/docs/getting-started)
+[![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)](https://www.prisma.io/public/assets/images/getting-started)
 [![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
 [![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)](https://eslint.org/)
 [![Prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E)](https://prettier.io/)
@@ -92,7 +92,7 @@ When running locally, by default the API will be accessible at url http://localh
 
 <div align="left">
   <kbd>
-    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/readme-api-running.png?raw=true" 
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/readme-api-running.png?raw=true" 
     width="450"
     alt="console-api-running"/>
   </kbd>
@@ -122,7 +122,7 @@ Download and install the [pgAdmin](https://www.pgadmin.org/download/) tool for [
 
 <div align="left">
   <kbd>
-    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgadmin/pgadmin-tool.jpeg?raw=true" 
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/pgadmin/pgadmin-tool.jpeg?raw=true" 
     width="650"
     alt="pgadmin-tool"/>
   </kbd>
@@ -134,7 +134,7 @@ Run `pgAdmin`. Right-click on the item `Servers`, select `Create` -> `Server` an
 
 <div align="left">
   <kbd>
-    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgadmin/pgadmin-create-server.png?raw=true" 
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/pgadmin/pgadmin-create-server.png?raw=true" 
     width="380"
     alt="pgadmin-create-server-instance"/>
   </kbd>
@@ -147,7 +147,7 @@ Run `pgAdmin`. Right-click on the item `Servers`, select `Create` -> `Server` an
 
 <div align="left">
   <kbd>
-    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/pgadmin/pgadmin-create-database.png?raw=true" 
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/pgadmin/pgadmin-create-database.png?raw=true" 
     width="380"
     alt="pgadmin-create-database"/>
   </kbd>
@@ -160,7 +160,7 @@ Run `pgAdmin`. Right-click on the item `Servers`, select `Create` -> `Server` an
 
 <div align="left">
   <kbd>
-    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/doc/readme/heroku/heroku-postgres-add-on.png?raw=true" 
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/heroku/heroku-postgres-add-on.png?raw=true" 
     width="380"
     alt="heroku-postgres-add-on"/>
   </kbd>
