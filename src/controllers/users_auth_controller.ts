@@ -1,8 +1,8 @@
-import { Response, Request } from 'express';
+import { Request, Response, NextFunction } from 'express';
 import presenter from '@presenters/users_auth/_index';
 import logger from '@utils/winston_file_logger/winston/logger';
 
-const signin = (req: Request, res: Response, next: any) => {
+const signin = (req: Request, res: Response, next: NextFunction) => {
     presenter
         .signin(req.body)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
@@ -12,7 +12,7 @@ const signin = (req: Request, res: Response, next: any) => {
         });
 };
 
-const signout = (req: Request, res: Response, next: any) => {
+const signout = (req: Request, res: Response, next: NextFunction) => {
     presenter
         .signout(req.body)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
@@ -22,7 +22,7 @@ const signout = (req: Request, res: Response, next: any) => {
         });
 };
 
-const signup = (req: Request, res: Response, next: any) => {
+const signup = (req: Request, res: Response, next: NextFunction) => {
     presenter
         .signup(req.body)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
@@ -32,7 +32,7 @@ const signup = (req: Request, res: Response, next: any) => {
         });
 };
 
-const signupConfirm = (req: Request, res: Response, next: any) => {
+const signupConfirm = (req: Request, res: Response, next: NextFunction) => {
     presenter
         .signupConfirm(req.query)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
@@ -42,7 +42,7 @@ const signupConfirm = (req: Request, res: Response, next: any) => {
         });
 };
 
-// const forgotPasswordRequest = (req: Request, res: Response, next: any) => {
+// const forgotPasswordRequest = (req: Request, res: Response, next: NextFunction) => {
 //     presenter
 //         .forgotPasswordRequest(req.body)
 //         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
@@ -52,7 +52,7 @@ const signupConfirm = (req: Request, res: Response, next: any) => {
 //         });
 // };
 
-// const forgotPasswordReset = (req: Request, res: Response, next: any) => {
+// const forgotPasswordReset = (req: Request, res: Response, next: NextFunction) => {
 //     presenter
 //         .forgotPasswordReset(req.body)
 //         .then((result: any) => res.status(result.httpStatusCode).json(result.data))

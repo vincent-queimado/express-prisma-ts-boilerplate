@@ -1,9 +1,9 @@
-import { Response, Request } from 'express';
+import { Request, Response, NextFunction } from 'express';
 import pkg from '@packagejson';
 import presenter from '@presenters/logs/_index';
 import logger from '@utils/winston_file_logger/winston/logger';
 
-const listar = (req: Request, res: Response, next: any) => {
+const listar = (req: Request, res: Response, next: NextFunction) => {
     presenter
         .listar()
         .then((result: any) => {

@@ -1,4 +1,6 @@
-const errorHandler = (err: any, res: any) => {
+import { Response } from 'express';
+
+const errorHandler = (err: any, res: Response) => {
     if (err.error === 'ValidationError') {
         return res.status(400).json({
             error: {

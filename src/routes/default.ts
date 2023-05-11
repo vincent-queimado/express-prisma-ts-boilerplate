@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response, Router } from 'express';
+import { Router, Request, Response, NextFunction } from 'express';
 import swaggerUi from 'swagger-ui-express';
 import specs from '@utils/swagger/swagger';
 import CtrlCommons from 'src/controllers/commons_controller';

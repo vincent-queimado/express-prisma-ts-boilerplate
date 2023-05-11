@@ -1,7 +1,7 @@
 import cors from 'cors';
 import path from 'path';
 import helmet from 'helmet';
-import express, { NextFunction, Request, Response } from 'express';
+import express, { Request, Response, NextFunction } from 'express';
 import favicon from 'serve-favicon';
 import bodyParser from 'body-parser';
 
