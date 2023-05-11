@@ -32,4 +32,4 @@ switch (nodeEnv) {
 
 const config: IConfig = { ...baseConfig, ...envConfig };
 
-export = config.database;
+export = config;

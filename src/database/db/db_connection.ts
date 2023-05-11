@@ -6,24 +6,24 @@ import logger from '@utils/winston_file_logger/winston/logger';
 
 const prisma = new PrismaClient();
 
+const provider = config.database.provider;
+
 const checkConnection = async () => {
     await prisma
         .$connect()
         .then(() => {
             /* eslint-disable no-console */
             console.log(
-                colorTxt.white(`-> Connected on database: ${config.host}:${config.port}`),
+                colorTxt.white(`-> Connected on ${provider} database`),
                 /* eslint-enable no-console */
             );
-            logger.info(`Database connection has been established successfully.`);
+            logger.info(`${provider} database connection has been established successfully.`);
         })
         .catch((err) => {
             /* eslint-disable no-console */
-            console.log(
-                colorTxt.red(`-> Unable to connect to the database ${config.host}:${config.port}`),
-            );
+            console.log(colorTxt.red(`-> Unable to connect to the ${provider} database`));
             /* eslint-enable no-console */
-            logger.error(`Unable to connect to the database: ${err})`);
+            logger.error(`Unable to connect to the ${provider} database: ${err})`);
             throw err;
         })
         .finally(async () => {

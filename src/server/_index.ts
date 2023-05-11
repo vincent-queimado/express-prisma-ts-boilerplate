@@ -2,7 +2,7 @@ import moment from 'moment';
 import colorTxt from 'ansi-colors';
 
 import pkg from '@packagejson';
-import server from '@server/http_server';
+import server from 'src/server/http_server';
 import db from '@database/db/db_connection';
 import logger from '@utils/winston_file_logger/winston/logger';
 

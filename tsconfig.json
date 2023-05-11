@@ -18,7 +18,7 @@
         "baseUrl": ".",
         "paths": {
             "@config/*": ["./src/config/*"],
-            "@server/*": ["./src/server/*"],
+            "@server/*": ["src/server/*"],
             "@routes/*": ["./src/routes/*"],
             "@middlewares/*": ["./src/middlewares/*"],
             "@database/*": ["./src/database/*"],
