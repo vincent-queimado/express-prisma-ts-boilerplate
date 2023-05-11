@@ -3,8 +3,8 @@ import colorTxt from 'ansi-colors';
 
 import pkg from '@packagejson';
 import server from '@server/http_server';
+import db from '@database/db/db_connection';
 import logger from '@utils/winston_file_logger/winston/logger';
-import { dbconnection } from '@database/sqlz/db/sequelize';
 
 const startup = () => {
     /* eslint-disable no-console */
@@ -25,7 +25,7 @@ const startup = () => {
     logger.info(`Api started at ${moment().format('YYYY-MM-DD HH:mm')}`);
 
     server();
-    dbconnection();
+    db.checkConnection();
 };
 
 export default {

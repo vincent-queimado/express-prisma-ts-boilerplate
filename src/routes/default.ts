@@ -1,13 +1,13 @@
-import express from 'express';
+import { NextFunction, Request, Response, Router } from 'express';
 import swaggerUi from 'swagger-ui-express';
 import specs from '@utils/swagger/swagger';
-import CtrlCommons from '@controllers/commons';
-import CtrlLogs from '@controllers/logs';
+import CtrlCommons from 'src/controllers/commons_controller';
+import CtrlLogs from 'src/controllers/logs_controller';
 
-const router = express.Router();
+const router = Router();
 
 // Cors Settings
-router.all('/*', (req, res, next) => {
+router.all('/*', (req: Request, res: Response, next: NextFunction) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET, POST, PATCH');
     res.header(
@@ -21,17 +21,6 @@ router.all('/*', (req, res, next) => {
 router.get('/', CtrlCommons.root);
 
 // API Info
-/**
- * @openapi
- * paths:
- *   /info/:
- *     get:
- *       summary: Api Information Details
- *       tags: [Informations]
- *       responses:
- *         "200":
- *           description: hello world
- */
 router.get('/info', CtrlCommons.info);
 
 // API Logs

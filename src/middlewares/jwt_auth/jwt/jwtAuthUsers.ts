@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import { Request } from 'express';
 import config from '@config/app/_index';
 import httpMsg from '@utils/http_messages/http_msg';
-import userExist from '@services/users/exist';
+import userExist from '@services/users/exist_service';
 
 export default async (req: Request) => {
     const authHeader = await req.headers.authorization;

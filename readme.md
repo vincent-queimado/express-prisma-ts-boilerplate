@@ -110,7 +110,14 @@ $ npm run start
 
 ## :electric_plug: Create your database
 
-You will need to configure an SQL database supported by the project's ORM in order to perform the data storage. By default the boilerplate uses a demo connection to the **PostgreSQL database**, but it can be changed to another database supported by the [Prisma ORM](https://www.prisma.io/stack). If you want to install another database, skip this section.
+You will need to configure an SQL database supported by the project's ORM in order to perform the data storage. By default the boilerplate uses a demo connection to the **PostgreSQL database**, but it can be changed to another database supported by the [Prisma ORM](https://www.prisma.io/stack).
+
+If you want to install another database, remove the prisma folder, execute a new prisma initialization, follow the instructions and skip this section:
+
+```bash
+$ rm .\prisma
+$ npx prisma init
+```
 
 If you want to continue with the [PostgreSQL](https://www.postgresql.org/download/) database but don't already have the software, download [pgAdmin](https://www.pgadmin.org/download/) now or use the Heroku Posgres cloud add-on.
 

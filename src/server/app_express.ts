@@ -1,12 +1,12 @@
 import cors from 'cors';
 import path from 'path';
 import helmet from 'helmet';
-import express from 'express';
+import express, { NextFunction, Request, Response } from 'express';
 import favicon from 'serve-favicon';
 import bodyParser from 'body-parser';
 
 import routes from '@routes/default';
-import apiRoutes from '@routes/routes';
+import apiRoutesV1 from '@routes/v1/routes';
 
 import morganMiddleware from '@middlewares/morgan_logger/morgan_middleware';
 import handleError from '@middlewares/http_error_handler/error_handler';
@@ -33,12 +33,12 @@ export default () => {
     app.use('/logs', express.static(publicLogs, { dotfiles: 'allow' }));
 
     app.use('/', routes);
-    app.use('/api/v1/', apiRoutes);
+    app.use('/api/v1/', apiRoutesV1);
 
     app.set('view engine', 'ejs');
     app.set('views', path.join(__dirname, '../api/views'));
 
-    app.get('*', (req, res, next) => {
+    app.get('*', (req: Request, res: Response, next: NextFunction) => {
         next();
     });
 
