@@ -33,6 +33,6 @@
             "@packagejson": ["package.json"]
         }
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "prisma/seeders", "prisma/migrations"],
     "exclude": ["coverage", "dist", "doc", "logs", "tests", "node_modules"]
 }

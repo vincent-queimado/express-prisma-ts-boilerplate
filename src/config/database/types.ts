@@ -7,7 +7,6 @@ export interface IProcessEnv {
 /* CONFIG */
 
 interface IDatabase {
-    provider: string;
     url: string;
 }
 

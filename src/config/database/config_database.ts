@@ -3,7 +3,6 @@ import { IEnvConfig, IProcessEnv } from './types';
 const devConfig = (env: IProcessEnv): IEnvConfig => {
     return {
         database: {
-            provider: env.DATABASE_PROVIDER || 'postgresql',
             url:
                 env.DATABASE_URL ||
                 'postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public',
@@ -14,7 +13,6 @@ const devConfig = (env: IProcessEnv): IEnvConfig => {
 const stageConfig = (env: IProcessEnv): IEnvConfig => {
     return {
         database: {
-            provider: env.DATABASE_PROVIDER || 'postgresql',
             url:
                 env.DATABASE_URL ||
                 'postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public',
@@ -25,7 +23,6 @@ const stageConfig = (env: IProcessEnv): IEnvConfig => {
 const prodConfig = (env: IProcessEnv): IEnvConfig => {
     return {
         database: {
-            provider: env.DATABASE_PROVIDER || 'postgresql',
             url:
                 env.DATABASE_URL ||
                 'postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public',
