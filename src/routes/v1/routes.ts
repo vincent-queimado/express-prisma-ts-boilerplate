@@ -4,7 +4,7 @@ import { Router } from 'express';
 
 // import CtrlUsers from '@controllers/users';
 // import CtrlUserMe from '@controllers/users_me';
-import CtrlUserAuth from 'src/controllers/users_auth_controller';
+import CtrlUserAuth from '@controllers/users_auth.controller';
 
 const router = Router();
 
