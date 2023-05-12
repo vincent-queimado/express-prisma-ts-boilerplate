@@ -1,8 +1,8 @@
-import { Response, Request } from 'express';
+import { Request, Response, NextFunction } from 'express';
 import presenter from '@presenters/commons/_index';
 import logger from '@utils/winston_file_logger/winston/logger';
 
-const root = (req: Request, res: Response, next: any) => {
+const root = (req: Request, res: Response, next: NextFunction) => {
     presenter
         .apiRoot()
         .then((result: any) => {
@@ -15,7 +15,7 @@ const root = (req: Request, res: Response, next: any) => {
         .catch((err: any) => next(err));
 };
 
-const info = (req: Request, res: Response, next: any) => {
+const info = (req: Request, res: Response, next: NextFunction) => {
     presenter
         .apiInfo()
         .then((result: any) => {

@@ -1,8 +1,8 @@
-import { NextFunction, Request, Response, Router } from 'express';
+import { Router, Request, Response, NextFunction } from 'express';
 import swaggerUi from 'swagger-ui-express';
 import specs from '@utils/swagger/swagger';
-import CtrlCommons from 'src/controllers/commons_controller';
-import CtrlLogs from 'src/controllers/logs_controller';
+import CtrlCommons from '@controllers/commons.controller';
+import CtrlLogs from '@controllers/logs.controller';
 
 const router = Router();
 

@@ -11,14 +11,14 @@ const skip = () => {
     return !config.debug.http_request;
 };
 
-const morganConsoleLogger = morgan('dev');
+const consoleLogger = morgan('dev');
 
-const morganFileLogger = morgan(
+const fileLogger = morgan(
     'HTTP request from :remote-addr :method :url :status :res[content-length] - :response-time ms',
     { stream, skip },
 );
 
 export default {
-    morganConsoleLogger,
-    morganFileLogger,
+    consoleLogger,
+    fileLogger,
 };
