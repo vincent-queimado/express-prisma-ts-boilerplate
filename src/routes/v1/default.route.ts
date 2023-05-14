@@ -1,6 +1,5 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import CtrlCommons from '@controllers/commons.controller';
-import CtrlLogs from '@controllers/logs.controller';
 
 const router = Router();
 
@@ -20,8 +19,5 @@ router.get('/', CtrlCommons.root);
 
 // API Info
 router.get('/info', CtrlCommons.info);
-
-// API Logs
-router.get('/logs', CtrlLogs.listar);
 
 export default router;

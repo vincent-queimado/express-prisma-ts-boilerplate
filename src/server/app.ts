@@ -24,10 +24,10 @@ export default () => {
 
     app.use(helmet());
 
-    app.use(xss());
+    // app.use(xss());
 
     app.use(cors());
-    app.options('*', cors());
+    // app.options('*', cors());
 
     app.use(morgan.consoleLogger);
     app.use(morgan.fileLogger);

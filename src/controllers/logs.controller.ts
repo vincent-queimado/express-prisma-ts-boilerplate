@@ -8,7 +8,7 @@ const listar = (req: Request, res: Response, next: NextFunction) => {
         .listar()
         .then((result: any) => {
             try {
-                res.render('logs', {
+                res.render('logs_view', {
                     title: `Logs de Api ${pkg.name.toUpperCase()}`,
                     logsInfo: result.logsInfo,
                     logsError: result.logsError,

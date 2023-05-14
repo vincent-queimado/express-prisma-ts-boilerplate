@@ -4,6 +4,6 @@ import CtrlLogs from '@controllers/logs.controller';
 const router = Router();
 
 // API Logs
-router.get('/logs', CtrlLogs.listar);
+router.get('/', CtrlLogs.listar);
 
 export default router;
