@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken';
 import { Request } from 'express';
-import config from '@config/app/_index';
+import config from '@config/app';
 import httpMsg from '@utils/http_messages/http_msg';
 
 export default async (req: Request) => {

@@ -29,7 +29,9 @@
             "@views/*": ["./src/views/*"],
             "@utils/*": ["./src/utils/*"],
             "@prisma/*": ["./prisma/*"],
-            "@doc/*": ["./doc/*"],
+            "@public/*": ["./public/*"],
+            "@docs/*": ["./docs/*"],
+            "@logs/*": ["./logs/*"],
             "@packagejson": ["package.json"]
         }
     },

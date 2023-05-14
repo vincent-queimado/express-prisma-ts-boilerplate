@@ -8,8 +8,9 @@ import express, { Request, Response, NextFunction } from 'express';
 import xss from '@middlewares/xss/xss';
 import rateLimit from '@middlewares/rate_limiter/rate_limiter';
 
-import routes from '@routes/default';
-import apiRoutesV1 from '@routes/v1/routes';
+// import routes from '@routes/default';
+// import apiRoutesV1 from '@routes/v1/routes';
+import routes from '@routes/v1';
 
 import morgan from '@middlewares/morgan/morgan';
 import handleError from '@middlewares/http_error_handler/error_handler';
@@ -26,24 +27,27 @@ export default () => {
     app.use(xss());
 
     app.use(cors());
-
-    app.use(rateLimit.limiter);
+    app.options('*', cors());
 
     app.use(morgan.consoleLogger);
     app.use(morgan.fileLogger);
 
-    app.use(favicon(publicFavicon));
-
     app.use(bodyParser.json({ limit: jsonLimit }));
-    app.use(bodyParser.urlencoded({ extended: false }));
+    app.use(bodyParser.urlencoded({ extended: true }));
+
+    app.use(favicon(publicFavicon));
 
     app.use('/logs', express.static(publicLogs, { dotfiles: 'allow' }));
 
-    app.use('/', routes);
-    app.use('/api/v1/', apiRoutesV1);
+    // app.use('/', routes);
+    // app.use('/api/v1/', apiRoutesV1);
+
+    app.use('/v1/auth', rateLimit.limiter);
+
+    app.use('/v1', routes);
 
     app.set('view engine', 'ejs');
-    app.set('views', path.join(__dirname, '../api/views'));
+    app.set('views', path.join(__dirname, '../views'));
 
     app.get('*', (req: Request, res: Response, next: NextFunction) => {
         next();

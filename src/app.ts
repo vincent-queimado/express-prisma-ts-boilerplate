@@ -1,3 +1,3 @@
-import app from 'src/server/_index';
+import app from '@server/index';
 
 app.startup();
