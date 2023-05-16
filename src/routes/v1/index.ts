@@ -38,7 +38,7 @@ defaultRoutes.forEach((route) => {
     router.use(route.path, route.route);
 });
 
-if (config.isDev) {
+if (config.isDev || config.isTest) {
     devRoutes.forEach((route) => {
         router.use(route.path, route.route);
     });

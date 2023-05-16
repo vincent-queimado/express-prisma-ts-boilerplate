@@ -1,12 +1,35 @@
-/** @type {import('ts-jest').JestConfigWithTsJest} */
+import { compilerOptions } from './tsconfig.json';
+import { pathsToModuleNameMapper } from 'ts-jest';
+
 export default {
     preset: 'ts-jest',
     testEnvironment: 'node',
-    // testMatch: ['**/tests/**/*.test.ts'],
-    // collectCoverage: true,
-    // coverageDirectory: './coverage',
-    // collectCoverageFrom: ['src/**/*.{js,ts}', '!**/node_modules/**'],
-    // coveragePathIgnorePatterns: ['node_modules', 'prisma', 'public', 'logs', 'tests', 'src/config', 'src/app.ts'],
-    // coverageReporters: ['text', 'lcov', 'clover', 'html'],
-    // transform: {},
+    moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
+    modulePaths: ['<rootDir>'],
+    testMatch: ['**/tests/**/*.test.ts'],
+    collectCoverage: true,
+    coverageDirectory: './coverage',
+    collectCoverageFrom: ['src/**/*.{js,ts}'],
+    coveragePathIgnorePatterns: [
+        'node_modules',
+        'prisma',
+        'public',
+        'logs',
+        'tests',
+        'src/config',
+        'src/app.ts',
+        'src/server',
+        'controllers/',
+        'presenters/',
+        'services/',
+        'utils/http_messages',
+        'utils/nodemailer/',
+    ],
+    coverageThreshold: {
+        global: {
+            lines: 90,
+        },
+    },
+    coverageReporters: ['text', 'lcov', 'clover', 'html'],
+    transform: {},
 };

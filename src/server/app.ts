@@ -8,9 +8,9 @@ import express, { Request, Response, NextFunction } from 'express';
 import xss from '@middlewares/xss/xss';
 import rateLimit from '@middlewares/rate_limiter/rate_limiter';
 
-// import routes from '@routes/default';
-// import apiRoutesV1 from '@routes/v1/routes';
-import routes from '@routes/v1';
+import routes from '@routes/index';
+import routesV1 from '@routes/v1';
+import config from '@config/app';
 
 import morgan from '@middlewares/morgan/morgan';
 import handleError from '@middlewares/http_error_handler/error_handler';
@@ -24,10 +24,10 @@ export default () => {
 
     app.use(helmet());
 
-    // app.use(xss());
+    app.use(xss());
 
     app.use(cors());
-    // app.options('*', cors());
+    app.options('*', cors());
 
     app.use(morgan.consoleLogger);
     app.use(morgan.fileLogger);
@@ -37,14 +37,13 @@ export default () => {
 
     app.use(favicon(publicFavicon));
 
-    app.use('/logs', express.static(publicLogs, { dotfiles: 'allow' }));
+    app.use(`/${config.api.version}/logs`, express.static(publicLogs, { dotfiles: 'allow' }));
 
-    // app.use('/', routes);
-    // app.use('/api/v1/', apiRoutesV1);
+    app.use(`/${config.api.version}/auth`, rateLimit.limiter);
 
-    app.use('/v1/auth', rateLimit.limiter);
+    app.use(`/${config.api.version}`, routesV1);
 
-    app.use('/v1', routes);
+    app.use('/', routes);
 
     app.set('view engine', 'ejs');
     app.set('views', path.join(__dirname, '../views'));

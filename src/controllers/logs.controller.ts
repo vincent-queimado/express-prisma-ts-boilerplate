@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import pkg from '@packagejson';
-import presenter from '@presenters/logs/_index';
+import presenter from '@presenters/logs';
 import logger from '@utils/winston_file_logger/winston/logger';
 
 const listar = (req: Request, res: Response, next: NextFunction) => {

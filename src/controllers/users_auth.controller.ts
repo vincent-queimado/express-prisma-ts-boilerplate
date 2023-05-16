@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import presenter from '@presenters/users_auth/_index';
+import presenter from '@presenters/users_auth';
 import logger from '@utils/winston_file_logger/winston/logger';
 
 const signin = (req: Request, res: Response, next: NextFunction) => {

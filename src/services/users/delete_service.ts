@@ -1,4 +1,4 @@
-import prisma from '@prisma/prisma-client';
+import prisma from '@pri/prisma-client';
 import logger from '@utils/winston_file_logger/winston/logger';
 
 export default async (id: string) => {

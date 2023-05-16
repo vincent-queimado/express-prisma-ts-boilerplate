@@ -12,9 +12,17 @@ interface IApp {
     ssl: boolean;
 }
 
+interface IApi {
+    version: string;
+}
+
 interface IJwt {
     secret: string;
     expiredIn: string;
+}
+
+interface IBcrypt {
+    saltRounds: number;
 }
 
 interface IDebug {
@@ -24,6 +32,7 @@ interface IDebug {
 
 export interface IBaseConfig {
     nodeEnv: string;
+    isTest: boolean;
     isDev: boolean;
     isStage: boolean;
     isProd: boolean;
@@ -31,7 +40,9 @@ export interface IBaseConfig {
 
 export interface IEnvConfig {
     app: IApp;
+    api: IApi;
     jwt: IJwt;
+    bcrypt: IBcrypt;
     debug: IDebug;
 }
 

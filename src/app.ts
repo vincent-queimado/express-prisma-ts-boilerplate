@@ -1,3 +1,4 @@
-import app from '@server/index';
+import startup from '@server/index';
+const silent = false;
 
-app.startup();
+startup(silent);

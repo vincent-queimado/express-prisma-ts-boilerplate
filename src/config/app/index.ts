@@ -9,6 +9,7 @@ const nodeEnv: string = processEnv.NODE_ENV || 'development';
 
 const baseConfig: IBaseConfig = {
     nodeEnv,
+    isTest: nodeEnv === 'test',
     isDev: nodeEnv === 'development',
     isStage: nodeEnv === 'staging',
     isProd: nodeEnv === 'production',
@@ -17,6 +18,9 @@ const baseConfig: IBaseConfig = {
 let envConfig: IEnvConfig;
 
 switch (nodeEnv) {
+    case 'test':
+        envConfig = envConfigs.testConfig(processEnv);
+        break;
     case 'development':
         envConfig = envConfigs.devConfig(processEnv);
         break;

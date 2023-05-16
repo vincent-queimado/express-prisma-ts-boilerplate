@@ -8,7 +8,8 @@ const custom = winston.format.combine(
     winston.format.json(),
     winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
     winston.format.printf(
-        (info) => `${info.timestamp} | ${info.level.toUpperCase()} | ${info.message}`,
+        /* istanbul ignore next */ (info) =>
+            `${info.timestamp} | ${info.level.toUpperCase()} | ${info.message}`,
     ),
 );
 

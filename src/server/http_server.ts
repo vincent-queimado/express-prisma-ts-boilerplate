@@ -6,7 +6,7 @@ import app from '@server/app';
 import config from '@config/app';
 import logger from '@utils/winston_file_logger/winston/logger';
 
-export default async () => {
+export default async (silent: boolean) => {
     const serverHost = config.app.host;
     const serverPort = config.app.port;
     const serverSsl = config.app.host;
@@ -18,7 +18,7 @@ export default async () => {
 
     server.listen(serverPort);
 
-    server.on('listening', () => onListening(serverHost, serverPort));
+    server.on('listening', () => onListening(serverHost, serverPort, silent));
 
     server.on('error', (error) =>
         onError(error, serverHost, serverPort, server, serverConnections),
@@ -51,12 +51,15 @@ const createServer = (app: any, serverSsl: any) => {
     return httpserver;
 };
 
-const onListening = (host: string, port: number) => {
-    /* eslint-disable no-console */
-    console.log(
-        colorTxt.white(`-> Listening on ${host}:${port}`),
-        /* eslint-enable no-console */
-    );
+const onListening = (host: string, port: number, silent: boolean) => {
+    if (!silent) {
+        /* eslint-disable no-console */
+        console.log(
+            colorTxt.white(`-> Listening on ${host}:${port}`),
+            /* eslint-enable no-console */
+        );
+    }
+
     logger.info(`Api status: Ready (listening on ${host}:${port})`);
 };
 
