@@ -19,7 +19,7 @@ This project is a simple and complete boilerplate written in **TypeScript** to q
 
 Use of libraries like **Prisma ORM**, log management with **Morgan** and **Winston** (tracking of HTTP request logs in real time and storage of rotating log files with web visualization via EJS engine), unit test coverage with **Jest**, data validation schemas with **Zod**, JWT middleware authentication, Swagger documentation, and other essential packages to start a new custom project.<br />
 
-The boilerplate is a clean architecture based template project for NodeJs using TypeScript to facilitate support and customization of the project. We integrated the Prettier and Eslint tools into the project to help us automate type-checking during Typescript code development.
+The boilerplate is based on the MVC architecture using TypeScript to facilitate support and customization of the project. We integrated the Prettier and Eslint tools into the project to help us automate type-checking during Typescript code development.
 
 This repo is functionality complete.
 <br/><br/>
@@ -82,7 +82,7 @@ APP_URL_SSL='false'
 
 ### Step 4 - Finally, run the project
 
-Running locally in `development` environment:</br>
+-   Running locally in `development` environment:</br>
 
 ```bash
 # development (watch mode)
@@ -100,7 +100,7 @@ When running locally, by default the API will be accessible at url http://localh
 </div>
 </br>
 
-Running in a `production` environment (the code will be transpiled in the build folder and executed):</br>
+-   Running in a `production` environment (the code will be transpiled in the build folder and executed):</br>
 
 ```bash
 # production mode
