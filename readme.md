@@ -202,15 +202,19 @@ Obs.: Initially, the project assumes that we will use the Postgres database by d
 
 The API ships with several convenience commands (runnable via `npm`):
 
--   `npm run lint`: run code linting
+-   `npm run lint:check`: run code linting. Check for syntax errors
 -   `npm run lint:fix`: automatically fix lint problems
--   `npm run format`: automatically fix prettier problems
--   `npm run test`: run functional tests (this requires that the server be running)
+-   `npm run prettier:check`: checks that the code style is correctly formatted
+-   `npm run prettier:format`: automatically fix prettier problems
+-   `npm run test`: run functional tests with coverage
 -   `npm run test:watch`: run functional tests in watch mode
--   `npm run migrate`: run migration
--   `npm run migrate:undo`: run undo migration
--   `npm run migrate:reset`: run new migration after undo migration
--   `npm run seed`: populate database
+-   `npm run prisma:format`: check .prisma files format
+-   `npm run prisma:migrate`: reads the data sources and data model definition to create a new migration
+-   `npm run prisma:generate`: reads all above mentioned information from the Prisma schema to generate the correct data source client code
+-   `npm run prisma:generate:watch`: watch the Prisma schema and rerun after a change
+-   `npm run prisma:reset`: reset your database and apply all migrations, all data will be lost
+-   `npm run prisma:seed`: seed the database
+-   `npm run commit`: help you follow conventional commits flow
 
 ## Scope of structure
 
