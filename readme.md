@@ -40,7 +40,7 @@ This repo is functionality complete.
 [![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)](https://swagger.io/)
 <br/><br/>
 
-## :zap: Getting Started
+## :zap: Getting Started - Project setup
 
 To install the project, follow the steps below.
 
