@@ -17,9 +17,9 @@
 
 This project is a simple and complete boilerplate written in **TypeScript** to quickly create an **Express Rest API**.<br />
 
-Use of libraries like **Prisma ORM**, log management with **Morgan** and **Winston** (tracking of HTTP request logs in real time and storage of rotating log files with web visualization via EJS engine), unit test coverage with **Jest**, data validation schemas with **Zod**, JWT middleware authentication, Swagger documentation, and other essential packages to start a new custom project.<br />
+Use of libraries like **Prisma ORM**, log management with **Morgan** and **Winston** (tracking of HTTP request logs in real time and storage of rotating log files with web visualization via EJS engine), unit test coverage with **Jest**, data validation schemas with **Zod**, JWT middleware authentication, **Swagger** documentation, and other essential packages to start a new custom project.<br />
 
-The boilerplate is a clean architecture based template project for NodeJs using TypeScript to facilitate support and customization of the project. We integrated the Prettier and Eslint tools into the project to help us automate type-checking during Typescript code development.
+The boilerplate is based on the MVC architecture with extra layers to facilitate support and customization of the project. We integrated the **ESLint** and **Prettier** tools into the project to help us automate type-checking during Typescript code development.
 
 This repo is functionality complete.
 <br/><br/>
@@ -40,7 +40,7 @@ This repo is functionality complete.
 [![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)](https://swagger.io/)
 <br/><br/>
 
-## :zap: Getting Started
+## :zap: Getting Started - Project setup
 
 To install the project, follow the steps below.
 
@@ -82,7 +82,7 @@ APP_URL_SSL='false'
 
 ### Step 4 - Finally, run the project
 
-Running locally in `development` environment:</br>
+-   Running locally in `development` environment:</br>
 
 ```bash
 # development (watch mode)
@@ -94,13 +94,13 @@ When running locally, by default the API will be accessible at url http://localh
 <div align="left">
   <kbd>
     <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/readme-api-running.png?raw=true" 
-    width="450"
+    width="600"
     alt="console-api-running"/>
   </kbd>
 </div>
 </br>
 
-Running in a `production` environment (the code will be transpiled in the build folder and executed):</br>
+-   Running in a `production` environment (the code will be transpiled in the build folder and executed):</br>
 
 ```bash
 # production mode
@@ -202,15 +202,19 @@ Obs.: Initially, the project assumes that we will use the Postgres database by d
 
 The API ships with several convenience commands (runnable via `npm`):
 
--   `npm run lint`: run code linting
+-   `npm run lint:check`: run code linting to check for syntax errors
 -   `npm run lint:fix`: automatically fix lint problems
--   `npm run format`: automatically fix prettier problems
--   `npm run test`: run functional tests (this requires that the server be running)
+-   `npm run prettier:check`: checks that the code style is correctly formatted
+-   `npm run prettier:format`: automatically fix prettier problems
+-   `npm run test`: run functional tests with coverage
 -   `npm run test:watch`: run functional tests in watch mode
--   `npm run migrate`: run migration
--   `npm run migrate:undo`: run undo migration
--   `npm run migrate:reset`: run new migration after undo migration
--   `npm run seed`: populate database
+-   `npm run prisma:format`: check .prisma files format
+-   `npm run prisma:migrate`: reads the data sources and data model definition to create a new migration
+-   `npm run prisma:generate`: reads all above mentioned information to generate the data source
+-   `npm run prisma:generate:watch`: watch the Prisma schema and rerun after a change
+-   `npm run prisma:reset`: reset your database and apply all migrations, all data will be lost
+-   `npm run prisma:seed`: seed the database
+-   `npm run commit`: help you follow conventional commits flow
 
 ## Scope of structure
 
