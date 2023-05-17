@@ -26,6 +26,7 @@
             "@models/*": ["src/models/*"],
             "@presenters/*": ["src/presenters/*"],
             "@services/*": ["src/services/*"],
+            "@functions/*": ["src/functions/*"],
             "@views/*": ["src/views/*"],
             "@utils/*": ["src/utils/*"],
             "@public/*": ["public/*"],
