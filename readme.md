@@ -50,7 +50,7 @@ First, to clone the repository, you'll need [Git](https://git-scm.com/downloads)
 From your command line:
 
 ```bash
-$ git clone https://github.com/vincent-queimado/typescript-express-boilerplate.git
+$ git clone https://github.com/vincent-queimado/express-prisma-ts-boilerplate.git
 ```
 
 ### Step 2 - Install the project dependencies
@@ -58,7 +58,7 @@ $ git clone https://github.com/vincent-queimado/typescript-express-boilerplate.g
 To run this application, you'll need [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. Make sure you install all the necessary dependencies to run the project from your command line:
 
 ```bash
-$ cd typescript-express-boilerplate
+$ cd express-prisma-ts-boilerplate
 $ npm install
 ```
 
