@@ -1,7 +1,8 @@
 import bcrypt from 'bcryptjs';
+import config from '@config/app';
 
 export default async (password: string) => {
-    const saltRounds = 10;
+    const saltRounds = config.bcrypt.saltRounds;
 
     const hashPassword = bcrypt.hashSync(password, saltRounds);
 

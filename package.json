@@ -1,7 +1,7 @@
 {
-    "name": "express-typescript-boilerplate",
+    "name": "express-prisma-ts-boilerplate",
     "version": "1.0.1",
-    "description": "This project is a boilerplate for creating an Express Rest API back-end application with Typescript. Use of libraries like Prisma ORM, log management with Morgan/Winston, unit tests with Jest, validation schemas with Zod, JWT authentication, and other essential packages to start a new project.",
+    "description": "A starter project written in TypeScript for quickly building Express RESTful APIs using ORM, loggers, schema validator, authentication, unit test coverage, and much more.",
     "author": {
         "name": "Vincent Jean",
         "email": "vincent.queimado@gmail.com",

@@ -1,10 +1,8 @@
-import colorTxt from 'ansi-colors';
 import { PrismaClient } from '@prisma/client';
-import logger from '@utils/winston_file_logger/winston/logger';
-
-const prisma = new PrismaClient();
 
 const checkConnection = async () => {
+    const prisma = new PrismaClient();
+
     const connection = await prisma
         .$connect()
         .then(() => {
