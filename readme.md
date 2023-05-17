@@ -17,9 +17,9 @@
 
 This project is a simple and complete boilerplate written in **TypeScript** to quickly create an **Express Rest API**.<br />
 
-Use of libraries like **Prisma ORM**, log management with **Morgan** and **Winston** (tracking of HTTP request logs in real time and storage of rotating log files with web visualization via EJS engine), unit test coverage with **Jest**, data validation schemas with **Zod**, JWT middleware authentication, Swagger documentation, and other essential packages to start a new custom project.<br />
+Use of libraries like **Prisma ORM**, log management with **Morgan** and **Winston** (tracking of HTTP request logs in real time and storage of rotating log files with web visualization via EJS engine), unit test coverage with **Jest**, data validation schemas with **Zod**, JWT middleware authentication, **Swagger** documentation, and other essential packages to start a new custom project.<br />
 
-The boilerplate is based on the MVC architecture with extra layers to facilitate support and customization of the project. We integrated the Prettier and Eslint tools into the project to help us automate type-checking during Typescript code development.
+The boilerplate is based on the MVC architecture with extra layers to facilitate support and customization of the project. We integrated the **ESLint** and **Prettier** tools into the project to help us automate type-checking during Typescript code development.
 
 This repo is functionality complete.
 <br/><br/>
