@@ -15,11 +15,11 @@
 
 ## :blue_heart: About the boilerplate
 
-This project is a simple and complete boilerplate written in TypeScript to quickly create an **Express Rest API**.<br />
+This project is a simple and complete boilerplate written in **TypeScript** to quickly create an **Express Rest API**.<br />
 
-Use of libraries like **Prisma ORM**, log management with **Morgan/Winston** (logging HTTP requests and rotating log files), unit test coverage with **Jest**, data validation schemas with **Zod**, JWT authentication, and other essential packages to start a new custom project.<br />
+Use of libraries like **Prisma ORM**, log management with **Morgan** and **Winston** (tracking of HTTP request logs in real time and storage of rotating log files with web visualization via EJS engine), unit test coverage with **Jest**, data validation schemas with **Zod**, JWT middleware authentication, Swagger documentation, and other essential packages to start a new custom project.<br />
 
-The architecture resembles the basic MVC model, despite having extra layers to facilitate support and customization of the project. We integrated the Prettier and Eslint tools into the project to help us automate type-checking during Typescript code development.
+The boilerplate is a clean architecture based template project for NodeJs using TypeScript to facilitate support and customization of the project. We integrated the Prettier and Eslint tools into the project to help us automate type-checking during Typescript code development.
 
 This repo is functionality complete.
 <br/><br/>
@@ -37,6 +37,7 @@ This repo is functionality complete.
 [![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)](https://nodemon.io/)
 [![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
 [![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)](https://jwt.io/)
+[![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)](https://swagger.io/)
 <br/><br/>
 
 ## :zap: Getting Started
@@ -49,7 +50,7 @@ First, to clone the repository, you'll need [Git](https://git-scm.com/downloads)
 From your command line:
 
 ```bash
-$ git clone https://github.com/vincent-queimado/typescript-express-boilerplate.git
+$ git clone https://github.com/vincent-queimado/express-prisma-ts-boilerplate.git
 ```
 
 ### Step 2 - Install the project dependencies
@@ -57,7 +58,7 @@ $ git clone https://github.com/vincent-queimado/typescript-express-boilerplate.g
 To run this application, you'll need [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. Make sure you install all the necessary dependencies to run the project from your command line:
 
 ```bash
-$ cd typescript-express-boilerplate
+$ cd express-prisma-ts-boilerplate
 $ npm install
 ```
 

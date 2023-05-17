@@ -1,13 +1,13 @@
 import fs from 'fs';
 import path from 'path';
 import nodemailer from './nodemailer';
-import config from '@config/email/_index';
+import config from '@config/email';
 import globalUrl from '@utils/global_http_url/globalurl';
 
 const htmlTemplate = '../templates/welcome.html';
 const htmlFileEncoding = 'utf-8';
 
-const emailSubject = 'Melibee - Seja bem-vindo(a)';
+const emailSubject = 'Api - Seja bem-vindo(a)';
 const emailText = 'Seja bem-vindo(a)';
 
 export default async (data: any) => {

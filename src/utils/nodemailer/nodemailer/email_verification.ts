@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import nodemailer from 'nodemailer';
-import config from '@config/email/_index';
+import config from '@config/email';
 import logger from '@utils/winston_file_logger/winston/logger';
 import globalUrl from '@utils/global_http_url/globalurl';
 
@@ -9,7 +9,7 @@ const htmlTemplate = '../templates/email-verification.html';
 const htmlFileEncoding = 'utf-8';
 
 const errorSendEmail = 'Error to send e-mail.';
-const emailSubject = 'Melibee - Confirmação de cadastro';
+const emailSubject = 'Api - Confirmação de cadastro';
 const emailText = 'E-mail de confirmação de cadastro.';
 
 export default async (data: any) => {

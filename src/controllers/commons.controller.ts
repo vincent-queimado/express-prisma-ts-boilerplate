@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import presenter from '@presenters/commons/_index';
+import presenter from '@presenters/commons';
 import logger from '@utils/winston_file_logger/winston/logger';
 
 const root = (req: Request, res: Response, next: NextFunction) => {
@@ -8,11 +8,11 @@ const root = (req: Request, res: Response, next: NextFunction) => {
         .then((result: any) => {
             try {
                 res.redirect(result.data.content);
-            } catch (err: any) {
+            } catch (err: any) /* istanbul ignore next */ {
                 logger.error(`Erro ao redirecionar rota para raiz de url. ${err.message}`);
             }
         })
-        .catch((err: any) => next(err));
+        .catch(/* istanbul ignore next */ (err: any) => next(err));
 };
 
 const info = (req: Request, res: Response, next: NextFunction) => {
@@ -21,11 +21,11 @@ const info = (req: Request, res: Response, next: NextFunction) => {
         .then((result: any) => {
             try {
                 res.status(result.httpStatusCode).json(result.data);
-            } catch (err: any) {
+            } catch (err: any) /* istanbul ignore next */ {
                 logger.error(`Erro ao apresentar informações de API. ${err.message}`);
             }
         })
-        .catch((err: any) => next(err));
+        .catch(/* istanbul ignore next */ (err: any) => next(err));
 };
 
 export default {

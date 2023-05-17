@@ -1,1 +1,1 @@
-export default () => ({ success: true, data: '/info', error: null });
+export default () => ({ success: true, data: '/v1/info', error: null });

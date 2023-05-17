@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 
-import presenter from './jwt/_index';
+import presenter from './jwt';
 import logger from '@utils/winston_file_logger/winston/logger';
 
 // Auth validate token without checking user in database (not recommended)

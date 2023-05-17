@@ -1,30 +1,20 @@
-import colorTxt from 'ansi-colors';
 import { PrismaClient } from '@prisma/client';
-import logger from '@utils/winston_file_logger/winston/logger';
-
-const prisma = new PrismaClient();
 
 const checkConnection = async () => {
-    await prisma
+    const prisma = new PrismaClient();
+
+    const connection = await prisma
         .$connect()
         .then(() => {
-            /* eslint-disable no-console */
-            console.log(
-                colorTxt.white(`-> Connected on database`),
-                /* eslint-enable no-console */
-            );
-            logger.info(`Database connection has been established successfully.`);
+            return { success: true, error: null };
         })
         .catch((err) => {
-            /* eslint-disable no-console */
-            console.log(colorTxt.red(`-> Unable to connect to the database`));
-            /* eslint-enable no-console */
-            logger.error(`Unable to connect to the database: ${err})`);
-            throw err;
+            return { success: false, error: err };
         })
         .finally(async () => {
             await prisma.$disconnect();
         });
+    return connection;
 };
 
 export default { checkConnection };

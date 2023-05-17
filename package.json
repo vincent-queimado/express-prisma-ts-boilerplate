@@ -1,7 +1,7 @@
 {
-    "name": "express-typescript-boilerplate",
+    "name": "express-prisma-ts-boilerplate",
     "version": "1.0.1",
-    "description": "This project is a boilerplate for creating an Express Rest API back-end application with Typescript. Use of libraries like Prisma ORM, log management with Morgan/Winston, unit tests with Jest, validation schemas with Zod, JWT authentication, and other essential packages to start a new project.",
+    "description": "A starter project written in TypeScript for quickly building Express RESTful APIs using ORM, loggers, schema validator, authentication, unit test coverage, and much more.",
     "author": {
         "name": "Vincent Jean",
         "email": "vincent.queimado@gmail.com",
@@ -37,8 +37,7 @@
         "lint:fix": "eslint --fix src/**/*.ts",
         "prettier:check": "prettier --check \"src/**/*.{js,ts}\"",
         "prettier:write": "prettier --write \"src/**/*.{js,ts}\"",
-        "test": "jest -i",
-        "test:cov": "jest --coverage",
+        "test": "jest --detectOpenHandles",
         "test:watch": "jest --watch",
         "prisma:migrate": "prisma migrate dev --skip-seed --preview-feature",
         "prisma:format": "prisma format",
@@ -61,6 +60,7 @@
         "@types/nodemailer": "^6.4.7",
         "@types/sequelize": "^4.28.14",
         "@types/serve-favicon": "^2.5.3",
+        "@types/supertest": "^2.0.12",
         "@types/swagger-jsdoc": "^6.0.1",
         "@types/swagger-ui-express": "^4.1.3",
         "@types/uuid": "^9.0.1",
