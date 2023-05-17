@@ -202,7 +202,7 @@ Obs.: Initially, the project assumes that we will use the Postgres database by d
 
 The API ships with several convenience commands (runnable via `npm`):
 
--   `npm run lint:check`: run code linting. Check for syntax errors
+-   `npm run lint:check`: run code linting to check for syntax errors
 -   `npm run lint:fix`: automatically fix lint problems
 -   `npm run prettier:check`: checks that the code style is correctly formatted
 -   `npm run prettier:format`: automatically fix prettier problems
@@ -210,7 +210,7 @@ The API ships with several convenience commands (runnable via `npm`):
 -   `npm run test:watch`: run functional tests in watch mode
 -   `npm run prisma:format`: check .prisma files format
 -   `npm run prisma:migrate`: reads the data sources and data model definition to create a new migration
--   `npm run prisma:generate`: reads all above mentioned information from the Prisma schema to generate the correct data source client code
+-   `npm run prisma:generate`: reads all above mentioned information to generate the data source
 -   `npm run prisma:generate:watch`: watch the Prisma schema and rerun after a change
 -   `npm run prisma:reset`: reset your database and apply all migrations, all data will be lost
 -   `npm run prisma:seed`: seed the database
