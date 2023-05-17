@@ -94,7 +94,7 @@ When running locally, by default the API will be accessible at url http://localh
 <div align="left">
   <kbd>
     <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/readme-api-running.png?raw=true" 
-    width="450"
+    width="600"
     alt="console-api-running"/>
   </kbd>
 </div>
