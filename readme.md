@@ -15,11 +15,11 @@
 
 ## :blue_heart: About the boilerplate
 
-This project is a simple and complete boilerplate written in TypeScript to quickly create an **Express Rest API**.<br />
+This project is a simple and complete boilerplate written in **TypeScript\* to quickly create an **Express Rest API\*\*.<br />
 
-Use of libraries like **Prisma ORM**, log management with **Morgan/Winston** (logging HTTP requests and rotating log files), unit test coverage with **Jest**, data validation schemas with **Zod**, JWT authentication, and other essential packages to start a new custom project.<br />
+Use of libraries like **Prisma ORM**, log management with **Morgan/Winston** (logging HTTP requests and rotating log files), unit test coverage with **Jest**, data validation schemas with **Zod**, JWT middleware authentication, and other essential packages to start a new custom project.<br />
 
-The architecture resembles the basic MVC model, despite having extra layers to facilitate support and customization of the project. We integrated the Prettier and Eslint tools into the project to help us automate type-checking during Typescript code development.
+The boilerplate is a clean architecture based template project for NodeJs using TypeScript to facilitate support and customization of the project. We integrated the Prettier and Eslint tools into the project to help us automate type-checking during Typescript code development.
 
 This repo is functionality complete.
 <br/><br/>

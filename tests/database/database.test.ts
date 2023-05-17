@@ -7,7 +7,10 @@ describe('CHECK DATABASE', () => {
     });
 
     it('CHECK FAIL DATABASE CONNECTION', async () => {
-        process.env.DATABASE_URL = 'postgresql://test:test@localhost:5432/test?schema=public';
+        const wrongUrl = 'postgresql://test:test@localhost:5432/test?schema=public';
+
+        process.env.DATABASE_URL = wrongUrl;
+
         const res = await db.checkConnection();
         expect(res).toMatchObject({ success: false });
     });
