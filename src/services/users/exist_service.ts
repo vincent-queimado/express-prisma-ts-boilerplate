@@ -3,7 +3,7 @@ import logger from '@utils/winston_file_logger/winston/logger';
 
 export default (id: string) => {
     const result = prisma.user
-        .findByPk(id)
+        .findUnique({ where: { id: id } })
         .then((res: any) => ({ success: true, data: res, error: null }))
         .catch((error: any) => {
             logger.error(`Failed to find account. DB Error: ${error}`);

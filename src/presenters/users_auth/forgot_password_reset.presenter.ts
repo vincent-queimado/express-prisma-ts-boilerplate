@@ -4,7 +4,7 @@
 import httpMsg from '@utils/http_messages/http_msg';
 import servUpdateUser from '@services/users/update_service';
 import servFindOneUser from '@services/users/get_by_field_service';
-import servHashPassword from 'src/functions/generate_hash_password';
+import servHashPassword from '@functions/generate_hash_password';
 
 const errCode = 'ERROR_USER_FORGOT_PASSWORD_RESET';
 

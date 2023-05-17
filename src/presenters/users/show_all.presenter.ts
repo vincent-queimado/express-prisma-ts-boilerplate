@@ -1,5 +1,5 @@
 import httpMsg from '@utils/http_messages/http_msg';
-import findAll from '@services/users/get_all';
+import findAll from '@services/users/get_all_service';
 
 const errCode = 'ERROR_USERS_FIND_ALL';
 

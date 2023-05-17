@@ -1,7 +1,7 @@
 import httpMsg from '@utils/http_messages/http_msg';
 import servFindOneUser from '@services/users/get_by_field_service';
-import servCheckPassword from 'src/functions/check_password';
-import servGenerateToken from 'src/functions/generate_token_access';
+import servCheckPassword from '@functions/check_password';
+import servGenerateToken from '@functions/generate_token_access';
 
 const errCode = 'ERROR_USER_SIGNIN';
 

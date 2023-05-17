@@ -4,7 +4,7 @@ import httpMsg from '@utils/http_messages/http_msg';
 import servCreateUser from '@services/users/save_service';
 import servUpdateUser from '@services/users/update_service';
 import servFindOneUser from '@services/users/get_by_field_service';
-import servHashPassword from 'src/functions/generate_hash_password';
+import servHashPassword from '@functions/generate_hash_password';
 import sendEmail from '@utils/nodemailer/nodemailer/email_verification';
 
 const errCode = 'ERROR_USER_SIGNUP';
