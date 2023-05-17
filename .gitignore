@@ -2,13 +2,13 @@
 node_modules
 
 # Build
-build
+build/
 
 # Unit Test
-coverage
+coverage/
 
 # Logs
-logs
+logs/
 
 # Keep environment variables out of version control
 .env
