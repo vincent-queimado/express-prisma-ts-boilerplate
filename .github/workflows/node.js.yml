@@ -32,5 +32,5 @@ jobs:
               run: |
                   touch .env
                   echo DATABASE_URL=${{ secrets.DATABASE_URL }} >> .env
-            - name: Run
-              run: npm run start:prod
+            - name: Run test
+              run: npm run test
