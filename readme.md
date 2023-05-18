@@ -164,21 +164,9 @@ Run `pgAdmin`. Right-click on the item `Servers`, select `Create` -> `Server` an
 </div>
 <br/>
 
-### Option 2 - Create your database from Heroku with Heroku Postgres add-on
+### Option 2 - Create your database from Hosting Cloud Service
 
-[Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) is a managed SQL database service provided directly by the cloud plataform [Heroku], bypassing all those infrastructure headaches(https://signup.heroku.com/).
-
-<div align="left">
-  <kbd>
-    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/heroku/heroku-postgres-add-on.png?raw=true" 
-    width="380"
-    alt="heroku-postgres-add-on"/>
-  </kbd>
-</div>
-
-Go to your Heroku account. If you have an account in Heroku, you can log in [here](https://id.heroku.com/login). If you need to setup a new one go [here](https://signup.heroku.com/login). They also offer a `free` tier.
-
-Click to the Dashboard menu dropdown on your left. Select Databases.
+[ElephantSQL](https://api.elephantsql.com/) is an example of hosting cloud service for the PostgreSQL database, bypassing all those infrastructure headaches(https://api.elephantsql.com/).
 
 ## Initialize your database
 
@@ -202,7 +190,7 @@ Obs.: Initially, the project assumes that we will use the Postgres database by d
 
 ## More scripts
 
-The API ships with several convenience commands (runnable via `npm`):
+The boilerplate ships with several convenience commands (runnable via `npm`):
 
 -   `npm run lint:check`: run code linting to check for syntax errors
 -   `npm run lint:fix`: automatically fix lint problems
@@ -220,38 +208,34 @@ The API ships with several convenience commands (runnable via `npm`):
 
 ## Scope of structure
 
-API service structure summary:
+Boilerplate structure summary:
 
 ```
 build\                    # Transpiled TypeScript code to Javasccript
+coverage\                 # Unit test reports
 docs\                     # Documentation / Postman collection / Readme assets
 logs\                     # Log files (generate with Winston packages)
 node_modules\             # NodeJS packages
+prisma\                   # Prisma schema and client connection / Migrations and seed
+  |--migrations\          # Database migration
+  |--seed\                # Database seed
 public\                   # Public ressources
 src\                      # Sources
- |--api\                  # Custom MVC model with extra layers
-     |--controllers\      # Controllers
-     |--models\           # Models
-     |--presenters\       # Presenters
-     |--services\         # Services
- |--config\               # Environment variables and configuration related things
+  |--config\              # Environment variables and configuration related things
      |--app\              # App configuration file
      |--database\         # Database configuration file
      |--email\            # Email configuration file
- |--database\             # Database connection drivers and migration files
-     |--sql\              # Sequelize ORM
-         |--db\           # Database connection
-         |--migrations\   # Database migration
-         |--seeders\      # Database seeders
- |--middlewares\          # Middlewares (JWT auth, data validation schema, Morgan, other middlewares)
-     |--schemas\          # Data validation schema
- |--server\               # Express server
- |--routes\               # Custom Routes
- |--utils\                # Utility handler, logger, mailer, etc..
- |--app.js                # Entry point
-tests\                    # unit test coverage with Jest
+  |--controllers\         # Controllers
+  |--database\            # Database connection
+  |--functions\           # Functions
+  |--middlewares\         # Middlewares (JWT auth, data validation schema, Morgan, and other middlewares)
+  |--models\              # Models
+  |--presenters\          # Presenters (Extra layer over MVC)
+  |--routes\              # Custom Routes
+  |--server\              # Express server
+  |--services\            # Services
+  |--utils\               # Utility handler, logger, mailer, etc..
+  |--views\               # Views (basic views renderized by EJS engine)
+  |--app.js               # Entry point
+tests\                    # Unit test coverage with Jest
 ```
-
-## Deploy to Heroku
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
