@@ -13,6 +13,7 @@
 <a href="https://codecov.io/gh/vincent-queimado/express-prisma-ts-boilerplate">
   <img src="https://codecov.io/gh/vincent-queimado/express-prisma-ts-boilerplate/branch/master/graph/badge.svg" />
 </a>
+
 ![divider](https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/readme-divider.png)
 
 ## :blue_heart: About the boilerplate
