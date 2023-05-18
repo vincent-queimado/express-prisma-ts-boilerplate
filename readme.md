@@ -10,7 +10,9 @@
   <span>A starter project written in TypeScript for quickly building Express RESTful APIs using ORM, loggers, schema validator, authentication, unit test coverage, and much more.</span></br>
   <sub>Made with ❤️ by <a href="https://github.com/vincent-queimado">Vincent Jean</a></sub>
 </p>
-
+<a href="https://codecov.io/gh/vincent-queimado/express-prisma-ts-boilerplate">
+  <img src="https://codecov.io/gh/vincent-queimado/express-prisma-ts-boilerplate/branch/master/graph/badge.svg" />
+</a>
 ![divider](https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/readme-divider.png)
 
 ## :blue_heart: About the boilerplate
