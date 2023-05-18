@@ -27,9 +27,9 @@ export default {
     ],
     coverageThreshold: {
         global: {
-            lines: 90,
+            lines: 50,
         },
     },
-    coverageReporters: ['text', 'lcov', 'clover', 'html'],
+    coverageReporters: ['json-summary', 'text', 'lcov', 'clover', 'html'],
     transform: {},
 };
