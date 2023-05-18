@@ -28,5 +28,9 @@ jobs:
                   cache-dependency-path: '**/package-lock.json'
             - name: Install dependencies
               run: npm install
+            - name: Create env file
+              run: |
+                  touch .env
+                  echo DATABASE_URL=${{ secrets.DATABASE_URL }} >> .env
             - name: Run
               run: npm run start:prod
