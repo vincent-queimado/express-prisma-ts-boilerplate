@@ -166,7 +166,18 @@ Run `pgAdmin`. Right-click on the item `Servers`, select `Create` -> `Server` an
 
 ### Option 2 - Create your database from Hosting Cloud Service
 
-[ElephantSQL](https://api.elephantsql.com/) is an example of hosting cloud service for the PostgreSQL database, bypassing all those infrastructure headaches(https://api.elephantsql.com/).
+[ElephantSQL](https://api.elephantsql.com/) is an example of hosting cloud service for the PostgreSQL database, bypassing all those infrastructure headaches (https://api.elephantsql.com/).
+
+Create a free instance (Tiny Turtle plan) and copy the URL in the DATABASE_URL variable of the .env file. The free version is limited to 20MB.
+
+<div align="left">
+  <kbd>
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/elephantsql/elephantsql-free-instance.png?raw=true" 
+    width="600"
+    alt="elephantsql-create-instance"/>
+  </kbd>
+</div>
+<br/>
 
 ## Initialize your database
 
