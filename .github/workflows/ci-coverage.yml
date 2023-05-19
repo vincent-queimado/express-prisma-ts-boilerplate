@@ -28,9 +28,13 @@ jobs:
 
             - name: Reset Database
               run: npm run prisma:reset:force
+              env:
+                  DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
             - name: Seed Database
               run: npm run prisma:seed
+              env:
+                  DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
             - name: Run the tests
               run: npm run test
