@@ -2,7 +2,7 @@ import { Router } from 'express';
 
 // import Auth from '@middlewares/jwt_auth/auth';
 
-// import CtrlUsers from '@controllers/users';
+import CtrlUsers from '@controllers/users.controller';
 // import CtrlUserMe from '@controllers/users_me';
 
 const router = Router();
@@ -13,6 +13,6 @@ const router = Router();
 // router.patch('/me/delete', Auth.jwtUsers, CtrlUserMe.deleteMe);
 
 // List of All Users
-// router.get('/users', CtrlUsers.showAll);
+router.get('/', CtrlUsers.showAll);
 
 export default router;

@@ -4,6 +4,9 @@ import { pathsToModuleNameMapper } from 'ts-jest';
 export default {
     preset: 'ts-jest',
     testEnvironment: 'node',
+    testEnvironmentOptions: {
+        NODE_ENV: 'test',
+    },
     moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
     modulePaths: ['<rootDir>'],
     testMatch: ['**/tests/**/*.test.ts'],
