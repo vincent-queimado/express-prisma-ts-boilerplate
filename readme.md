@@ -122,7 +122,7 @@ $ rm .\prisma
 $ npx prisma init
 ```
 
-If you want to continue with the [PostgreSQL](https://www.postgresql.org/download/) database but don't already have the software, download [pgAdmin](https://www.pgadmin.org/download/) now or use the Heroku Posgres cloud add-on.
+If you want to continue with the [PostgreSQL](https://www.postgresql.org/download/) database but don't already have the software, download [pgAdmin](https://www.pgadmin.org/download/) now or use a Hosting Cloud Service.
 
 ### Option 1 - Create your database from the pgAdmin tool
 
@@ -181,9 +181,9 @@ Create a free instance (Tiny Turtle plan) and copy the URL in the DATABASE_URL v
 
 ## Initialize your database
 
-You will need to configure a SQL database supported by ORM Sequelize (Oracle, Postgres, MySQL, MariaDB, SQLite, SQL Server, and more) for data storage.
+You will need to configure a SQL database supported by Prisma ORM for data storage.
 
-Before running the project, it will be necessary to perform a migration through ORM Sequelize. In this way, the first tables of the project will be created. When executing the reset command, the ORM seed will be called, thus populating some tables:
+Before running the project, it will be necessary to perform a migration through Prisma. In this way, the first tables of the project will be created. When executing the reset command, the ORM seed will be called, thus populating some tables:
 
 Migration run command:
 
