@@ -27,7 +27,7 @@ jobs:
               run: npm install
 
             - name: Update Database
-              run: npx prisma migrate dev
+              run: npx prisma db push --preview-feature
               env:
                   DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
