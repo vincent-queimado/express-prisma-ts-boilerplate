@@ -47,6 +47,7 @@
         "prisma:generate:watch": "prisma generate --watch",
         "prisma:seed": "ts-node prisma/seed/seed.ts --preview-feature",
         "prisma:reset": "prisma migrate reset",
+        "prisma:reset:force": "prisma migrate reset -f",
         "husky:prepare": "husky install && npx husky add .husky/pre-commit \"npx lint-staged\"",
         "precommit": "lint-staged",
         "commit": "git add . && git-cz"
