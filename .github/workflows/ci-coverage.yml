@@ -26,10 +26,10 @@ jobs:
             - name: Install dependencies
               run: npm install
 
-            - name: Update Database
-              run: npx prisma migrate dev
-              env:
-                  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+            # - name: Reset Database
+            #   run: npm run prisma dev
+            #   env:
+            #       DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
             - name: Run the tests
               run: npm run test
