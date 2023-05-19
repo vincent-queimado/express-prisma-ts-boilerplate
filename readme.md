@@ -84,7 +84,7 @@ APP_URL_SSL='false'
 
 ### Step 4 - Finally, run the project
 
--   Running locally in `development` environment:</br>
+Running locally in `development` environment:</br>
 
 ```bash
 # development (watch mode)
@@ -102,20 +102,20 @@ When running locally, by default the API will be accessible at url http://localh
 </div>
 </br>
 
--   Running in a `production` environment (the code will be transpiled in the build folder and executed):</br>
+Running in a `production` environment (the code will be transpiled in the build folder and executed):</br>
 
 ```bash
 # production mode
-$ npm run start
+$ npm run start:prod
 ```
 
 <br/>
 
 ## :electric_plug: Create your database
 
-You will need to configure an SQL database supported by the project's ORM in order to perform the data storage. By default the boilerplate uses a demo connection to the **PostgreSQL database**, but it can be changed to another database supported by the [Prisma ORM](https://www.prisma.io/stack).
+You will need to configure an SQL database supported by the Prisma ORM in order to perform the data storage. By default the boilerplate uses a demo connection to the **PostgreSQL database**, but it can be changed to another database supported by the [Prisma ORM](https://www.prisma.io/stack).
 
-If you want to install another database, remove the prisma folder, execute a new prisma initialization, follow the instructions and skip this section:
+If you want to install another database, remove the Prisma folder, execute a new prisma initialization, follow the instructions and skip this section:
 
 ```bash
 $ rm .\prisma
@@ -164,11 +164,21 @@ Run `pgAdmin`. Right-click on the item `Servers`, select `Create` -> `Server` an
 </div>
 <br/>
 
+Reports the URL based on the credentials and database information in the `DATABASE_URL` variable located in the `.env` file. Example:
+
+```bash
+#.env
+...
+# DATABASE
+DATABASE_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public"
+...
+```
+
 ### Option 2 - Create your database from Hosting Cloud Service
 
 [ElephantSQL](https://api.elephantsql.com/) is an example of hosting cloud service for the PostgreSQL database, bypassing all those infrastructure headaches (https://api.elephantsql.com/).
 
-Create a free instance (Tiny Turtle plan) and copy the URL in the DATABASE_URL variable of the .env file. The free version is limited to 20MB.
+Create a free instance (Tiny Turtle plan) and copy the URL in the `DATABASE_URL` variable of the `.env` file. The free version is limited to 20MB.
 
 <div align="left">
   <kbd>
@@ -191,13 +201,7 @@ Migration run command:
 $ npm run migrate
 ```
 
-Command to undo migrations and run again:
-
-```bash
-$ npm run migrate:reset
-```
-
-Obs.: Initially, the project assumes that we will use the Postgres database by default, but feel free to change the connection data to the database of your choice.
+Obs.: Initially, the project assumes that we will use the PostgreSQL database by default, but feel free to change the connection data to the database of your choice.
 
 ## More scripts
 
