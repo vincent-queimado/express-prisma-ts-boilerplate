@@ -1,7 +1,5 @@
-import jwt from './jwtAuth';
-import jwtUsers from './jwtAuthUsers';
+import jwtUsers from './jwtUsers';
 
 export default {
-    jwt,
     jwtUsers,
 };
