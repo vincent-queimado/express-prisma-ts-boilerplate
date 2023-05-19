@@ -26,13 +26,8 @@ jobs:
             - name: Install dependencies
               run: npm install
 
-            - name: Reset Database
-              run: npm run prisma:reset:force
-              env:
-                  DATABASE_URL: ${{ secrets.DATABASE_URL }}
-
-            - name: Seed Database
-              run: npm run prisma:seed
+            - name: Update Database
+              run: npx prisma migrate dev
               env:
                   DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
