@@ -27,7 +27,7 @@ jobs:
               run: npm install
 
             - name: Reset Database
-              run: npx prisma migrate reset
+              run: npx prisma migrate reset --force
               env:
                   DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
