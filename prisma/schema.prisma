@@ -7,16 +7,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User_hive {
-  id        String   @id @db.Uuid
-  userId    String   @db.Uuid
-  hiveId    String   @db.Uuid
-  createdAt DateTime @db.Timestamptz(6)
-  updatedAt DateTime @db.Timestamptz(6)
-}
-
 model User {
-  id                         String    @id @db.Uuid
+  id                         String    @id @default(uuid()) @db.Uuid
   email                      String    @unique @db.VarChar(255)
   name                       String    @db.VarChar(255)
   phone                      String    @db.VarChar(255)
@@ -35,7 +27,7 @@ model User {
   resetPasswordToken         String    @db.VarChar(255)
   enabled                    Boolean?  @default(true)
   deleted                    Boolean?  @default(false)
-  createdAt                  DateTime  @db.Timestamptz(6)
-  updatedAt                  DateTime  @db.Timestamptz(6)
+  createdAt                  DateTime  @default(now())
+  updatedAt                  DateTime  @updatedAt
   deletedAt                  DateTime? @db.Timestamptz(6)
 }

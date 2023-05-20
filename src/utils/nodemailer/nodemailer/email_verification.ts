@@ -3,7 +3,7 @@ import path from 'path';
 import nodemailer from 'nodemailer';
 import config from '@config/email';
 import logger from '@utils/winston_file_logger/winston/logger';
-import globalUrl from '@utils/global_http_url/globalurl';
+import globalUrl from '@utils/global_http_url/global_http_url';
 
 const htmlTemplate = '../templates/email-verification.html';
 const htmlFileEncoding = 'utf-8';

@@ -13,7 +13,10 @@ interface IApp {
 }
 
 interface IApi {
+    prefix: string;
     version: string;
+    jsonLimit: string;
+    extUrlencoded: boolean;
 }
 
 interface IJwt {

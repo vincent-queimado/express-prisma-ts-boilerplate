@@ -1,6 +1,9 @@
 import request from 'supertest';
 
 import server from '../../src/server/http_server';
+import globalApiPath from '../../src/utils/global_api_path/global_api_path';
+
+const apiPath = globalApiPath();
 
 describe('CHECK DEFAULT API ENDPOINTS', () => {
     let app: any;
@@ -14,13 +17,13 @@ describe('CHECK DEFAULT API ENDPOINTS', () => {
         await request(app).get('/').expect(302);
     });
 
-    it('GET /v1', async () => {
-        await request(app).get('/v1').expect(302);
+    it(`GET ${apiPath}`, async () => {
+        await request(app).get(`${apiPath}`).expect(302);
     });
 
-    it('GET /v1/info', async () => {
+    it(`GET ${apiPath}/info`, async () => {
         await request(app)
-            .get('/v1/info')
+            .get(`${apiPath}/info`)
             .expect(200)
             .then((response) => {
                 expect(response.body).toEqual(

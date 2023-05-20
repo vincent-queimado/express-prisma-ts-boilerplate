@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import nodemailer from './nodemailer';
 import config from '@config/email';
-import globalUrl from '@utils/global_http_url/globalurl';
+import globalUrl from '@utils/global_http_url/global_http_url';
 
 const htmlTemplate = '../templates/welcome.html';
 const htmlFileEncoding = 'utf-8';

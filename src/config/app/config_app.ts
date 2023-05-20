@@ -8,7 +8,10 @@ const testConfig = (env: IProcessEnv): IEnvConfig => {
             ssl: env.APP_URL_SSL == 'true' || false,
         },
         api: {
+            prefix: env.API_PREFIX || 'api',
             version: env.API_VERSION || 'v1',
+            jsonLimit: env.API_JSON_LIMIT || '5mb',
+            extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
         },
         jwt: {
             secret: env.API_JWT_SECRET || 'jwtsecretword',
@@ -32,7 +35,10 @@ const devConfig = (env: IProcessEnv): IEnvConfig => {
             ssl: env.APP_URL_SSL == 'true' || false,
         },
         api: {
+            prefix: env.API_PREFIX || 'api',
             version: env.API_VERSION || 'v1',
+            jsonLimit: env.API_JSON_LIMIT || '5mb',
+            extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
         },
         jwt: {
             secret: env.API_JWT_SECRET || 'jwtsecretword',
@@ -56,7 +62,10 @@ const stageConfig = (env: IProcessEnv): IEnvConfig => {
             ssl: env.APP_URL_SSL == 'true' || false,
         },
         api: {
+            prefix: env.API_PREFIX || 'api',
             version: env.API_VERSION || 'v1',
+            jsonLimit: env.API_JSON_LIMIT || '5mb',
+            extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
         },
         jwt: {
             secret: env.API_JWT_SECRET || 'jwtsecretword',
@@ -80,7 +89,10 @@ const prodConfig = (env: IProcessEnv): IEnvConfig => {
             ssl: env.APP_URL_SSL == 'true' || false,
         },
         api: {
+            prefix: env.API_PREFIX || 'api',
             version: env.API_VERSION || 'v1',
+            jsonLimit: env.API_JSON_LIMIT || '5mb',
+            extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
         },
         jwt: {
             secret: env.API_JWT_SECRET || 'jwtsecretword',

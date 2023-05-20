@@ -5,12 +5,12 @@ import CtrlUserAuth from '@controllers/users_auth.controller';
 const router = Router();
 
 // User Register
-router.post('/register', CtrlUserAuth.signup);
-router.get('/register/confirmation', CtrlUserAuth.signupConfirm);
+router.post('/register', CtrlUserAuth.register);
+router.get('/register/confirmation', CtrlUserAuth.registerConfirm);
 
 // User Login/Logout
-router.post('/auth/login', CtrlUserAuth.signin);
-router.post('/auth/logout', CtrlUserAuth.signout);
+router.post('/auth/login', CtrlUserAuth.login);
+router.post('/auth/logout', CtrlUserAuth.logout);
 
 // User Forgot Password
 // router.post('/forgotpassword/request', CtrlUserAuth.forgotPasswordRequest);

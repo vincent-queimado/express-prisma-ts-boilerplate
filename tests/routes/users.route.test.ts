@@ -1,6 +1,9 @@
 import request from 'supertest';
 
 import server from '../../src/server/http_server';
+import globalApiPath from '../../src/utils/global_api_path/global_api_path';
+
+const apiPath = globalApiPath();
 
 describe('CHECK USERS API ENDPOINTS', () => {
     let app: any;
@@ -10,9 +13,9 @@ describe('CHECK USERS API ENDPOINTS', () => {
         app = await server(silent);
     });
 
-    it('GET /v1/users', async () => {
+    it(`GET ${apiPath}/users`, async () => {
         await request(app)
-            .get('/v1/users')
+            .get(`${apiPath}/users`)
             .expect(200)
             .then((response) => {
                 expect(response.body).toEqual(

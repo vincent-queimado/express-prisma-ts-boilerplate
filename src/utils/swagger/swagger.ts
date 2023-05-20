@@ -1,5 +1,5 @@
 import swaggerJSDoc from 'swagger-jsdoc';
-import globalUrl from '@utils/global_http_url/globalurl';
+import globalUrl from '@utils/global_http_url/global_http_url';
 import { name, version, description, author, license } from '@packagejson';
 
 const url = `${globalUrl()}`;

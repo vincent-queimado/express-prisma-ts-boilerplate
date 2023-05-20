@@ -6,9 +6,10 @@ interface CustomNodeJsGlobal extends Global {
 
 declare const global: CustomNodeJsGlobal;
 
+// const prisma = global.prisma || new PrismaClient({ log: ['info'] });
 const prisma = global.prisma || new PrismaClient();
 
-if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'test') {
+if (process.env.NODE_ENV !== 'production') {
     global.prisma = prisma;
 }
 
