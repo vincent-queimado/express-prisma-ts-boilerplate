@@ -1,4 +1,4 @@
-import listar from './listar.presenter';
+import listar from './listar_presenter';
 
 export default {
     listar,

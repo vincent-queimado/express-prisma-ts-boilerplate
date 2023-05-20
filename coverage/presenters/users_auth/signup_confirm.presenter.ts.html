@@ -293,11 +293,11 @@ export default <span class="fstat-no" title="function not covered" >async </span
 <span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (!existUser.success) <span class="cstat-no" title="statement not covered" >return httpMsg.http422(existUser.msgError, errCode);</span></span>
 &nbsp;
     // Compare signup token
-    const checkedToken = <span class="cstat-no" title="statement not covered" >await checkToken(datas.token, existUser.data.signupConfirmationToken);</span>
+    const checkedToken = <span class="cstat-no" title="statement not covered" >await checkToken(datas.token, existUser.data.tokenOfRegisterConfirmation);</span>
 <span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (!checkedToken.success) <span class="cstat-no" title="statement not covered" >return httpMsg.http422(checkedToken.msgError, errCode);</span></span>
 &nbsp;
     // Update User
-    const updatedUser = <span class="cstat-no" title="statement not covered" >await updateUser(existUser.data.id, { signupConfirmationComplete: true });</span>
+    const updatedUser = <span class="cstat-no" title="statement not covered" >await updateUser(existUser.data.id, { isRegistered: true });</span>
 <span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (!updatedUser.success) <span class="cstat-no" title="statement not covered" >return httpMsg.http422(updatedUser.msgError, errCode);</span></span>
 <span class="cstat-no" title="statement not covered" >    user = { id: existUser.data.id };</span>
 &nbsp;
@@ -307,7 +307,7 @@ export default <span class="fstat-no" title="function not covered" >async </span
 <span class="cstat-no" title="statement not covered" >        return httpMsg.http422(msgErrorSendingEmail, errCode);</span>
     }
 &nbsp;
-    // return httpMsg.http200({ email: datas.email, signupConfirmationComplete: 'confirmed' });
+    // return httpMsg.http200({ email: datas.email, isRegistered: 'confirmed' });
 <span class="cstat-no" title="statement not covered" >    return httpMsg.http200(user);</span>
 };
 &nbsp;
@@ -319,7 +319,7 @@ const requiredDatas = <span class="fstat-no" title="function not covered" >async
 };
 &nbsp;
 const getUser = <span class="fstat-no" title="function not covered" >async </span>(email: string) =&gt; {
-    const result = <span class="cstat-no" title="statement not covered" >await servFindOneUser(email, 'email', ['password', 'resetPasswordToken'], false);</span>
+    const result = <span class="cstat-no" title="statement not covered" >await servFindOneUser(email, 'email', ['password', 'tokenOfResetPassword'], false);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (!result.success) <span class="cstat-no" title="statement not covered" >return { success: false, data: null, msgError: msgErrorCheckUser };</span></span>
 &nbsp;
@@ -330,14 +330,14 @@ const getUser = <span class="fstat-no" title="function not covered" >async </spa
             msgError: msgErrorUserNotFound,
         };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (result.data &amp;&amp; result.data.signupConfirmationComplete)</span>
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (result.data &amp;&amp; result.data.isRegistered)</span>
 <span class="cstat-no" title="statement not covered" >        return {</span>
             success: false,
             data: null,
             msgError: msgErrorUseAlreadyRegistered,
         };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (result.data &amp;&amp; result.data.signupConfirmationToken)</span>
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (result.data &amp;&amp; result.data.tokenOfRegisterConfirmation)</span>
 <span class="cstat-no" title="statement not covered" >        return {</span>
             success: true,
             data: result.data,

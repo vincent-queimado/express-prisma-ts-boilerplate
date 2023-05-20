@@ -227,7 +227,7 @@ export default <span class="fstat-no" title="function not covered" >async </span
 &nbsp;
     const url =
 <span class="cstat-no" title="statement not covered" >        `${globalUrl()}/api/v1/auth/signup/confirmation/` +</span>
-        `?email=${data.email}&amp;token=${data.signupConfirmationToken}`;
+        `?email=${data.email}&amp;token=${data.tokenOfRegisterConfirmation}`;
 &nbsp;
     let htmlText = <span class="cstat-no" title="statement not covered" >fs</span>
         .readFileSync(path.resolve(__dirname, htmlTemplate), {

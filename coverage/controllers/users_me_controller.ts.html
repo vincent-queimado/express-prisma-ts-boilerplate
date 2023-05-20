@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/18</span>
+                <span class='fraction'>6/18</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">33.33% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/18</span>
+                <span class='fraction'>6/18</span>
             </div>
         
             
@@ -103,20 +103,10 @@
 <a name='L38'></a><a href='#L38'>38</a>
 <a name='L39'></a><a href='#L39'>39</a>
 <a name='L40'></a><a href='#L40'>40</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -126,7 +116,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -136,16 +136,16 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Request, Response, NextFunction } from 'express';
-<span class="cstat-no" title="statement not covered" >import presenter from '@presenters/users';</span>
-<span class="cstat-no" title="statement not covered" >import logger from '@utils/winston_file_logger/winston/logger';</span>
+import presenter from '@presenters/users';
+import logger from '@utils/winston_file_logger/winston/logger';
 &nbsp;
-const showMe = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(r</span>eq: Request, res: Response, next: NextFunction) =&gt; {</span>
+const showMe = <span class="fstat-no" title="function not covered" >(r</span>eq: Request, res: Response, next: NextFunction) =&gt; {
 <span class="cstat-no" title="statement not covered" >    presenter</span>
         .showMe(req.body.user.id)
         .then(<span class="fstat-no" title="function not covered" >(r</span>esult: any) =&gt; <span class="cstat-no" title="statement not covered" >res.status(result.httpStatusCode).json(result.data))</span>
@@ -155,7 +155,7 @@ const showMe = <span class="cstat-no" title="statement not covered" ><span class
         });
 };
 &nbsp;
-const updateMe = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(r</span>eq: Request, res: Response, next: NextFunction) =&gt; {</span>
+const updateMe = <span class="fstat-no" title="function not covered" >(r</span>eq: Request, res: Response, next: NextFunction) =&gt; {
 <span class="cstat-no" title="statement not covered" >    presenter</span>
         .updateMe(req.body.user.id, req.body)
         .then(<span class="fstat-no" title="function not covered" >(r</span>esult: any) =&gt; <span class="cstat-no" title="statement not covered" >res.status(result.httpStatusCode).json(result.data))</span>
@@ -165,7 +165,7 @@ const updateMe = <span class="cstat-no" title="statement not covered" ><span cla
         });
 };
 &nbsp;
-const deleteMe = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(r</span>eq: Request, res: Response, next: NextFunction) =&gt; {</span>
+const deleteMe = <span class="fstat-no" title="function not covered" >(r</span>eq: Request, res: Response, next: NextFunction) =&gt; {
 <span class="cstat-no" title="statement not covered" >    presenter</span>
         .deleteMe(req.body.user.id)
         .then(<span class="fstat-no" title="function not covered" >(r</span>esult: any) =&gt; <span class="cstat-no" title="statement not covered" >res.status(result.httpStatusCode).json(result.data))</span>
@@ -175,7 +175,7 @@ const deleteMe = <span class="cstat-no" title="statement not covered" ><span cla
         });
 };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >export default {</span>
+export default {
     showMe,
     updateMe,
     deleteMe,
@@ -187,7 +187,7 @@ const deleteMe = <span class="cstat-no" title="statement not covered" ><span cla
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-05-16T19:57:18.718Z
+                at 2023-05-20T22:24:51.509Z
             </div>
         <script src="../prettify.js"></script>
         <script>

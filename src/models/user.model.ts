@@ -13,9 +13,9 @@ export interface User {
     google_locale: string | null;
     google_avatar: string | null;
     password: string;
-    signupConfirmationComplete: boolean;
-    signupConfirmationToken: string;
-    resetPasswordToken: string;
-    enabled: boolean;
-    deleted: boolean;
+    isRegistered: boolean;
+    tokenOfRegisterConfirmation: string;
+    tokenOfResetPassword: string;
+    isDisabled: boolean;
+    isDeleted: boolean;
 }

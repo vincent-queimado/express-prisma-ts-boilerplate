@@ -176,7 +176,7 @@ DATABASE_URL="postgresql://johndoe:randompassword@localhost:5432/mydb?schema=pub
 
 ### Option 2 - Create your database from Hosting Cloud Service
 
-[ElephantSQL](https://api.elephantsql.com/) is an example of hosting cloud service for the PostgreSQL database, bypassing all those infrastructure headaches (https://api.elephantsql.com/).
+[ElephantSQL](https://api.elephantsql.com/) is a free tier hosting cloud service for the PostgreSQL database, bypassing all those infrastructure headaches (https://api.elephantsql.com/).
 
 Create a free instance (Tiny Turtle plan) and copy the URL in the `DATABASE_URL` variable of the `.env` file. The free version is limited to 20MB.
 

@@ -423,8 +423,8 @@ export default <span class="fstat-no" title="function not covered" >async </span
 <span class="cstat-no" title="statement not covered" >        datas.password = hashedPassword.data;</span>
 &nbsp;
         // Generate signup token
-<span class="cstat-no" title="statement not covered" >        datas.signupConfirmationToken = await randtoken.suid(16);</span>
-<span class="cstat-no" title="statement not covered" >        datas.resetPasswordToken = await randtoken.suid(16);</span>
+<span class="cstat-no" title="statement not covered" >        datas.tokenOfRegisterConfirmation = await randtoken.suid(16);</span>
+<span class="cstat-no" title="statement not covered" >        datas.tokenOfResetPassword = await randtoken.suid(16);</span>
 &nbsp;
         // Create new User
         const createdUser = <span class="cstat-no" title="statement not covered" >await createUser(datas);</span>
@@ -433,7 +433,7 @@ export default <span class="fstat-no" title="function not covered" >async </span
     }
 &nbsp;
     // Update User if exist with your signup is not complete
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (existUser.data &amp;&amp; !existUser.data.signupConfirmationComplete) {</span>
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (existUser.data &amp;&amp; !existUser.data.isRegistered) {</span>
         // Hash password
         const hashedPassword = <span class="cstat-no" title="statement not covered" >await hashUserPassword(datas.password);</span>
 <span class="cstat-no" title="statement not covered" >        <span class="missing-if-branch" title="if path not taken" >I</span>if (!hashedPassword.success || !hashedPassword.data) {</span>
@@ -442,8 +442,8 @@ export default <span class="fstat-no" title="function not covered" >async </span
 <span class="cstat-no" title="statement not covered" >        datas.password = hashedPassword.data;</span>
 &nbsp;
         // Generate signup token
-<span class="cstat-no" title="statement not covered" >        datas.signupConfirmationToken = await randtoken.suid(16);</span>
-<span class="cstat-no" title="statement not covered" >        datas.resetPasswordToken = await randtoken.suid(16);</span>
+<span class="cstat-no" title="statement not covered" >        datas.tokenOfRegisterConfirmation = await randtoken.suid(16);</span>
+<span class="cstat-no" title="statement not covered" >        datas.tokenOfResetPassword = await randtoken.suid(16);</span>
 &nbsp;
         // Update User
         const updatedUser = <span class="cstat-no" title="statement not covered" >await updateUser(existUser.data.id, datas);</span>
@@ -475,7 +475,7 @@ const getUser = <span class="fstat-no" title="function not covered" >async </spa
     const result = <span class="cstat-no" title="statement not covered" >await servFindOneUser(</span>
         email,
         'email',
-        ['password', 'signupConfirmationToken', 'resetPasswordToken'],
+        ['password', 'tokenOfRegisterConfirmation', 'tokenOfResetPassword'],
         false,
     );
 &nbsp;
@@ -488,14 +488,14 @@ const getUser = <span class="fstat-no" title="function not covered" >async </spa
             msgError: '',
         };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (result.data &amp;&amp; !result.data.dataValues.signupConfirmationComplete)</span>
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (result.data &amp;&amp; !result.data.dataValues.isRegistered)</span>
 <span class="cstat-no" title="statement not covered" >        return {</span>
             success: true,
             data: result.data.dataValues,
             msgError: '',
         };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (result.data &amp;&amp; result.data.dataValues.signupConfirmationComplete)</span>
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (result.data &amp;&amp; result.data.dataValues.isRegistered)</span>
 <span class="cstat-no" title="statement not covered" >        return {</span>
             success: false,
             data: result.data.dataValues,

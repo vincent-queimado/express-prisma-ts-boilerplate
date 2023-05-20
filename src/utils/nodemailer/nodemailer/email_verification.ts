@@ -34,7 +34,7 @@ export default async (data: any) => {
 
     const url =
         `${globalUrl()}/api/v1/auth/signup/confirmation/` +
-        `?email=${data.email}&token=${data.signupConfirmationToken}`;
+        `?email=${data.email}&token=${data.tokenOfRegisterConfirmation}`;
 
     let htmlText = fs
         .readFileSync(path.resolve(__dirname, htmlTemplate), {
