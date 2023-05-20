@@ -15,6 +15,7 @@
         "noImplicitAny": true,
         "removeComments": true,
         "skipLibCheck": true,
+        "sourceMap": true,
         "baseUrl": ".",
         "paths": {
             "@config/*": ["src/config/*"],

@@ -1,9 +1,9 @@
 {
     "total": {
-        "lines": { "total": 206, "covered": 153, "skipped": 0, "pct": 74.27 },
-        "statements": { "total": 212, "covered": 156, "skipped": 0, "pct": 73.58 },
+        "lines": { "total": 215, "covered": 171, "skipped": 0, "pct": 79.53 },
+        "statements": { "total": 222, "covered": 175, "skipped": 0, "pct": 78.82 },
         "functions": { "total": 27, "covered": 20, "skipped": 0, "pct": 74.07 },
-        "branches": { "total": 25, "covered": 8, "skipped": 0, "pct": 32 },
+        "branches": { "total": 26, "covered": 9, "skipped": 0, "pct": 34.61 },
         "branchesTrue": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
     },
     "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\database\\db_connection.ts": {
@@ -43,21 +43,21 @@
         "branches": { "total": 6, "covered": 0, "skipped": 0, "pct": 0 }
     },
     "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\middlewares\\jwt_auth\\auth.ts": {
-        "lines": { "total": 11, "covered": 0, "skipped": 0, "pct": 0 },
+        "lines": { "total": 11, "covered": 4, "skipped": 0, "pct": 36.36 },
         "functions": { "total": 3, "covered": 0, "skipped": 0, "pct": 0 },
-        "statements": { "total": 11, "covered": 0, "skipped": 0, "pct": 0 },
+        "statements": { "total": 11, "covered": 4, "skipped": 0, "pct": 36.36 },
         "branches": { "total": 2, "covered": 0, "skipped": 0, "pct": 0 }
     },
     "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\middlewares\\jwt_auth\\jwt\\index.ts": {
-        "lines": { "total": 2, "covered": 0, "skipped": 0, "pct": 0 },
+        "lines": { "total": 2, "covered": 2, "skipped": 0, "pct": 100 },
         "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
-        "statements": { "total": 2, "covered": 0, "skipped": 0, "pct": 0 },
+        "statements": { "total": 2, "covered": 2, "skipped": 0, "pct": 100 },
         "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
     },
     "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\middlewares\\jwt_auth\\jwt\\jwtUsers.ts": {
-        "lines": { "total": 27, "covered": 0, "skipped": 0, "pct": 0 },
+        "lines": { "total": 27, "covered": 6, "skipped": 0, "pct": 22.22 },
         "functions": { "total": 3, "covered": 0, "skipped": 0, "pct": 0 },
-        "statements": { "total": 29, "covered": 0, "skipped": 0, "pct": 0 },
+        "statements": { "total": 29, "covered": 6, "skipped": 0, "pct": 20.68 },
         "branches": { "total": 7, "covered": 0, "skipped": 0, "pct": 0 }
     },
     "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\middlewares\\morgan\\morgan.ts": {
@@ -67,9 +67,9 @@
         "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
     },
     "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\middlewares\\rate_limiter\\rate_limiter.ts": {
-        "lines": { "total": 3, "covered": 3, "skipped": 0, "pct": 100 },
+        "lines": { "total": 3, "covered": 0, "skipped": 0, "pct": 0 },
         "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
-        "statements": { "total": 3, "covered": 3, "skipped": 0, "pct": 100 },
+        "statements": { "total": 3, "covered": 0, "skipped": 0, "pct": 0 },
         "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
     },
     "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\middlewares\\xss\\xss.ts": {
@@ -79,21 +79,15 @@
         "branches": { "total": 6, "covered": 4, "skipped": 0, "pct": 66.66 }
     },
     "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\default.route.ts": {
-        "lines": { "total": 10, "covered": 10, "skipped": 0, "pct": 100 },
-        "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
-        "statements": { "total": 10, "covered": 10, "skipped": 0, "pct": 100 },
+        "lines": { "total": 5, "covered": 5, "skipped": 0, "pct": 100 },
+        "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
+        "statements": { "total": 5, "covered": 5, "skipped": 0, "pct": 100 },
         "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
     },
     "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\index.ts": {
         "lines": { "total": 7, "covered": 7, "skipped": 0, "pct": 100 },
         "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
         "statements": { "total": 7, "covered": 7, "skipped": 0, "pct": 100 },
-        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
-    },
-    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\auth.route.ts": {
-        "lines": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
-        "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
-        "statements": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
         "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
     },
     "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\default.route.ts": {
@@ -109,18 +103,36 @@
         "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
     },
     "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\index.ts": {
-        "lines": { "total": 16, "covered": 16, "skipped": 0, "pct": 100 },
+        "lines": { "total": 17, "covered": 17, "skipped": 0, "pct": 100 },
         "functions": { "total": 2, "covered": 2, "skipped": 0, "pct": 100 },
-        "statements": { "total": 16, "covered": 16, "skipped": 0, "pct": 100 },
+        "statements": { "total": 17, "covered": 17, "skipped": 0, "pct": 100 },
         "branches": { "total": 3, "covered": 3, "skipped": 0, "pct": 100 }
     },
-    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\user.route.ts": {
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\user_auth.route.ts": {
+        "lines": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
+        "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
+        "statements": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\user_me.route.ts": {
+        "lines": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
+        "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
+        "statements": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\users.route.ts": {
         "lines": { "total": 5, "covered": 5, "skipped": 0, "pct": 100 },
         "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
         "statements": { "total": 5, "covered": 5, "skipped": 0, "pct": 100 },
         "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
     },
-    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\utils\\global_http_url\\globalurl.ts": {
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\utils\\global_api_path\\global_api_path.ts": {
+        "lines": { "total": 5, "covered": 5, "skipped": 0, "pct": 100 },
+        "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
+        "statements": { "total": 6, "covered": 6, "skipped": 0, "pct": 100 },
+        "branches": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\utils\\global_http_url\\global_http_url.ts": {
         "lines": { "total": 3, "covered": 3, "skipped": 0, "pct": 100 },
         "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
         "statements": { "total": 3, "covered": 3, "skipped": 0, "pct": 100 },

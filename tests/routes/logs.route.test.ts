@@ -1,6 +1,9 @@
 import request from 'supertest';
 
 import server from '../../src/server/http_server';
+import globalApiPath from '../../src/utils/global_api_path/global_api_path';
+
+const apiPath = globalApiPath();
 
 describe('CHECK LOGS API ENDPOINTS', () => {
     let app: any;
@@ -10,8 +13,8 @@ describe('CHECK LOGS API ENDPOINTS', () => {
         app = await server(silent);
     });
 
-    it('GET /v1/logs', async () => {
-        await request(app).get('/v1/logs').expect(301);
+    it(`GET ${apiPath}/logs`, async () => {
+        await request(app).get(`${apiPath}/logs`).expect(200);
     });
 
     afterAll(async () => {

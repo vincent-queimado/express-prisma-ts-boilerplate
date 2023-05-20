@@ -1,4 +1,4 @@
-import prisma from '@pri/prisma-client';
+import prisma from '../../../prisma/prisma-client';
 import logger from '@utils/winston_file_logger/winston/logger';
 
 export default (data: string, dataBy: string, excludeFields: any, findDeleted: boolean) => {
@@ -19,7 +19,6 @@ export default (data: string, dataBy: string, excludeFields: any, findDeleted: b
     };
 
     const query = buildQuery(data, dataBy, excludeFields, findDeleted);
-    console.log(query);
 
     const result = prisma.user
         .findFirst({

@@ -69,10 +69,10 @@ export default async (userDatas: any) => {
     }
 
     // Send confirmation email
-    const resultSendEmail = await sendEmail(datas);
-    if (!resultSendEmail.success) {
-        return httpMsg.http422(msgErrorSendingEmail, errCode);
-    }
+    // const resultSendEmail = await sendEmail(datas);
+    // if (!resultSendEmail.success) {
+    //     return httpMsg.http422(msgErrorSendingEmail, errCode);
+    // }
 
     return httpMsg.http201(user);
 };
@@ -105,17 +105,17 @@ const getUser = async (email: string) => {
             msgError: '',
         };
 
-    if (result.data && !result.data.dataValues.signupConfirmationComplete)
+    if (result.data && !result.data.signupConfirmationComplete)
         return {
             success: true,
-            data: result.data.dataValues,
+            data: result.data,
             msgError: '',
         };
 
-    if (result.data && result.data.dataValues.signupConfirmationComplete)
+    if (result.data && result.data.signupConfirmationComplete)
         return {
             success: false,
-            data: result.data.dataValues,
+            data: result.data,
             msgError: msgErrorUserAlreadyExist,
         };
 

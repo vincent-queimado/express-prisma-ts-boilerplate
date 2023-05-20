@@ -2,42 +2,42 @@ import { Request, Response, NextFunction } from 'express';
 import presenter from '@presenters/users_auth';
 import logger from '@utils/winston_file_logger/winston/logger';
 
-const signin = (req: Request, res: Response, next: NextFunction) => {
+const login = (req: Request, res: Response, next: NextFunction) => {
     presenter
-        .signin(req.body)
+        .login(req.body)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
         .catch((err: any) => {
-            logger.error(`Erro de signup. ${err.message}`);
+            logger.error(`Login error. ${err.message}`);
             next(err);
         });
 };
 
-const signout = (req: Request, res: Response, next: NextFunction) => {
+const logout = (req: Request, res: Response, next: NextFunction) => {
     presenter
-        .signout(req.body)
+        .logout(req.body)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
         .catch((err: any) => {
-            logger.error(`Erro de signout. ${err.message}`);
+            logger.error(`Logout error. ${err.message}`);
             next(err);
         });
 };
 
-const signup = (req: Request, res: Response, next: NextFunction) => {
+const register = (req: Request, res: Response, next: NextFunction) => {
     presenter
-        .signup(req.body)
+        .register(req.body)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
         .catch((err: any) => {
-            logger.error(`Erro de sigup. ${err.message}`);
+            logger.error(`Register error. ${err.message}`);
             next(err);
         });
 };
 
-const signupConfirm = (req: Request, res: Response, next: NextFunction) => {
+const registerConfirm = (req: Request, res: Response, next: NextFunction) => {
     presenter
-        .signupConfirm(req.query)
+        .registerConfirm(req.query)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
         .catch((err: any) => {
-            logger.error(`Erro de confirmação de signup. ${err.message}`);
+            logger.error(`Register confirmation error. ${err.message}`);
             next(err);
         });
 };
@@ -47,7 +47,7 @@ const signupConfirm = (req: Request, res: Response, next: NextFunction) => {
 //         .forgotPasswordRequest(req.body)
 //         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
 //         .catch((err: any) => {
-//             logger.error(`Erro de solicitação de reset de senha. ${err.message}`);
+//             logger.error(`Password reset request error. ${err.message}`);
 //             next(err);
 //         });
 // };
@@ -57,16 +57,16 @@ const signupConfirm = (req: Request, res: Response, next: NextFunction) => {
 //         .forgotPasswordReset(req.body)
 //         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
 //         .catch((err: any) => {
-//             logger.error(`Erro de reset de senha. ${err.message}`);
+//             logger.error(`Password reset error. ${err.message}`);
 //             next(err);
 //         });
 // };
 
 export default {
-    signin,
-    signout,
-    signup,
-    signupConfirm,
+    login,
+    logout,
+    register,
+    registerConfirm,
     // forgotPasswordRequest,
     // forgotPasswordReset,
 };

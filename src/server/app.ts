@@ -1,26 +1,26 @@
 import cors from 'cors';
 import path from 'path';
 import helmet from 'helmet';
+import express from 'express';
 import favicon from 'serve-favicon';
 import bodyParser from 'body-parser';
-import express, { Request, Response, NextFunction } from 'express';
 
 import xss from '@middlewares/xss/xss';
-import rateLimit from '@middlewares/rate_limiter/rate_limiter';
-
-import routes from '@routes/index';
-import routesV1 from '@routes/v1';
-import config from '@config/app';
-
 import morgan from '@middlewares/morgan/morgan';
+import rateLimit from '@middlewares/rate_limiter/rate_limiter';
 import handleError from '@middlewares/http_error_handler/error_handler';
 
-const jsonLimit = '5mb';
+import config from '@config/app';
+import routesV1 from '@routes/v1';
+import routes from '@routes/index';
+import globalApiPath from '@utils/global_api_path/global_api_path';
+
 const publicLogs = './logs';
 const publicFavicon = './public/assets/images/favicons/favicon.ico';
 
 export default () => {
     const app = express();
+    const apiPath = globalApiPath();
 
     app.use(helmet());
 
@@ -32,25 +32,22 @@ export default () => {
     app.use(morgan.consoleLogger);
     app.use(morgan.fileLogger);
 
-    app.use(bodyParser.json({ limit: jsonLimit }));
-    app.use(bodyParser.urlencoded({ extended: true }));
+    app.use(bodyParser.json({ limit: config.api.jsonLimit }));
+    app.use(bodyParser.urlencoded({ extended: config.api.extUrlencoded }));
 
     app.use(favicon(publicFavicon));
 
-    app.use(`/${config.api.version}/logs`, express.static(publicLogs, { dotfiles: 'allow' }));
+    app.use(`/${apiPath}/logs`, express.static(publicLogs, { dotfiles: 'allow' }));
 
-    app.use(`/${config.api.version}/auth`, rateLimit.limiter);
+    // app.use(`${apiPath}/auth`, rateLimit.limiter);
+    app.use(`${apiPath}/auth`, routesV1);
 
-    app.use(`/${config.api.version}`, routesV1);
+    app.use(`${apiPath}/`, routesV1);
 
     app.use('/', routes);
 
     app.set('view engine', 'ejs');
     app.set('views', path.join(__dirname, '../views'));
-
-    app.get('*', (req: Request, res: Response, next: NextFunction) => {
-        next();
-    });
 
     app.use(handleError);
 
