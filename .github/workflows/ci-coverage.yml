@@ -27,12 +27,12 @@ jobs:
               run: npm install
 
             - name: Reset database
-              run: prisma:reset:force
+              run: npm run prisma:reset:force
               env:
                   DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
             - name: Seed database
-              run: prisma:seed
+              run: npm run prisma:seed
               env:
                   DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
