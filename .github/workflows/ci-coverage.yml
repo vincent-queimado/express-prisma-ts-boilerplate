@@ -36,12 +36,12 @@ jobs:
               env:
                   DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
-            - name: Run the tests
+            - name: Run unit tests
               run: npm run test
               env:
                   DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
-            - name: Executing remote ssh commands using password
+            - name: Deploy to server
               uses: appleboy/ssh-action@v0.1.10
               with:
                   host: ${{ secrets.REMOTE_HOST }}
