@@ -51,7 +51,7 @@ jobs:
                   script_stop: true
                   debug: true
                   script: |
-                      pkill -f node
+                      sudo pkill -f node
                       cd /home/nodejs/express-prisma-ts-boilerplate
                       git checkout dev
                       git pull
