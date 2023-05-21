@@ -52,7 +52,7 @@ jobs:
                   tar -cvf deploy.tar ../build/
 
             - name: Deploy to server
-              uses: appleboy/scp-action@v0.1.4
+              uses: appleboy/scp-action@master
               with:
                   host: ${{ secrets.REMOTE_HOST }}
                   port: ${{ secrets.REMOTE_PORT }}
