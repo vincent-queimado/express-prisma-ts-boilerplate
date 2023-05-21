@@ -51,12 +51,7 @@ jobs:
                   script_stop: true
                   debug: true
                   script: |
-                      sudo pkill -f node
-                      cd /home/nodejs/express-prisma-ts-boilerplate
-                      git checkout dev
-                      git pull
-                      npm install
-                      npm run start:prod
+                      bash /home/nodejs/express-prisma-ts-boilerplate/deploy.sh
 
             - name: Upload coverage to Codecov
               uses: codecov/codecov-action@v3
