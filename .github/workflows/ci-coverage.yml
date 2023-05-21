@@ -41,6 +41,20 @@ jobs:
               env:
                   DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
+            - name: Run build task
+              run: npm run prebuild && npm run build
+
+            - name: Deploy to Server
+              uses: easingthemes/ssh-deploy@main
+              env:
+                  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+                  ARGS: '-rlgoDzvc -i --delete'
+                  SOURCE: 'build/'
+                  REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+                  REMOTE_USER: ${{ secrets.REMOTE_USER }}
+                  TARGET: '/home/nodejs'
+                  EXCLUDE: '/build/, /node_modules/'
+
             - name: Upload coverage to Codecov
               uses: codecov/codecov-action@v3
               with:
