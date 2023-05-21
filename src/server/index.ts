@@ -40,7 +40,7 @@ const checkDatabase = async (silent: boolean) => {
         logger.info(`Database connection has been established successfully.`);
     } else {
         if (!silent) console.log(colorTxt.red(`-> Unable to connect to the database`));
-        logger.error(`Unable to connect to the database: ${res.error})`);
+        logger.error(`Unable to connect to the database: ${res.error}`);
     }
     /* eslint-enable no-console */
 };
