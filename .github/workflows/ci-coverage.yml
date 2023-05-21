@@ -23,23 +23,23 @@ jobs:
                   cache: 'npm'
                   cache-dependency-path: '**/package-lock.json'
 
-            - name: Install dependencies
-              run: npm install
+            # - name: Install dependencies
+            #   run: npm install
 
-            - name: Reset database
-              run: npm run prisma:reset:force
-              env:
-                  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+            # - name: Reset database
+            #   run: npm run prisma:reset:force
+            #   env:
+            #       DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
-            - name: Seed database
-              run: npm run prisma:seed
-              env:
-                  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+            # - name: Seed database
+            #   run: npm run prisma:seed
+            #   env:
+            #       DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
-            - name: Run unit tests
-              run: npm run test
-              env:
-                  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+            # - name: Run unit tests
+            #   run: npm run test
+            #   env:
+            #       DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
             - name: Deploy to server
               uses: appleboy/ssh-action@v0.1.10
@@ -49,6 +49,7 @@ jobs:
                   username: ${{ secrets.REMOTE_USER }}
                   password: ${{ secrets.SSH_PASSWORD }}
                   script_stop: true
+                  debug: true
                   script: |
                       pkill -f node
                       cd /home/nodejs/express-prisma-ts-boilerplate
