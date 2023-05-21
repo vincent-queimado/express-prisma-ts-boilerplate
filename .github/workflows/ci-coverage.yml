@@ -49,8 +49,8 @@ jobs:
               with:
                   host: ${{ secrets.REMOTE_HOST }}
                   username: ${{ secrets.REMOTE_USER }}
-                  port: 22
-                  key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  port: ${{ secrets.REMOTE_PORT }}
+                  password: ${{ secrets.SSH_PASSWORD }}
                   source: '/home/nodejs'
                   target: '/build'
 
