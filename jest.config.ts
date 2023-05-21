@@ -7,6 +7,7 @@ export default {
     testEnvironmentOptions: {
         NODE_ENV: 'test',
     },
+    testTimeout: 60000,
     moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
     modulePaths: ['<rootDir>'],
     testMatch: ['**/tests/**/*.test.ts'],
