@@ -41,25 +41,20 @@ jobs:
               env:
                   DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
-            - name: Run build task
-              run: npm run prebuild && npm run build
-
-            # Runs a set of commands using the runners shell
-            - name: Run a multi-line script
-              run: |
-                  mkdir ../build
-                  cp -TR . ../build
-                  tar -cvf deploy.tar ../build/
-
-            - name: Deploy to server
-              uses: appleboy/scp-action@master
+            - name: Executing remote ssh commands using password
+              uses: appleboy/ssh-action@v0.1.10
               with:
                   host: ${{ secrets.REMOTE_HOST }}
-                  port: ${{ secrets.REMOTE_PORT }}
                   username: ${{ secrets.REMOTE_USER }}
                   password: ${{ secrets.SSH_PASSWORD }}
-                  source: 'deploy.tar'
-                  target: '/home/nodejs/express-prisma-ts-boilerplate'
+                  port: ${{ secrets.PORT }}
+                  script: |
+                      pkill -f node
+                      cd /home/nodejs/express-prisma-ts-boilerplate
+                      git checkout dev
+                      git pull
+                      npm install
+                      npm run start:prod
 
             - name: Upload coverage to Codecov
               uses: codecov/codecov-action@v3
