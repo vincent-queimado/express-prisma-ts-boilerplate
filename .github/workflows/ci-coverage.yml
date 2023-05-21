@@ -44,16 +44,15 @@ jobs:
             - name: Run build task
               run: npm run prebuild && npm run build
 
-            - name: Deploy to Server
-              uses: easingthemes/ssh-deploy@main
-              env:
-                  SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-                  ARGS: '-rlgoDzvc -i --delete'
-                  SOURCE: 'build/'
-                  REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-                  REMOTE_USER: ${{ secrets.REMOTE_USER }}
-                  TARGET: '/home/nodejs'
-                  EXCLUDE: '/build/, /node_modules/'
+            - name: Deploy to server
+              uses: appleboy/scp-action@v0.1.4
+              with:
+                  host: ${{ secrets.REMOTE_HOST }}
+                  username: ${{ secrets.REMOTE_USER }}
+                  port: 22
+                  key: ${{ secrets.SSH_PRIVATE_KEY }}
+                  source: '/home/nodejs'
+                  target: '/build'
 
             - name: Upload coverage to Codecov
               uses: codecov/codecov-action@v3
