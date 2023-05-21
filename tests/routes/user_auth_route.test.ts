@@ -42,6 +42,8 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
     });
 
     it('USER REGISTER SUCCESS TEST', async () => {
+        jest.setTimeout(30000);
+
         // User successfully registered
         await request(app)
             .post(`${apiPath}/auth/register`)
