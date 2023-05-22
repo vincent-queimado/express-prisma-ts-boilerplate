@@ -48,13 +48,9 @@ jobs:
                   port: ${{ secrets.REMOTE_PORT }}
                   username: ${{ secrets.REMOTE_USER }}
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
-                  passphrase: ${{ secrets.SSH_PASSWORD }}
+                  # password: ${{ secrets.SSH_PASSWORD }}
                   script: |
-                      cd /home/nodejs/express-prisma-ts-boilerplate
-                      git checkout dev
-                      git pull
-                  # script: |
-                  #     bash /home/nodejs/express-prisma-ts-boilerplate/deploy.sh
+                      bash /home/nodejs/express-prisma-ts-boilerplate/deploy.sh
 
             - name: Upload coverage to Codecov
               uses: codecov/codecov-action@v3
