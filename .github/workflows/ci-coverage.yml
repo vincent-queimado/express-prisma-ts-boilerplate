@@ -50,8 +50,10 @@ jobs:
                   password: ${{ secrets.SSH_PASSWORD }}
                   script_stop: true
                   debug: true
-                  script: |
-                      bash /home/nodejs/express-prisma-ts-boilerplate/deploy.sh
+                  passphrase: 'funky'
+                  script: cd /home/nodejs/express-prisma-ts-boilerplate/ && git pull
+                  # script: |
+                  #     bash /home/nodejs/express-prisma-ts-boilerplate/deploy.sh
 
             - name: Upload coverage to Codecov
               uses: codecov/codecov-action@v3
