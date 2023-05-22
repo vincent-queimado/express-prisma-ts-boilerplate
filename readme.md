@@ -14,7 +14,7 @@
 <div align="center">
 
 [![Codecov](https://codecov.io/gh/vincent-queimado/express-prisma-ts-boilerplate/branch/master/graph/badge.svg?token=GN0J6Y47VM)](https://codecov.io/gh/vincent-queimado/express-prisma-ts-boilerplate)
-[![Snyk](https://snyk.io/test/github/vincent-queimado/express-prisma-ts-boilerplate/badge.svg?targetFile=package.json](https://app.snyk.io/)
+[![Snyk](https://snyk.io/test/github/vincent-queimado/express-prisma-ts-boilerplate/badge.svg?targetFile=package.json)](https://app.snyk.io/)
 [![NodeJs](https://img.shields.io/badge/dynamic/json?label=node&query=%24.engines%5B%22node%22%5D&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvincent-queimado%2Fexpress-prisma-ts-boilerplate%2Fmaster%2Fpackage.json?logo=node&logoColor=white)](https://nodejs.org/ "Go to NodeJs")
 [![NPM](https://img.shields.io/badge/dynamic/json?label=npm&query=%24.engines%5B%22npm%22%5D&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvincent-queimado%2Fexpress-prisma-ts-boilerplate%2Fmaster%2Fpackage.json?logo=npm&logoColor=white)](https://www.npmjs.com/ "Go to NPM")
 [![Package - Typescript](https://img.shields.io/github/package-json/dependency-version/vincent-queimado/express-prisma-ts-boilerplate/dev/typescript?logo=typescript&logoColor=white)](https://www.npmjs.com/package/typescript "Go to TypeScript on NPM")
