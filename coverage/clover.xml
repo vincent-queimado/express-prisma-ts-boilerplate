@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1684772782932" clover="3.2.0">
-  <project timestamp="1684772782932" name="All files">
+<coverage generated="1684781949232" clover="3.2.0">
+  <project timestamp="1684781949232" name="All files">
     <metrics statements="631" coveredstatements="487" conditionals="122" coveredconditionals="54" methods="104" coveredmethods="67" elements="857" coveredelements="608" complexity="0" loc="631" ncloc="631" packages="20" files="52" classes="52"/>
     <package name="controllers">
       <metrics statements="44" coveredstatements="38" conditionals="0" coveredconditionals="0" methods="28" coveredmethods="14"/>
@@ -777,10 +777,10 @@
         <line num="2" count="4" type="stmt"/>
         <line num="4" count="4" type="stmt"/>
         <line num="6" count="4" type="stmt"/>
-        <line num="7" count="4" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
-        <line num="11" count="4" type="stmt"/>
-        <line num="17" count="4" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="11" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
       </file>
       <file name="update_user_service.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\services\users\update_user_service.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>

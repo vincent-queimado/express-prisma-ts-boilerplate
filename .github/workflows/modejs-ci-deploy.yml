@@ -35,7 +35,7 @@ jobs:
             - name: Run unit tests
               run: npm run test
               env:
-                  JWT_SECRET: ${{ secrets.JWT_SECRET }}
+                  API_JWT_SECRET: ${{ secrets.JWT_SECRET }}
                   DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
             - name: Build
