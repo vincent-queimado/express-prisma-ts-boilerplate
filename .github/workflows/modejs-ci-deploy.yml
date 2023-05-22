@@ -36,6 +36,7 @@ jobs:
               run: npm run test
               env:
                   API_JWT_SECRET: ${{ secrets.JWT_SECRET }}
+                  API_BCRYPT_SALTROUNDS: ${{ secrets.BCRYPT_SALTROUNDS }}
                   DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
             - name: Build

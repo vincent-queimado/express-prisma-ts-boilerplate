@@ -3,17 +3,6 @@ import CtrlCommons from '@controllers/commons_controller';
 
 const router = Router();
 
-// Cors Settings
-router.all('/*', (req: Request, res: Response, next: NextFunction) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PATCH');
-    res.header(
-        'Access-Control-Allow-Headers',
-        'Origin, X-Requested-With, Content-Type, Accept, Authorization',
-    );
-    next();
-});
-
 // API Root Redirect
 router.get('/', CtrlCommons.root);
 
