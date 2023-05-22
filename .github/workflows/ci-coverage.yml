@@ -47,7 +47,7 @@ jobs:
                   host: ${{ secrets.REMOTE_HOST }}
                   port: ${{ secrets.REMOTE_PORT }}
                   username: ${{ secrets.REMOTE_USER }}
-                  # password: ${{ secrets.SSH_PASSWORD }}
+                  password: ${{ secrets.SSH_PASSWORD }}
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
                   passphrase: 'funky'
                   script: cd /home/nodejs/express-prisma-ts-boilerplate/ && git pull
