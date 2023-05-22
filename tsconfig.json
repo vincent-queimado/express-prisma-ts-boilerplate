@@ -37,6 +37,6 @@
             "@packagejson": ["package.json"]
         }
     },
-    "include": ["src/**/*", "prisma/**/*", "public/**/*"],
-    "exclude": ["build", "coverage", "docs", "logs", "node_modules", "tests"]
+    "include": ["src/**/*", "prisma/**/*"],
+    "exclude": ["build", "coverage", "docs", "logs", "node_modules", "public", "tests"]
 }

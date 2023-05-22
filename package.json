@@ -32,7 +32,8 @@
     "scripts": {
         "prebuild": "rimraf ./build",
         "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./build/src",
-        "start:prod": "npm run prebuild && npm run build && cross-env NODE_ENV=production node build/src/app.js",
+        "copyfiles": "copyfiles -u 1 public/**/*.* build/public/ && copyfiles -u 1 src/views/**/*.* build/src/views/",
+        "start:prod": "npm run prebuild && npm run build && npm run copyfiles && cross-env NODE_ENV=production node build/src/app.js",
         "start:dev": "nodemon",
         "lint:check": "eslint src/**/*.ts",
         "lint:fix": "eslint --fix src/**/*.ts",
@@ -71,6 +72,7 @@
         "@typescript-eslint/eslint-plugin": "^5.53.0",
         "@typescript-eslint/parser": "^5.53.0",
         "commitizen": "4.3.0",
+        "copyfiles": "^2.4.1",
         "cz-conventional-changelog": "^3.3.0",
         "eslint": "^8.35.0",
         "eslint-config-prettier": "^8.6.0",
