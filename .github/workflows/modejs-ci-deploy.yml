@@ -1,4 +1,4 @@
-name: NodeJs CI
+name: build
 
 on: [push]
 
