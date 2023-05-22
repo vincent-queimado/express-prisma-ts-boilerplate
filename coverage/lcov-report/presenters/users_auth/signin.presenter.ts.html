@@ -323,7 +323,7 @@ const getUser = <span class="fstat-no" title="function not covered" >async </spa
     const result = <span class="cstat-no" title="statement not covered" >await servFindOneUser(</span>
         email,
         'email',
-        ['signupConfirmationToken', 'resetPasswordToken'],
+        ['tokenOfRegisterConfirmation', 'tokenOfResetPassword'],
         false,
     );
 &nbsp;
@@ -336,14 +336,14 @@ const getUser = <span class="fstat-no" title="function not covered" >async </spa
             msgError: msgErrorUserNotFound,
         };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (result.data &amp;&amp; !result.data.dataValues.signupConfirmationComplete)</span>
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (result.data &amp;&amp; !result.data.dataValues.isRegistered)</span>
 <span class="cstat-no" title="statement not covered" >        return {</span>
             success: false,
             data: null,
             msgError: msgErrorUserNotRegistered,
         };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (result.data &amp;&amp; result.data.dataValues.signupConfirmationComplete)</span>
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (result.data &amp;&amp; result.data.dataValues.isRegistered)</span>
 <span class="cstat-no" title="statement not covered" >        return {</span>
             success: true,
             data: result.data.dataValues,

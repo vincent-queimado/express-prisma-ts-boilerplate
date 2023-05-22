@@ -1,0 +1,66 @@
+name: NodeJs CI
+
+on: [push]
+
+jobs:
+    build-and-test:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [18.x]
+
+        steps:
+            - uses: actions/checkout@v3
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'npm'
+                  cache-dependency-path: '**/package-lock.json'
+
+            - name: Install dependencies
+              run: npm install
+
+            - name: Reset database
+              run: npm run prisma:reset:force
+              env:
+                  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+            - name: Seed database
+              run: npm run prisma:seed
+              env:
+                  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+            - name: Run unit tests
+              run: npm run test
+              env:
+                  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+            - name: Build
+              run: npm run prebuild && npm run build && npm run copyfiles
+
+    deploy:
+        needs: build-and-test
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [18.x]
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Deploy to server
+              uses: appleboy/ssh-action@master
+              with:
+                  host: ${{ secrets.REMOTE_HOST }}
+                  port: ${{ secrets.REMOTE_PORT }}
+                  username: ${{ secrets.REMOTE_USER }}
+                  password: ${{ secrets.SSH_PASSWORD }}
+                  script: |
+                      bash /home/nodejs/express-prisma-ts-boilerplate/deploy.sh
+
+            - name: Upload coverage to Codecov
+              uses: codecov/codecov-action@v3
+              with:
+                  token: ${{ secrets.CODECOV_TOKEN }}

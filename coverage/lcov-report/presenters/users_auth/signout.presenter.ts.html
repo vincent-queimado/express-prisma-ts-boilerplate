@@ -190,7 +190,7 @@ export default <span class="fstat-no" title="function not covered" >async </span
     const resultFindUser = <span class="cstat-no" title="statement not covered" >await servFindOneUser(</span>
         data.email,
         'email',
-        ['password', 'resetPasswordToken', 'signupConfirmationToken', 'deleted'],
+        ['password', 'tokenOfResetPassword', 'tokenOfRegisterConfirmation', 'deleted'],
         false,
     );
 <span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (!resultFindUser.success) {</span>
@@ -216,11 +216,11 @@ export default <span class="fstat-no" title="function not covered" >async </span
 <span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (resultCreateNewUser.data.dataValues.password !== undefined) {</span>
 <span class="cstat-no" title="statement not covered" >        delete resultCreateNewUser.data.dataValues.password;</span>
     }
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (resultCreateNewUser.data.dataValues.resetPasswordToken !== undefined) {</span>
-<span class="cstat-no" title="statement not covered" >        delete resultCreateNewUser.data.dataValues.resetPasswordToken;</span>
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (resultCreateNewUser.data.dataValues.tokenOfResetPassword !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >        delete resultCreateNewUser.data.dataValues.tokenOfResetPassword;</span>
     }
-<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (resultCreateNewUser.data.dataValues.signupConfirmationToken !== undefined) {</span>
-<span class="cstat-no" title="statement not covered" >        delete resultCreateNewUser.data.dataValues.signupConfirmationToken;</span>
+<span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (resultCreateNewUser.data.dataValues.tokenOfRegisterConfirmation !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >        delete resultCreateNewUser.data.dataValues.tokenOfRegisterConfirmation;</span>
     }
 <span class="cstat-no" title="statement not covered" >    <span class="missing-if-branch" title="if path not taken" >I</span>if (resultCreateNewUser.data.dataValues.deleted !== undefined) {</span>
 <span class="cstat-no" title="statement not covered" >        delete resultCreateNewUser.data.dataValues.deleted;</span>

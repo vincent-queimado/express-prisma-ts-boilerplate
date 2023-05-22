@@ -1,10 +1,34 @@
 {
     "total": {
-        "lines": { "total": 215, "covered": 171, "skipped": 0, "pct": 79.53 },
-        "statements": { "total": 222, "covered": 175, "skipped": 0, "pct": 78.82 },
-        "functions": { "total": 27, "covered": 20, "skipped": 0, "pct": 74.07 },
-        "branches": { "total": 26, "covered": 9, "skipped": 0, "pct": 34.61 },
+        "lines": { "total": 681, "covered": 458, "skipped": 0, "pct": 67.25 },
+        "statements": { "total": 701, "covered": 463, "skipped": 0, "pct": 66.04 },
+        "functions": { "total": 104, "covered": 57, "skipped": 0, "pct": 54.8 },
+        "branches": { "total": 151, "covered": 46, "skipped": 0, "pct": 30.46 },
         "branchesTrue": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\controllers\\commons_controller.ts": {
+        "lines": { "total": 11, "covered": 11, "skipped": 0, "pct": 100 },
+        "functions": { "total": 4, "covered": 4, "skipped": 0, "pct": 100 },
+        "statements": { "total": 11, "covered": 11, "skipped": 0, "pct": 100 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\controllers\\users_auth_controller.ts": {
+        "lines": { "total": 23, "covered": 11, "skipped": 0, "pct": 47.82 },
+        "functions": { "total": 12, "covered": 4, "skipped": 0, "pct": 33.33 },
+        "statements": { "total": 23, "covered": 11, "skipped": 0, "pct": 47.82 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\controllers\\users_controller.ts": {
+        "lines": { "total": 8, "covered": 6, "skipped": 0, "pct": 75 },
+        "functions": { "total": 3, "covered": 2, "skipped": 0, "pct": 66.66 },
+        "statements": { "total": 8, "covered": 6, "skipped": 0, "pct": 75 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\controllers\\users_me_controller.ts": {
+        "lines": { "total": 18, "covered": 6, "skipped": 0, "pct": 33.33 },
+        "functions": { "total": 9, "covered": 0, "skipped": 0, "pct": 0 },
+        "statements": { "total": 18, "covered": 6, "skipped": 0, "pct": 33.33 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
     },
     "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\database\\db_connection.ts": {
         "lines": { "total": 9, "covered": 9, "skipped": 0, "pct": 100 },
@@ -78,7 +102,97 @@
         "statements": { "total": 20, "covered": 19, "skipped": 0, "pct": 95 },
         "branches": { "total": 6, "covered": 4, "skipped": 0, "pct": 66.66 }
     },
-    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\default.route.ts": {
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\presenters\\commons\\api_info_presenter.ts": {
+        "lines": { "total": 12, "covered": 9, "skipped": 0, "pct": 75 },
+        "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
+        "statements": { "total": 12, "covered": 9, "skipped": 0, "pct": 75 },
+        "branches": { "total": 3, "covered": 2, "skipped": 0, "pct": 66.66 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\presenters\\commons\\api_root_presenter.ts": {
+        "lines": { "total": 11, "covered": 9, "skipped": 0, "pct": 81.81 },
+        "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
+        "statements": { "total": 12, "covered": 9, "skipped": 0, "pct": 75 },
+        "branches": { "total": 3, "covered": 2, "skipped": 0, "pct": 66.66 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\presenters\\commons\\index.ts": {
+        "lines": { "total": 3, "covered": 3, "skipped": 0, "pct": 100 },
+        "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
+        "statements": { "total": 3, "covered": 3, "skipped": 0, "pct": 100 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\presenters\\users\\delete_me_presenter.ts": {
+        "lines": { "total": 22, "covered": 5, "skipped": 0, "pct": 22.72 },
+        "functions": { "total": 1, "covered": 0, "skipped": 0, "pct": 0 },
+        "statements": { "total": 22, "covered": 5, "skipped": 0, "pct": 22.72 },
+        "branches": { "total": 9, "covered": 0, "skipped": 0, "pct": 0 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\presenters\\users\\index.ts": {
+        "lines": { "total": 5, "covered": 5, "skipped": 0, "pct": 100 },
+        "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
+        "statements": { "total": 5, "covered": 5, "skipped": 0, "pct": 100 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\presenters\\users\\show_all_presenter.ts": {
+        "lines": { "total": 7, "covered": 7, "skipped": 0, "pct": 100 },
+        "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
+        "statements": { "total": 7, "covered": 7, "skipped": 0, "pct": 100 },
+        "branches": { "total": 2, "covered": 2, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\presenters\\users\\show_me_presenter.ts": {
+        "lines": { "total": 10, "covered": 4, "skipped": 0, "pct": 40 },
+        "functions": { "total": 1, "covered": 0, "skipped": 0, "pct": 0 },
+        "statements": { "total": 10, "covered": 4, "skipped": 0, "pct": 40 },
+        "branches": { "total": 4, "covered": 0, "skipped": 0, "pct": 0 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\presenters\\users\\update_me_presenter.ts": {
+        "lines": { "total": 33, "covered": 5, "skipped": 0, "pct": 15.15 },
+        "functions": { "total": 1, "covered": 0, "skipped": 0, "pct": 0 },
+        "statements": { "total": 33, "covered": 5, "skipped": 0, "pct": 15.15 },
+        "branches": { "total": 18, "covered": 0, "skipped": 0, "pct": 0 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\presenters\\users_auth\\forgot_password_request_presenter.ts": {
+        "lines": { "total": 23, "covered": 6, "skipped": 0, "pct": 26.08 },
+        "functions": { "total": 1, "covered": 0, "skipped": 0, "pct": 0 },
+        "statements": { "total": 23, "covered": 6, "skipped": 0, "pct": 26.08 },
+        "branches": { "total": 7, "covered": 0, "skipped": 0, "pct": 0 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\presenters\\users_auth\\forgot_password_reset_presenter.ts": {
+        "lines": { "total": 23, "covered": 6, "skipped": 0, "pct": 26.08 },
+        "functions": { "total": 1, "covered": 0, "skipped": 0, "pct": 0 },
+        "statements": { "total": 23, "covered": 6, "skipped": 0, "pct": 26.08 },
+        "branches": { "total": 13, "covered": 0, "skipped": 0, "pct": 0 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\presenters\\users_auth\\index.ts": {
+        "lines": { "total": 7, "covered": 7, "skipped": 0, "pct": 100 },
+        "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
+        "statements": { "total": 7, "covered": 7, "skipped": 0, "pct": 100 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\presenters\\users_auth\\login_presenter.ts": {
+        "lines": { "total": 48, "covered": 16, "skipped": 0, "pct": 33.33 },
+        "functions": { "total": 5, "covered": 0, "skipped": 0, "pct": 0 },
+        "statements": { "total": 55, "covered": 16, "skipped": 0, "pct": 29.09 },
+        "branches": { "total": 16, "covered": 0, "skipped": 0, "pct": 0 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\presenters\\users_auth\\logout_presenter.ts": {
+        "lines": { "total": 29, "covered": 6, "skipped": 0, "pct": 20.68 },
+        "functions": { "total": 1, "covered": 0, "skipped": 0, "pct": 0 },
+        "statements": { "total": 29, "covered": 6, "skipped": 0, "pct": 20.68 },
+        "branches": { "total": 15, "covered": 0, "skipped": 0, "pct": 0 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\presenters\\users_auth\\register_confirm_presenter.ts": {
+        "lines": { "total": 46, "covered": 46, "skipped": 0, "pct": 100 },
+        "functions": { "total": 5, "covered": 5, "skipped": 0, "pct": 100 },
+        "statements": { "total": 50, "covered": 46, "skipped": 0, "pct": 92 },
+        "branches": { "total": 13, "covered": 9, "skipped": 0, "pct": 69.23 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\presenters\\users_auth\\register_presenter.ts": {
+        "lines": { "total": 67, "covered": 67, "skipped": 0, "pct": 100 },
+        "functions": { "total": 6, "covered": 6, "skipped": 0, "pct": 100 },
+        "statements": { "total": 68, "covered": 68, "skipped": 0, "pct": 100 },
+        "branches": { "total": 22, "covered": 22, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\default_route.ts": {
         "lines": { "total": 5, "covered": 5, "skipped": 0, "pct": 100 },
         "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
         "statements": { "total": 5, "covered": 5, "skipped": 0, "pct": 100 },
@@ -90,13 +204,13 @@
         "statements": { "total": 7, "covered": 7, "skipped": 0, "pct": 100 },
         "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
     },
-    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\default.route.ts": {
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\default_route.ts": {
         "lines": { "total": 11, "covered": 11, "skipped": 0, "pct": 100 },
         "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
         "statements": { "total": 11, "covered": 11, "skipped": 0, "pct": 100 },
         "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
     },
-    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\docs.route.ts": {
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\docs_route.ts": {
         "lines": { "total": 7, "covered": 7, "skipped": 0, "pct": 100 },
         "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
         "statements": { "total": 7, "covered": 7, "skipped": 0, "pct": 100 },
@@ -108,22 +222,76 @@
         "statements": { "total": 17, "covered": 17, "skipped": 0, "pct": 100 },
         "branches": { "total": 3, "covered": 3, "skipped": 0, "pct": 100 }
     },
-    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\user_auth.route.ts": {
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\user_auth_route.ts": {
         "lines": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
         "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
         "statements": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
         "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
     },
-    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\user_me.route.ts": {
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\user_me_route.ts": {
         "lines": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
         "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
         "statements": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
         "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
     },
-    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\users.route.ts": {
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\routes\\v1\\users_route.ts": {
         "lines": { "total": 5, "covered": 5, "skipped": 0, "pct": 100 },
         "functions": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 },
         "statements": { "total": 5, "covered": 5, "skipped": 0, "pct": 100 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\services\\commons\\api_info_service.ts": {
+        "lines": { "total": 4, "covered": 4, "skipped": 0, "pct": 100 },
+        "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
+        "statements": { "total": 4, "covered": 4, "skipped": 0, "pct": 100 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\services\\commons\\api_root_service.ts": {
+        "lines": { "total": 5, "covered": 5, "skipped": 0, "pct": 100 },
+        "functions": { "total": 1, "covered": 1, "skipped": 0, "pct": 100 },
+        "statements": { "total": 5, "covered": 5, "skipped": 0, "pct": 100 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\services\\users\\create_user_service.ts": {
+        "lines": { "total": 7, "covered": 7, "skipped": 0, "pct": 100 },
+        "functions": { "total": 3, "covered": 2, "skipped": 0, "pct": 66.66 },
+        "statements": { "total": 7, "covered": 7, "skipped": 0, "pct": 100 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\services\\users\\exist_user_service.ts": {
+        "lines": { "total": 6, "covered": 3, "skipped": 0, "pct": 50 },
+        "functions": { "total": 3, "covered": 0, "skipped": 0, "pct": 0 },
+        "statements": { "total": 6, "covered": 3, "skipped": 0, "pct": 50 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\services\\users\\get_all_user_service.ts": {
+        "lines": { "total": 6, "covered": 6, "skipped": 0, "pct": 100 },
+        "functions": { "total": 3, "covered": 2, "skipped": 0, "pct": 66.66 },
+        "statements": { "total": 6, "covered": 6, "skipped": 0, "pct": 100 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\services\\users\\get_user_service.ts": {
+        "lines": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
+        "functions": { "total": 4, "covered": 3, "skipped": 0, "pct": 75 },
+        "statements": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\services\\users\\logical_delete_user_service.ts": {
+        "lines": { "total": 9, "covered": 4, "skipped": 0, "pct": 44.44 },
+        "functions": { "total": 3, "covered": 0, "skipped": 0, "pct": 0 },
+        "statements": { "total": 9, "covered": 4, "skipped": 0, "pct": 44.44 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\services\\users\\physical_delete_user_service.ts": {
+        "lines": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
+        "functions": { "total": 3, "covered": 2, "skipped": 0, "pct": 66.66 },
+        "statements": { "total": 8, "covered": 8, "skipped": 0, "pct": 100 },
+        "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
+    },
+    "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\services\\users\\update_user_service.ts": {
+        "lines": { "total": 7, "covered": 7, "skipped": 0, "pct": 100 },
+        "functions": { "total": 3, "covered": 2, "skipped": 0, "pct": 66.66 },
+        "statements": { "total": 7, "covered": 7, "skipped": 0, "pct": 100 },
         "branches": { "total": 0, "covered": 0, "skipped": 0, "pct": 100 }
     },
     "C:\\Users\\Vincent Jean\\Documents\\NodeJs\\typescript-express-boilerplate\\src\\utils\\global_api_path\\global_api_path.ts": {

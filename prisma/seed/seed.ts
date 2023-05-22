@@ -5,8 +5,8 @@ import bcrypt from 'bcryptjs';
 
 const prisma = new PrismaClient();
 
-const accountQty = 9;
-const accounts: any = [];
+const userQty = 9;
+const users: any = [];
 
 const states = [
     'AC',
@@ -39,9 +39,9 @@ const states = [
 ];
 
 async function main() {
-    for (let i = 0; i <= accountQty; i += 1) {
+    for (let i = 0; i <= userQty; i += 1) {
         if (!i) {
-            accounts.push({
+            users.push({
                 id: uuidv4(),
                 name: 'johndoe',
                 email: 'johndoe@sample.com',
@@ -49,14 +49,14 @@ async function main() {
                 accountName: 'johndoe',
                 accountLocationState: 'PE',
                 password: bcrypt.hashSync('Johndoe@1234', 10),
-                signupConfirmationComplete: true,
-                signupConfirmationToken: randtoken.suid(16),
-                resetPasswordToken: randtoken.suid(16),
+                isRegistered: true,
+                tokenOfRegisterConfirmation: randtoken.suid(16),
+                tokenOfResetPassword: randtoken.suid(16),
                 createdAt: new Date().toISOString(),
                 updatedAt: new Date().toISOString(),
             });
         } else {
-            accounts.push({
+            users.push({
                 id: uuidv4(),
                 name: `johndoe.sample${i}`,
                 email: `johndoe.sample${i}@smaple.com`,
@@ -64,9 +64,9 @@ async function main() {
                 accountName: `account${i}`,
                 accountLocationState: states[Math.floor(Math.random() * states.length)],
                 password: bcrypt.hashSync('Johndoe@1234', 10),
-                signupConfirmationComplete: true,
-                signupConfirmationToken: randtoken.suid(16),
-                resetPasswordToken: randtoken.suid(16),
+                isRegistered: true,
+                tokenOfRegisterConfirmation: randtoken.suid(16),
+                tokenOfResetPassword: randtoken.suid(16),
                 createdAt: new Date().toISOString(),
                 updatedAt: new Date().toISOString(),
             });
@@ -74,7 +74,7 @@ async function main() {
     }
 
     await prisma.user.createMany({
-        data: accounts,
+        data: users,
     });
 }
 

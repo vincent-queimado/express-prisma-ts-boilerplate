@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import defaultRoute from './default.route';
-import userAuthRoute from './user_auth.route';
-import userMeRoute from './user_me.route';
-import usersRoute from './users.route';
-import logsRoute from './logs.route';
-import docsRoute from './docs.route';
+import defaultRoute from './default_route';
+import userAuthRoute from './user_auth_route';
+import userMeRoute from './user_me_route';
+import usersRoute from './users_route';
+import logsRoute from './logs_route';
+import docsRoute from './docs_route';
 import config from '@config/app';
 
 const router = Router();

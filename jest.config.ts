@@ -7,6 +7,7 @@ export default {
     testEnvironmentOptions: {
         NODE_ENV: 'test',
     },
+    testTimeout: 60000,
     moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
     modulePaths: ['<rootDir>'],
     testMatch: ['**/tests/**/*.test.ts'],
@@ -22,9 +23,6 @@ export default {
         'src/config',
         'src/app.ts',
         'src/server',
-        'controllers/',
-        'presenters/',
-        'services/',
         'utils/http_messages',
         'utils/nodemailer/',
     ],

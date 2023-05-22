@@ -38,5 +38,5 @@
         }
     },
     "include": ["src/**/*", "prisma/**/*"],
-    "exclude": ["build", "coverage", "docs", "logs", "node_modules", "tests"]
+    "exclude": ["build", "coverage", "docs", "logs", "node_modules", "public", "tests"]
 }
