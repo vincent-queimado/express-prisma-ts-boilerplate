@@ -14,7 +14,7 @@ const testConfig = (env: IProcessEnv): IEnvConfig => {
             extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
         },
         jwt: {
-            secret: env.API_JWT_SECRET || 'jwtsecretword',
+            secret: env.API_JWT_SECRET || '',
             expiredIn: env.API_JWT_EXPIRED_IN || '24h',
         },
         bcrypt: {
@@ -41,7 +41,7 @@ const devConfig = (env: IProcessEnv): IEnvConfig => {
             extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
         },
         jwt: {
-            secret: env.API_JWT_SECRET || 'jwtsecretword',
+            secret: env.API_JWT_SECRET || '',
             expiredIn: env.API_JWT_EXPIRED_IN || '24h',
         },
         bcrypt: {
@@ -68,7 +68,7 @@ const stageConfig = (env: IProcessEnv): IEnvConfig => {
             extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
         },
         jwt: {
-            secret: env.API_JWT_SECRET || 'jwtsecretword',
+            secret: env.API_JWT_SECRET || '',
             expiredIn: env.API_JWT_EXPIRED_IN || '24h',
         },
         bcrypt: {
@@ -95,7 +95,7 @@ const prodConfig = (env: IProcessEnv): IEnvConfig => {
             extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
         },
         jwt: {
-            secret: env.API_JWT_SECRET || 'jwtsecretword',
+            secret: env.API_JWT_SECRET || '',
             expiredIn: env.API_JWT_EXPIRED_IN || '24h',
         },
         bcrypt: {

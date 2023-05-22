@@ -8,7 +8,7 @@ const devConfig = (env: IProcessEnv): IEnvConfig => {
         smtp: {
             service: env.SMTP_SERVICE || 'gmail',
             user: env.SMTP_USER || 'admin',
-            password: env.SMTP_PASSWORD || 'password',
+            password: env.SMTP_PASSWORD || '',
         },
         oauth: {
             clientId: env.OAUTH_CLIENTID || '',
@@ -30,7 +30,7 @@ const stageConfig = (env: IProcessEnv): IEnvConfig => {
         smtp: {
             service: env.SMTP_SERVICE || 'gmail',
             user: env.SMTP_USER || 'admin',
-            password: env.SMTP_PASSWORD || 'password',
+            password: env.SMTP_PASSWORD || '',
         },
         oauth: {
             clientId: env.OAUTH_CLIENTID || '',
@@ -52,7 +52,7 @@ const prodConfig = (env: IProcessEnv): IEnvConfig => {
         smtp: {
             service: env.SMTP_SERVICE || 'gmail',
             user: env.SMTP_USER || 'admin',
-            password: env.SMTP_PASSWORD || 'password',
+            password: env.SMTP_PASSWORD || '',
         },
         oauth: {
             clientId: env.OAUTH_CLIENTID || '',
