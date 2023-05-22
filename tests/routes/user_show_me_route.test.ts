@@ -25,11 +25,39 @@ describe('CHECK USER ME API ENDPOINTS', () => {
 
     it('CHECK USER SHOW ME', async () => {
         let token = null;
+        const password = '12341234';
+        const wrongToken =
+            'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ5.eyJpZCI6ImYxYmI0NmNiLTYxY2QtNDVmYy05OGNiLTM2ZWM4ZGI1YTNlMSIsIm5hbWUiOiJKb2huZG9lIiwiZW1haWwiOiJqb2huZG9lQHNhbXBsZS5jb20iLCJhdmF0YXIiOm51bGwsImlhdCI6MTY4NDc4MzU3NCwiZXhwIjoxNjg0ODY5OTc0fQ.MUX_HpyoUtQJyuCwosoJypJZeNhtCbCKIg5ntM_e_58';
+
+        const createPayload = {
+            email: 'johndoe-test-showme@sample.com',
+            name: 'johndoe-test-showme',
+            phone: '(81) 99999-9999',
+            accountName: 'johndoe-test-showme',
+            accountLocationState: 'PE',
+            password: bcrypt.hashSync(password, saltRounds),
+            tokenOfRegisterConfirmation: randtoken.suid(16),
+            tokenOfResetPassword: randtoken.suid(16),
+            isRegistered: true,
+        };
 
         const payload = {
-            email: 'johndoe@sample.com',
-            password: 'Johndoe@1234',
+            email: createPayload.email,
+            password,
         };
+
+        // Check user and clean before new registration
+        const user = await getUser(createPayload.email, 'email', { id: true }, false);
+
+        if (user.data) {
+            await deleteUser(createPayload.email);
+        }
+
+        // Create User
+        await createUser(createPayload);
+
+        // Check new user
+        await getUser(createPayload.email, 'email', { id: true }, false);
 
         // Authorized Login
         await request(app)
@@ -45,6 +73,7 @@ describe('CHECK USER ME API ENDPOINTS', () => {
                 );
             });
 
+        // Show me with correct token
         await request(app)
             .get(`${apiPath}/user/me`)
             .set('Authorization', `Bearer ${token}`)
@@ -54,6 +83,47 @@ describe('CHECK USER ME API ENDPOINTS', () => {
                     expect.objectContaining({
                         success: true,
                         content: expect.any(Object),
+                    }),
+                );
+            });
+
+        // Show me with incorrect token
+        await request(app)
+            .get(`${apiPath}/user/me`)
+            .set('Authorization', `Bearer ${wrongToken}`)
+            .expect(401)
+            .then((response) => {
+                expect(response.body).toEqual(
+                    expect.objectContaining({
+                        success: false,
+                    }),
+                );
+            });
+
+        // Show me without token
+        await request(app)
+            .get(`${apiPath}/user/me`)
+            .expect(401)
+            .then((response) => {
+                expect(response.body).toEqual(
+                    expect.objectContaining({
+                        success: false,
+                    }),
+                );
+            });
+
+        // Delete User
+        await deleteUser(createPayload.email);
+
+        // Show me with correct token but user not exist
+        await request(app)
+            .get(`${apiPath}/user/me`)
+            .set('Authorization', `Bearer ${token}`)
+            .expect(401)
+            .then((response) => {
+                expect(response.body).toEqual(
+                    expect.objectContaining({
+                        success: false,
                     }),
                 );
             });

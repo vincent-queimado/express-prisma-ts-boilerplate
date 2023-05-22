@@ -6,7 +6,6 @@ import config from '../../src/config/app';
 import server from '../../src/server/http_server';
 import getUser from '../../src/services/users/get_user_service';
 import createUser from '../../src/services/users/create_user_service';
-import updateUser from '../../src/services/users/update_user_service';
 import deleteUser from '../../src/services/users/physical_delete_user_service';
 import globalApiPath from '../../src/utils/global_api_path/global_api_path';
 

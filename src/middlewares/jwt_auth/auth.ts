@@ -14,7 +14,7 @@ const jwtUsers = (req: Request, res: Response, next: NextFunction) => {
                 next();
             }
         })
-        .catch((err: any) => {
+        .catch((err: any) => /* istanbul ignore next */ {
             logger.error(`JWT Auth error: ${err})`);
             next(err);
         });

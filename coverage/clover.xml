@@ -1,64 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1684784111639" clover="3.2.0">
-  <project timestamp="1684784111639" name="All files">
-    <metrics statements="535" coveredstatements="517" conditionals="87" coveredconditionals="71" methods="97" coveredmethods="80" elements="719" coveredelements="668" complexity="0" loc="535" ncloc="535" packages="18" files="46" classes="46"/>
+<coverage generated="1684797959853" clover="3.2.0">
+  <project timestamp="1684797959853" name="All files">
+    <metrics statements="523" coveredstatements="521" conditionals="82" coveredconditionals="81" methods="96" coveredmethods="79" elements="701" coveredelements="681" complexity="0" loc="523" ncloc="523" packages="18" files="46" classes="46"/>
     <package name="controllers">
       <metrics statements="44" coveredstatements="42" conditionals="0" coveredconditionals="0" methods="28" coveredmethods="18"/>
       <file name="commons_controller.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\controllers\commons_controller.ts">
         <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
         <line num="10" count="2" type="stmt"/>
-        <line num="18" count="10" type="stmt"/>
+        <line num="18" count="11" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
-        <line num="31" count="10" type="stmt"/>
+        <line num="31" count="11" type="stmt"/>
       </file>
       <file name="users_auth_controller.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\controllers\users_auth_controller.ts">
         <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="12" coveredmethods="8"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="15" count="10" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
-        <line num="25" count="10" type="stmt"/>
+        <line num="25" count="11" type="stmt"/>
         <line num="26" count="3" type="stmt"/>
         <line num="28" count="3" type="stmt"/>
-        <line num="35" count="10" type="stmt"/>
+        <line num="35" count="11" type="stmt"/>
         <line num="36" count="3" type="stmt"/>
         <line num="38" count="3" type="stmt"/>
-        <line num="65" count="10" type="stmt"/>
+        <line num="65" count="11" type="stmt"/>
       </file>
       <file name="users_controller.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\controllers\users_controller.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="15" count="10" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
       </file>
       <file name="users_me_controller.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\controllers\users_me_controller.ts">
         <metrics statements="12" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="4"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="15" count="10" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
         <line num="16" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
-        <line num="25" count="10" type="stmt"/>
+        <line num="25" count="11" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
         <line num="28" count="0" type="stmt"/>
-        <line num="35" count="10" type="stmt"/>
+        <line num="35" count="11" type="stmt"/>
       </file>
     </package>
     <package name="database">
@@ -80,20 +80,20 @@
       <metrics statements="22" coveredstatements="22" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="4"/>
       <file name="check_password.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\functions\check_password.ts">
         <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="11" type="stmt"/>
-        <line num="3" count="11" type="stmt"/>
-        <line num="4" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="1" count="12" type="stmt"/>
+        <line num="3" count="12" type="stmt"/>
+        <line num="4" count="7" type="cond" truecount="1" falsecount="0"/>
         <line num="5" count="2" type="stmt"/>
-        <line num="12" count="4" type="stmt"/>
+        <line num="12" count="5" type="stmt"/>
       </file>
       <file name="generate_hash_password.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\functions\generate_hash_password.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="12" type="stmt"/>
-        <line num="2" count="12" type="stmt"/>
-        <line num="4" count="12" type="stmt"/>
-        <line num="5" count="4" type="stmt"/>
-        <line num="7" count="4" type="stmt"/>
-        <line num="9" count="4" type="stmt"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="2" count="13" type="stmt"/>
+        <line num="4" count="13" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="9" count="5" type="stmt"/>
       </file>
       <file name="generate_password.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\functions\generate_password.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
@@ -106,114 +106,112 @@
       </file>
       <file name="generate_token_access.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\functions\generate_token_access.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="11" type="stmt"/>
-        <line num="2" count="11" type="stmt"/>
-        <line num="4" count="11" type="stmt"/>
-        <line num="5" count="4" type="stmt"/>
-        <line num="18" count="4" type="stmt"/>
+        <line num="1" count="12" type="stmt"/>
+        <line num="2" count="12" type="stmt"/>
+        <line num="4" count="12" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="18" count="5" type="stmt"/>
       </file>
     </package>
     <package name="middlewares.jwt_auth">
-      <metrics statements="11" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
       <file name="auth.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\middlewares\jwt_auth\auth.ts">
-        <metrics statements="11" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="2"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="10" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="11" count="0" type="stmt"/>
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="2"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="10" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="3" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="23" count="10" type="stmt"/>
+        <line num="23" count="11" type="stmt"/>
       </file>
     </package>
     <package name="middlewares.jwt_auth.jwt">
-      <metrics statements="28" coveredstatements="24" conditionals="7" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <metrics statements="28" coveredstatements="28" conditionals="7" coveredconditionals="7" methods="3" coveredmethods="3"/>
       <file name="index.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\middlewares\jwt_auth\jwt\index.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
       </file>
       <file name="jwtUsers.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\middlewares\jwt_auth\jwt\jwtUsers.ts">
-        <metrics statements="26" coveredstatements="22" conditionals="7" coveredconditionals="3" methods="3" coveredmethods="3"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="12" count="2" type="cond" truecount="0" falsecount="1"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="16" count="2" type="cond" truecount="0" falsecount="1"/>
-        <line num="18" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="19" count="2" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
-        <line num="29" count="2" type="cond" truecount="0" falsecount="1"/>
-        <line num="30" count="0" type="stmt"/>
+        <metrics statements="26" coveredstatements="26" conditionals="7" coveredconditionals="7" methods="3" coveredmethods="3"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+        <line num="8" count="5" type="stmt"/>
+        <line num="9" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="16" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="29" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="30" count="1" type="stmt"/>
         <line num="33" count="2" type="stmt"/>
-        <line num="36" count="10" type="stmt"/>
-        <line num="37" count="2" type="stmt"/>
-        <line num="38" count="2" type="stmt"/>
-        <line num="40" count="2" type="cond" truecount="0" falsecount="1"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="46" count="2" type="stmt"/>
-        <line num="47" count="2" type="stmt"/>
-        <line num="50" count="2" type="stmt"/>
+        <line num="36" count="11" type="stmt"/>
+        <line num="37" count="4" type="stmt"/>
+        <line num="38" count="4" type="stmt"/>
+        <line num="40" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="1" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="47" count="3" type="stmt"/>
+        <line num="50" count="4" type="stmt"/>
       </file>
     </package>
     <package name="middlewares.morgan">
       <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="morgan.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\middlewares\morgan\morgan.ts">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
-        <line num="7" count="21" type="stmt"/>
-        <line num="10" count="10" type="stmt"/>
-        <line num="11" count="21" type="stmt"/>
-        <line num="14" count="10" type="stmt"/>
-        <line num="16" count="10" type="stmt"/>
-        <line num="21" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
+        <line num="7" count="26" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="11" count="26" type="stmt"/>
+        <line num="14" count="11" type="stmt"/>
+        <line num="16" count="11" type="stmt"/>
+        <line num="21" count="11" type="stmt"/>
       </file>
     </package>
     <package name="middlewares.xss">
-      <metrics statements="16" coveredstatements="16" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="3"/>
+      <metrics statements="16" coveredstatements="16" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="3"/>
       <file name="xss.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\middlewares\xss\xss.ts">
-        <metrics statements="16" coveredstatements="16" conditionals="6" coveredconditionals="4" methods="3" coveredmethods="3"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="4" count="10" type="cond" truecount="0" falsecount="1"/>
-        <line num="5" count="42" type="stmt"/>
-        <line num="6" count="42" type="cond" truecount="1" falsecount="0"/>
-        <line num="7" count="42" type="stmt"/>
-        <line num="8" count="42" type="stmt"/>
-        <line num="11" count="42" type="stmt"/>
-        <line num="12" count="42" type="cond" truecount="1" falsecount="0"/>
-        <line num="14" count="42" type="stmt"/>
-        <line num="17" count="10" type="stmt"/>
-        <line num="18" count="10" type="stmt"/>
-        <line num="19" count="21" type="cond" truecount="0" falsecount="1"/>
-        <line num="20" count="21" type="cond" truecount="1" falsecount="0"/>
-        <line num="21" count="21" type="cond" truecount="1" falsecount="0"/>
-        <line num="22" count="21" type="stmt"/>
-        <line num="26" count="10" type="stmt"/>
+        <metrics statements="16" coveredstatements="16" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="3"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="4" count="11" type="cond" truecount="0" falsecount="1"/>
+        <line num="5" count="78" type="stmt"/>
+        <line num="6" count="78" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="78" type="stmt"/>
+        <line num="8" count="78" type="stmt"/>
+        <line num="11" count="78" type="stmt"/>
+        <line num="12" count="78" type="cond" truecount="1" falsecount="0"/>
+        <line num="14" count="78" type="stmt"/>
+        <line num="17" count="11" type="stmt"/>
+        <line num="18" count="11" type="stmt"/>
+        <line num="19" count="26" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="26" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="26" type="cond" truecount="1" falsecount="0"/>
+        <line num="22" count="26" type="stmt"/>
+        <line num="26" count="11" type="stmt"/>
       </file>
     </package>
     <package name="presenters.commons">
       <metrics statements="21" coveredstatements="21" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
       <file name="api_info_presenter.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\presenters\commons\api_info_presenter.ts">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="12" count="1" type="cond" truecount="2" falsecount="0"/>
@@ -221,11 +219,11 @@
       </file>
       <file name="api_root_presenter.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\presenters\commons\api_root_presenter.ts">
         <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
         <line num="12" count="2" type="cond" truecount="2" falsecount="0"/>
@@ -233,68 +231,61 @@
       </file>
       <file name="index.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\presenters\commons\index.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
       </file>
     </package>
     <package name="presenters.users">
-      <metrics statements="55" coveredstatements="46" conditionals="24" coveredconditionals="15" methods="3" coveredmethods="3"/>
+      <metrics statements="50" coveredstatements="50" conditionals="19" coveredconditionals="19" methods="3" coveredmethods="3"/>
       <file name="index.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\presenters\users\index.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
       </file>
       <file name="show_all_presenter.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\presenters\users\show_all_presenter.ts">
         <metrics statements="7" coveredstatements="7" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="11" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="15" count="1" type="stmt"/>
       </file>
       <file name="show_me_presenter.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\presenters\users\show_me_presenter.ts">
-        <metrics statements="10" coveredstatements="8" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
-        <line num="8" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="30" count="1" type="cond" truecount="2" falsecount="1"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
+        <metrics statements="8" coveredstatements="8" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="32" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="1" type="stmt"/>
       </file>
       <file name="update_me_presenter.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\presenters\users\update_me_presenter.ts">
-        <metrics statements="33" coveredstatements="26" conditionals="18" coveredconditionals="11" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
-        <line num="9" count="1" type="cond" truecount="2" falsecount="1"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="16" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="19" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="24" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="cond" truecount="0" falsecount="3"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="cond" truecount="2" falsecount="1"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="38" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="39" count="1" type="stmt"/>
+        <metrics statements="30" coveredstatements="30" conditionals="15" coveredconditionals="15" methods="1" coveredmethods="1"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+        <line num="10" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="25" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="37" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="41" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="42" count="1" type="stmt"/>
         <line num="44" count="1" type="cond" truecount="1" falsecount="0"/>
@@ -305,90 +296,92 @@
         <line num="51" count="1" type="stmt"/>
         <line num="53" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="54" count="1" type="stmt"/>
+        <line num="56" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="57" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
       </file>
     </package>
     <package name="presenters.users_auth">
       <metrics statements="166" coveredstatements="166" conditionals="39" coveredconditionals="39" methods="17" coveredmethods="17"/>
       <file name="index.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\presenters\users_auth\index.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
-        <line num="8" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
+        <line num="8" count="11" type="stmt"/>
       </file>
       <file name="login_presenter.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\presenters\users_auth\login_presenter.ts">
         <metrics statements="45" coveredstatements="45" conditionals="8" coveredconditionals="8" methods="5" coveredmethods="5"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
-        <line num="8" count="10" type="stmt"/>
-        <line num="9" count="10" type="stmt"/>
-        <line num="10" count="10" type="stmt"/>
-        <line num="11" count="10" type="stmt"/>
-        <line num="12" count="10" type="stmt"/>
-        <line num="13" count="10" type="stmt"/>
-        <line num="15" count="10" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
-        <line num="20" count="6" type="stmt"/>
-        <line num="22" count="6" type="stmt"/>
-        <line num="25" count="6" type="stmt"/>
-        <line num="27" count="6" type="stmt"/>
-        <line num="30" count="4" type="stmt"/>
-        <line num="32" count="4" type="stmt"/>
-        <line num="35" count="3" type="stmt"/>
-        <line num="37" count="3" type="stmt"/>
-        <line num="39" count="3" type="stmt"/>
-        <line num="45" count="3" type="stmt"/>
-        <line num="48" count="10" type="stmt"/>
-        <line num="50" count="6" type="stmt"/>
-        <line num="52" count="6" type="stmt"/>
-        <line num="57" count="10" type="stmt"/>
-        <line num="58" count="6" type="stmt"/>
-        <line num="77" count="6" type="stmt"/>
-        <line num="79" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
+        <line num="8" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="11" count="11" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="13" count="11" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
+        <line num="16" count="8" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="22" count="8" type="stmt"/>
+        <line num="25" count="7" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
+        <line num="30" count="5" type="stmt"/>
+        <line num="32" count="5" type="stmt"/>
+        <line num="35" count="4" type="stmt"/>
+        <line num="37" count="4" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="45" count="4" type="stmt"/>
+        <line num="48" count="11" type="stmt"/>
+        <line num="50" count="8" type="stmt"/>
+        <line num="52" count="7" type="stmt"/>
+        <line num="57" count="11" type="stmt"/>
+        <line num="58" count="7" type="stmt"/>
+        <line num="77" count="7" type="stmt"/>
+        <line num="79" count="7" type="cond" truecount="1" falsecount="0"/>
         <line num="80" count="1" type="stmt"/>
-        <line num="86" count="5" type="cond" truecount="3" falsecount="0"/>
+        <line num="86" count="6" type="cond" truecount="3" falsecount="0"/>
         <line num="87" count="1" type="stmt"/>
-        <line num="93" count="4" type="cond" truecount="3" falsecount="0"/>
-        <line num="94" count="4" type="stmt"/>
-        <line num="104" count="10" type="stmt"/>
-        <line num="105" count="4" type="stmt"/>
-        <line num="107" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="93" count="5" type="cond" truecount="3" falsecount="0"/>
+        <line num="94" count="5" type="stmt"/>
+        <line num="104" count="11" type="stmt"/>
+        <line num="105" count="5" type="stmt"/>
+        <line num="107" count="5" type="cond" truecount="1" falsecount="0"/>
         <line num="108" count="1" type="stmt"/>
-        <line num="111" count="3" type="stmt"/>
-        <line num="114" count="10" type="stmt"/>
-        <line num="115" count="3" type="stmt"/>
-        <line num="118" count="3" type="stmt"/>
-        <line num="122" count="3" type="stmt"/>
+        <line num="111" count="4" type="stmt"/>
+        <line num="114" count="11" type="stmt"/>
+        <line num="115" count="4" type="stmt"/>
+        <line num="118" count="4" type="stmt"/>
+        <line num="122" count="4" type="stmt"/>
       </file>
       <file name="logout_presenter.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\presenters\users_auth\logout_presenter.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
       </file>
       <file name="register_confirm_presenter.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\presenters\users_auth\register_confirm_presenter.ts">
         <metrics statements="43" coveredstatements="43" conditionals="9" coveredconditionals="9" methods="5" coveredmethods="5"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
-        <line num="8" count="10" type="stmt"/>
-        <line num="9" count="10" type="stmt"/>
-        <line num="10" count="10" type="stmt"/>
-        <line num="11" count="10" type="stmt"/>
-        <line num="12" count="10" type="stmt"/>
-        <line num="13" count="10" type="stmt"/>
-        <line num="14" count="10" type="stmt"/>
-        <line num="16" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
+        <line num="8" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="11" count="11" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="13" count="11" type="stmt"/>
+        <line num="14" count="11" type="stmt"/>
+        <line num="16" count="11" type="stmt"/>
         <line num="17" count="3" type="stmt"/>
         <line num="18" count="3" type="stmt"/>
         <line num="21" count="3" type="stmt"/>
@@ -401,8 +394,8 @@
         <line num="38" count="1" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
         <line num="48" count="1" type="stmt"/>
-        <line num="51" count="10" type="stmt"/>
-        <line num="58" count="10" type="stmt"/>
+        <line num="51" count="11" type="stmt"/>
+        <line num="58" count="11" type="stmt"/>
         <line num="59" count="3" type="stmt"/>
         <line num="78" count="3" type="stmt"/>
         <line num="81" count="3" type="stmt"/>
@@ -410,35 +403,35 @@
         <line num="89" count="1" type="stmt"/>
         <line num="95" count="2" type="cond" truecount="3" falsecount="0"/>
         <line num="96" count="2" type="stmt"/>
-        <line num="106" count="10" type="stmt"/>
+        <line num="106" count="11" type="stmt"/>
         <line num="107" count="1" type="stmt"/>
         <line num="110" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="114" count="1" type="stmt"/>
         <line num="117" count="1" type="stmt"/>
         <line num="119" count="1" type="stmt"/>
-        <line num="122" count="10" type="stmt"/>
+        <line num="122" count="11" type="stmt"/>
         <line num="123" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="124" count="1" type="stmt"/>
         <line num="126" count="1" type="stmt"/>
       </file>
       <file name="register_presenter.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\presenters\users_auth\register_presenter.ts">
         <metrics statements="67" coveredstatements="67" conditionals="22" coveredconditionals="22" methods="6" coveredmethods="6"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
-        <line num="10" count="10" type="stmt"/>
-        <line num="12" count="10" type="stmt"/>
-        <line num="13" count="10" type="stmt"/>
-        <line num="14" count="10" type="stmt"/>
-        <line num="15" count="10" type="stmt"/>
-        <line num="16" count="10" type="stmt"/>
-        <line num="17" count="10" type="stmt"/>
-        <line num="18" count="10" type="stmt"/>
-        <line num="19" count="10" type="stmt"/>
-        <line num="21" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="13" count="11" type="stmt"/>
+        <line num="14" count="11" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
+        <line num="16" count="11" type="stmt"/>
+        <line num="17" count="11" type="stmt"/>
+        <line num="18" count="11" type="stmt"/>
+        <line num="19" count="11" type="stmt"/>
+        <line num="21" count="11" type="stmt"/>
         <line num="22" count="3" type="stmt"/>
         <line num="23" count="3" type="stmt"/>
         <line num="26" count="3" type="stmt"/>
@@ -464,8 +457,8 @@
         <line num="72" count="1" type="stmt"/>
         <line num="73" count="1" type="stmt"/>
         <line num="82" count="2" type="stmt"/>
-        <line num="85" count="10" type="stmt"/>
-        <line num="96" count="10" type="stmt"/>
+        <line num="85" count="11" type="stmt"/>
+        <line num="96" count="11" type="stmt"/>
         <line num="97" count="3" type="stmt"/>
         <line num="100" count="3" type="stmt"/>
         <line num="102" count="3" type="cond" truecount="1" falsecount="0"/>
@@ -474,17 +467,17 @@
         <line num="110" count="1" type="stmt"/>
         <line num="116" count="1" type="cond" truecount="3" falsecount="0"/>
         <line num="117" count="1" type="stmt"/>
-        <line num="127" count="10" type="stmt"/>
+        <line num="127" count="11" type="stmt"/>
         <line num="128" count="1" type="stmt"/>
         <line num="131" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="134" count="1" type="stmt"/>
-        <line num="137" count="10" type="stmt"/>
+        <line num="137" count="11" type="stmt"/>
         <line num="138" count="1" type="stmt"/>
         <line num="141" count="1" type="cond" truecount="2" falsecount="0"/>
         <line num="144" count="1" type="stmt"/>
         <line num="146" count="1" type="stmt"/>
         <line num="148" count="1" type="stmt"/>
-        <line num="151" count="10" type="stmt"/>
+        <line num="151" count="11" type="stmt"/>
         <line num="152" count="2" type="stmt"/>
         <line num="154" count="2" type="stmt"/>
         <line num="157" count="2" type="cond" truecount="2" falsecount="0"/>
@@ -496,113 +489,108 @@
       <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="default_route.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\routes\default_route.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
-        <line num="9" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
       </file>
       <file name="index.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\routes\index.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
-        <line num="13" count="10" type="stmt"/>
-        <line num="14" count="10" type="stmt"/>
-        <line num="17" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
+        <line num="13" count="11" type="stmt"/>
+        <line num="14" count="11" type="stmt"/>
+        <line num="17" count="11" type="stmt"/>
       </file>
     </package>
     <package name="routes.v1">
-      <metrics statements="56" coveredstatements="56" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
+      <metrics statements="51" coveredstatements="51" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
       <file name="default_route.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\routes\v1\default_route.ts">
-        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
-        <line num="8" count="33" type="stmt"/>
-        <line num="9" count="33" type="stmt"/>
-        <line num="10" count="33" type="stmt"/>
-        <line num="14" count="33" type="stmt"/>
-        <line num="18" count="10" type="stmt"/>
-        <line num="21" count="10" type="stmt"/>
-        <line num="23" count="10" type="stmt"/>
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
       </file>
       <file name="docs_route.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\routes\v1\docs_route.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="8" count="10" type="stmt"/>
-        <line num="9" count="10" type="stmt"/>
-        <line num="11" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="8" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="11" count="11" type="stmt"/>
       </file>
       <file name="index.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\routes\v1\index.ts">
         <metrics statements="17" coveredstatements="17" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
-        <line num="8" count="10" type="stmt"/>
-        <line num="10" count="10" type="stmt"/>
-        <line num="12" count="10" type="stmt"/>
-        <line num="35" count="10" type="stmt"/>
-        <line num="42" count="10" type="stmt"/>
-        <line num="43" count="50" type="stmt"/>
-        <line num="46" count="10" type="cond" truecount="3" falsecount="0"/>
-        <line num="47" count="10" type="stmt"/>
-        <line num="48" count="10" type="stmt"/>
-        <line num="52" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+        <line num="8" count="11" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="35" count="11" type="stmt"/>
+        <line num="42" count="11" type="stmt"/>
+        <line num="43" count="55" type="stmt"/>
+        <line num="46" count="11" type="cond" truecount="3" falsecount="0"/>
+        <line num="47" count="11" type="stmt"/>
+        <line num="48" count="11" type="stmt"/>
+        <line num="52" count="11" type="stmt"/>
       </file>
       <file name="user_auth_route.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\routes\v1\user_auth_route.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="8" count="10" type="stmt"/>
-        <line num="9" count="10" type="stmt"/>
-        <line num="12" count="10" type="stmt"/>
-        <line num="13" count="10" type="stmt"/>
-        <line num="19" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="8" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="13" count="11" type="stmt"/>
+        <line num="19" count="11" type="stmt"/>
       </file>
       <file name="user_me_route.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\routes\v1\user_me_route.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
-        <line num="10" count="10" type="stmt"/>
-        <line num="11" count="10" type="stmt"/>
-        <line num="12" count="10" type="stmt"/>
-        <line num="14" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="11" count="11" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
+        <line num="14" count="11" type="stmt"/>
       </file>
       <file name="users_route.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\routes\v1\users_route.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
-        <line num="10" count="10" type="stmt"/>
-        <line num="12" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+        <line num="10" count="11" type="stmt"/>
+        <line num="12" count="11" type="stmt"/>
       </file>
     </package>
     <package name="services.commons">
       <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <file name="api_info_service.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\services\commons\api_info_service.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
       </file>
       <file name="api_root_service.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\services\commons\api_root_service.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="2" type="stmt"/>
         <line num="7" count="2" type="stmt"/>
@@ -612,61 +600,61 @@
       <metrics statements="44" coveredstatements="44" conditionals="0" coveredconditionals="0" methods="19" coveredmethods="13"/>
       <file name="create_user_service.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\services\users\create_user_service.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="6" count="10" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="19" count="3" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="6" count="11" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
       </file>
       <file name="exist_user_service.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\services\users\exist_user_service.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
       </file>
       <file name="get_all_user_service.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\services\users\get_all_user_service.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
       </file>
       <file name="get_user_service.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\services\users\get_user_service.ts">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
-        <line num="5" count="19" type="stmt"/>
-        <line num="25" count="19" type="stmt"/>
-        <line num="26" count="19" type="stmt"/>
-        <line num="28" count="19" type="stmt"/>
-        <line num="30" count="19" type="stmt"/>
-        <line num="36" count="19" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
+        <line num="5" count="22" type="stmt"/>
+        <line num="25" count="22" type="stmt"/>
+        <line num="26" count="22" type="stmt"/>
+        <line num="28" count="22" type="stmt"/>
+        <line num="30" count="22" type="stmt"/>
+        <line num="36" count="22" type="stmt"/>
       </file>
       <file name="physical_delete_user_service.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\services\users\physical_delete_user_service.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
-        <line num="1" count="3" type="stmt"/>
-        <line num="2" count="3" type="stmt"/>
-        <line num="4" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
+        <line num="1" count="4" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
       </file>
       <file name="update_user_service.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\services\users\update_user_service.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="4" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="4" count="11" type="stmt"/>
         <line num="5" count="5" type="stmt"/>
         <line num="7" count="5" type="stmt"/>
         <line num="12" count="5" type="stmt"/>
@@ -677,56 +665,56 @@
       <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <file name="global_api_path.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\utils\global_api_path\global_api_path.ts">
         <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="4" count="22" type="stmt"/>
-        <line num="8" count="22" type="cond" truecount="1" falsecount="0"/>
-        <line num="10" count="22" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="4" count="24" type="stmt"/>
+        <line num="8" count="24" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="24" type="stmt"/>
       </file>
     </package>
     <package name="utils.global_http_url">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="global_http_url.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\utils\global_http_url\global_http_url.ts">
         <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="11" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="11" count="11" type="stmt"/>
       </file>
     </package>
     <package name="utils.swagger">
       <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="swagger.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\utils\swagger\swagger.ts">
         <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
-        <line num="8" count="10" type="stmt"/>
-        <line num="9" count="10" type="stmt"/>
-        <line num="13" count="10" type="stmt"/>
-        <line num="14" count="10" type="stmt"/>
-        <line num="15" count="10" type="stmt"/>
-        <line num="16" count="10" type="stmt"/>
-        <line num="18" count="10" type="stmt"/>
-        <line num="35" count="10" type="stmt"/>
-        <line num="40" count="10" type="stmt"/>
-        <line num="42" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+        <line num="8" count="11" type="stmt"/>
+        <line num="9" count="11" type="stmt"/>
+        <line num="13" count="11" type="stmt"/>
+        <line num="14" count="11" type="stmt"/>
+        <line num="15" count="11" type="stmt"/>
+        <line num="16" count="11" type="stmt"/>
+        <line num="18" count="11" type="stmt"/>
+        <line num="35" count="11" type="stmt"/>
+        <line num="40" count="11" type="stmt"/>
+        <line num="42" count="11" type="stmt"/>
       </file>
     </package>
     <package name="utils.winston_file_logger.winston">
       <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="logger.ts" path="C:\Users\Vincent Jean\Documents\NodeJs\typescript-express-boilerplate\src\utils\winston_file_logger\winston\logger.ts">
         <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="2" count="10" type="stmt"/>
-        <line num="3" count="10" type="stmt"/>
-        <line num="5" count="10" type="stmt"/>
-        <line num="7" count="10" type="stmt"/>
-        <line num="16" count="10" type="stmt"/>
-        <line num="20" count="31" type="stmt"/>
-        <line num="24" count="10" type="stmt"/>
-        <line num="68" count="10" type="stmt"/>
+        <line num="1" count="11" type="stmt"/>
+        <line num="2" count="11" type="stmt"/>
+        <line num="3" count="11" type="stmt"/>
+        <line num="5" count="11" type="stmt"/>
+        <line num="7" count="11" type="stmt"/>
+        <line num="16" count="11" type="stmt"/>
+        <line num="20" count="37" type="stmt"/>
+        <line num="24" count="11" type="stmt"/>
+        <line num="68" count="11" type="stmt"/>
       </file>
     </package>
   </project>
