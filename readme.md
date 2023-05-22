@@ -13,7 +13,7 @@
 
 <div align="center">
 
-[![Passing Test](https://github.com/vincent-queimado/express-prisma-ts-boilerplate/workflows/NodeJs%20CI/badge.svg)]
+[![Passing Test](https://github.com/vincent-queimado/express-prisma-ts-boilerplate/workflows/NodeJs%20CI/badge.svg)](https://github.com/vincent-queimado//vincent-queimado/express-prisma-ts-boilerplate)
 [![Codecov](https://codecov.io/gh/vincent-queimado/express-prisma-ts-boilerplate/branch/master/graph/badge.svg?token=GN0J6Y47VM)](https://codecov.io/gh/vincent-queimado/express-prisma-ts-boilerplate)
 [![Snyk](https://snyk.io/test/github/vincent-queimado/express-prisma-ts-boilerplate/badge.svg?targetFile=package.json)](https://app.snyk.io/)
   
