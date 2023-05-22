@@ -14,9 +14,9 @@
 <div align="center">
 
 [![codecov](https://codecov.io/gh/vincent-queimado/express-prisma-ts-boilerplate/branch/master/graph/badge.svg?token=GN0J6Y47VM)](https://codecov.io/gh/vincent-queimado/express-prisma-ts-boilerplate)
-
+![NodeJs](https://img.shields.io/badge/dynamic/json?label=node&query=%24.engines%5B%22node%22%5D&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvincent-queimado%2Fexpress-prisma-ts-boilerplate%2Fmaster%2Fpackage.json?logo=node&logoColor=white)
 [![Package - Typescript](https://img.shields.io/github/package-json/dependency-version/vincent-queimado/express-prisma-ts-boilerplate/dev/typescript?logo=typescript&logoColor=white)](https://www.npmjs.com/package/typescript "Go to TypeScript on NPM")
-[![Package - Prisma](https://img.shields.io/github/package-json/dependency-version/vincent-queimado/express-prisma-ts-boilerplate/dev/typescript?logo=prisma&logoColor=white)](https://www.npmjs.com/package/prisma "Go to Prisma on NPM")
+[![Package - Prisma](https://img.shields.io/github/package-json/dependency-version/vincent-queimado/express-prisma-ts-boilerplate/dev/prisma?logo=prisma&logoColor=white)](https://www.npmjs.com/package/prisma "Go to Prisma on NPM")
 [![Package - Jest](https://img.shields.io/github/package-json/dependency-version/vincent-queimado/express-prisma-ts-boilerplate/dev/jest?logo=jest)](https://www.npmjs.com/package/jest "Go to Jest on NPM")
 </div>
 
