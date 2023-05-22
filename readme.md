@@ -13,6 +13,10 @@
 
 [![codecov](https://codecov.io/gh/vincent-queimado/express-prisma-ts-boilerplate/branch/master/graph/badge.svg?token=GN0J6Y47VM)](https://codecov.io/gh/vincent-queimado/express-prisma-ts-boilerplate)
 
+[![Package - Typescript](https://img.shields.io/github/package-json/dependency-version/vincent-queimado/express-prisma-ts-boilerplate/dev/typescript?logo=typescript&logoColor=white)](https://www.npmjs.com/package/typescript "Go to TypeScript on NPM")
+[![Package - Prisma](https://img.shields.io/github/package-json/dependency-version/vincent-queimado/express-prisma-ts-boilerplate/dev/typescript?logo=prisma&logoColor=white)](https://www.npmjs.com/package/prisma "Go to Prisma on NPM")
+[![Package - Jest](https://img.shields.io/github/package-json/dependency-version/vincent-queimado/express-prisma-ts-boilerplate/dev/jest?logo=jest)](https://www.npmjs.com/package/jest "Go to Jest on NPM")
+
 ![divider](https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/readme-divider.png)
 
 ## :blue_heart: About the boilerplate
