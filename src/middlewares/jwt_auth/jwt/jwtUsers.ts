@@ -43,7 +43,6 @@ const verifyToken = (token: string) => {
             return res;
         }
 
-        res.error = err.message;
         res.payload = decoded;
         return res;
     });

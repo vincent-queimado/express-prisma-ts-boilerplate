@@ -9,8 +9,8 @@ router.post('/register', CtrlUserAuth.register);
 router.get('/register/confirmation', CtrlUserAuth.registerConfirm);
 
 // User Login/Logout
-router.post('/auth/login', CtrlUserAuth.login);
-router.post('/auth/logout', CtrlUserAuth.logout);
+router.post('/login', CtrlUserAuth.login);
+router.get('/logout', CtrlUserAuth.logout);
 
 // User Forgot Password
 // router.post('/forgotpassword/request', CtrlUserAuth.forgotPasswordRequest);

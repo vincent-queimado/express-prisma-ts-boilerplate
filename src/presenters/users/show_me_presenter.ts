@@ -13,16 +13,20 @@ export default async (id: string) => {
     const result = await findOne(
         id,
         'id',
-        [
-            'password',
-            'tokenOfResetPassword',
-            'tokenOfRegisterConfirmation',
-            'isDisabled',
-            'isDeleted',
-            'deletedAt',
-        ],
+        {
+            id: true,
+            name: true,
+            email: true,
+            phone: true,
+            avatar: true,
+            accountType: true,
+            isDisabled: false,
+            isRegistered: true,
+            createdAt: true,
+        },
         false,
     );
+
     if (!result.success || !result.data) {
         return httpMsg.http422('Error to find User.', errCode);
     }

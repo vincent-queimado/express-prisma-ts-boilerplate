@@ -6,7 +6,7 @@ const login = (req: Request, res: Response, next: NextFunction) => {
     presenter
         .login(req.body)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
-        .catch((err: any) => {
+        .catch((err: any) => /* istanbul ignore next*/ {
             logger.error(`Login error. ${err.message}`);
             next(err);
         });
@@ -14,9 +14,9 @@ const login = (req: Request, res: Response, next: NextFunction) => {
 
 const logout = (req: Request, res: Response, next: NextFunction) => {
     presenter
-        .logout(req.body)
+        .logout()
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
-        .catch((err: any) => {
+        .catch((err: any) => /* istanbul ignore next*/ {
             logger.error(`Logout error. ${err.message}`);
             next(err);
         });
@@ -26,7 +26,7 @@ const register = (req: Request, res: Response, next: NextFunction) => {
     presenter
         .register(req.body)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
-        .catch((err: any) => {
+        .catch((err: any) => /* istanbul ignore next*/ {
             logger.error(`Register error. ${err.message}`);
             next(err);
         });
@@ -36,7 +36,7 @@ const registerConfirm = (req: Request, res: Response, next: NextFunction) => {
     presenter
         .registerConfirm(req.query)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
-        .catch((err: any) => {
+        .catch((err: any) => /* istanbul ignore next*/ {
             logger.error(`Register confirmation error. ${err.message}`);
             next(err);
         });

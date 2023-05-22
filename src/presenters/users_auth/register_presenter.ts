@@ -94,12 +94,7 @@ const requiredDatas = async (datas: any) => /* istanbul ignore next */ {
 };
 
 const getUser = async (email: string) => {
-    const result = await servFindOneUser(
-        email,
-        'email',
-        ['password', 'tokenOfRegisterConfirmation', 'tokenOfResetPassword'],
-        false,
-    );
+    const result = await servFindOneUser(email, 'email', { id: true, isRegistered: true }, false);
 
     /* istanbul ignore if */
     if (!result.success) return { success: false, data: null, msgError: msgErrorCheckUser };
