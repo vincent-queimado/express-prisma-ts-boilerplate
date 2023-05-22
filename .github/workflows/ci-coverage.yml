@@ -61,10 +61,8 @@ jobs:
                   host: ${{ secrets.REMOTE_HOST }}
                   port: ${{ secrets.REMOTE_PORT }}
                   username: ${{ secrets.REMOTE_USER }}
-                  password: ${{ secrets.SSH_PASSWORD }}
-                  script_stop: true
-                  debug: true
-                  passphrase: 'funky'
+                  # password: ${{ secrets.SSH_PASSWORD }}
+                  key: ${{ secrets.SSH_PRIVATE_KEY }}
                   script: cd /home/nodejs/express-prisma-ts-boilerplate/ && git pull
                   # script: |
                   #     bash /home/nodejs/express-prisma-ts-boilerplate/deploy.sh
