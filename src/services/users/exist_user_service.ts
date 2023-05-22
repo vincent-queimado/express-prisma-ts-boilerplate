@@ -2,7 +2,6 @@ import prisma from '../../../prisma/prisma-client';
 import logger from '@utils/winston_file_logger/winston/logger';
 
 export default (id: string) => {
-    console.log(id);
     const where = { id };
     const result = prisma.user
         .findUnique({ where })

@@ -35,24 +35,24 @@ export default async (id: string, data: any) => {
         return httpMsg.http422('Error to update User.', errCode);
     }
 
-    if (result.data[1][0].dataValues.password !== undefined) {
-        delete result.data[1][0].dataValues.password;
+    if (result.data.password !== undefined) {
+        delete result.data.password;
     }
-    if (result.data[1][0].dataValues.tokenOfResetPassword !== undefined) {
-        delete result.data[1][0].dataValues.tokenOfResetPassword;
+    if (result.data.tokenOfResetPassword !== undefined) {
+        delete result.data.tokenOfResetPassword;
     }
-    if (result.data[1][0].dataValues.tokenOfRegisterConfirmation !== undefined) {
-        delete result.data[1][0].dataValues.tokenOfRegisterConfirmation;
+    if (result.data.tokenOfRegisterConfirmation !== undefined) {
+        delete result.data.tokenOfRegisterConfirmation;
     }
-    if (result.data[1][0].dataValues.isDisabled !== undefined) {
-        delete result.data[1][0].dataValues.isDisabled;
+    if (result.data.isDisabled !== undefined) {
+        delete result.data.isDisabled;
     }
-    if (result.data[1][0].dataValues.isDeleted !== undefined) {
-        delete result.data[1][0].dataValues.isDeleted;
+    if (result.data.isDeleted !== undefined) {
+        delete result.data.isDeleted;
     }
-    if (result.data[1][0].dataValues.deletedAt !== undefined) {
-        delete result.data[1][0].dataValues.deletedAt;
+    if (result.data.deletedAt !== undefined) {
+        delete result.data.deletedAt;
     }
 
-    return httpMsg.http200(result.data[1][0]);
+    return httpMsg.http200(result.data);
 };

@@ -3,7 +3,10 @@ import { v4 as uuidv4 } from 'uuid';
 import randtoken from 'rand-token';
 import bcrypt from 'bcryptjs';
 
+import config from '../../src/config/app';
+
 const prisma = new PrismaClient();
+const saltRounds = config.bcrypt.saltRounds;
 
 const userQty = 9;
 const users: any = [];
@@ -48,7 +51,7 @@ async function main() {
                 phone: `81999999999`,
                 accountName: 'johndoe',
                 accountLocationState: 'PE',
-                password: bcrypt.hashSync('Johndoe@1234', 10),
+                password: bcrypt.hashSync('Johndoe@1234', saltRounds),
                 isRegistered: true,
                 tokenOfRegisterConfirmation: randtoken.suid(16),
                 tokenOfResetPassword: randtoken.suid(16),
@@ -63,7 +66,7 @@ async function main() {
                 phone: `8199999999${i}`,
                 accountName: `account${i}`,
                 accountLocationState: states[Math.floor(Math.random() * states.length)],
-                password: bcrypt.hashSync('Johndoe@1234', 10),
+                password: bcrypt.hashSync('Johndoe@1234', saltRounds),
                 isRegistered: true,
                 tokenOfRegisterConfirmation: randtoken.suid(16),
                 tokenOfResetPassword: randtoken.suid(16),
