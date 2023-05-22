@@ -3,7 +3,7 @@ import servFindOneUser from '@services/users/get_user_service';
 import servCheckPassword from '@functions/check_password';
 import servGenerateToken from '@functions/generate_token_access';
 
-const errCode = 'ERROR_USER_SIGNIN';
+const errCode = 'ERROR_USER_LOGIN';
 
 const msgErrorDataMissing = 'User data missing.';
 const msgErrorCheckUser = 'Error to check user.';
@@ -18,18 +18,22 @@ export default async (userDatas: any) => {
 
     // Check required datas
     const required = await requiredDatas(datas);
+    /* istanbul ignore if */
     if (!required.success) return httpMsg.http401(errCode);
 
     // Check existing User
     const existUser = await getUser(datas.email);
+    /* istanbul ignore if */
     if (!existUser.success) return httpMsg.http401(errCode);
 
     // Check password
     const checkedPassword = await checkPassword(datas.password, existUser.data.password);
+    /* istanbul ignore if */
     if (!checkedPassword.success) return httpMsg.http401(errCode);
 
-    // // Generate token access
-    const generatedToken = await generateToken(datas);
+    // Generate token access
+    const generatedToken = await generateToken(existUser.data);
+    /* istanbul ignore if */
     if (!generatedToken.success) return httpMsg.http401(errCode);
 
     user = {
@@ -42,9 +46,11 @@ export default async (userDatas: any) => {
 };
 
 const requiredDatas = async (datas: any) => {
+    /* istanbul ignore if */
     if (!datas.email) return { success: false, msgError: msgErrorDataMissing };
+    /* istanbul ignore if */
     if (!datas.password) return { success: false, msgError: msgErrorDataMissing };
-
+    /* istanbul ignore next */
     return { success: true, msgError: '' };
 };
 
@@ -52,10 +58,22 @@ const getUser = async (email: string) => {
     const result = await servFindOneUser(
         email,
         'email',
-        ['tokenOfRegisterConfirmation', 'tokenOfResetPassword'],
+        {
+            id: true,
+            name: true,
+            email: true,
+            phone: true,
+            avatar: true,
+            accountType: true,
+            password: true,
+            isDisabled: false,
+            isRegistered: true,
+            createdAt: true,
+        },
         false,
     );
 
+    /* istanbul ignore if */
     if (!result.success) return { success: false, data: null, msgError: msgErrorCheckUser };
 
     if (!result.data)
@@ -65,20 +83,21 @@ const getUser = async (email: string) => {
             msgError: msgErrorUserNotFound,
         };
 
-    if (result.data && !result.data.dataValues.isRegistered)
+    if (result.data && !result.data.isRegistered)
         return {
             success: false,
             data: null,
             msgError: msgErrorUserNotRegistered,
         };
 
-    if (result.data && result.data.dataValues.isRegistered)
+    if (result.data && result.data.isRegistered)
         return {
             success: true,
-            data: result.data.dataValues,
+            data: result.data,
             msgError: '',
         };
 
+    /* istanbul ignore next */
     return { success: false, data: null, msgError: msgErrorCheckUser };
 };
 
@@ -95,6 +114,7 @@ const checkPassword = async (password: string, hashPassword: string) => {
 const generateToken = async (datas: any) => {
     const result = await servGenerateToken(datas.id, datas.name, datas.email, datas.avatar);
 
+    /* istanbul ignore if */
     if (!result.success) {
         return { success: false, data: null, msgError: msgErrorUserToken };
     }

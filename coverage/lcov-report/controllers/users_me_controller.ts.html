@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/18</span>
+                <span class='fraction'>6/12</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/18</span>
+                <span class='fraction'>6/12</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -103,40 +103,40 @@
 <a name='L38'></a><a href='#L38'>38</a>
 <a name='L39'></a><a href='#L39'>39</a>
 <a name='L40'></a><a href='#L40'>40</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -149,9 +149,9 @@ const showMe = <span class="fstat-no" title="function not covered" >(r</span>eq:
 <span class="cstat-no" title="statement not covered" >    presenter</span>
         .showMe(req.body.user.id)
         .then(<span class="fstat-no" title="function not covered" >(r</span>esult: any) =&gt; <span class="cstat-no" title="statement not covered" >res.status(result.httpStatusCode).json(result.data))</span>
-        .catch(<span class="fstat-no" title="function not covered" >(e</span>rr: any) =&gt; {
-<span class="cstat-no" title="statement not covered" >            logger.error(`Erro de visualização de dados de usuário. ${err.message}`);</span>
-<span class="cstat-no" title="statement not covered" >            next(err);</span>
+        .catch(<span class="fstat-no" title="function not covered" >(e</span>rr: any) =&gt; /* istanbul ignore next*/ {
+            logger.error(`Erro de visualização de dados de usuário. ${err.message}`);
+            next(err);
         });
 };
 &nbsp;
@@ -159,9 +159,9 @@ const updateMe = <span class="fstat-no" title="function not covered" >(r</span>e
 <span class="cstat-no" title="statement not covered" >    presenter</span>
         .updateMe(req.body.user.id, req.body)
         .then(<span class="fstat-no" title="function not covered" >(r</span>esult: any) =&gt; <span class="cstat-no" title="statement not covered" >res.status(result.httpStatusCode).json(result.data))</span>
-        .catch(<span class="fstat-no" title="function not covered" >(e</span>rr: any) =&gt; {
-<span class="cstat-no" title="statement not covered" >            logger.error(`Erro de atualização de dados de usuário. ${err.message}`);</span>
-<span class="cstat-no" title="statement not covered" >            next(err);</span>
+        .catch(<span class="fstat-no" title="function not covered" >(e</span>rr: any) =&gt; /* istanbul ignore next*/ {
+            logger.error(`Erro de atualização de dados de usuário. ${err.message}`);
+            next(err);
         });
 };
 &nbsp;
@@ -169,9 +169,9 @@ const deleteMe = <span class="fstat-no" title="function not covered" >(r</span>e
 <span class="cstat-no" title="statement not covered" >    presenter</span>
         .deleteMe(req.body.user.id)
         .then(<span class="fstat-no" title="function not covered" >(r</span>esult: any) =&gt; <span class="cstat-no" title="statement not covered" >res.status(result.httpStatusCode).json(result.data))</span>
-        .catch(<span class="fstat-no" title="function not covered" >(e</span>rr: any) =&gt; {
-<span class="cstat-no" title="statement not covered" >            logger.error(`Erro de exclusão de dados de usuário. ${err.message}`);</span>
-<span class="cstat-no" title="statement not covered" >            next(err);</span>
+        .catch(<span class="fstat-no" title="function not covered" >(e</span>rr: any) =&gt; /* istanbul ignore next*/ {
+            logger.error(`Erro de exclusão de dados de usuário. ${err.message}`);
+            next(err);
         });
 };
 &nbsp;
@@ -187,7 +187,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-05-21T12:05:31.703Z
+                at 2023-05-22T16:26:22.865Z
             </div>
         <script src="../prettify.js"></script>
         <script>

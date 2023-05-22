@@ -1,11 +1,10 @@
 import prisma from '../../../prisma/prisma-client';
 import logger from '@utils/winston_file_logger/winston/logger';
 
-export default (data: string, dataBy: string, excludeFields: any, findDeleted: boolean) => {
+export default (data: string, dataBy: string, fields: any, findDeleted: boolean) => {
     const buildQuery = (
         data: string,
         dataBy: string,
-        excludeFields: any,
         findDeleted: boolean,
     ) => /* istanbul ignore next */ {
         if (dataBy === 'id') {
@@ -23,10 +22,11 @@ export default (data: string, dataBy: string, excludeFields: any, findDeleted: b
         }
     };
 
-    const where = buildQuery(data, dataBy, excludeFields, findDeleted);
+    const where = buildQuery(data, dataBy, findDeleted);
+    const select = fields;
 
     const result = prisma.user
-        .findFirst({ where })
+        .findFirst({ where, select })
         .then((res: any) => ({ success: true, data: res, error: null }))
         .catch((error: any) => /* istanbul ignore next */ {
             logger.error(`Failed to find account. DB Error: ${error}`);

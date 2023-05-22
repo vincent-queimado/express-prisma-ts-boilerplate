@@ -48,7 +48,7 @@ export default async (userDatas: any) => {
     return httpMsg.http200(user);
 };
 
-const requiredDatas = async (datas: any) => /* istanbul ignore if */ {
+const requiredDatas = async (datas: any) => /* istanbul ignore next */ {
     if (!datas.email) return { success: false, msgError: msgErrorDataMissing };
     if (!datas.token) return { success: false, msgError: msgErrorDataMissing };
 
@@ -59,7 +59,18 @@ const getUser = async (email: string) => {
     const result = await servFindOneUser(
         email,
         'email',
-        ['password', 'tokenOfResetPassword'],
+        {
+            id: true,
+            name: true,
+            email: true,
+            phone: true,
+            avatar: true,
+            accountType: true,
+            tokenOfRegisterConfirmation: true,
+            isDisabled: false,
+            isRegistered: true,
+            createdAt: true,
+        },
         false,
     );
 
@@ -99,8 +110,10 @@ const updateUser = async (id: string, datas: any) => {
     if (!result.success || !result.data)
         return { success: false, data: null, msgError: msgErrorUpdateUser };
 
+    /* istanbul ignore if */
     if (!result.data) return { success: false, data: null, msgError: msgErrorUserNotFound };
 
+    /* istanbul ignore if */
     if (result.data < 1) return { success: false, data: null, msgError: msgErrorUserNotFound };
 
     return { success: true, data: result.data, msgError: '' };

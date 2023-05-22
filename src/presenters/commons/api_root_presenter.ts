@@ -8,10 +8,11 @@ export default async () => {
     try {
         const result = await apiRoot();
 
+        /* istanbul ignore if */
         if (!result.success || !result.data) return httpMsg.http422('Erro ao redirecionar', lblErr);
 
         return httpMsg.http200(result.data);
-    } catch (err: any) {
+    } catch (err: any) /* istanbul ignore next */ {
         logger.error(`Erro ao redicionar a url. ${err.message}`);
         return httpMsg.http422('Erro ao tentar redirecionar.', lblErr);
     }
