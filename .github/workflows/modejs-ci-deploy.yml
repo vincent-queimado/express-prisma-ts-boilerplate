@@ -1,18 +1,14 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
-name: CI and Code Coverage
+name: NodeJs CI
 
 on: [push]
 
 jobs:
-    build:
+    build-and-test:
         runs-on: ubuntu-latest
 
         strategy:
             matrix:
                 node-version: [18.x]
-                # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
         steps:
             - uses: actions/checkout@v3
@@ -23,24 +19,37 @@ jobs:
                   cache: 'npm'
                   cache-dependency-path: '**/package-lock.json'
 
-            # - name: Install dependencies
-            #   run: npm install
+            - name: Install dependencies
+              run: npm install
 
-            # - name: Reset database
-            #   run: npm run prisma:reset:force
-            #   env:
-            #       DATABASE_URL: ${{ secrets.DATABASE_URL }}
+            - name: Build
+              run: npm run prebuild && npm run build && npm run copyfiles
 
-            # - name: Seed database
-            #   run: npm run prisma:seed
-            #   env:
-            #       DATABASE_URL: ${{ secrets.DATABASE_URL }}
+            - name: Reset database
+              run: npm run prisma:reset:force
+              env:
+                  DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
-            # - name: Run unit tests
-            #   run: npm run test
-            #   env:
-            #       DATABASE_URL: ${{ secrets.DATABASE_URL }}
+            - name: Seed database
+              run: npm run prisma:seed
+              env:
+                  DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
+            - name: Run unit tests
+              run: npm run test
+              env:
+                  DATABASE_URL: ${{ secrets.DATABASE_URL }}
+
+    deploy:
+        needs: build-and-test
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [18.x]
+
+        steps:
+            - uses: actions/checkout@v2
             - name: Deploy to server
               uses: appleboy/ssh-action@master
               with:
