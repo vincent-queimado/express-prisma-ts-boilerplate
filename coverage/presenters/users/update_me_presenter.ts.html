@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">78.78% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>26/33</span>
+                <span class='fraction'>30/30</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">61.11% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>11/18</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">78.78% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>26/33</span>
+                <span class='fraction'>30/30</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -121,41 +121,47 @@
 <a name='L56'></a><a href='#L56'>56</a>
 <a name='L57'></a><a href='#L57'>57</a>
 <a name='L58'></a><a href='#L58'>58</a>
-<a name='L59'></a><a href='#L59'>59</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-yes">10x</span>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -187,8 +193,9 @@ const errCode = 'ERROR_USER_UPDATE_ME';
 &nbsp;
 export default async (id: string, data: any) =&gt; {
     // Check User data
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (!id || !Object.keys(data).length) {
-<span class="cstat-no" title="statement not covered" >        return httpMsg.http422('User data missing.', errCode);</span>
+    /* istanbul ignore if */
+    if (!id || !Object.keys(data).length) {
+        return httpMsg.http422('User data missing.', errCode);
     }
 &nbsp;
     // Data filter
@@ -197,23 +204,25 @@ export default async (id: string, data: any) =&gt; {
     if (data.name) {
         dataFiltered.name = data.name;
     }
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (data.email) {
-<span class="cstat-no" title="statement not covered" >        dataFiltered.email = data.email;</span>
+    if (data.email) {
+        dataFiltered.email = data.email;
     }
 &nbsp;
     // Hash password
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (data.password) {
-        const resultHashPassword = <span class="cstat-no" title="statement not covered" >await servHashPassword(data.password);</span>
-<span class="cstat-no" title="statement not covered" >        <span class="missing-if-branch" title="if path not taken" >I</span>if (!resultHashPassword.success || !resultHashPassword.data) {</span>
-<span class="cstat-no" title="statement not covered" >            return { success: false, data: null, error: 'Eror to hash password' };</span>
+    if (data.password) {
+        const resultHashPassword = await servHashPassword(data.password);
+        /* istanbul ignore if */
+        if (!resultHashPassword.success || !resultHashPassword.data) {
+            return { success: false, data: null, error: 'Eror to hash password' };
         }
-<span class="cstat-no" title="statement not covered" >        dataFiltered.password = resultHashPassword.data;</span>
+        dataFiltered.password = resultHashPassword.data;
     }
 &nbsp;
     // Update User
     const result = await servUpdateUser(id, dataFiltered);
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (!result.success || !result.data) {
-<span class="cstat-no" title="statement not covered" >        return httpMsg.http422('Error to update User.', errCode);</span>
+    /* istanbul ignore if */
+    if (!result.success || !result.data) {
+        return httpMsg.http422('Error to update User.', errCode);
     }
 &nbsp;
     if (result.data.password !== undefined) {
@@ -244,7 +253,7 @@ export default async (id: string, data: any) =&gt; {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-05-22T19:35:11.645Z
+                at 2023-05-22T23:25:59.859Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

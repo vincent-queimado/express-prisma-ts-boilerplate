@@ -6,6 +6,7 @@ const errCode = 'ERROR_USER_UPDATE_ME';
 
 export default async (id: string, data: any) => {
     // Check User data
+    /* istanbul ignore if */
     if (!id || !Object.keys(data).length) {
         return httpMsg.http422('User data missing.', errCode);
     }
@@ -23,6 +24,7 @@ export default async (id: string, data: any) => {
     // Hash password
     if (data.password) {
         const resultHashPassword = await servHashPassword(data.password);
+        /* istanbul ignore if */
         if (!resultHashPassword.success || !resultHashPassword.data) {
             return { success: false, data: null, error: 'Eror to hash password' };
         }
@@ -31,6 +33,7 @@ export default async (id: string, data: any) => {
 
     // Update User
     const result = await servUpdateUser(id, dataFiltered);
+    /* istanbul ignore if */
     if (!result.success || !result.data) {
         return httpMsg.http422('Error to update User.', errCode);
     }

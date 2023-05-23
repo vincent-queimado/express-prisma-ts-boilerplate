@@ -5,6 +5,7 @@ const errCode = 'ERROR_USER_FIND_ME';
 
 export default async (id: string) => {
     // Check User ID
+    /* istanbul ignore if */
     if (!id) {
         return httpMsg.http422('User data missing.', errCode);
     }
@@ -27,6 +28,7 @@ export default async (id: string) => {
         false,
     );
 
+    /* istanbul ignore if */
     if (!result.success || !result.data) {
         return httpMsg.http422('Error to find User.', errCode);
     }

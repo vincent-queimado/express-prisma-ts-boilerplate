@@ -24,8 +24,6 @@ export default () => {
 
     app.use(helmet());
 
-    app.use(xss());
-
     app.use(cors());
     app.options('*', cors());
 
@@ -34,6 +32,8 @@ export default () => {
 
     app.use(bodyParser.json({ limit: config.api.jsonLimit }));
     app.use(bodyParser.urlencoded({ extended: config.api.extUrlencoded }));
+
+    app.use(xss());
 
     app.use(favicon(publicFavicon));
 
