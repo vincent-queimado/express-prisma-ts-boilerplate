@@ -14,8 +14,8 @@ const testConfig = (env: IProcessEnv): IEnvConfig => {
             extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
         },
         jwt: {
-            secret: env.API_JWT_SECRET || '',
-            expiredIn: env.API_JWT_EXPIRED_IN || '24h',
+            secret: env.JWT_SECRET || '',
+            expiredIn: env.JWT_EXPIRED_IN || '24h',
         },
         bcrypt: {
             saltRounds: parseInt(env.BCRYPT_SALTROUNDS || '') || 10,
@@ -41,8 +41,8 @@ const devConfig = (env: IProcessEnv): IEnvConfig => {
             extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
         },
         jwt: {
-            secret: env.API_JWT_SECRET || '',
-            expiredIn: env.API_JWT_EXPIRED_IN || '24h',
+            secret: env.JWT_SECRET || '',
+            expiredIn: env.JWT_EXPIRED_IN || '24h',
         },
         bcrypt: {
             saltRounds: parseInt(env.BCRYPT_SALTROUNDS || '') || 10,
@@ -68,8 +68,8 @@ const stageConfig = (env: IProcessEnv): IEnvConfig => {
             extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
         },
         jwt: {
-            secret: env.API_JWT_SECRET || '',
-            expiredIn: env.API_JWT_EXPIRED_IN || '24h',
+            secret: env.JWT_SECRET || '',
+            expiredIn: env.JWT_EXPIRED_IN || '24h',
         },
         bcrypt: {
             saltRounds: parseInt(env.BCRYPT_SALTROUNDS || '') || 10,
@@ -95,8 +95,8 @@ const prodConfig = (env: IProcessEnv): IEnvConfig => {
             extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
         },
         jwt: {
-            secret: env.API_JWT_SECRET || '',
-            expiredIn: env.API_JWT_EXPIRED_IN || '24h',
+            secret: env.JWT_SECRET || '',
+            expiredIn: env.JWT_EXPIRED_IN || '24h',
         },
         bcrypt: {
             saltRounds: parseInt(env.BCRYPT_SALTROUNDS || '') || 10,
