@@ -30,6 +30,10 @@ const defaultRoutes = [
         path: '/logs',
         route: logsRoute,
     },
+    {
+        path: '/docs',
+        route: docsRoute,
+    },
 ];
 
 const devRoutes = [
@@ -43,7 +47,7 @@ defaultRoutes.forEach((route) => {
     router.use(route.path, route.route);
 });
 
-if (config.isDev || config.isTest) {
+if (!config.isProd) {
     devRoutes.forEach((route) => {
         router.use(route.path, route.route);
     });
