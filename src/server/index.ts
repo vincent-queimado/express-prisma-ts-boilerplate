@@ -9,7 +9,7 @@ import logger from '@utils/winston_file_logger/winston/logger';
 const startup = async (silent: boolean) => {
     if (!silent) {
         /* eslint-disable no-console */
-        console.clear();
+        // console.clear();
         console.log(
             colorTxt.bgWhite.black(`\n Starting ${pkg.name.toUpperCase()} `) +
                 colorTxt.bgMagenta.black(` v${pkg.version} `),

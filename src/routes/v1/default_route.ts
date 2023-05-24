@@ -1,4 +1,4 @@
-import { Router, Request, Response, NextFunction } from 'express';
+import { Router } from 'express';
 import CtrlCommons from '@controllers/commons_controller';
 
 const router = Router();

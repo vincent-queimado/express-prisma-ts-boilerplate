@@ -1,10 +1,6 @@
-/* PROCESS */
-
 export interface IProcessEnv {
     [key: string]: string | undefined;
 }
-
-/* CONFIG */
 
 interface IApp {
     host: string;
@@ -22,6 +18,10 @@ interface IApi {
 interface IJwt {
     secret: string;
     expiredIn: string;
+}
+
+interface ICors {
+    allowOrigin: string;
 }
 
 interface IBcrypt {
@@ -45,6 +45,7 @@ export interface IEnvConfig {
     app: IApp;
     api: IApi;
     jwt: IJwt;
+    cors: ICors;
     bcrypt: IBcrypt;
     debug: IDebug;
 }
