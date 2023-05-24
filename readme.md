@@ -3,19 +3,18 @@
 </div>
 
 <div align="center">
-  <h1>Express RESTful API boilerplate using TypeScript<br/>(Express + Typescript + Prisma + Jest)</h1>
+  <h1>Express RESTful API boilerplate using TypeScript<br/>NodeJs + Express + Typescript + Prisma</h1>
 </div>
 
 <p align="center">
-  <span>A starter project written in TypeScript for quickly building Express RESTful APIs using ORM, loggers, schema validator, authentication, unit test coverage, and much more.</span></br>
+  <span>A starter NodeJs project written in TypeScript for quickly building Express RESTful APIs using ORM, loggers, schema validator, authentication, unit test coverage, and much more.</span></br>
   <sub>Made with ❤️ by <a href="https://github.com/vincent-queimado">Vincent Jean</a></sub>
 </p>
 
 <div align="center">
 
-[![Passing Test](https://github.com/vincent-queimado/express-prisma-ts-boilerplate/workflows/NodeJs%20CI/badge.svg)](https://github.com/vincent-queimado//vincent-queimado/express-prisma-ts-boilerplate)
+[![Passing Test](https://github.com/vincent-queimado/express-prisma-ts-boilerplate/workflows/build/badge.svg)](https://github.com/vincent-queimado//vincent-queimado/express-prisma-ts-boilerplate)
 [![codecov](https://codecov.io/gh/vincent-queimado/express-prisma-ts-boilerplate/branch/master/graph/badge.svg?token=GN0J6Y47VM)](https://codecov.io/gh/vincent-queimado/express-prisma-ts-boilerplate)
-[![Known Vulnerabilities](https://snyk.io/test/github/vincent-queimado/express-prisma-ts-boilerplate/badge.svg)](https://app.snyk.io/)
 
 [![NodeJs](https://img.shields.io/badge/dynamic/json?label=node&query=%24.engines%5B%22node%22%5D&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvincent-queimado%2Fexpress-prisma-ts-boilerplate%2Fmaster%2Fpackage.json)](https://nodejs.org/ 'Go to NodeJs')
 [![NPM](https://img.shields.io/badge/dynamic/json?label=npm&query=%24.engines%5B%22npm%22%5D&url=https%3A%2F%2Fraw.githubusercontent.com%2Fvincent-queimado%2Fexpress-prisma-ts-boilerplate%2Fmaster%2Fpackage.json)](https://www.npmjs.com/ 'Go to NPM')
