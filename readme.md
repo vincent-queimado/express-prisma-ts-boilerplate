@@ -248,10 +248,11 @@ prisma\                   # Prisma schema and client connection / Migrations and
 public\                   # Public ressources
 src\                      # Sources
   |--config\              # Environment variables and configuration related things
-     |--app\              # App configuration file
-     |--database\         # Database configuration file
-     |--email\            # Email configuration file
+      |--app\             # App configuration file
+      |--database\        # Database configuration file
+      |--email\           # Email configuration file
   |--controllers\         # Controllers
+      |--plataform        # Plataform business logic
   |--database\            # Database connection
   |--functions\           # Functions
   |--middlewares\         # Middlewares (JWT auth, data validation schema, Morgan, and other middlewares)

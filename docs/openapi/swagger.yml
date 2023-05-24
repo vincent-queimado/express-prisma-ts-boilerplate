@@ -1,0 +1,231 @@
+openapi: 3.0.0
+info:
+  title: express-prisma-ts-boilerplate
+  description: >-
+    A starter project written in TypeScript for quickly building Express RESTful
+    APIs using ORM, loggers, schema validator, authentication, unit test
+    coverage, and much more.
+  version: 1.0.1
+  contact:
+    name: Vincent Jean
+    email: vincent.queimado@gmail.com
+  license:
+    name: ISC
+    url: https://github.com/vincent-queimado
+servers:
+  - url: http://localhost:3344/api/v1/
+    description: Api Ver. 1
+components:
+  securitySchemes:
+    noauthAuth:
+      type: http
+      scheme: noauth
+    bearerAuth:
+      type: http
+      scheme: bearer
+tags:
+  - name: Api Info
+  - name: Api Logs
+  - name: Client
+  - name: Client > User
+  - name: Client > User > Auth
+  - name: Client > User > Auth > Register
+  - name: Client > User > Auth > Login
+  - name: Client > User > Me
+  - name: Admin
+  - name: Admin > Users Management
+paths:
+  /info:
+    get:
+      tags:
+        - Api Info
+      summary: Info
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /logs:
+    get:
+      tags:
+        - Api Logs
+      summary: Logs
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /auth/register:
+    post:
+      tags:
+        - Client > User > Auth > Register
+      summary: Register
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: johndoe@sample.com
+                name: johndoe
+                phone: (81) 99999-9999
+                accountName: johndoe
+                accountLocationState: PE
+                password: '1234'
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /auth/register/confirmation:
+    get:
+      tags:
+        - Client > User > Auth > Register
+      summary: Register Confirmation
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+        - name: email
+          in: query
+          schema:
+            type: string
+          example: johndoe@sample.com
+        - name: token
+          in: query
+          schema:
+            type: string
+          example: 0CrT0an7NBY9cvLd0NYFa3mk
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /auth/login:
+    post:
+      tags:
+        - Client > User > Auth > Login
+      summary: Login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: johndoe@sample.com
+                password: Johndoe@1234
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /auth/logout:
+    get:
+      tags:
+        - Client > User > Auth > Login
+      summary: Logout
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /user/me:
+    get:
+      tags:
+        - Client > User > Me
+      summary: Show Me
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    patch:
+      tags:
+        - Client > User > Me
+      summary: Update Me
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                name: johndoe
+                email: johndoe@sample.com
+                password: Johndoe@1234
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /user/me/delete:
+    patch:
+      tags:
+        - Client > User > Me
+      summary: Delete Me (Logical delete)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: ''
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /users:
+    get:
+      tags:
+        - Admin > Users Management
+      summary: All Users
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}

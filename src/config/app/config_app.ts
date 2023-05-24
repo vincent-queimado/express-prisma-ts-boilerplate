@@ -13,6 +13,9 @@ const testConfig = (env: IProcessEnv): IEnvConfig => {
             jsonLimit: env.API_JSON_LIMIT || '5mb',
             extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
         },
+        cors: {
+            allowOrigin: env.CORS_ALLOW_ORIGIN || '*',
+        },
         jwt: {
             secret: env.JWT_SECRET || '',
             expiredIn: env.JWT_EXPIRED_IN || '24h',
@@ -39,6 +42,9 @@ const devConfig = (env: IProcessEnv): IEnvConfig => {
             version: env.API_VERSION || 'v1',
             jsonLimit: env.API_JSON_LIMIT || '5mb',
             extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
+        },
+        cors: {
+            allowOrigin: env.CORS_ALLOW_ORIGIN || '*',
         },
         jwt: {
             secret: env.JWT_SECRET || '',
@@ -67,6 +73,9 @@ const stageConfig = (env: IProcessEnv): IEnvConfig => {
             jsonLimit: env.API_JSON_LIMIT || '5mb',
             extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
         },
+        cors: {
+            allowOrigin: env.CORS_ALLOW_ORIGIN || '*',
+        },
         jwt: {
             secret: env.JWT_SECRET || '',
             expiredIn: env.JWT_EXPIRED_IN || '24h',
@@ -93,6 +102,9 @@ const prodConfig = (env: IProcessEnv): IEnvConfig => {
             version: env.API_VERSION || 'v1',
             jsonLimit: env.API_JSON_LIMIT || '5mb',
             extUrlencoded: env.API_EXT_URLENCODED == 'false' || true,
+        },
+        cors: {
+            allowOrigin: env.CORS_ALLOW_ORIGIN || '*',
         },
         jwt: {
             secret: env.JWT_SECRET || '',

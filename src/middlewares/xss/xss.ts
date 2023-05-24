@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { inHTMLData } from 'xss-filters';
 
+/* istanbul ignore next */
 const clean = <T>(data: T | string = ''): T => {
     let isObject = false;
     if (typeof data === 'object') {

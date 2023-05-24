@@ -1,10 +1,6 @@
-/* PROCESS */
-
 export interface IProcessEnv {
     [key: string]: string | undefined;
 }
-
-/* CONFIG */
 
 interface IAuth {
     type: string;

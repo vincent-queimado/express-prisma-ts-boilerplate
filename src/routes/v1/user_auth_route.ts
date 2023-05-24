@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import CtrlUserAuth from '@controllers/users_auth_controller';
+import CtrlUserAuth from '@controllers/client/users_auth_controller';
 
 const router = Router();
 

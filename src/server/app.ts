@@ -17,15 +17,16 @@ import globalApiPath from '@utils/global_api_path/global_api_path';
 
 const publicLogs = './logs';
 const publicFavicon = './public/assets/images/favicons/favicon.ico';
+const views = '../views';
 
 export default () => {
     const app = express();
     const apiPath = globalApiPath();
+    const corsOptions = { origin: config.cors.allowOrigin };
 
     app.use(helmet());
 
-    app.use(cors());
-    app.options('*', cors());
+    app.use(cors(corsOptions));
 
     app.use(morgan.consoleLogger);
     app.use(morgan.fileLogger);
@@ -47,7 +48,7 @@ export default () => {
     app.use('/', routes);
 
     app.set('view engine', 'ejs');
-    app.set('views', path.join(__dirname, '../views'));
+    app.set('views', path.join(__dirname, views));
 
     app.use(handleError);
 
