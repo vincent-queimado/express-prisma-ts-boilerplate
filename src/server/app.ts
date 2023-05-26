@@ -37,6 +37,7 @@ export default () => {
     app.use(xss());
 
     app.use(favicon(publicFavicon));
+    app.use(express.static('public'));
 
     app.use(`/${apiPath}/logs`, express.static(publicLogs, { dotfiles: 'allow' }));
 

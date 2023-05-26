@@ -10,7 +10,7 @@ import { name, version, description, author, license } from '@packagejson';
 const openApi = 'docs/openapi/swagger.yml';
 const postmanCollection = 'docs/postman/postman_collection.json';
 
-const url = `${uri()}${apiUri()}/`;
+const url = `${apiUri()}/`;
 
 const servers = [{ url: `${url}`, description: 'Api Ver. 1' }];
 
@@ -30,7 +30,7 @@ export default async () => {
             return { success: true, data: data, error: null };
         })
         .catch((err) => /* istanbul ignore next */ {
-            logger.error(`Swagger Generation stopped due to some error'. ${err}`);
+            logger.error(`Swagger generation stopped due to some error'. ${err}`);
             return { success: false, data: null, error: err };
         });
 
