@@ -5,7 +5,12 @@ export interface IProcessEnv {
 interface IApp {
     host: string;
     port: number;
-    ssl: boolean;
+}
+
+interface ISsl {
+    isHttps: boolean;
+    privateKey: string;
+    certificate: string;
 }
 
 interface IApi {
@@ -43,6 +48,7 @@ export interface IBaseConfig {
 
 export interface IEnvConfig {
     app: IApp;
+    ssl: ISsl;
     api: IApi;
     jwt: IJwt;
     cors: ICors;

@@ -1,3 +1,4 @@
+import fs from 'fs';
 import http from 'http';
 import https from 'https';
 import colorTxt from 'ansi-colors';
@@ -9,12 +10,11 @@ import logger from '@utils/winston_file_logger/winston/logger';
 export default async (silent: boolean) => {
     const serverHost = config.app.host;
     const serverPort = config.app.port;
-    const serverSsl = config.app.host;
 
     let serverConnections: any;
     serverConnections = [];
 
-    const server = createServer(app(), serverSsl);
+    const server = createServer(app());
 
     server.listen(serverPort);
 
@@ -40,24 +40,43 @@ export default async (silent: boolean) => {
     return server;
 };
 
-const createServer = (app: any, serverSsl: any) => {
+const createServer = (app: any) => {
     let httpserver;
+    let options;
 
-    if (config.app.ssl) {
-        httpserver = https.createServer(serverSsl, app);
+    if (config.ssl.isHttps && config.isProd) {
+        try {
+            options = {
+                key: fs.readFileSync(`${config.ssl.privateKey}`),
+                cert: fs.readFileSync(`${config.ssl.certificate}`),
+            };
+        } catch (err) {
+            logger.error(`Http server error - SSL certificate files is not found`);
+            logger.error(`Http server error - Shutting down gracefully (SHUTDOWN)`);
+            process.exit(0);
+        }
+        httpserver = https.createServer(options, app);
     } else {
         httpserver = http.createServer(app);
     }
+
     return httpserver;
 };
 
 const onListening = (host: string, port: number, silent: boolean) => {
     if (!silent) {
         /* eslint-disable no-console */
-        console.log(
-            colorTxt.white(`-> Listening on ${host}:${port}`),
-            /* eslint-enable no-console */
-        );
+        if (config.ssl.isHttps && config.isProd) {
+            console.log(
+                colorTxt.white(`-> Listening on https://${host}:${port} (SSL)`),
+                /* eslint-enable no-console */
+            );
+        } else {
+            console.log(
+                colorTxt.white(`-> Listening on http://${host}:${port}`),
+                /* eslint-enable no-console */
+            );
+        }
     }
 
     logger.info(`Api status: Ready (listening on ${host}:${port})`);
