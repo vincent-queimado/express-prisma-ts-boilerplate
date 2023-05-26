@@ -13,7 +13,7 @@ info:
     name: ISC
     url: https://github.com/vincent-queimado
 servers:
-  - url: http://localhost:3344/api/v1/
+  - url: https://localhost:3344/api/v1/
     description: Api Ver. 1
 components:
   securitySchemes:

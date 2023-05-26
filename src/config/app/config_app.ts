@@ -5,7 +5,11 @@ const testConfig = (env: IProcessEnv): IEnvConfig => {
         app: {
             host: env.APP_URL_HOST || 'localhost',
             port: (env.APP_URL_PORT && parseInt(env.APP_URL_PORT, 10)) || 10030,
-            ssl: env.APP_URL_SSL == 'true' || false,
+        },
+        ssl: {
+            isHttps: env.SSL_ALLOW == 'true' || false,
+            privateKey: env.SSL_PRIVATE_KEY || '',
+            certificate: env.SSL_CERTIFICATE || '',
         },
         api: {
             prefix: env.API_PREFIX || 'api',
@@ -35,7 +39,11 @@ const devConfig = (env: IProcessEnv): IEnvConfig => {
         app: {
             host: env.APP_URL_HOST || 'localhost',
             port: (env.APP_URL_PORT && parseInt(env.APP_URL_PORT, 10)) || 10030,
-            ssl: env.APP_URL_SSL == 'true' || false,
+        },
+        ssl: {
+            isHttps: env.SSL_ALLOW == 'true' || false,
+            privateKey: env.SSL_PRIVATE_KEY || '',
+            certificate: env.SSL_CERTIFICATE || '',
         },
         api: {
             prefix: env.API_PREFIX || 'api',
@@ -65,7 +73,11 @@ const stageConfig = (env: IProcessEnv): IEnvConfig => {
         app: {
             host: env.APP_URL_HOST || 'localhost',
             port: (env.APP_URL_PORT && parseInt(env.APP_URL_PORT, 10)) || 10030,
-            ssl: env.APP_URL_SSL == 'true' || false,
+        },
+        ssl: {
+            isHttps: env.SSL_ALLOW == 'true' || false,
+            privateKey: env.SSL_PRIVATE_KEY || '',
+            certificate: env.SSL_CERTIFICATE || '',
         },
         api: {
             prefix: env.API_PREFIX || 'api',
@@ -95,7 +107,11 @@ const prodConfig = (env: IProcessEnv): IEnvConfig => {
         app: {
             host: env.APP_URL_HOST || 'localhost',
             port: (env.APP_URL_PORT && parseInt(env.APP_URL_PORT, 10)) || 10030,
-            ssl: env.APP_URL_SSL == 'true' || false,
+        },
+        ssl: {
+            isHttps: env.SSL_ALLOW == 'true' || false,
+            privateKey: env.SSL_PRIVATE_KEY || '',
+            certificate: env.SSL_CERTIFICATE || '',
         },
         api: {
             prefix: env.API_PREFIX || 'api',
