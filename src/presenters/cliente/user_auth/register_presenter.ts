@@ -1,9 +1,9 @@
 import randtoken from 'rand-token';
 
 import httpMsg from '@utils/http_messages/http_msg';
-import servCreateUser from '@services/users/create_user_service';
-import servUpdateUser from '@services/users/update_user_service';
-import servFindOneUser from '@services/users/get_user_service';
+import servCreateUser from '@services/users/user_create_service';
+import servUpdateUser from '@services/users/user_update_service';
+import servFindOneUser from '@services/users/user_get_one_service';
 import servHashPassword from '@functions/generate_hash_password';
 import sendEmail from '@utils/nodemailer/nodemailer/email_verification';
 

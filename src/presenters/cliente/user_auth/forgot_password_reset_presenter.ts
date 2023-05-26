@@ -2,8 +2,8 @@
 
 // import config from '@config/app/index';
 import httpMsg from '@utils/http_messages/http_msg';
-import servUpdateUser from '@services/users/update_user_service';
-import servFindOneUser from '@services/users/get_user_service';
+import servUpdateUser from '@services/users/user_update_service';
+import servFindOneUser from '@services/users/user_get_one_service';
 import servHashPassword from '@functions/generate_hash_password';
 
 const errCode = 'ERROR_USER_FORGOT_PASSWORD_RESET';

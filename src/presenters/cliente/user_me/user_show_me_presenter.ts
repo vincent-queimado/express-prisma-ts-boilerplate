@@ -1,5 +1,5 @@
 import httpMsg from '@utils/http_messages/http_msg';
-import findOne from '@services/users/get_user_service';
+import findOne from '@services/users/user_get_one_service';
 
 const errCode = 'ERROR_USER_FIND_ME';
 
