@@ -2,9 +2,9 @@ import request from 'supertest';
 import randtoken from 'rand-token';
 
 import server from '../../src/server/http_server';
-import getUser from '../../src/services/users/get_user_service';
-import updateUser from '../../src/services/users/update_user_service';
-import deleteUser from '../../src/services/users/physical_delete_user_service';
+import getUser from '../../src/services/users/user_get_one_service';
+import updateUser from '../../src/services/users/user_update_service';
+import deleteUser from '../../src/services/users/user_physical_delete_service';
 import globalApiPath from '../../src/utils/global_api_path/global_api_path';
 
 const apiPath = globalApiPath();
@@ -68,7 +68,7 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
 
         // Update User with confirm registration
         const newUser = await getUser(registerPayload.email, 'email', { id: true }, false);
-        await updateUser(newUser.data.id, { isRegistered: true });
+        await updateUser(newUser.data.id, { isRegistered: true }, { id: true });
 
         // Try to register the same user after confirm registration
         await request(app)

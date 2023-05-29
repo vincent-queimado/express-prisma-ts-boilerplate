@@ -1,11 +1,11 @@
 import prisma from '../../../prisma/prisma-client';
 import logger from '@utils/winston_file_logger/winston/logger';
 
-const msgError = 'User creation service error. Failed to create a user.';
+const msgError = 'Failed to create a user.';
 
-export default (datas: any) => {
+export default (datas: any, select: object) => {
     const result = prisma.user
-        .create({ data: datas })
+        .create({ data: datas, select })
         .then((res: any) => ({ success: true, data: res, error: null }))
         .catch((error: any) => /* istanbul ignore next */ {
             logger.error(`${msgError} ${error}`);

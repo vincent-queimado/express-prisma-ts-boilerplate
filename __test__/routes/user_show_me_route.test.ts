@@ -4,10 +4,9 @@ import bcrypt from 'bcryptjs';
 
 import config from '../../src/config/app';
 import server from '../../src/server/http_server';
-import getUser from '../../src/services/users/get_user_service';
-import createUser from '../../src/services/users/create_user_service';
-import updateUser from '../../src/services/users/update_user_service';
-import deleteUser from '../../src/services/users/physical_delete_user_service';
+import getUser from '../../src/services/users/user_get_one_service';
+import createUser from '../../src/services/users/user_create_service';
+import deleteUser from '../../src/services/users/user_physical_delete_service';
 import globalApiPath from '../../src/utils/global_api_path/global_api_path';
 
 const apiPath = globalApiPath();
@@ -54,7 +53,7 @@ describe('CHECK USER ME API ENDPOINTS', () => {
         }
 
         // Create User
-        await createUser(createPayload);
+        await createUser(createPayload, { id: true });
 
         // Check new user
         await getUser(createPayload.email, 'email', { id: true }, false);

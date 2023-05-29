@@ -2,7 +2,7 @@ export default {
     http200(data: any) {
         const params = {
             success: true,
-            message: 'Sucesso',
+            message: 'Success',
             content: data || null,
         };
         return { httpStatusCode: 200, data: params };
@@ -10,7 +10,7 @@ export default {
     http201(data: any) {
         const params = {
             success: true,
-            message: 'Criado com sucesso',
+            message: 'Successfully create',
             content: data || null,
         };
         return { httpStatusCode: 201, data: params };
@@ -18,7 +18,7 @@ export default {
     http204(data: any) {
         const params = {
             success: true,
-            message: 'Excluído com sucesso',
+            message: 'Successfully delete',
             content: data || null,
         };
         return { httpStatusCode: 204, data: params };

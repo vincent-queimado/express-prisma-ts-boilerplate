@@ -1,10 +1,23 @@
 import httpMsg from '@utils/http_messages/http_msg';
-import servUpdateUser from '@services/users/update_user_service';
+import servUpdateUser from '@services/users/user_update_service';
 import servHashPassword from '@functions/generate_hash_password';
 
 const errCode = 'ERROR_USER_UPDATE_ME';
 
 export default async (id: string, data: any) => {
+    const select = {
+        id: true,
+        name: true,
+        email: true,
+        phone: true,
+        avatar: true,
+        accountType: true,
+        password: true,
+        isDisabled: false,
+        isRegistered: true,
+        createdAt: true,
+    };
+
     // Check User data
     /* istanbul ignore if */
     if (!id || !Object.keys(data).length) {
@@ -32,7 +45,7 @@ export default async (id: string, data: any) => {
     }
 
     // Update User
-    const result = await servUpdateUser(id, dataFiltered);
+    const result = await servUpdateUser(id, dataFiltered, select);
     /* istanbul ignore if */
     if (!result.success || !result.data) {
         return httpMsg.http422('Error to update User.', errCode);
