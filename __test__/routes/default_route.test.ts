@@ -28,7 +28,7 @@ describe('CHECK DEFAULT API ENDPOINTS', () => {
             .then((response) => {
                 expect(response.body).toEqual(
                     expect.objectContaining({
-                        message: 'Sucesso',
+                        message: 'Success',
                         content: expect.any(Object),
                     }),
                 );

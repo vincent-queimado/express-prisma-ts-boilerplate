@@ -5,160 +5,145 @@ import servCreateUser from '@services/users/user_create_service';
 import servUpdateUser from '@services/users/user_update_service';
 import servFindOneUser from '@services/users/user_get_one_service';
 import servHashPassword from '@functions/generate_hash_password';
-import sendEmail from '@utils/nodemailer/nodemailer/email_verification';
+// import sendEmail from '@utils/nodemailer/nodemailer/email_verification';
 
-const errCode = 'ERROR_USER_SIGNUP';
+const errorCod = 'ERROR_USER_REGISTER';
+const errorMsg = 'Failed to register user';
+const errorMsgDeleted = 'Failed to register a deleted user';
+const errorMsgDisabled = 'Failed to register a disabled user';
+const errorMsgRegistered = 'Failed to register an already registered user';
 
-const msgErrorDataMissing = 'User data missing.';
-const msgErrorCheckUser = 'Error to check user.';
-const msgErrorUserAlreadyExist = 'User already exist.';
-const msgErrorSaveUser = 'Error to save user data.';
-const msgErrorUpdateUser = 'Error to update user.';
-const msgErrorUserNotFound = 'User not found.';
-const msgErrorSendingEmail = 'Error to sending confirmation email.';
-const msgErrorHashPassword = 'Error to hash the User password.';
+const isEmailNotif = false;
 
-export default async (userDatas: any) => {
-    const datas = userDatas;
-    let user = {};
+export default async (data: any) => {
+    let registeredUser = {};
 
-    // Check required datas
-    const required = await requiredDatas(datas);
-    /* istanbul ignore if  */
-    if (!required.success) return httpMsg.http422(required.msgError, errCode);
+    // Check required user datas
+    if (!checkRequiredDatas(data)) return httpMsg.http422(errorMsg, errorCod);
 
-    // Check existing User
-    const existUser = await getUser(datas.email);
-    if (!existUser.success) return httpMsg.http422(existUser.msgError, errCode);
+    // Check existing user and get data
+    const user = await getUser(data.email);
+    if (!user.success) return httpMsg.http422(user.error || '', errorCod);
 
-    // Create User if not exist
-    if (!existUser.data) {
-        // Hash password
-        const hashedPassword = await hashUserPassword(datas.password);
-        /* istanbul ignore if  */
-        if (!hashedPassword.success || !hashedPassword.data) {
-            return httpMsg.http422(hashedPassword.msgError, errCode);
-        }
-        datas.password = hashedPassword.data;
-
-        // Generate signup token
-        datas.tokenOfRegisterConfirmation = await randtoken.suid(16);
-        datas.tokenOfResetPassword = await randtoken.suid(16);
-
-        // Create new User
-        const createdUser = await createUser(datas);
-        /* istanbul ignore if  */
-        if (!createdUser.success) return httpMsg.http422(createdUser.msgError, errCode);
-        user = { id: createdUser.data.id };
+    // If user exist but is not registered: update user
+    if (user.data && !user.data.isRegistered) {
+        const updatedUser = await updateUser(user.data.id, data);
+        if (!updatedUser.success) return httpMsg.http422(errorMsg, errorCod);
+        registeredUser = updatedUser.data;
     }
 
-    // Update User if exist with your signup is not complete
-    if (existUser.data && !existUser.data.isRegistered) {
-        // Hash password
-        const hashedPassword = await hashUserPassword(datas.password);
-        /* istanbul ignore if  */
-        if (!hashedPassword.success || !hashedPassword.data) {
-            return httpMsg.http422(hashedPassword.msgError, errCode);
-        }
-        datas.password = hashedPassword.data;
-
-        // Generate signup token
-        datas.tokenOfRegisterConfirmation = await randtoken.suid(16);
-        datas.tokenOfResetPassword = await randtoken.suid(16);
-
-        // Update User
-        const updatedUser = await updateUser(existUser.data.id, datas);
-        /* istanbul ignore if  */
-        if (!updatedUser.success) return httpMsg.http422(updatedUser.msgError, errCode);
-        user = { id: existUser.data.id };
+    // If user not exist: create new user
+    if (!user.data) {
+        const createdUser = await createUser(data);
+        if (!createdUser.success) return httpMsg.http422(errorMsg, errorCod);
+        registeredUser = createdUser.data;
     }
 
-    // Send confirmation email
-    // const resultSendEmail = await sendEmail(datas);
-    // if (!resultSendEmail.success) {
-    //     return httpMsg.http422(msgErrorSendingEmail, errCode);
-    // }
+    // Send Email
+    if (isEmailNotif) await sendEmail(registeredUser);
 
-    return httpMsg.http201(user);
+    // Success HTTP return
+    return httpMsg.http201(registeredUser);
 };
 
-const requiredDatas = async (datas: any) => /* istanbul ignore next */ {
-    if (!datas.email) return { success: false, msgError: msgErrorDataMissing };
-    if (!datas.name) return { success: false, msgError: msgErrorDataMissing };
-    if (!datas.phone) return { success: false, msgError: msgErrorDataMissing };
-    if (!datas.accountName) return { success: false, msgError: msgErrorDataMissing };
-    if (!datas.accountLocationState) return { success: false, msgError: msgErrorDataMissing };
-    if (!datas.password) return { success: false, msgError: msgErrorDataMissing };
+const checkRequiredDatas = (datas: any) => /* istanbul ignore next */ {
+    if (!datas.email) return false;
+    if (!datas.name) return false;
+    if (!datas.phone) return false;
+    if (!datas.password) return false;
 
-    return { success: true, msgError: '' };
+    return true;
 };
 
 const getUser = async (email: string) => {
-    const result = await servFindOneUser(email, 'email', { id: true, isRegistered: true }, false);
+    const whereBy = 'email';
 
-    /* istanbul ignore if */
-    if (!result.success) return { success: false, data: null, msgError: msgErrorCheckUser };
+    const select = {
+        id: true,
+        isDisabled: true,
+        isDeleted: true,
+        isRegistered: true,
+    };
 
-    if (!result.data)
-        return {
-            success: true,
-            data: null,
-            msgError: '',
-        };
+    // Get user by email
+    const result = await servFindOneUser(email, whereBy, select, false);
 
-    if (result.data && !result.data.isRegistered)
-        return {
-            success: true,
-            data: result.data,
-            msgError: '',
-        };
+    // Check user status
+    if (!result.success) return { success: false, data: null, error: errorMsg };
+    if (result.data) {
+        if (result.data.isDeleted) return { success: false, data: null, error: errorMsgDeleted }; // Need not to be excluded
+        if (result.data.isDisabled) return { success: false, data: null, error: errorMsgDisabled }; // Need to be enabled
+        if (result.data.isRegistered)
+            return { success: false, data: null, error: errorMsgRegistered }; // Need not to be registered
+    }
 
-    if (result.data && result.data.isRegistered)
-        return {
-            success: false,
-            data: result.data,
-            msgError: msgErrorUserAlreadyExist,
-        };
-
-    /* istanbul ignore next */
-    return { success: false, data: null, msgError: msgErrorCheckUser };
+    return { success: true, data: result.data, error: null };
 };
 
 const createUser = async (datas: any) => {
-    const result = await servCreateUser(datas);
+    const select = {
+        name: true,
+        email: true,
+        phone: true,
+        createdAt: true,
+    };
+
+    // Hash user password
+    const hashedPassword = await hashUserPassword(datas.password);
+    if (!hashedPassword.success || !hashedPassword.data) return { success: false, data: null };
+
+    datas.password = hashedPassword.data;
+
+    // Create user tokens
+    datas.tokenOfRegisterConfirmation = randtoken.suid(16);
+    datas.tokenOfResetPassword = randtoken.suid(16);
+
+    // Create user
+    const created = await servCreateUser(datas, select);
 
     /* istanbul ignore if */
-    if (!result.success || !result.data)
-        return { success: false, data: null, msgError: msgErrorSaveUser };
+    if (!created.success || !created.data) return { success: false, data: null };
 
-    return { success: true, data: result.data, msgError: '' };
+    return { success: true, data: created.data };
 };
 
 const updateUser = async (id: string, datas: any) => {
-    const result = await servUpdateUser(id, datas);
+    const select = {
+        name: true,
+        email: true,
+        phone: true,
+        createdAt: true,
+    };
+
+    // Hash user password
+    const hashedPassword = await hashUserPassword(datas.password);
+    if (!hashedPassword.success || !hashedPassword.data) return { success: false, data: null };
+
+    datas.password = hashedPassword.data;
+
+    // Create user tokens
+    datas.tokenOfRegisterConfirmation = randtoken.suid(16);
+    datas.tokenOfResetPassword = randtoken.suid(16);
+
+    // Update user
+    const updated = await servUpdateUser(id, datas, select);
 
     /* istanbul ignore if */
-    if (!result.success || !result.data)
-        return { success: false, data: null, msgError: msgErrorUpdateUser };
-    /* istanbul ignore if */
-    if (!result.data) return { success: false, data: null, msgError: msgErrorUserNotFound };
-    /* istanbul ignore if */
-    if (result.data < 1) return { success: false, data: null, msgError: msgErrorUserNotFound };
+    if (!updated.success || !updated.data) return { success: false, data: null };
 
-    return { success: true, data: result.data, msgError: '' };
+    return { success: true, data: updated.data };
 };
 
-const hashUserPassword = async (password: string) => {
-    let pwd = password;
-
-    const resultHashPassword = await servHashPassword(pwd);
+const hashUserPassword = async (plainPassword: string) => {
+    const hashedPassword = await servHashPassword(plainPassword);
 
     /* istanbul ignore if  */
-    if (!resultHashPassword.success || !resultHashPassword.data) {
-        return { success: false, data: null, msgError: msgErrorHashPassword };
-    }
+    if (!hashedPassword.success || !hashedPassword.data) return { success: false, data: null };
 
-    pwd = resultHashPassword.data;
+    return { success: true, data: hashedPassword.data };
+};
 
-    return { success: true, data: pwd, msgError: '' };
+const sendEmail = async (user: any) => {
+    // const result = await sendEmail(user);
+    // if (!result.success) return httpMsg.http422(errorMsg, errorCod);
 };

@@ -1,127 +1,99 @@
 import httpMsg from '@utils/http_messages/http_msg';
 import servUpdateUser from '@services/users/user_update_service';
 import servFindOneUser from '@services/users/user_get_one_service';
-import sendEmail from '@utils/nodemailer/nodemailer/email_welcome';
+// import sendEmail from '@utils/nodemailer/nodemailer/email_welcome';
 
-const errCode = 'ERROR_USER_SIGNUP_CONFIRMATION';
+const errorCod = 'ERROR_USER_SIGNUP_CONFIRMATION';
+const errorMsg = 'Failed to confirm registration';
+const errorMsgDeleted = 'Failed to register a deleted user';
+const errorMsgDisabled = 'Failed to register a disabled user';
+const errorMsgRegistered = 'Failed to confirm an already registered user';
 
-const msgErrorDataMissing = 'User data missing.';
-const msgErrorCheckUser = 'User check error.';
-const msgErrorUserNotFound = 'User not found.';
-const msgErrorUseAlreadyRegistered = 'User already registered';
-const msgErrorCheckToken = 'Token error';
-const msgErrorUpdateUser = 'User update error';
-const msgErrorSendingEmail = 'Error to sending confirmation email';
+const isEmailNotif = false;
 
-export default async (userDatas: any) => {
-    const datas = userDatas;
-    let user = {};
+export default async (data: any) => {
+    // Check required user data
+    if (!checkRequiredDatas(data)) return httpMsg.http422(errorMsg, errorCod);
 
-    // Check required datas
-    const required = await requiredDatas(datas);
-    /* istanbul ignore if */
-    if (!required.success) return httpMsg.http422(required.msgError, errCode);
+    // Check existing user and get data
+    const user = await getUser(data.email);
+    if (!user.success) return httpMsg.http422(user.error || '', errorCod);
 
-    // Check existing User
-    const existUser = await getUser(datas.email);
-    /* istanbul ignore if */
-    if (!existUser.success) return httpMsg.http422(existUser.msgError, errCode);
+    // Check user token
+    if (!checkToken(data.token, user.data.tokenOfRegisterConfirmation))
+        return httpMsg.http422(errorMsg, errorCod);
 
-    // Compare signup token
-    const checkedToken = await checkToken(datas.token, existUser.data.tokenOfRegisterConfirmation);
-    /* istanbul ignore if */
-    if (!checkedToken.success) return httpMsg.http422(checkedToken.msgError, errCode);
+    // Update the user registration status
+    const updated = await updateUser(user.data.id, { isRegistered: true });
+    if (!updated.success) return httpMsg.http422(errorMsg, errorCod);
 
-    // Update User
-    const updatedUser = await updateUser(existUser.data.id, { isRegistered: true });
-    /* istanbul ignore if */
-    if (!updatedUser.success) return httpMsg.http422(updatedUser.msgError, errCode);
-    user = { id: existUser.data.id };
+    // Send Email
+    if (isEmailNotif) await sendEmail(user.data);
 
-    // Send welcome email
-    // const resultSendEmail = await sendEmail(existUser.data);
-    // if (!resultSendEmail.success) {
-    //     return httpMsg.http422(msgErrorSendingEmail, errCode);
-    // }
-
-    // return httpMsg.http200({ email: datas.email, isRegistered: 'confirmed' });
-    return httpMsg.http200(user);
+    return httpMsg.http200({ email: user.data.email, isRegistered: true });
 };
 
-const requiredDatas = async (datas: any) => /* istanbul ignore next */ {
-    if (!datas.email) return { success: false, msgError: msgErrorDataMissing };
-    if (!datas.token) return { success: false, msgError: msgErrorDataMissing };
+const checkRequiredDatas = (datas: any) => /* istanbul ignore next */ {
+    if (!datas.email) return false;
+    if (!datas.token) return false;
 
-    return { success: true, msgError: '' };
+    return true;
 };
 
 const getUser = async (email: string) => {
-    const result = await servFindOneUser(
-        email,
-        'email',
-        {
-            id: true,
-            name: true,
-            email: true,
-            phone: true,
-            avatar: true,
-            accountType: true,
-            tokenOfRegisterConfirmation: true,
-            isDisabled: false,
-            isRegistered: true,
-            createdAt: true,
-        },
-        false,
-    );
+    const whereBy = 'email';
 
-    /* istanbul ignore if */
-    if (!result.success) return { success: false, data: null, msgError: msgErrorCheckUser };
+    const select = {
+        id: true,
+        name: true,
+        email: true,
+        phone: true,
+        avatar: true,
+        accountType: true,
+        password: true,
+        isDisabled: true,
+        isDeleted: true,
+        isRegistered: true,
+        tokenOfRegisterConfirmation: true,
+        createdAt: true,
+    };
 
-    /* istanbul ignore if */
-    if (!result.data)
-        return {
-            success: false,
-            data: null,
-            msgError: msgErrorUserNotFound,
-        };
+    // Get user by email
+    const result = await servFindOneUser(email, whereBy, select, false);
 
-    if (result.data && result.data.isRegistered)
-        return {
-            success: false,
-            data: null,
-            msgError: msgErrorUseAlreadyRegistered,
-        };
+    // Check user status
+    if (!result.success) return { success: false, data: null, error: errorMsg };
+    if (!result.data) return { success: false, data: null, error: errorMsg }; // Need to exist
+    if (!result.data.tokenOfRegisterConfirmation)
+        return { success: false, data: null, error: errorMsg }; // Need to have a token
+    if (result.data.isDeleted) return { success: false, data: null, error: errorMsgDeleted }; // Need not to be excluded
+    if (result.data.isDisabled) return { success: false, data: null, error: errorMsgDisabled }; // Need to be enabled
+    if (result.data.isRegistered) return { success: false, data: null, error: errorMsgRegistered }; // Need not to be registered
 
-    if (result.data && result.data.tokenOfRegisterConfirmation)
-        return {
-            success: true,
-            data: result.data,
-            msgError: '',
-        };
-
-    /* istanbul ignore next */
-    return { success: false, data: null, msgError: msgErrorCheckUser };
+    return { success: true, data: result.data, error: null };
 };
 
 const updateUser = async (id: string, datas: any) => {
-    const result = await servUpdateUser(id, datas);
+    const select = {
+        id: true,
+        isRegistered: true,
+    };
+
+    const result = await servUpdateUser(id, datas, select);
 
     /* istanbul ignore if */
-    if (!result.success || !result.data)
-        return { success: false, data: null, msgError: msgErrorUpdateUser };
+    if (!result.success || !result.data) return { success: false, data: null };
 
-    /* istanbul ignore if */
-    if (!result.data) return { success: false, data: null, msgError: msgErrorUserNotFound };
-
-    /* istanbul ignore if */
-    if (result.data < 1) return { success: false, data: null, msgError: msgErrorUserNotFound };
-
-    return { success: true, data: result.data, msgError: '' };
+    return { success: true, data: result.data };
 };
 
-const checkToken = async (token: string, signupToken: string) => {
-    if (token === signupToken) {
-        return { success: true, msgError: '' };
-    }
-    return { success: false, msgError: msgErrorCheckToken };
+const checkToken = (inputToken: string, token: string) => {
+    if (inputToken !== token) return false;
+
+    return true;
+};
+
+const sendEmail = async (user: any) => {
+    // const result = await sendEmail(user);
+    // if (!result.success) return httpMsg.http422(errorMsg, errorCod);
 };

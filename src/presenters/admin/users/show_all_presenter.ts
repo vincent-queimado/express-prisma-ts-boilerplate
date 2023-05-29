@@ -31,7 +31,7 @@ const getAllUsers = async (where: object, select: object) => {
     const result = await findAll(where, select);
 
     /* istanbul ignore if  */
-    if (!result.success || !result.data) httpMsg.http422('Error to list users.', errCode);
+    if (!result.success || !result.data) httpMsg.http422(msgError, errCode);
 
     return { success: result.success, data: result.data, error: result.error };
 };

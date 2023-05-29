@@ -3,121 +3,88 @@ import servFindOneUser from '@services/users/user_get_one_service';
 import servCheckPassword from '@functions/check_password';
 import servGenerateToken from '@functions/generate_token_access';
 
-const errCode = 'ERROR_USER_LOGIN';
+const errorCod = 'ERROR_USER_LOGIN';
+const errorMsg = 'Failed to authenticate';
+const errorMsgDeleted = 'Failed to register a deleted user';
+const errorMsgDisabled = 'Failed to register a disabled user';
+const errorMsgRegistered = 'Failed to register an already registered user';
 
-const msgErrorDataMissing = 'User data missing.';
-const msgErrorCheckUser = 'Error to check user.';
-const msgErrorUserNotFound = 'User not found.';
-const msgErrorUserNotRegistered = 'User not registered.';
-const msgErrorUserInvalidPassword = 'Invalid password.';
-const msgErrorUserToken = 'Error to generate token.';
+export default async (data: any) => {
+    let userLogged = {};
 
-export default async (userDatas: any) => {
-    const datas = userDatas;
-    let user = {};
+    // Check required user data
+    if (!checkRequiredDatas(data)) return httpMsg.http422(errorMsg, errorCod);
 
-    // Check required datas
-    const required = await requiredDatas(datas);
-    /* istanbul ignore if */
-    if (!required.success) return httpMsg.http401(errCode);
-
-    // Check existing User
-    const existUser = await getUser(datas.email);
-    /* istanbul ignore if */
-    if (!existUser.success) return httpMsg.http401(errCode);
+    // Check existing user and get data
+    const user = await getUser(data.email);
+    if (!user.success) return httpMsg.http401(errorCod);
 
     // Check password
-    const checkedPassword = await checkPassword(datas.password, existUser.data.password);
-    /* istanbul ignore if */
-    if (!checkedPassword.success) return httpMsg.http401(errCode);
+    const checkedPassword = await checkPassword(data.password, user.data.password);
+    if (!checkedPassword) return httpMsg.http401(errorCod);
 
     // Generate token access
-    const generatedToken = await generateToken(existUser.data);
-    /* istanbul ignore if */
-    if (!generatedToken.success) return httpMsg.http401(errCode);
+    const generatedToken = await generateToken(user.data);
+    if (!generatedToken.success) return httpMsg.http401(errorCod);
 
-    user = {
+    // User data
+    userLogged = {
+        email: user.data.email,
+        name: user.data.name,
         token: generatedToken.data,
-        name: existUser.data.name,
-        email: existUser.data.email,
     };
 
-    return httpMsg.http200(user);
+    // Success HTTP return
+    return httpMsg.http200(userLogged);
 };
 
-const requiredDatas = async (datas: any) => {
-    /* istanbul ignore if */
-    if (!datas.email) return { success: false, msgError: msgErrorDataMissing };
-    /* istanbul ignore if */
-    if (!datas.password) return { success: false, msgError: msgErrorDataMissing };
-    /* istanbul ignore next */
-    return { success: true, msgError: '' };
+const checkRequiredDatas = (datas: any) => /* istanbul ignore next */ {
+    if (!datas.email) return false;
+    if (!datas.password) return false;
+
+    return true;
 };
 
 const getUser = async (email: string) => {
-    const result = await servFindOneUser(
-        email,
-        'email',
-        {
-            id: true,
-            name: true,
-            email: true,
-            phone: true,
-            avatar: true,
-            accountType: true,
-            password: true,
-            isDisabled: false,
-            isRegistered: true,
-            createdAt: true,
-        },
-        false,
-    );
+    const whereBy = 'email';
 
-    /* istanbul ignore if */
-    if (!result.success) return { success: false, data: null, msgError: msgErrorCheckUser };
+    const select = {
+        id: true,
+        name: true,
+        email: true,
+        password: true,
+        isDisabled: true,
+        isDeleted: true,
+        isRegistered: true,
+    };
 
-    if (!result.data)
-        return {
-            success: false,
-            data: null,
-            msgError: msgErrorUserNotFound,
-        };
+    // Get user by email
+    const result = await servFindOneUser(email, whereBy, select, false);
 
-    if (result.data && !result.data.isRegistered)
-        return {
-            success: false,
-            data: null,
-            msgError: msgErrorUserNotRegistered,
-        };
+    // Check user status
+    if (!result.success) return { success: false, data: null, error: errorMsg };
+    if (!result.data) return { success: false, data: null, error: errorMsg }; // Need to exist
+    if (!result.data.password) return { success: false, data: null, error: errorMsg }; // Need to have a password
+    if (result.data.isDeleted) return { success: false, data: null, error: errorMsgDeleted }; // Need not to be excluded
+    if (result.data.isDisabled) return { success: false, data: null, error: errorMsgDisabled }; // Need to be enabled
+    if (!result.data.isRegistered) return { success: false, data: null, error: errorMsgRegistered }; // Need to be registered
 
-    if (result.data && result.data.isRegistered)
-        return {
-            success: true,
-            data: result.data,
-            msgError: '',
-        };
-
-    /* istanbul ignore next */
-    return { success: false, data: null, msgError: msgErrorCheckUser };
+    return { success: true, data: result.data, error: null };
 };
 
-const checkPassword = async (password: string, hashPassword: string) => {
-    const result = await servCheckPassword(password, hashPassword);
+const checkPassword = async (plainPassword: string, hashPassword: string) => {
+    const result = await servCheckPassword(plainPassword, hashPassword);
 
-    if (!result.success) {
-        return { success: false, msgError: msgErrorUserInvalidPassword };
-    }
+    if (!result.success) return false;
 
-    return { success: true, msgError: '' };
+    return true;
 };
 
 const generateToken = async (datas: any) => {
     const result = await servGenerateToken(datas.id, datas.name, datas.email, datas.avatar);
 
     /* istanbul ignore if */
-    if (!result.success) {
-        return { success: false, data: null, msgError: msgErrorUserToken };
-    }
+    if (!result.success) return { success: false, data: null };
 
-    return { success: true, data: result.data, msgError: '' };
+    return { success: true, data: result.data };
 };

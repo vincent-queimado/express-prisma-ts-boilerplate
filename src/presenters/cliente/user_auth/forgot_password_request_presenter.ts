@@ -3,52 +3,93 @@ import randtoken from 'rand-token';
 import httpMsg from '@utils/http_messages/http_msg';
 import servUpdateUser from '@services/users/user_update_service';
 import servFindOneUser from '@services/users/user_get_one_service';
+// import sendEmail from '@utils/nodemailer/nodemailer/email_verification';
 
-const errCode = 'ERROR_USER_FORGOT_PASSWORD_REQUEST';
+const errorCod = 'ERROR_USER_FORGOT_PASSWORD_REQUEST';
+const errorMsg = 'Failed to request forgot password';
+const errorMsgDeleted = 'Failed to register a deleted user';
+const errorMsgDisabled = 'Failed to register a disabled user';
+const errorMsgRegistered = 'Failed to register an already registered user';
+
+const isEmailNotif = false;
 
 export default async (data: any) => {
-    const dataFiltered: any = {};
+    // Check required user data
+    if (!checkRequiredDatas(data)) return httpMsg.http422(errorMsg, errorCod);
 
-    // Check User data
-    if (!data.email) {
-        return httpMsg.http422('User signup confirmation data missing.', errCode);
-    }
+    // Check existing user and get data
+    const user = await getUser(data.email);
+    if (!user.success) return httpMsg.http422(user.error || '', errorCod);
 
-    // Check existing User
-    const resultFindUser = await servFindOneUser(
-        data.email,
-        'email',
-        ['password', 'tokenOfResetPassword', 'isDeleted'],
-        false,
-    );
-    if (!resultFindUser.success) {
-        return httpMsg.http422('Error to check existing User.', errCode);
-    }
-    if (!resultFindUser.data) {
-        return httpMsg.http422('Signup confirmation error.', errCode);
-    }
+    // Check if user is already confirmed
+    if (!getRegisterConfirmation(user.data.isRegistered))
+        return httpMsg.http422(errorMsg, errorCod);
 
-    // Check if User is already confirmed
-    if (resultFindUser.data.isRegistered === 'pending') {
-        return httpMsg.http422('User has not verified their email address.', errCode);
-    }
+    // Update user reset password token
+    if (!updateUserToken(user.data.id)) return httpMsg.http422(errorMsg, errorCod);
 
-    // Generate token
-    dataFiltered.tokenOfResetPassword = randtoken.suid(16);
+    // Send Email
+    if (isEmailNotif) await sendEmail(user.data);
 
-    // Update token reset token
-    const result = await servUpdateUser(resultFindUser.data.id, dataFiltered);
-    if (!result.success || !result.data) {
-        return httpMsg.http422('Error to update User.', errCode);
-    }
+    // Success HTTP return
+    return httpMsg.http200({ email: user.data.email, isEmailNotif });
+};
 
-    // Send confirmation email
-    dataFiltered.email = resultFindUser.data.email;
-    dataFiltered.name = resultFindUser.data.name;
-    // const resultSendEmail = await sendgrid.forgotPasswordRequest(dataFiltered);
-    // if (!resultSendEmail.success) {
-    //     return httpMsg.http422('Error to sending forgot password request email.', errCode);
-    // }
+const checkRequiredDatas = (data: any) => /* istanbul ignore next */ {
+    if (!data.email) return false;
 
-    return httpMsg.http200({ email: data.email });
+    return true;
+};
+
+const getUser = async (email: string) => {
+    const whereBy = 'email';
+
+    const select = {
+        id: true,
+        name: true,
+        email: true,
+        isDisabled: true,
+        isDeleted: true,
+        isRegistered: true,
+        tokenOfResetPassword: true,
+    };
+
+    // Get user by email
+    const result = await servFindOneUser(email, whereBy, select, false);
+
+    // Check user status
+    if (!result.success) return { success: false, data: null, error: errorMsg };
+    if (!result.data) return { success: false, data: null, error: errorMsg }; // Need to exist
+    if (!result.data.tokenOfResetPassword) return { success: false, data: null, error: errorMsg }; // Need to have a reset password token
+    if (result.data.isDeleted) return { success: false, data: null, error: errorMsgDeleted }; // Need not to be excluded
+    if (result.data.isDisabled) return { success: false, data: null, error: errorMsgDisabled }; // Need to be enabled
+    if (!result.data.isRegistered) return { success: false, data: null, error: errorMsgRegistered }; // Need to be registered
+
+    return { success: true, data: result.data, error: null };
+};
+
+const getRegisterConfirmation = (isRegistered: boolean) => {
+    if (!isRegistered) return false;
+    return true;
+};
+
+const updateUserToken = async (id: string) => {
+    const select = {
+        id: true,
+        name: true,
+        email: true,
+    };
+
+    const tokenOfResetPassword = randtoken.suid(16);
+
+    const result = await servUpdateUser(id, { tokenOfResetPassword }, select);
+
+    if (!result.success) return false;
+
+    return true;
+};
+
+const sendEmail = async (user: any) => {
+    // const result = await sendEmail(user);
+    // if (!result.success) return httpMsg.http422(errorMsg, errorCod);
 };

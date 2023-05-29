@@ -1,36 +1,28 @@
 import prisma from '../../../prisma/prisma-client';
 import logger from '@utils/winston_file_logger/winston/logger';
 
-export default (data: string, dataBy: string, fields: object, findDeleted: boolean) => {
+const msgError = 'Failed to get one user.';
+
+export default (data: string, whereBy: string, select: object, findDeleted: boolean) => {
     const buildQuery = (
         data: string,
-        dataBy: string,
+        whereBy: string,
         findDeleted: boolean,
     ) => /* istanbul ignore next */ {
-        if (dataBy === 'id') {
-            if (findDeleted) {
-                return { id: data };
-            } else {
-                return { id: data, isDeleted: false };
-            }
-        } else if (dataBy === 'email') {
-            if (findDeleted) {
-                return { email: data };
-            } else {
-                return { email: data, isDeleted: false };
-            }
-        }
+        if (whereBy === 'id' && findDeleted) return { id: data };
+        if (whereBy === 'id' && !findDeleted) return { id: data, isDeleted: false };
+        if (whereBy === 'email' && findDeleted) return { email: data };
+        if (whereBy === 'email' && !findDeleted) return { email: data, isDeleted: false };
     };
 
-    const where = buildQuery(data, dataBy, findDeleted);
-    const select = fields;
+    const where = buildQuery(data, whereBy, findDeleted);
 
     const result = prisma.user
         .findFirst({ where, select })
         .then((res: any) => ({ success: true, data: res, error: null }))
         .catch((error: any) => /* istanbul ignore next */ {
-            logger.error(`Failed to find account. DB Error: ${error}`);
-            return { success: false, data: null, error: 'Failed to find account.' };
+            logger.error(`${msgError} ${error}`);
+            return { success: false, data: null, error: msgError };
         });
 
     return result;
