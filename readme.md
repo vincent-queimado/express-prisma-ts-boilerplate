@@ -259,7 +259,7 @@ src\                      # Sources
   |--models\              # Models
   |--presenters\          # Presenters (Extra layer over MVC)
   |--routes\              # Custom Routes
-  |--server\              # Express server
+  |--server\              # Http server using the Express framework
   |--services\            # Services
   |--utils\               # Utility handler, logger, mailer, etc..
   |--views\               # Views (basic views renderized by EJS engine)

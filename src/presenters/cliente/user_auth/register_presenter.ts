@@ -1,11 +1,12 @@
 import randtoken from 'rand-token';
 
+import config from '@config/app/index';
 import httpMsg from '@utils/http_messages/http_msg';
 import servCreateUser from '@services/users/user_create_service';
 import servUpdateUser from '@services/users/user_update_service';
 import servFindOneUser from '@services/users/user_get_one_service';
 import servHashPassword from '@functions/generate_hash_password';
-// import sendEmail from '@utils/nodemailer/nodemailer/email_verification';
+import sendEmail from '@utils/nodemailer/nodemailer/email_verification';
 
 const errorCod = 'ERROR_USER_REGISTER';
 const errorMsg = 'Failed to register user';
@@ -13,10 +14,10 @@ const errorMsgDeleted = 'Failed to register a deleted user';
 const errorMsgDisabled = 'Failed to register a disabled user';
 const errorMsgRegistered = 'Failed to register an already registered user';
 
-const isEmailNotif = false;
+const isEmailNotif = true;
 
 export default async (data: any) => {
-    let registeredUser = {};
+    let registeredUser;
 
     // Check required user datas
     if (!checkRequiredDatas(data)) return httpMsg.http422(errorMsg, errorCod);
@@ -40,7 +41,12 @@ export default async (data: any) => {
     }
 
     // Send Email
-    if (isEmailNotif) await sendEmail(registeredUser);
+    if (!config.isTest && isEmailNotif) {
+        const sended = await sendEmail(registeredUser);
+        if (!sended) return httpMsg.http422(errorMsg, errorCod);
+    }
+
+    delete registeredUser.tokenOfRegisterConfirmation;
 
     // Success HTTP return
     return httpMsg.http201(registeredUser);
@@ -85,6 +91,7 @@ const createUser = async (datas: any) => {
         name: true,
         email: true,
         phone: true,
+        tokenOfRegisterConfirmation: true,
         createdAt: true,
     };
 
@@ -112,6 +119,7 @@ const updateUser = async (id: string, datas: any) => {
         name: true,
         email: true,
         phone: true,
+        tokenOfRegisterConfirmation: true,
         createdAt: true,
     };
 
@@ -141,9 +149,4 @@ const hashUserPassword = async (plainPassword: string) => {
     if (!hashedPassword.success || !hashedPassword.data) return { success: false, data: null };
 
     return { success: true, data: hashedPassword.data };
-};
-
-const sendEmail = async (user: any) => {
-    // const result = await sendEmail(user);
-    // if (!result.success) return httpMsg.http422(errorMsg, errorCod);
 };

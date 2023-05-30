@@ -16,6 +16,7 @@ interface IOauth {
     clientId: string;
     clientSecret: string;
     refreshToken: string;
+    redirect: string;
 }
 
 interface IDebug {
@@ -25,6 +26,7 @@ interface IDebug {
 
 export interface IBaseConfig {
     nodeEnv: string;
+    isTest: boolean;
     isDev: boolean;
     isStage: boolean;
     isProd: boolean;
