@@ -119,8 +119,6 @@
         "postman-to-openapi": "^3.0.1",
         "rand-token": "^1.0.1",
         "serve-favicon": "^2.5.0",
-        "swagger-autogen": "^2.23.1",
-        "swagger-jsdoc": "^6.2.8",
         "swagger-ui-express": "^4.6.2",
         "uuid": "^9.0.0",
         "winston": "^3.8.2",
