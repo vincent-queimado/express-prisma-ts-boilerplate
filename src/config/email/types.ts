@@ -26,6 +26,7 @@ interface IDebug {
 
 export interface IBaseConfig {
     nodeEnv: string;
+    isTest: boolean;
     isDev: boolean;
     isStage: boolean;
     isProd: boolean;
