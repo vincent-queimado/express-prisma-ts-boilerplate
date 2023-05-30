@@ -1,3 +1,4 @@
+import config from '@config/app/index';
 import httpMsg from '@utils/http_messages/http_msg';
 import servUpdateUser from '@services/users/user_update_service';
 import servFindOneUser from '@services/users/user_get_one_service';
@@ -28,7 +29,7 @@ export default async (data: any) => {
     if (!updated.success) return httpMsg.http422(errorMsg, errorCod);
 
     // Send Email
-    if (isEmailNotif) await sendEmail(user.data);
+    if (!config.isTest && isEmailNotif) await sendEmail(user.data);
 
     return httpMsg.http200({ email: user.data.email, isRegistered: true });
 };

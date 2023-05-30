@@ -1,5 +1,6 @@
 import randtoken from 'rand-token';
 
+import config from '@config/app/index';
 import httpMsg from '@utils/http_messages/http_msg';
 import servCreateUser from '@services/users/user_create_service';
 import servUpdateUser from '@services/users/user_update_service';
@@ -40,7 +41,7 @@ export default async (data: any) => {
     }
 
     // Send Email
-    if (isEmailNotif) {
+    if (!config.isTest && isEmailNotif) {
         const sended = await sendEmail(registeredUser);
         if (!sended) return httpMsg.http422(errorMsg, errorCod);
     }
