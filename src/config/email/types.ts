@@ -16,6 +16,7 @@ interface IOauth {
     clientId: string;
     clientSecret: string;
     refreshToken: string;
+    redirect: string;
 }
 
 interface IDebug {

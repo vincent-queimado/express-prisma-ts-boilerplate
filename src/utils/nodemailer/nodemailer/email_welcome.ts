@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import nodemailer from './nodemailer';
+import nodemailer from './core/nodemailer';
 import config from '@config/email';
 import globalUrl from '@utils/global_http_url/global_http_url';
 

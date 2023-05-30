@@ -6,18 +6,19 @@ const devConfig = (env: IProcessEnv): IEnvConfig => {
             type: 'OAuth2',
         },
         smtp: {
-            service: env.SMTP_SERVICE || 'gmail',
-            user: env.SMTP_USER || 'admin',
-            password: env.SMTP_PASSWORD || '',
+            service: env.EMAIL_SERVICE || 'gmail',
+            user: env.EMAIL_USER || 'admin',
+            password: env.EMAIL_PASSWORD || '',
         },
         oauth: {
-            clientId: env.OAUTH_CLIENTID || '',
-            clientSecret: env.OAUTH_CLIENT_SECRET || '',
-            refreshToken: env.OAUTH_REFRESH_TOKEN || '',
+            clientId: env.EMAIL_OAUTH_CLIENT_ID || '',
+            clientSecret: env.EMAIL_OAUTH_CLIENT_SECRET || '',
+            refreshToken: env.EMAIL_OAUTH_REFRESH_TOKEN || '',
+            redirect: env.EMAIL_OAUTH_REDIRECT || '',
         },
         debug: {
-            debug: false,
-            logger: false,
+            debug: true,
+            logger: true,
         },
     };
 };
@@ -36,6 +37,7 @@ const stageConfig = (env: IProcessEnv): IEnvConfig => {
             clientId: env.OAUTH_CLIENTID || '',
             clientSecret: env.OAUTH_CLIENT_SECRET || '',
             refreshToken: env.OAUTH_REFRESH_TOKEN || '',
+            redirect: env.EMAIL_OAUTH_REDIRECT || '',
         },
         debug: {
             debug: false,
@@ -58,6 +60,7 @@ const prodConfig = (env: IProcessEnv): IEnvConfig => {
             clientId: env.OAUTH_CLIENTID || '',
             clientSecret: env.OAUTH_CLIENT_SECRET || '',
             refreshToken: env.OAUTH_REFRESH_TOKEN || '',
+            redirect: env.EMAIL_OAUTH_REDIRECT || '',
         },
         debug: {
             debug: false,
