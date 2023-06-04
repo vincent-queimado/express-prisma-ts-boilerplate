@@ -32,7 +32,7 @@
     "scripts": {
         "prebuild": "rimraf ./build",
         "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./build/src",
-        "copyfiles": "copyfiles -u 1 public/**/*.* build/public/ && copyfiles -u 1 src/views/**/*.* build/src/",
+        "copyfiles": "copyfiles -u 1 public/**/*.* build/public/ && copyfiles -u 1 src/views/**/*.* build/src/ && copyfiles -u 1 src/utils/nodemailer/templates/**/*.* build/src/",
         "start:prod": "npm run prebuild && npm run build && npm run copyfiles && cross-env NODE_ENV=production node build/src/app.js",
         "start:dev": "nodemon",
         "lint:check": "eslint src/**/*.ts",
