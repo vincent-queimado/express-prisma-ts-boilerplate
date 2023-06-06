@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <h1>Express RESTful API boilerplate using TypeScript<br/>NodeJs + Express + Typescript + Prisma</h1>
+  <h1>Welcome to the Express Rest API Boilerplate!<br/>NodeJs + Express + Prisma + Typescript</h1>
 </div>
 
 <p align="center">
@@ -28,13 +28,15 @@
 
 ## :blue_heart: About the boilerplate
 
-This project is a simple and complete boilerplate written in **TypeScript** to quickly create an **Express Rest API**.<br />
+The project is a concise and comprehensive **TypeScript** boilerplate specifically designed for rapid development of **Express REST APIs**. This is a boilerplate designed to streamline the creation of new API projects using Express. It provides a minimal set of dependencies that aid in project structuring and acceleration. The boilerplate is production-ready, although customization is recommended to align with specific project requirements.<br />
 
-Use of libraries like **Prisma ORM**, log management with **Morgan** and **Winston** (tracking of HTTP request logs in real time and storage of rotating log files with web visualization via EJS engine), unit test coverage with **Jest**, data validation schemas with **Zod**, JWT middleware authentication, **Swagger** documentation, and other essential packages to start a new custom project.<br />
+The boilerplate includes various essential libraries and tools to support the development of your custom project. It leverages the power of **Prisma ORM** for seamless database operations, facilitates log management with **Morgan** and **Winston** to track HTTP request logs in real-time and store rotating log files with web visualization through the **EJS engine**.
 
-The boilerplate is based on the MVC architecture with extra layers to facilitate support and customization of the project. We integrated the **ESLint** and **Prettier** tools into the project to help us automate type-checking during Typescript code development.
+Additionally, the boilerplate ensures robustness by offering comprehensive unit test coverage using **Jest**, data validation schemas with **Zod**, JWT middleware authentication, and **Swagger** documentation generation.
 
-This repo is functionality complete.
+The project follows the MVC architecture and incorporates additional layers for enhanced support and customization. To ensure code quality and consistency, we have integrated **ESLint** and **Prettier** tools, enabling automated type-checking during TypeScript code development.
+
+Rest assured, this repository is fully functional and ready for use.
 <br/><br/>
 
 ## :rocket: Technologies
@@ -72,7 +74,7 @@ To run this application, you'll need [Node.js](https://nodejs.org/en/download/) 
 
 ```bash
 $ cd express-prisma-ts-boilerplate
-$ npm install
+$ npm i
 ```
 
 ### Step 3 - Configure your project variables
