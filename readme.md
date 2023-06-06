@@ -152,33 +152,34 @@ $ npm run migrate
 Obs.: Initially, the project assumes that we will use the PostgreSQL database by default, but feel free to change the connection data to the database of your choice.
 
 ## Available .env Settings
-|Name  |Description  |
-|--|--|
-|APP_URL_HOST         |[String] It is the host the API will use. By default it is **localhost**.  |
-|APP_URL_PORT         |[String] It is the port the API will use. By default it is **3344**.       |
-|SSL_ALLOW            |[String] Enable or disable SSL in the API. By default it is **false**.     |
-|SSL_PRIVATE_KEY      |[String] SSL private key file path. By default it is empty.  |
-|SSL_CERTIFICATE      |[String] SSL certificate file path. By default it is empty.  |
-|API_PREFIX           |[String] Api route prefix. By default it is **api**.   |
-|API_VERSION          |[String] Api route version. By default it is **v1**.   |
-|API_JSON_LIMIT       |[String] Limits request JSON body size. By default it is **5mb**.|
-|API_EXT_URLENCODED   |[String] The “extended” syntax allows for rich objects and arrays to be encoded into the URL-encoded format, allowing for a JSON-like experience with URL-encoded. By default it is '**false**.|
-|CORS_ALLOW_ORIGIN    |[String] CORS Allow Origin is a header that specifies which origins are allowed to access server resources. By default it is \*.|
-|JWT_SECRET           |[String] The JWT secret is a key used for signing and verifying JSON Web Tokens (JWTs)I. By default it is **randomsecret**.|
-|JWT_EXPIRED_IN       |[String] JWT expiration is a time indicating when a JWT expires. By default it is **24h**.|
-|BCRYPT_SALTROUNDS    |[String] Bcrypt's salt rounds is the number of iterations used to hash a password, determining the computational cost and strength of the resulting hash. By default it is **10**.|
-|RATE_LIMIT_MAX       |[String] Max rate limiter is a mechanism that restricts the maximum number of requests allowed within a specified time period to prevent abuse or overload on a server or API. By default it is **100**.|
-|RATE_LIMIT_WINDOW    |[String] Rate limiter window is a time duration during which the rate limiting is enforced, limiting the number of requests allowed within that specific timeframe.. By default it is **15**.|
-|DEBUG_HTTP_REQUEST      |[String] Refers to a debugging technique or feature that enables detailed logging and analysis of HTTP requests, helping developers troubleshoot and understand the behavior of the requests being sent and received. By default it is **true**   |
-|DEBUG_HTTP_CONNECTION   |[String] Is a debugging feature that allows for detailed monitoring and analysis of the HTTP connection process, providing insights into the establishment, communication, and termination of HTTP connections, aiding in debugging network-related issues. By default it is **false**   |
-|DATABASE_URL         |[String] is a string that contains the necessary information (such as host, port, username, password, and database name) to establish a connection to a database. By default it is **postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public**.   |
-|EMAIL_USER                 |[String] SSL private key file path. By default it is **johndoe.sample@gmail.com**.  |
-|EMAIL_PASSWORD             |[String] SSL private key file path. By default it is empty.  |
-|EMAIL_SERVICE              |[String] SSL private key file path. By default it is **gmail**.  |
-|EMAIL_OAUTH_CLIENT_ID      |[String] SSL private key file path. By default it is empty. |
-|EMAIL_OAUTH_CLIENT_SECRET      |[String] SSL private key file path. By default it is empty.  |
-|EMAIL_OAUTH_REFRESH_TOKEN      |[String] SSL private key file path. By default it is empty.  |
-|EMAIL_OAUTH_REDIRECT       |[String] SSL private key file path. By default it is **https://developers.google.com/oauthplayground**.  |
+
+| Name                      | Description                                                                                                                                                                                                                                                                            |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| APP_URL_HOST              | [String] It is the host the API will use. By default it is **localhost**.                                                                                                                                                                                                              |
+| APP_URL_PORT              | [String] It is the port the API will use. By default it is **3344**.                                                                                                                                                                                                                   |
+| SSL_ALLOW                 | [String] Enable or disable SSL in the API. By default it is **false**.                                                                                                                                                                                                                 |
+| SSL_PRIVATE_KEY           | [String] SSL private key file path. By default it is empty.                                                                                                                                                                                                                            |
+| SSL_CERTIFICATE           | [String] SSL certificate file path. By default it is empty.                                                                                                                                                                                                                            |
+| API_PREFIX                | [String] Api route prefix. By default it is **api**.                                                                                                                                                                                                                                   |
+| API_VERSION               | [String] Api route version. By default it is **v1**.                                                                                                                                                                                                                                   |
+| API_JSON_LIMIT            | [String] Limits request JSON body size. By default it is **5mb**.                                                                                                                                                                                                                      |
+| API_EXT_URLENCODED        | [String] The “extended” syntax allows for rich objects and arrays to be encoded into the URL-encoded format, allowing for a JSON-like experience with URL-encoded. By default it is **false**.                                                                                         |
+| CORS_ALLOW_ORIGIN         | [String] CORS Allow Origin is a header that specifies which origins are allowed to access server resources. By default it is \*.                                                                                                                                                       |
+| JWT_SECRET                | [String] The JWT secret is a key used for signing and verifying JSON Web Tokens (JWTs)I. By default it is **randomsecret**.                                                                                                                                                            |
+| JWT_EXPIRED_IN            | [String] JWT expiration is a time indicating when a JWT expires. By default it is **24h**.                                                                                                                                                                                             |
+| BCRYPT_SALTROUNDS         | [String] Bcrypt's salt rounds is the number of iterations used to hash a password, determining the computational cost and strength of the resulting hash. By default it is **10**.                                                                                                     |
+| RATE_LIMIT_MAX            | [String] Max rate limiter is a mechanism that restricts the maximum number of requests allowed within a specified time period to prevent abuse or overload on a server or API. By default it is **100**.                                                                               |
+| RATE_LIMIT_WINDOW         | [String] Rate limiter window is a time duration during which the rate limiting is enforced, limiting the number of requests allowed within that specific timeframe.. By default it is **15**.                                                                                          |
+| DEBUG_HTTP_REQUEST        | [String] Refers to a debugging technique or feature that enables detailed logging and analysis of HTTP requests, helping developers troubleshoot and understand the behavior of the requests being sent and received. By default it is **true**                                        |
+| DEBUG_HTTP_CONNECTION     | [String] Is a debugging feature that allows for detailed monitoring and analysis of the HTTP connection process, providing insights into the establishment, communication, and termination of HTTP connections, aiding in debugging network-related issues. By default it is **false** |
+| DATABASE_URL              | [String] is a string that contains the necessary information (such as host, port, username, password, and database name) to establish a connection to a database. By default it is **postgresql://johndoe:randompassword@localhost:5432/mydb?sslmode=require&schema=public**.          |
+| EMAIL_USER                | [String] SSL private key file path. By default it is **johndoe.sample@gmail.com**.                                                                                                                                                                                                     |
+| EMAIL_PASSWORD            | [String] SSL private key file path. By default it is empty.                                                                                                                                                                                                                            |
+| EMAIL_SERVICE             | [String] SSL private key file path. By default it is **gmail**.                                                                                                                                                                                                                        |
+| EMAIL_OAUTH_CLIENT_ID     | [String] SSL private key file path. By default it is empty.                                                                                                                                                                                                                            |
+| EMAIL_OAUTH_CLIENT_SECRET | [String] SSL private key file path. By default it is empty.                                                                                                                                                                                                                            |
+| EMAIL_OAUTH_REFRESH_TOKEN | [String] SSL private key file path. By default it is empty.                                                                                                                                                                                                                            |
+| EMAIL_OAUTH_REDIRECT      | [String] SSL private key file path. By default it is **https://developers.google.com/oauthplayground**.                                                                                                                                                                                |
 
 ## More scripts
 

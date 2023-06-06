@@ -39,13 +39,11 @@ export default () => {
     app.use(favicon(publicFavicon));
     app.use(express.static('public'));
 
+    app.use(rateLimit.limiter);
+
     app.use(`/${apiPath}/logs`, express.static(publicLogs, { dotfiles: 'allow' }));
-
-    // app.use(`${apiPath}/auth`, rateLimit.limiter);
     app.use(`${apiPath}/auth`, routesV1);
-
     app.use(`${apiPath}/`, routesV1);
-
     app.use('/', routes);
 
     app.set('view engine', 'ejs');
