@@ -28,13 +28,13 @@
 
 ## :blue_heart: About the boilerplate
 
-The project is a concise and comprehensive **TypeScript** boilerplate specifically designed for rapid development of Express **REST APIs**. This is a boilerplate designed to streamline the creation of new API projects using Express. It provides a minimal set of dependencies that aid in project structuring and acceleration. The boilerplate is production-ready, although customization is recommended to align with specific project requirements.<br />
+The project is a concise and comprehensive **TypeScript** boilerplate specifically designed for rapid development of **Express REST APIs**. This is a boilerplate designed to streamline the creation of new API projects using Express. It provides a minimal set of dependencies that aid in project structuring and acceleration. The boilerplate is production-ready, although customization is recommended to align with specific project requirements.<br />
 
-The boilerplate includes various essential libraries and tools to support the development of your custom project. It leverages the power of Prisma ORM for seamless database operations, facilitates log management with Morgan and Winston to track HTTP request logs in real-time and store rotating log files with web visualization through the EJS engine.
+The boilerplate includes various essential libraries and tools to support the development of your custom project. It leverages the power of **Prisma ORM** for seamless database operations, facilitates log management with **Morgan** and **Winston** to track HTTP request logs in real-time and store rotating log files with web visualization through the **EJS engine**.
 
-Additionally, the boilerplate ensures robustness by offering comprehensive unit test coverage using Jest, data validation schemas with Zod, JWT middleware authentication, and Swagger documentation generation.
+Additionally, the boilerplate ensures robustness by offering comprehensive unit test coverage using **Jest**, data validation schemas with **Zod**, JWT middleware authentication, and **Swagger** documentation generation.
 
-The project follows the MVC architecture and incorporates additional layers for enhanced support and customization. To ensure code quality and consistency, we have integrated ESLint and Prettier tools, enabling automated type-checking during TypeScript code development.
+The project follows the MVC architecture and incorporates additional layers for enhanced support and customization. To ensure code quality and consistency, we have integrated **ESLint** and **Prettier** tools, enabling automated type-checking during TypeScript code development.
 
 Rest assured, this repository is fully functional and ready for use.
 <br/><br/>
