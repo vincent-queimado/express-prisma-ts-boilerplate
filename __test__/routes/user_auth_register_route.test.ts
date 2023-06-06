@@ -24,11 +24,11 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
             email: 'johndoe-tes-register@sample.com',
             name: 'johndoe-test-register',
             phone: '(81) 99999-9999',
-            accountName: 'johndoe-test-register',
-            accountLocationState: 'PE',
+            // accountName: 'johndoe-test-register',
+            // accountLocationState: 'PE',
             password: '12341234',
-            tokenOfRegisterConfirmation: randtoken.suid(16),
-            tokenOfResetPassword: randtoken.suid(16),
+            // tokenOfRegisterConfirmation: randtoken.suid(16),
+            // tokenOfResetPassword: randtoken.suid(16),
         };
 
         // Check user and clean before new registration

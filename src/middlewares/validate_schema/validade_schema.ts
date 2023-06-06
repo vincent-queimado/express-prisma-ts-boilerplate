@@ -15,7 +15,7 @@ export const validateSchema =
             next();
         } catch (error) {
             if (error instanceof ZodError) {
-                logger.info('Zod validation error. Check response.');
+                logger.info(`Zod validation error. ${error.message}`);
                 return res.status(400).json(
                     error.issues.map((issue) => ({
                         success: false,
@@ -24,7 +24,7 @@ export const validateSchema =
                     })),
                 );
             } else {
-                logger.info('Server Internal error. Check response.');
+                logger.info(`Server Internal error.`);
                 return res.status(500).json({
                     error: {
                         code: 500,

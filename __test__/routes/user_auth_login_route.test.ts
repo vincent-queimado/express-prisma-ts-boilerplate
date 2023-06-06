@@ -26,7 +26,7 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
     it('CHECK USER LOGIN', async () => {
         const password = '12341234';
         const wrongEmail = 'johndoe-test-login-wrong@sample.com';
-        const wrongPassword = bcrypt.hashSync('1234567890', saltRounds);
+        const wrongPassword = '43210';
 
         const createPayload = {
             email: 'johndoe-test-login@sample.com',
