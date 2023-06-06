@@ -27,6 +27,10 @@ const testConfig = (env: IProcessEnv): IEnvConfig => {
         bcrypt: {
             saltRounds: parseInt(env.BCRYPT_SALTROUNDS || '') || 10,
         },
+        ratelimiter: {
+            max: env.RATE_LIMIT_MAX || '100',
+            window: env.RATE_LIMIT_WINDOW || '15',
+        },
         debug: {
             http_request: env.DEBUG_HTTP_REQUEST == 'true' || true,
             http_connection: env.DEBUG_HTTP_CONNECTION == 'true' || false,
@@ -60,6 +64,10 @@ const devConfig = (env: IProcessEnv): IEnvConfig => {
         },
         bcrypt: {
             saltRounds: parseInt(env.BCRYPT_SALTROUNDS || '') || 10,
+        },
+        ratelimiter: {
+            max: env.RATE_LIMIT_MAX || '100',
+            window: env.RATE_LIMIT_WINDOW || '15',
         },
         debug: {
             http_request: env.DEBUG_HTTP_REQUEST == 'true' || true,
@@ -95,6 +103,10 @@ const stageConfig = (env: IProcessEnv): IEnvConfig => {
         bcrypt: {
             saltRounds: parseInt(env.BCRYPT_SALTROUNDS || '') || 10,
         },
+        ratelimiter: {
+            max: env.RATE_LIMIT_MAX || '100',
+            window: env.RATE_LIMIT_WINDOW || '15',
+        },
         debug: {
             http_request: env.DEBUG_HTTP_REQUEST == 'true' || false,
             http_connection: env.DEBUG_HTTP_CONNECTION == 'true' || false,
@@ -128,6 +140,10 @@ const prodConfig = (env: IProcessEnv): IEnvConfig => {
         },
         bcrypt: {
             saltRounds: parseInt(env.BCRYPT_SALTROUNDS || '') || 10,
+        },
+        ratelimiter: {
+            max: env.RATE_LIMIT_MAX || '100',
+            window: env.RATE_LIMIT_WINDOW || '15',
         },
         debug: {
             http_request: env.DEBUG_HTTP_REQUEST == 'true' || false,

@@ -20,6 +20,11 @@ interface IApi {
     extUrlencoded: boolean;
 }
 
+interface IRatelimiter {
+    max: string;
+    window: string;
+}
+
 interface IJwt {
     secret: string;
     expiredIn: string;
@@ -50,6 +55,7 @@ export interface IEnvConfig {
     app: IApp;
     ssl: ISsl;
     api: IApi;
+    ratelimiter: IRatelimiter;
     jwt: IJwt;
     cors: ICors;
     bcrypt: IBcrypt;
