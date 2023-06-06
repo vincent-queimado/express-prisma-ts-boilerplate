@@ -209,6 +209,7 @@ src\                      # Sources
   |--models\              # Models
   |--presenters\          # Presenters (Extra layer over MVC)
   |--routes\              # Custom Routes
+  |--schemas\             # Schema validation
   |--server\              # Http server using the Express framework
   |--services\            # Services
   |--utils\               # Utility handler, logger, mailer, etc..
