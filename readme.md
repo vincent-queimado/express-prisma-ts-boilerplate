@@ -135,22 +135,89 @@ $ npx prisma init
 
 If you want to continue with the [PostgreSQL](https://www.postgresql.org/download/) database but don't already have the software, download [pgAdmin](https://www.pgadmin.org/download/) now or use a Hosting Cloud Service.
 
+## Initialize your database
+
+You will need to configure a SQL database supported by Prisma ORM for data storage.
+
+Before running the project, it will be necessary to perform a migration through Prisma. In this way, the first tables of the project will be created. When executing the reset command, the ORM seed will be called, thus populating some tables:
+
+Migration run command:
+
+```bash
+$ npm run migrate
+```
+
+Obs.: Initially, the project assumes that we will use the PostgreSQL database by default, but feel free to change the connection data to the database of your choice.
+
 ## Available .env Settings
 |Name  |Description  |
 |--|--|
-|APP_URL_HOST  |[String] It is the host the API will use. By default it is *localhost**.  |
-|APP_URL_PORT  |[String] It is the port the API will use. By default it is **3344**.  |
-|CORS_ALLOW_ORIGIN|[String] Enable or disable CORS in the API. By default it is *****.|
-|LOG_LEVEL|['debug','warn','silent'] The log level used in the API logs. By default it is '**debug**'|
-|LOG_COLORED|[Boolean] Just if the logs are colored or not. By default it is **true**.|
-|COMPRESSION_ENABLED|[Boolean] Enable or disable the use of compression in the responses. By default is is **true**.|
-|UPLOAD_ENABLED|[Boolean] Enable or disable the support of file uploads. By default it is **true**.|
-|GENERATE_CLIENT|[Boolean] Enable or disable the automatic generation of the client.ts file every time the server runs. It is **true** by default but it will only run automatically when launching a development server. For production server, you will have to run the command manually (*check the scripts section*).|
-|GENERATE_API_DOCS|[Boolean] Enable or disable the automatic generation of the OpenAPI V3 docs every time the server runs. It is **true** by default but it will only run automatically when launching a development server. For production server, you will have to run the command manually (*check the scripts section*).|
-|API_VERSION|[String] The API version. It is just used in the generated docs. By default it is '**0.0.1**'.|
-|API_TITLE|[String] The API title. It is used only in the generated docs. By default it is your **project name**.|
-|API_SERVER_URL|[String] The API URL. It is used only in the generated docs but you don't need a working URL, only if you want to use those docs to call the API directly. By default it is '**http://api.example.com/v1**'|
+|APP_URL_HOST         |[String] It is the host the API will use. By default it is **localhost**.  |
+|APP_URL_PORT         |[String] It is the port the API will use. By default it is **3344**.       |
+|SSL_ALLOW            |[String] Enable or disable SSL in the API. By default it is **false**.     |
+|SSL_PRIVATE_KEY      |[String] Private Key for SSL. By default it is **/etc/letsencrypt/live/mydomain/privkey.pem**.   |
+|SSL_CERTIFICATE      |[String] Certificate path for SSL. By default it is '**/etc/letsencrypt/live/mydomain/cert.pem**.|
+|API_PREFIX           |[String] Api route prefix. By default it is **api**.   |
+|API_VERSION          |[String] Api route version. By default it is **v1**.   |
+|API_JSON_LIMIT       |[String] Limits request JSON body size. By default it is '**5mb**.|
+|API_EXT_URLENCODED   |[String] The “extended” syntax allows for rich objects and arrays to be encoded into the URL-encoded format, allowing for a JSON-like experience with URL-encoded. By default it is '**false**.|
+|CORS_ALLOW_ORIGIN    |[String] Enable or disable CORS in the API. By default it is \*.|
 
+
+## More scripts
+
+The boilerplate ships with several convenience commands (runnable via `npm`):
+
+-   `npm run lint:check`: run code linting to check for syntax errors
+-   `npm run lint:fix`: automatically fix lint problems
+-   `npm run prettier:check`: checks that the code style is correctly formatted
+-   `npm run prettier:format`: automatically fix prettier problems
+-   `npm run test`: run functional tests with coverage
+-   `npm run test:watch`: run functional tests in watch mode
+-   `npm run prisma:format`: check .prisma files format
+-   `npm run prisma:migrate`: reads the data sources and data model definition to create a new migration
+-   `npm run prisma:generate`: reads all above mentioned information to generate the data source
+-   `npm run prisma:generate:watch`: watch the Prisma schema and rerun after a change
+-   `npm run prisma:reset`: reset your database and apply all migrations, all data will be lost
+-   `npm run prisma:seed`: seed the database
+-   `npm run commit`: help you follow conventional commits flow
+
+## Scope of structure
+
+Boilerplate structure summary:
+
+```
+build\                    # Transpiled TypeScript code to Javasccript
+coverage\                 # Unit test reports
+docs\                     # Documentation / Postman collection / Readme assets
+logs\                     # Log files (generate with Winston packages)
+node_modules\             # NodeJS packages
+prisma\                   # Prisma schema and client connection / Migrations and seed
+  |--migrations\          # Database migration
+  |--seed\                # Database seed
+public\                   # Public ressources
+src\                      # Sources
+  |--config\              # Environment variables and configuration related things
+      |--app\             # App configuration file
+      |--database\        # Database configuration file
+      |--email\           # Email configuration file
+  |--controllers\         # Controllers
+      |--plataform        # Plataform business logic
+  |--database\            # Database connection
+  |--functions\           # Functions
+  |--middlewares\         # Middlewares (JWT auth, data validation schema, Morgan, and other middlewares)
+  |--models\              # Models
+  |--presenters\          # Presenters (Extra layer over MVC)
+  |--routes\              # Custom Routes
+  |--server\              # Http server using the Express framework
+  |--services\            # Services
+  |--utils\               # Utility handler, logger, mailer, etc..
+  |--views\               # Views (basic views renderized by EJS engine)
+  |--app.js               # Entry point
+tests\                    # Unit test coverage with Jest
+```
+
+## Postgresql database creation example
 
 ### Option 1 - Create your database from the pgAdmin tool
 
@@ -216,70 +283,3 @@ Create a free instance (Tiny Turtle plan) and copy the URL in the `DATABASE_URL`
   </kbd>
 </div>
 <br/>
-
-## Initialize your database
-
-You will need to configure a SQL database supported by Prisma ORM for data storage.
-
-Before running the project, it will be necessary to perform a migration through Prisma. In this way, the first tables of the project will be created. When executing the reset command, the ORM seed will be called, thus populating some tables:
-
-Migration run command:
-
-```bash
-$ npm run migrate
-```
-
-Obs.: Initially, the project assumes that we will use the PostgreSQL database by default, but feel free to change the connection data to the database of your choice.
-
-## More scripts
-
-The boilerplate ships with several convenience commands (runnable via `npm`):
-
--   `npm run lint:check`: run code linting to check for syntax errors
--   `npm run lint:fix`: automatically fix lint problems
--   `npm run prettier:check`: checks that the code style is correctly formatted
--   `npm run prettier:format`: automatically fix prettier problems
--   `npm run test`: run functional tests with coverage
--   `npm run test:watch`: run functional tests in watch mode
--   `npm run prisma:format`: check .prisma files format
--   `npm run prisma:migrate`: reads the data sources and data model definition to create a new migration
--   `npm run prisma:generate`: reads all above mentioned information to generate the data source
--   `npm run prisma:generate:watch`: watch the Prisma schema and rerun after a change
--   `npm run prisma:reset`: reset your database and apply all migrations, all data will be lost
--   `npm run prisma:seed`: seed the database
--   `npm run commit`: help you follow conventional commits flow
-
-## Scope of structure
-
-Boilerplate structure summary:
-
-```
-build\                    # Transpiled TypeScript code to Javasccript
-coverage\                 # Unit test reports
-docs\                     # Documentation / Postman collection / Readme assets
-logs\                     # Log files (generate with Winston packages)
-node_modules\             # NodeJS packages
-prisma\                   # Prisma schema and client connection / Migrations and seed
-  |--migrations\          # Database migration
-  |--seed\                # Database seed
-public\                   # Public ressources
-src\                      # Sources
-  |--config\              # Environment variables and configuration related things
-      |--app\             # App configuration file
-      |--database\        # Database configuration file
-      |--email\           # Email configuration file
-  |--controllers\         # Controllers
-      |--plataform        # Plataform business logic
-  |--database\            # Database connection
-  |--functions\           # Functions
-  |--middlewares\         # Middlewares (JWT auth, data validation schema, Morgan, and other middlewares)
-  |--models\              # Models
-  |--presenters\          # Presenters (Extra layer over MVC)
-  |--routes\              # Custom Routes
-  |--server\              # Http server using the Express framework
-  |--services\            # Services
-  |--utils\               # Utility handler, logger, mailer, etc..
-  |--views\               # Views (basic views renderized by EJS engine)
-  |--app.js               # Entry point
-tests\                    # Unit test coverage with Jest
-```
