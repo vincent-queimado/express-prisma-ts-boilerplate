@@ -32,6 +32,18 @@ export const register = z.object({
     }),
 });
 
+export const registerConfirmation = z.object({
+    query: z.object({
+        email: z.string().email({
+            message: 'Write a correct email address',
+        }),
+        token: z.string({
+            required_error: 'Token is required',
+            invalid_type_error: 'Incorrect token',
+        }),
+    }),
+});
+
 export const login = z.object({
     body: z.object({
         email: z.string().email({
@@ -48,5 +60,15 @@ export const login = z.object({
     }),
 });
 
+export const forgotPasswordRequest = z.object({
+    body: z.object({
+        email: z.string().email({
+            message: 'Write a correct email address',
+        }),
+    }),
+});
+
 export type loginType = z.infer<typeof login>;
 export type registerType = z.infer<typeof register>;
+export type registerConfirmationType = z.infer<typeof registerConfirmation>;
+export type forgotPasswordRequestType = z.infer<typeof forgotPasswordRequest>;
