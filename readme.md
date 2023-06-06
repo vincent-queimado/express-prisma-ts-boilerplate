@@ -124,7 +124,7 @@ $ npm run start:prod
 
 <br/>
 
-## :electric_plug: Create your database
+## :electric_plug: Create your database from ORM
 
 You will need to configure an SQL database supported by the Prisma ORM in order to perform the data storage. By default the boilerplate uses a demo connection to the **PostgreSQL database**, but it can be changed to another database supported by the [Prisma ORM](https://www.prisma.io/stack).
 
@@ -136,6 +136,105 @@ $ npx prisma init
 ```
 
 If you want to continue with the [PostgreSQL](https://www.postgresql.org/download/) database but don't already have the software, download [pgAdmin](https://www.pgadmin.org/download/) now or use a Hosting Cloud Service.
+
+## Initialize your database
+
+You will need to configure a SQL database supported by Prisma ORM for data storage.
+
+Before running the project, it will be necessary to perform a migration through Prisma. In this way, the first tables of the project will be created. When executing the reset command, the ORM seed will be called, thus populating some tables:
+
+Migration run command:
+
+```bash
+$ npm run migrate
+```
+
+Obs.: Initially, the project assumes that we will use the PostgreSQL database by default, but feel free to change the connection data to the database of your choice.
+
+## Available .env Settings
+|Name  |Description  |
+|--|--|
+|APP_URL_HOST         |[String] It is the host the API will use. By default it is **localhost**.  |
+|APP_URL_PORT         |[String] It is the port the API will use. By default it is **3344**.       |
+|SSL_ALLOW            |[String] Enable or disable SSL in the API. By default it is **false**.     |
+|SSL_PRIVATE_KEY      |[String] SSL private key file path. By default it is empty.  |
+|SSL_CERTIFICATE      |[String] SSL certificate file path. By default it is empty.  |
+|API_PREFIX           |[String] Api route prefix. By default it is **api**.   |
+|API_VERSION          |[String] Api route version. By default it is **v1**.   |
+|API_JSON_LIMIT       |[String] Limits request JSON body size. By default it is **5mb**.|
+|API_EXT_URLENCODED   |[String] The “extended” syntax allows for rich objects and arrays to be encoded into the URL-encoded format, allowing for a JSON-like experience with URL-encoded. By default it is '**false**.|
+|CORS_ALLOW_ORIGIN    |[String] CORS Allow Origin is a header that specifies which origins are allowed to access server resources. By default it is \*.|
+|JWT_SECRET           |[String] The JWT secret is a key used for signing and verifying JSON Web Tokens (JWTs)I. By default it is **randomsecret**.|
+|JWT_EXPIRED_IN       |[String] JWT expiration is a time indicating when a JWT expires. By default it is **24h**.|
+|BCRYPT_SALTROUNDS    |[String] Bcrypt's salt rounds is the number of iterations used to hash a password, determining the computational cost and strength of the resulting hash. By default it is **10**.|
+|RATE_LIMIT_MAX       |[String] Max rate limiter is a mechanism that restricts the maximum number of requests allowed within a specified time period to prevent abuse or overload on a server or API. By default it is **100**.|
+|RATE_LIMIT_WINDOW    |[String] Rate limiter window is a time duration during which the rate limiting is enforced, limiting the number of requests allowed within that specific timeframe.. By default it is **15**.|
+|DEBUG_HTTP_REQUEST      |[String] Refers to a debugging technique or feature that enables detailed logging and analysis of HTTP requests, helping developers troubleshoot and understand the behavior of the requests being sent and received. By default it is **true**   |
+|DEBUG_HTTP_CONNECTION   |[String] Is a debugging feature that allows for detailed monitoring and analysis of the HTTP connection process, providing insights into the establishment, communication, and termination of HTTP connections, aiding in debugging network-related issues. By default it is **false**   |
+|DATABASE_URL         |[String] is a string that contains the necessary information (such as host, port, username, password, and database name) to establish a connection to a database. By default it is **postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public**.   |
+|EMAIL_USER                 |[String] SSL private key file path. By default it is **johndoe.sample@gmail.com**.  |
+|EMAIL_PASSWORD             |[String] SSL private key file path. By default it is empty.  |
+|EMAIL_SERVICE              |[String] SSL private key file path. By default it is **gmail**.  |
+|EMAIL_OAUTH_CLIENT_ID      |[String] SSL private key file path. By default it is empty. |
+|EMAIL_OAUTH_CLIENT_SECRET      |[String] SSL private key file path. By default it is empty.  |
+|EMAIL_OAUTH_REFRESH_TOKEN      |[String] SSL private key file path. By default it is empty.  |
+|EMAIL_OAUTH_REDIRECT       |[String] SSL private key file path. By default it is **https://developers.google.com/oauthplayground**.  |
+
+## More scripts
+
+The boilerplate ships with several convenience commands (runnable via `npm`):
+
+-   `npm run lint:check`: run code linting to check for syntax errors
+-   `npm run lint:fix`: automatically fix lint problems
+-   `npm run prettier:check`: checks that the code style is correctly formatted
+-   `npm run prettier:format`: automatically fix prettier problems
+-   `npm run test`: run functional tests with coverage
+-   `npm run test:watch`: run functional tests in watch mode
+-   `npm run prisma:format`: check .prisma files format
+-   `npm run prisma:migrate`: reads the data sources and data model definition to create a new migration
+-   `npm run prisma:generate`: reads all above mentioned information to generate the data source
+-   `npm run prisma:generate:watch`: watch the Prisma schema and rerun after a change
+-   `npm run prisma:reset`: reset your database and apply all migrations, all data will be lost
+-   `npm run prisma:seed`: seed the database
+-   `npm run commit`: help you follow conventional commits flow
+
+## Scope of structure
+
+Boilerplate structure summary:
+
+```
+build\                    # Transpiled TypeScript code to Javasccript
+coverage\                 # Unit test reports
+docs\                     # Documentation / Postman collection / Readme assets
+logs\                     # Log files (generate with Winston packages)
+node_modules\             # NodeJS packages
+prisma\                   # Prisma schema and client connection / Migrations and seed
+  |--migrations\          # Database migration
+  |--seed\                # Database seed
+public\                   # Public ressources
+src\                      # Sources
+  |--config\              # Environment variables and configuration related things
+      |--app\             # App configuration file
+      |--database\        # Database configuration file
+      |--email\           # Email configuration file
+  |--controllers\         # Controllers
+      |--plataform        # Plataform business logic
+  |--database\            # Database connection
+  |--functions\           # Functions
+  |--middlewares\         # Middlewares (JWT auth, data validation schema, Morgan, and other middlewares)
+  |--models\              # Models
+  |--presenters\          # Presenters (Extra layer over MVC)
+  |--routes\              # Custom Routes
+  |--schemas\             # Schema validation
+  |--server\              # Http server using the Express framework
+  |--services\            # Services
+  |--utils\               # Utility handler, logger, mailer, etc..
+  |--views\               # Views (basic views renderized by EJS engine)
+  |--app.js               # Entry point
+tests\                    # Unit test coverage with Jest
+```
+
+## Postgresql database creation example
 
 ### Option 1 - Create your database from the pgAdmin tool
 
@@ -201,70 +300,3 @@ Create a free instance (Tiny Turtle plan) and copy the URL in the `DATABASE_URL`
   </kbd>
 </div>
 <br/>
-
-## Initialize your database
-
-You will need to configure a SQL database supported by Prisma ORM for data storage.
-
-Before running the project, it will be necessary to perform a migration through Prisma. In this way, the first tables of the project will be created. When executing the reset command, the ORM seed will be called, thus populating some tables:
-
-Migration run command:
-
-```bash
-$ npm run migrate
-```
-
-Obs.: Initially, the project assumes that we will use the PostgreSQL database by default, but feel free to change the connection data to the database of your choice.
-
-## More scripts
-
-The boilerplate ships with several convenience commands (runnable via `npm`):
-
--   `npm run lint:check`: run code linting to check for syntax errors
--   `npm run lint:fix`: automatically fix lint problems
--   `npm run prettier:check`: checks that the code style is correctly formatted
--   `npm run prettier:format`: automatically fix prettier problems
--   `npm run test`: run functional tests with coverage
--   `npm run test:watch`: run functional tests in watch mode
--   `npm run prisma:format`: check .prisma files format
--   `npm run prisma:migrate`: reads the data sources and data model definition to create a new migration
--   `npm run prisma:generate`: reads all above mentioned information to generate the data source
--   `npm run prisma:generate:watch`: watch the Prisma schema and rerun after a change
--   `npm run prisma:reset`: reset your database and apply all migrations, all data will be lost
--   `npm run prisma:seed`: seed the database
--   `npm run commit`: help you follow conventional commits flow
-
-## Scope of structure
-
-Boilerplate structure summary:
-
-```
-build\                    # Transpiled TypeScript code to Javasccript
-coverage\                 # Unit test reports
-docs\                     # Documentation / Postman collection / Readme assets
-logs\                     # Log files (generate with Winston packages)
-node_modules\             # NodeJS packages
-prisma\                   # Prisma schema and client connection / Migrations and seed
-  |--migrations\          # Database migration
-  |--seed\                # Database seed
-public\                   # Public ressources
-src\                      # Sources
-  |--config\              # Environment variables and configuration related things
-      |--app\             # App configuration file
-      |--database\        # Database configuration file
-      |--email\           # Email configuration file
-  |--controllers\         # Controllers
-      |--plataform        # Plataform business logic
-  |--database\            # Database connection
-  |--functions\           # Functions
-  |--middlewares\         # Middlewares (JWT auth, data validation schema, Morgan, and other middlewares)
-  |--models\              # Models
-  |--presenters\          # Presenters (Extra layer over MVC)
-  |--routes\              # Custom Routes
-  |--server\              # Http server using the Express framework
-  |--services\            # Services
-  |--utils\               # Utility handler, logger, mailer, etc..
-  |--views\               # Views (basic views renderized by EJS engine)
-  |--app.js               # Entry point
-tests\                    # Unit test coverage with Jest
-```
