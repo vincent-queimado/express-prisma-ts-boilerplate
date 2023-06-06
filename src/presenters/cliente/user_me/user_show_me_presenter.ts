@@ -2,7 +2,7 @@ import httpMsg from '@utils/http_messages/http_msg';
 import servFindOneUser from '@services/users/user_get_one_service';
 
 const errorCod = 'ERROR_USER_FIND_ME';
-const errorMsg = 'Failed to show user datas';
+const errorMsg = 'Failed to show user';
 const errorMsgDeleted = 'Failed to register a deleted user';
 const errorMsgDisabled = 'Failed to register a disabled user';
 const errorMsgRegistered = 'Failed to register an already registered user';

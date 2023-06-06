@@ -1,7 +1,6 @@
 import { Router } from 'express';
 
 import Auth from '@middlewares/jwt_auth/auth';
-
 import CtrlUserMe from '@controllers/admin/users_me_controller';
 
 const router = Router();
