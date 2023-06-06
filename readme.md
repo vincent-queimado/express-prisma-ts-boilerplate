@@ -157,14 +157,18 @@ Obs.: Initially, the project assumes that we will use the PostgreSQL database by
 |APP_URL_HOST         |[String] It is the host the API will use. By default it is **localhost**.  |
 |APP_URL_PORT         |[String] It is the port the API will use. By default it is **3344**.       |
 |SSL_ALLOW            |[String] Enable or disable SSL in the API. By default it is **false**.     |
-|SSL_PRIVATE_KEY      |[String] Private Key for SSL. By default it is **/etc/letsencrypt/live/mydomain/privkey.pem**.   |
-|SSL_CERTIFICATE      |[String] Certificate path for SSL. By default it is '**/etc/letsencrypt/live/mydomain/cert.pem**.|
+|SSL_PRIVATE_KEY      |[String] Private Key for SSL.        |
+|SSL_CERTIFICATE      |[String] Certificate path for SSL.   |
 |API_PREFIX           |[String] Api route prefix. By default it is **api**.   |
 |API_VERSION          |[String] Api route version. By default it is **v1**.   |
-|API_JSON_LIMIT       |[String] Limits request JSON body size. By default it is '**5mb**.|
+|API_JSON_LIMIT       |[String] Limits request JSON body size. By default it is **5mb**.|
 |API_EXT_URLENCODED   |[String] The “extended” syntax allows for rich objects and arrays to be encoded into the URL-encoded format, allowing for a JSON-like experience with URL-encoded. By default it is '**false**.|
-|CORS_ALLOW_ORIGIN    |[String] Enable or disable CORS in the API. By default it is \*.|
-
+|CORS_ALLOW_ORIGIN    |[String] CORS Allow Origin is a header that specifies which origins are allowed to access server resources. By default it is \*.|
+|JWT_SECRET           |[String] The JWT secret is a key used for signing and verifying JSON Web Tokens (JWTs)I. By default it is **randomsecret**.|
+|JWT_EXPIRED_IN       |[String] JWT expiration is a time indicating when a JWT expires. By default it is **24h**.|
+|BCRYPT_SALTROUNDS    |[String] Bcrypt's salt rounds is the number of iterations used to hash a password, determining the computational cost and strength of the resulting hash. By default it is **10**.|
+|RATE_LIMIT_MAX       |[String] Max rate limiter is a mechanism that restricts the maximum number of requests allowed within a specified time period to prevent abuse or overload on a server or API. By default it is **100**.|
+|RATE_LIMIT_WINDOW    |[String] Rate limiter window is a time duration during which the rate limiting is enforced, limiting the number of requests allowed within that specific timeframe.. By default it is **15**.|
 
 ## More scripts
 
