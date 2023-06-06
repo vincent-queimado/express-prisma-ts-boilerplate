@@ -31,6 +31,7 @@ tags:
   - name: Client > User > Auth
   - name: Client > User > Auth > Register
   - name: Client > User > Auth > Login
+  - name: Client > User > Auth > Forgot Password
   - name: Client > User > Me
   - name: Admin
   - name: Admin > Users Management
@@ -66,11 +67,9 @@ paths:
             schema:
               type: object
               example:
-                email: johndoe@sample.com
-                name: johndoe
+                email: vincent.queimado@gmail.com
+                name: vincent
                 phone: (81) 99999-9999
-                accountName: johndoe
-                accountLocationState: PE
                 password: '1234'
       security:
         - noauthAuth: []
@@ -100,12 +99,12 @@ paths:
           in: query
           schema:
             type: string
-          example: johndoe@sample.com
+          example: johndoe10@sample.com
         - name: token
           in: query
           schema:
             type: string
-          example: 0CrT0an7NBY9cvLd0NYFa3mk
+          example: 0D0G9ts1mX3Rdd6JbT2tzuiZ
       responses:
         '200':
           description: Successful response
@@ -140,6 +139,56 @@ paths:
       tags:
         - Client > User > Auth > Login
       summary: Logout
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /auth/forgotpassword/request:
+    post:
+      tags:
+        - Client > User > Auth > Forgot Password
+      summary: Request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: johndoe@sample.com
+      parameters:
+        - name: Content-Type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /auth/forgotpassword/reset:
+    post:
+      tags:
+        - Client > User > Auth > Forgot Password
+      summary: Reset
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: johndoe@sample.com
+                token: 0D0IB7oSsu4STEjsp5LjDtUj
+                password: Johndoe@1234
       parameters:
         - name: Content-Type
           in: header
@@ -195,17 +244,10 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /user/me/delete:
-    patch:
+    delete:
       tags:
         - Client > User > Me
       summary: Delete Me (Logical delete)
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              example: ''
       security:
         - bearerAuth: []
       parameters:
