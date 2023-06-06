@@ -172,7 +172,6 @@ Obs.: Initially, the project assumes that we will use the PostgreSQL database by
 |DEBUG_HTTP_REQUEST      |[String] Refers to a debugging technique or feature that enables detailed logging and analysis of HTTP requests, helping developers troubleshoot and understand the behavior of the requests being sent and received. By default it is **true**   |
 |DEBUG_HTTP_CONNECTION   |[String] Is a debugging feature that allows for detailed monitoring and analysis of the HTTP connection process, providing insights into the establishment, communication, and termination of HTTP connections, aiding in debugging network-related issues. By default it is **false**   |
 |DATABASE_URL         |[String] is a string that contains the necessary information (such as host, port, username, password, and database name) to establish a connection to a database. By default it is **postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public**.   |
-
 |EMAIL_USER                 |[String] SSL private key file path. By default it is **johndoe.sample@gmail.com**.  |
 |EMAIL_PASSWORD             |[String] SSL private key file path. By default it is empty.  |
 |EMAIL_SERVICE              |[String] SSL private key file path. By default it is **gmail**.  |
