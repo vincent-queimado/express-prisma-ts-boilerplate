@@ -14,7 +14,7 @@ export const register = z.object({
                 message: 'Name too long',
             }),
         phone: z
-            .number()
+            .string()
             .min(11, {
                 message: 'Phone too short',
             })
@@ -23,7 +23,7 @@ export const register = z.object({
             }),
         password: z
             .string()
-            .min(6, {
+            .min(4, {
                 message: 'Password too short',
             })
             .max(16, {
@@ -37,9 +37,14 @@ export const login = z.object({
         email: z.string().email({
             message: 'Write a correct email address',
         }),
-        password: z.string().min(6, {
-            message: 'Password too short',
-        }),
+        password: z
+            .string()
+            .min(4, {
+                message: 'Password too short',
+            })
+            .max(16, {
+                message: 'Password too long',
+            }),
     }),
 });
 
