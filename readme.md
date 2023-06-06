@@ -122,7 +122,7 @@ $ npm run start:prod
 
 <br/>
 
-## :electric_plug: Create your database
+## :electric_plug: Create your database from ORM
 
 You will need to configure an SQL database supported by the Prisma ORM in order to perform the data storage. By default the boilerplate uses a demo connection to the **PostgreSQL database**, but it can be changed to another database supported by the [Prisma ORM](https://www.prisma.io/stack).
 
@@ -134,6 +134,23 @@ $ npx prisma init
 ```
 
 If you want to continue with the [PostgreSQL](https://www.postgresql.org/download/) database but don't already have the software, download [pgAdmin](https://www.pgadmin.org/download/) now or use a Hosting Cloud Service.
+
+## Available .env Settings
+|Name  |Description  |
+|--|--|
+|APP_URL_HOST  |[String] It is the host the API will use. By default it is *localhost**.  |
+|APP_URL_PORT  |[String] It is the port the API will use. By default it is **3344**.  |
+|CORS_ALLOW_ORIGIN|[String] Enable or disable CORS in the API. By default it is *****.|
+|LOG_LEVEL|['debug','warn','silent'] The log level used in the API logs. By default it is '**debug**'|
+|LOG_COLORED|[Boolean] Just if the logs are colored or not. By default it is **true**.|
+|COMPRESSION_ENABLED|[Boolean] Enable or disable the use of compression in the responses. By default is is **true**.|
+|UPLOAD_ENABLED|[Boolean] Enable or disable the support of file uploads. By default it is **true**.|
+|GENERATE_CLIENT|[Boolean] Enable or disable the automatic generation of the client.ts file every time the server runs. It is **true** by default but it will only run automatically when launching a development server. For production server, you will have to run the command manually (*check the scripts section*).|
+|GENERATE_API_DOCS|[Boolean] Enable or disable the automatic generation of the OpenAPI V3 docs every time the server runs. It is **true** by default but it will only run automatically when launching a development server. For production server, you will have to run the command manually (*check the scripts section*).|
+|API_VERSION|[String] The API version. It is just used in the generated docs. By default it is '**0.0.1**'.|
+|API_TITLE|[String] The API title. It is used only in the generated docs. By default it is your **project name**.|
+|API_SERVER_URL|[String] The API URL. It is used only in the generated docs but you don't need a working URL, only if you want to use those docs to call the API directly. By default it is '**http://api.example.com/v1**'|
+
 
 ### Option 1 - Create your database from the pgAdmin tool
 
