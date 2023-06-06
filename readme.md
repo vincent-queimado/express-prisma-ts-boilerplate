@@ -3,7 +3,7 @@
 </div>
 
 <div align="center">
-  <h1>Express RESTful API boilerplate using TypeScript<br/>NodeJs + Express + Typescript + Prisma</h1>
+  <h1>Welcome to the Express Rest API Boilerplate!t<br/>NodeJs + Express + Typescript + Prisma</h1>
 </div>
 
 <p align="center">
