@@ -72,7 +72,7 @@ To run this application, you'll need [Node.js](https://nodejs.org/en/download/) 
 
 ```bash
 $ cd express-prisma-ts-boilerplate
-$ npm install
+$ npm i
 ```
 
 ### Step 3 - Configure your project variables
