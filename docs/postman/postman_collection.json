@@ -65,6 +65,9 @@
                                                     }
                                                 }
                                             ],
+                                            "protocolProfileBehavior": {
+                                                "strictSSL": true
+                                            },
                                             "request": {
                                                 "auth": {
                                                     "type": "noauth"
@@ -80,7 +83,7 @@
                                                 ],
                                                 "body": {
                                                     "mode": "raw",
-                                                    "raw": "{\r\n    \"email\": \"johndoe@sample.com\",\r\n    \"name\": \"johndoe\",\r\n    \"phone\": \"(81) 99999-9999\",\r\n    \"accountName\": \"johndoe\",\r\n    \"accountLocationState\": \"PE\",\r\n    \"password\":\"1234\"\r\n}",
+                                                    "raw": "{\r\n    \"email\": \"vincent.queimado@gmail.com\",\r\n    \"name\": \"vincent\",\r\n    \"phone\": \"(81) 99999-9999\",\r\n    \"password\":\"1234\"\r\n}",
                                                     "options": {
                                                         "raw": {
                                                             "language": "json"
@@ -120,17 +123,17 @@
                                                     }
                                                 },
                                                 "url": {
-                                                    "raw": "{{base_url}}{{api_version}}/auth/register/confirmation?email=johndoe@sample.com&token=0CrT0an7NBY9cvLd0NYFa3mk",
+                                                    "raw": "{{base_url}}{{api_version}}/auth/register/confirmation?email=johndoe10@sample.com&token=0D0G9ts1mX3Rdd6JbT2tzuiZ",
                                                     "host": ["{{base_url}}{{api_version}}"],
                                                     "path": ["auth", "register", "confirmation"],
                                                     "query": [
                                                         {
                                                             "key": "email",
-                                                            "value": "johndoe@sample.com"
+                                                            "value": "johndoe10@sample.com"
                                                         },
                                                         {
                                                             "key": "token",
-                                                            "value": "0CrT0an7NBY9cvLd0NYFa3mk"
+                                                            "value": "0D0G9ts1mX3Rdd6JbT2tzuiZ"
                                                         }
                                                     ]
                                                 }
@@ -151,7 +154,7 @@
                                                         "exec": [
                                                             "var jsonData = JSON.parse(responseBody);",
                                                             "",
-                                                            "pm.environment.set(\"auth_token_storekeeper\", jsonData.content.token);"
+                                                            "pm.environment.set(\"auth_token\", jsonData.content.token);"
                                                         ],
                                                         "type": "text/javascript"
                                                     }
@@ -190,11 +193,7 @@
                                                 {
                                                     "listen": "test",
                                                     "script": {
-                                                        "exec": [
-                                                            "var jsonData = JSON.parse(responseBody);",
-                                                            "",
-                                                            "pm.environment.set(\"auth_token_storekeeper\", jsonData.content.token);"
-                                                        ],
+                                                        "exec": [""],
                                                         "type": "text/javascript"
                                                     }
                                                 }
@@ -203,6 +202,16 @@
                                                 "disableBodyPruning": true
                                             },
                                             "request": {
+                                                "auth": {
+                                                    "type": "bearer",
+                                                    "bearer": [
+                                                        {
+                                                            "key": "token",
+                                                            "value": "{{auth_token}}",
+                                                            "type": "string"
+                                                        }
+                                                    ]
+                                                },
                                                 "method": "GET",
                                                 "header": [
                                                     {
@@ -225,6 +234,87 @@
                                                     "raw": "{{base_url}}{{api_version}}/auth/logout",
                                                     "host": ["{{base_url}}{{api_version}}"],
                                                     "path": ["auth", "logout"]
+                                                }
+                                            },
+                                            "response": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Forgot Password",
+                                    "item": [
+                                        {
+                                            "name": "Request",
+                                            "event": [
+                                                {
+                                                    "listen": "test",
+                                                    "script": {
+                                                        "exec": [""],
+                                                        "type": "text/javascript"
+                                                    }
+                                                }
+                                            ],
+                                            "request": {
+                                                "method": "POST",
+                                                "header": [
+                                                    {
+                                                        "key": "Content-Type",
+                                                        "name": "Content-Type",
+                                                        "type": "text",
+                                                        "value": "application/json"
+                                                    }
+                                                ],
+                                                "body": {
+                                                    "mode": "raw",
+                                                    "raw": "{\r\n        \"email\": \"johndoe@sample.com\"\r\n}",
+                                                    "options": {
+                                                        "raw": {
+                                                            "language": "json"
+                                                        }
+                                                    }
+                                                },
+                                                "url": {
+                                                    "raw": "{{base_url}}{{api_version}}/auth/forgotpassword/request",
+                                                    "host": ["{{base_url}}{{api_version}}"],
+                                                    "path": ["auth", "forgotpassword", "request"]
+                                                }
+                                            },
+                                            "response": []
+                                        },
+                                        {
+                                            "name": "Reset",
+                                            "event": [
+                                                {
+                                                    "listen": "test",
+                                                    "script": {
+                                                        "exec": [""],
+                                                        "type": "text/javascript"
+                                                    }
+                                                }
+                                            ],
+                                            "request": {
+                                                "method": "POST",
+                                                "header": [
+                                                    {
+                                                        "key": "Content-Type",
+                                                        "name": "Content-Type",
+                                                        "type": "text",
+                                                        "value": "application/json"
+                                                    }
+                                                ],
+                                                "body": {
+                                                    "mode": "raw",
+                                                    "raw": "{\r\n        \"email\": \"johndoe@sample.com\",\r\n        \"token\": \"0D0IB7oSsu4STEjsp5LjDtUj\",\r\n        \"password\": \"Johndoe@1234\"\r\n}",
+                                                    "options": {
+                                                        "raw": {
+                                                            "language": "json"
+                                                        }
+                                                    }
+                                                },
+                                                "url": {
+                                                    "raw": "{{base_url}}{{api_version}}/auth/forgotpassword/reset",
+                                                    "host": ["{{base_url}}{{api_version}}"],
+                                                    "path": ["auth", "forgotpassword", "reset"]
                                                 }
                                             },
                                             "response": []
@@ -348,7 +438,7 @@
                                                 }
                                             ]
                                         },
-                                        "method": "PATCH",
+                                        "method": "DELETE",
                                         "header": [
                                             {
                                                 "key": "Content-Type",
@@ -367,9 +457,9 @@
                                             }
                                         },
                                         "url": {
-                                            "raw": "{{base_url}}{{api_version}}/user/me/delete",
+                                            "raw": "{{base_url}}{{api_version}}/user/me",
                                             "host": ["{{base_url}}{{api_version}}"],
-                                            "path": ["user", "me", "delete"]
+                                            "path": ["user", "me"]
                                         }
                                     },
                                     "response": []
