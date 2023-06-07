@@ -115,8 +115,6 @@ When running locally, by default the API will be accessible at url http://localh
 </div>
 </br>
 
-https://github.com/vincent-queimado/express-prisma-ts-boilerplate/assets/48055990/021327c3-e63c-490e-8ee0-c326ec507c20
-
 Running in a `production` environment (the code will be transpiled in the build folder and executed):</br>
 
 ```bash
