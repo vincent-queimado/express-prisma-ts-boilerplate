@@ -239,20 +239,21 @@ tests\                    # Unit test coverage with Jest
 
 Some examples of ready-made endpoints are available. When importing a [Postman](https://www.postman.com/) collection to the project folder `docs`>`postman`, an web documentation will be automatically generated via [Swagger](https://swagger.io/).
 
-| Rota                                | HTTP (Verbs) | Description             |
-| ----------------------------------- | ------------ | ----------------------- |
-| /api/v1/info                        | GET          | Api informations        |
-| /api/v1/logs                        | GET          | Api logs                |
-| /api/v1/auth/login                  | POST         | Login                   |
-| /api/v1/auth/logout                 | GET          | Logout                  |
-| /api/v1/auth/register               | POST         | Register                |
-| /api/v1/auth/register/confirmation  | GET          | Register confirmation   |
-| /api/v1/auth/forgotpassword/request | POST         | Forgot password request |
-| /api/v1/auth/forgotpassword/reset   | POST         | Forgot password reset   |
-| /api/v1/user/me                     | GET          | Show me                 |
-| /api/v1/user/me                     | PATCH        | Update me               |
-| /api/v1/user/me                     | DELETE       | Delete me               |
-| /api/v1/users                       | GET          | Show all users          |
+| Rota                                | HTTP (Verbs) | Description                     |
+| ----------------------------------- | ------------ | ------------------------------- |
+| /api/v1/info                        | GET          | Api informations                |
+| /api/v1/logs                        | GET          | Api logs                        |
+| /api/v1/docs                        | GET          | Swagger doc (not allow in prod) |
+| /api/v1/auth/login                  | POST         | Login                           |
+| /api/v1/auth/logout                 | GET          | Logout                          |
+| /api/v1/auth/register               | POST         | Register                        |
+| /api/v1/auth/register/confirmation  | GET          | Register confirmation           |
+| /api/v1/auth/forgotpassword/request | POST         | Forgot password request         |
+| /api/v1/auth/forgotpassword/reset   | POST         | Forgot password reset           |
+| /api/v1/user/me                     | GET          | Show me                         |
+| /api/v1/user/me                     | PATCH        | Update me                       |
+| /api/v1/user/me                     | DELETE       | Delete me                       |
+| /api/v1/users                       | GET          | Show all users                  |
 
 The automatically generated documentation will be accessible on the web at url http://localhost:3344/api/v1/docs.
 
