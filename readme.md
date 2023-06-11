@@ -221,11 +221,11 @@ src\                      # Sources
       |--email\           # Email configuration file
   |--controllers\         # Controllers
       |--plataform        # Plataform business logic
+  |--dao                  # Responsible for retrieving and sending data to the database
   |--database\            # Database connection
   |--functions\           # Functions
   |--middlewares\         # Middlewares (JWT auth, data validation schema, Morgan, and other middlewares)
   |--models\              # Models
-  |--presenters\          # Presenters (Extra layer over MVC)
   |--routes\              # Custom Routes
   |--schemas\             # Schema validation
   |--server\              # Http server using the Express framework
