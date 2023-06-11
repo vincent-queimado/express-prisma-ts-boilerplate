@@ -50,7 +50,7 @@ const localUserStrategy = async (passport: any) => {
                     isDeleted: false,
                     isRegistered: true,
                 });
-                console.log(newUser);
+
                 if (!newUser.success) return done(errorMsg, {});
                 if (!newUser.data) return done(null, {});
 

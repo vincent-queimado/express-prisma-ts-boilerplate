@@ -7,7 +7,6 @@ const errorCod = 'ERROR_AUTH';
 const auth = (plataform: string) => async (req: Request, res: Response, next: NextFunction) => {
     await passport.authenticate(plataform, { session: false }, (err: any, user: object) => {
         if (err) {
-            console.log(err);
             const result = httpMsg.http422(err, errorCod);
             return res.status(result.httpStatusCode).json(result.data);
         }
