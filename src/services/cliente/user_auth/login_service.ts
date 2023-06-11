@@ -72,7 +72,14 @@ const checkPassword = async (plainPassword: string, hashPassword: string) => {
 };
 
 const generateToken = async (datas: any) => {
-    const result = await servGenerateToken(datas.id, datas.name, datas.email, datas.avatar);
+    const tokenData = {
+        id: datas.id,
+        name: datas.name,
+        email: datas.email,
+        avatar: datas.avatar,
+    };
+
+    const result = await servGenerateToken(tokenData);
 
     /* istanbul ignore if */
     if (!result.success) return { success: false, data: null };
