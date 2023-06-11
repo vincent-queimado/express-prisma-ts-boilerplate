@@ -27,7 +27,8 @@ interface IRatelimiter {
 
 interface IJwt {
     secretUser: string;
-    secretDevice: string;
+    secretAdmin: string;
+    secretApp: string;
     expiredIn: string;
 }
 

@@ -8,12 +8,12 @@ import servCheckPassword from '@functions/check_password';
 
 const errorMsg = 'Invalid token';
 
-const localOpts = {
+const localUserOpts = {
     usernameField: 'email',
     passwordField: 'password',
 };
 
-const jwtOpts = {
+const jwtUserOpts = {
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
     secretOrKey: config.jwt.secretUser,
 };
@@ -21,7 +21,7 @@ const jwtOpts = {
 const jwtUserStrategy = async (passport: any) => {
     passport.use(
         'jwt-user',
-        new JWTStrategy(jwtOpts, async (payload, done) => {
+        new JWTStrategy(jwtUserOpts, async (payload, done) => {
             try {
                 const newUser = await getUser({
                     id: payload.id,
@@ -42,7 +42,7 @@ const jwtUserStrategy = async (passport: any) => {
 const localUserStrategy = async (passport: any) => {
     passport.use(
         'login-user',
-        new LocalStrategy(localOpts, async (email, password, done) => {
+        new LocalStrategy(localUserOpts, async (email, password, done) => {
             try {
                 // Check user
                 const newUser = await getUser({
