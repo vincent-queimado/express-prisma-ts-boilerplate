@@ -1,9 +1,9 @@
-import login from './login_presenter';
-import logout from './logout_presenter';
-import register from './register_presenter';
-import registerConfirm from './register_confirm_presenter';
-import forgotPasswordRequest from './forgot_password_request_presenter';
-import forgotPasswordReset from './forgot_password_reset_presenter';
+import login from './login_service';
+import logout from './logout_service';
+import register from './register_service';
+import registerConfirm from './register_confirm_service';
+import forgotPasswordRequest from './request_password_service';
+import forgotPasswordReset from './reset_password_service';
 
 export default {
     login,

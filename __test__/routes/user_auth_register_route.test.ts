@@ -2,9 +2,9 @@ import request from 'supertest';
 import randtoken from 'rand-token';
 
 import server from '../../src/server/http_server';
-import getUser from '../../src/dao/users/user_get_one_service';
-import updateUser from '../../src/dao/users/user_update_service';
-import deleteUser from '../../src/dao/users/user_physical_delete_service';
+import getUser from '../../src/dao/users/user_get_one_dao';
+import updateUser from '../../src/dao/users/user_update_dao';
+import deleteUser from '../../src/dao/users/user_delete_dao';
 import globalApiPath from '../../src/utils/global_api_path/global_api_path';
 
 const apiPath = globalApiPath();

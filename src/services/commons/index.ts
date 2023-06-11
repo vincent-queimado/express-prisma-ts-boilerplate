@@ -1,5 +1,5 @@
-import apiRoot from './api_root_presenter';
-import apiInfo from './api_info_presenter';
+import apiRoot from './api_root_service';
+import apiInfo from './api_info_service';
 
 export default {
     apiRoot,

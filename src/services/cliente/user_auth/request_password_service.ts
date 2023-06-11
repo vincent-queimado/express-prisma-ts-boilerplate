@@ -1,8 +1,8 @@
 import randtoken from 'rand-token';
 
 import httpMsg from '@utils/http_messages/http_msg';
-import servUpdateUser from '@dao/users/user_update_service';
-import servFindOneUser from '@dao/users/user_get_one_service';
+import servUpdateUser from '@dao/users/user_update_dao';
+import servFindOneUser from '@dao/users/user_get_one_dao';
 // import sendEmail from '@utils/nodemailer/nodemailer/email_verification';
 
 const errorCod = 'ERROR_USER_FORGOT_PASSWORD_REQUEST';
