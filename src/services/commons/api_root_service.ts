@@ -1,8 +1,8 @@
-import globalApiPath from '@utils/global_api_path/global_api_path';
+import config from '@config/app';
 
 export default () => {
-    const apiPath = globalApiPath();
-    const route = `${apiPath}/info`;
+    const baseApiUrl = config.api.prefix;
+    const route = '/' + baseApiUrl + '/info';
 
     return { success: true, data: route, error: null };
 };

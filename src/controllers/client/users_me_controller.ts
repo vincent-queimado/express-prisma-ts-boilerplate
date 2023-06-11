@@ -3,8 +3,9 @@ import presenter from '@presenters/cliente/user_me';
 import logger from '@utils/winston_file_logger/winston/logger';
 
 const showMe = (req: Request, res: Response, next: NextFunction) => {
+    const user: any = req.user;
     presenter
-        .showMe(req.body.user.id)
+        .showMe(user.id)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
         .catch((err: any) => /* istanbul ignore next*/ {
             logger.error(`Erro de visualização de dados de usuário. ${err.message}`);
@@ -13,8 +14,9 @@ const showMe = (req: Request, res: Response, next: NextFunction) => {
 };
 
 const updateMe = (req: Request, res: Response, next: NextFunction) => {
+    const user: any = req.user;
     presenter
-        .updateMe(req.body.user.id, req.body)
+        .updateMe(user.id, req.body)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
         .catch((err: any) => /* istanbul ignore next*/ {
             logger.error(`Erro de atualização de dados de usuário. ${err.message}`);
@@ -23,8 +25,9 @@ const updateMe = (req: Request, res: Response, next: NextFunction) => {
 };
 
 const deleteMe = (req: Request, res: Response, next: NextFunction) => {
+    const user: any = req.user;
     presenter
-        .deleteMe(req.body.user.id)
+        .deleteMe(user.id)
         .then((result: any) => res.status(result.httpStatusCode).json(result.data))
         .catch((err: any) => /* istanbul ignore next*/ {
             logger.error(`Erro de exclusão de dados de usuário. ${err.message}`);

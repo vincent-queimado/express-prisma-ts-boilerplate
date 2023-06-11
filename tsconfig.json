@@ -28,6 +28,7 @@
             "@presenters/*": ["src/presenters/*"],
             "@services/*": ["src/services/*"],
             "@functions/*": ["src/functions/*"],
+            "@constants/*": ["src/constants/*"],
             "@schemas/*": ["src/schemas/*"],
             "@views/*": ["src/views/*"],
             "@utils/*": ["src/utils/*"],

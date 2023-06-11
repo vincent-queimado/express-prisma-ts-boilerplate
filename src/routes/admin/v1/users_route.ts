@@ -1,8 +1,5 @@
 import { Router } from 'express';
-
-import Auth from '@middlewares/jwt_auth/auth';
-
-import CtrlUsers from '@controllers/client/users_controller';
+import CtrlUsers from '@controllers/admin/users_controller';
 
 const router = Router();
 

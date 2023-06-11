@@ -23,11 +23,12 @@ export default async (data: any) => {
     if (!checkRequiredDatas(data)) return httpMsg.http422(errorMsg, errorCod);
 
     // Check existing user and get data
-    const user = await getUser(data.email);
+    const user = await getUser({ email: data.email });
     if (!user.success) return httpMsg.http422(user.error || '', errorCod);
 
     // If user exist but is not registered: update user
     if (user.data && !user.data.isRegistered) {
+        data.isDeleted = false;
         const updatedUser = await updateUser(user.data.id, data);
         if (!updatedUser.success) return httpMsg.http422(errorMsg, errorCod);
         registeredUser = updatedUser.data;
@@ -61,9 +62,7 @@ const checkRequiredDatas = (datas: any) => /* istanbul ignore next */ {
     return true;
 };
 
-const getUser = async (email: string) => {
-    const whereBy = 'email';
-
+const getUser = async (where: object) => {
     const select = {
         id: true,
         isDisabled: true,
@@ -72,7 +71,7 @@ const getUser = async (email: string) => {
     };
 
     // Get user by email
-    const result = await servFindOneUser(email, whereBy, select, false);
+    const result = await servFindOneUser(where, select);
 
     // Check user status
     if (!result.success) return { success: false, data: null, error: errorMsg };

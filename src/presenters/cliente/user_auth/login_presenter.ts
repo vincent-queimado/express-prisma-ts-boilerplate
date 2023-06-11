@@ -5,9 +5,6 @@ import servGenerateToken from '@functions/generate_token_access';
 
 const errorCod = 'ERROR_USER_LOGIN';
 const errorMsg = 'Failed to authenticate';
-const errorMsgDeleted = 'Failed to register a deleted user';
-const errorMsgDisabled = 'Failed to register a disabled user';
-const errorMsgRegistered = 'Failed to register an already registered user';
 
 export default async (data: any) => {
     let userLogged = {};
@@ -16,7 +13,11 @@ export default async (data: any) => {
     if (!checkRequiredDatas(data)) return httpMsg.http422(errorMsg, errorCod);
 
     // Check existing user and get data
-    const user = await getUser(data.email);
+    const user = await getUser({
+        email: data.email,
+        isDeleted: false,
+        isRegistered: true,
+    });
     if (!user.success) return httpMsg.http401(errorCod);
 
     // Check password
@@ -45,36 +46,26 @@ const checkRequiredDatas = (datas: any) => /* istanbul ignore next */ {
     return true;
 };
 
-const getUser = async (email: string) => {
-    const whereBy = 'email';
-
+const getUser = async (where: object) => {
     const select = {
         id: true,
         name: true,
         email: true,
         password: true,
-        isDisabled: true,
-        isDeleted: true,
-        isRegistered: true,
     };
 
     // Get user by email
-    const result = await servFindOneUser(email, whereBy, select, false);
+    const result = await servFindOneUser(where, select);
 
     // Check user status
-    if (!result.success) return { success: false, data: null, error: errorMsg };
-    if (!result.data) return { success: false, data: null, error: errorMsg }; // Need to exist
+    if (!result.success || !result.data) return { success: false, data: null, error: errorMsg };
     if (!result.data.password) return { success: false, data: null, error: errorMsg }; // Need to have a password
-    if (result.data.isDeleted) return { success: false, data: null, error: errorMsgDeleted }; // Need not to be excluded
-    if (result.data.isDisabled) return { success: false, data: null, error: errorMsgDisabled }; // Need to be enabled
-    if (!result.data.isRegistered) return { success: false, data: null, error: errorMsgRegistered }; // Need to be registered
 
     return { success: true, data: result.data, error: null };
 };
 
 const checkPassword = async (plainPassword: string, hashPassword: string) => {
     const result = await servCheckPassword(plainPassword, hashPassword);
-
     if (!result.success) return false;
 
     return true;

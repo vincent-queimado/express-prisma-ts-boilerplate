@@ -9,7 +9,7 @@ export default async (id: string, name: string, email: string, avatar: string) =
             email,
             avatar,
         },
-        config.jwt.secret,
+        config.jwt.secretUser,
         {
             expiresIn: config.jwt.expiredIn,
         },

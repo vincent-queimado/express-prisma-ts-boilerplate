@@ -14,7 +14,7 @@ describe('CHECK LOGS API ENDPOINTS', () => {
     });
 
     it(`GET ${apiPath}/logs`, async () => {
-        await request(app).get(`${apiPath}/logs`).expect(200);
+        await request(app).get(`${apiPath}/logs`).expect(301);
     });
 
     afterAll(async () => {

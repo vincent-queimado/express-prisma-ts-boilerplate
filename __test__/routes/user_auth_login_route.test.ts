@@ -46,7 +46,7 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
         };
 
         // Check user and clean before new registration
-        const user = await getUser(createPayload.email, 'email', { id: true }, false);
+        const user = await getUser({ email: createPayload.email }, { id: true });
 
         if (user.data) {
             await deleteUser(createPayload.email);
@@ -56,11 +56,11 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
         await createUser(createPayload, { id: true });
 
         // Check new user
-        const newUser = await getUser(createPayload.email, 'email', { id: true }, false);
+        const newUser = await getUser({ email: createPayload.email }, { id: true });
 
         // Unauthorized Login because not confirm registration
         await request(app)
-            .post(`${apiPath}/auth/login`)
+            .post(`${apiPath}/client/auth/login`)
             .send(loginPayload)
             .expect(401)
             .then((response) => {
@@ -76,7 +76,7 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
 
         // Authorized Login after confirm registration
         await request(app)
-            .post(`${apiPath}/auth/login`)
+            .post(`${apiPath}/client/auth/login`)
             .send(loginPayload)
             .expect(200)
             .then((response) => {
@@ -89,7 +89,7 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
 
         // Unauthorized Login with wrong password
         await request(app)
-            .post(`${apiPath}/auth/login`)
+            .post(`${apiPath}/client/auth/login`)
             .send({
                 email: createPayload.email,
                 password: wrongPassword,
@@ -105,7 +105,7 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
 
         // Unauthorized Login with unknow email
         await request(app)
-            .post(`${apiPath}/auth/login`)
+            .post(`${apiPath}/client/auth/login`)
             .send({
                 email: wrongEmail,
                 password: password,

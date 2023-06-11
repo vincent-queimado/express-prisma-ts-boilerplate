@@ -7,9 +7,6 @@ import servFindOneUser from '@services/users/user_get_one_service';
 
 const errorCod = 'ERROR_USER_FORGOT_PASSWORD_REQUEST';
 const errorMsg = 'Failed to request forgot password';
-const errorMsgDeleted = 'Failed to register a deleted user';
-const errorMsgDisabled = 'Failed to register a disabled user';
-const errorMsgRegistered = 'Failed to register an already registered user';
 
 const isEmailNotif = false;
 
@@ -18,12 +15,8 @@ export default async (data: any) => {
     if (!checkRequiredDatas(data)) return httpMsg.http422(errorMsg, errorCod);
 
     // Check existing user and get data
-    const user = await getUser(data.email);
+    const user = await getUser({ email: data.email, isDeleted: false, isRegistered: true });
     if (!user.success) return httpMsg.http422(user.error || '', errorCod);
-
-    // Check if user is already confirmed
-    if (!getRegisterConfirmation(user.data.isRegistered))
-        return httpMsg.http422(errorMsg, errorCod);
 
     // Update user reset password token
     if (!updateUserToken(user.data.id)) return httpMsg.http422(errorMsg, errorCod);
@@ -41,36 +34,22 @@ const checkRequiredDatas = (data: any) => /* istanbul ignore next */ {
     return true;
 };
 
-const getUser = async (email: string) => {
-    const whereBy = 'email';
-
+const getUser = async (where: object) => {
     const select = {
         id: true,
         name: true,
         email: true,
-        isDisabled: true,
-        isDeleted: true,
-        isRegistered: true,
         tokenOfResetPassword: true,
     };
 
     // Get user by email
-    const result = await servFindOneUser(email, whereBy, select, false);
+    const result = await servFindOneUser(where, select);
 
     // Check user status
-    if (!result.success) return { success: false, data: null, error: errorMsg };
-    if (!result.data) return { success: false, data: null, error: errorMsg }; // Need to exist
+    if (!result.success || !result.data) return { success: false, data: null, error: errorMsg };
     if (!result.data.tokenOfResetPassword) return { success: false, data: null, error: errorMsg }; // Need to have a reset password token
-    if (result.data.isDeleted) return { success: false, data: null, error: errorMsgDeleted }; // Need not to be excluded
-    if (result.data.isDisabled) return { success: false, data: null, error: errorMsgDisabled }; // Need to be enabled
-    if (!result.data.isRegistered) return { success: false, data: null, error: errorMsgRegistered }; // Need to be registered
 
     return { success: true, data: result.data, error: null };
-};
-
-const getRegisterConfirmation = (isRegistered: boolean) => {
-    if (!isRegistered) return false;
-    return true;
 };
 
 const updateUserToken = async (id: string) => {

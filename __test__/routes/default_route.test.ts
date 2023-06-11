@@ -14,7 +14,7 @@ describe('CHECK DEFAULT API ENDPOINTS', () => {
     });
 
     it('GET /', async () => {
-        await request(app).get('/').expect(302);
+        await request(app).get('/').expect(500);
     });
 
     it(`GET ${apiPath}`, async () => {

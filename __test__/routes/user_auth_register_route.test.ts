@@ -32,7 +32,7 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
         };
 
         // Check user and clean before new registration
-        const user = await getUser(registerPayload.email, 'email', { id: true }, false);
+        const user = await getUser({ email: registerPayload.email }, { id: true });
 
         if (user.data) {
             await deleteUser(registerPayload.email);
@@ -40,7 +40,7 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
 
         // User successfully registered
         await request(app)
-            .post(`${apiPath}/auth/register`)
+            .post(`${apiPath}/client/auth/register`)
             .send(registerPayload)
             .expect(201)
             .then((response) => {
@@ -54,7 +54,7 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
 
         // User successfully overwrite old registered without confirm registration
         await request(app)
-            .post(`${apiPath}/auth/register`)
+            .post(`${apiPath}/client/auth/register`)
             .send(registerPayload)
             .expect(201)
             .then((response) => {
@@ -67,12 +67,12 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
             });
 
         // Update User with confirm registration
-        const newUser = await getUser(registerPayload.email, 'email', { id: true }, false);
+        const newUser = await getUser({ email: registerPayload.email }, { id: true });
         await updateUser(newUser.data.id, { isRegistered: true }, { id: true });
 
         // Try to register the same user after confirm registration
         await request(app)
-            .post(`${apiPath}/auth/register`)
+            .post(`${apiPath}/client/auth/register`)
             .send(registerPayload)
             .expect(422)
             .then((response) => {

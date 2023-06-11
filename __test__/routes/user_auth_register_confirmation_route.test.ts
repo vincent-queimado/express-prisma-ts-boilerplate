@@ -39,7 +39,7 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
         };
 
         // Check user and clean before new registration
-        const user = await getUser(createPayload.email, 'email', { id: true }, false);
+        const user = await getUser({ email: createPayload.email }, { id: true });
 
         if (user.data) {
             await deleteUser(createPayload.email);
@@ -50,15 +50,13 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
 
         // Check new user
         const newUser = await getUser(
-            createPayload.email,
-            'email',
+            { email: createPayload.email },
             { id: true, email: true, tokenOfRegisterConfirmation: true },
-            false,
         );
 
         // User try to confirm the registration with a wrong token
         await request(app)
-            .get(`${apiPath}/auth/register/confirmation`)
+            .get(`${apiPath}/client/auth/register/confirmation`)
             .query({
                 email: createPayload.email,
                 token: wrongToken,
@@ -74,7 +72,7 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
 
         // User successfully confirm the registration with right token
         await request(app)
-            .get(`${apiPath}/auth/register/confirmation`)
+            .get(`${apiPath}/client/auth/register/confirmation`)
             .query({
                 email: createPayload.email,
                 token: newUser.data.tokenOfRegisterConfirmation,
@@ -91,7 +89,7 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
 
         // User is already registered
         await request(app)
-            .get(`${apiPath}/auth/register/confirmation`)
+            .get(`${apiPath}/client/auth/register/confirmation`)
             .query({
                 email: newUser.data.email,
                 token: newUser.data.tokenOfRegisterConfirmation,

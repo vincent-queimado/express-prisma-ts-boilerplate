@@ -5,7 +5,6 @@ export default () => {
 
     /* istanbul ignore next */
     if (config.api.prefix) path = `/${config.api.prefix}`;
-    if (config.api.prefix) path += `/${config.api.version}`;
 
     return path;
 };

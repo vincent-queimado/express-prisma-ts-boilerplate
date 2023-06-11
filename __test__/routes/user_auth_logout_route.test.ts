@@ -44,7 +44,7 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
         };
 
         // Check user and clean before new registration
-        const user = await getUser(createPayload.email, 'email', { id: true }, false);
+        const user = await getUser({ email: createPayload.email }, { id: true });
 
         if (user.data) {
             await deleteUser(createPayload.email);
@@ -54,11 +54,11 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
         await createUser(createPayload, { id: true });
 
         // Check new user
-        await getUser(createPayload.email, 'email', { id: true }, false);
+        await getUser({ email: createPayload.email }, { id: true });
 
         // Authorized Login
         await request(app)
-            .post(`${apiPath}/auth/login`)
+            .post(`${apiPath}/client/auth/login`)
             .send(payload)
             .expect(200)
             .then((response) => {
@@ -72,7 +72,7 @@ describe('CHECK USER AUTH API ENDPOINTS', () => {
 
         // Logout successfully
         await request(app)
-            .get(`${apiPath}/auth/logout`)
+            .get(`${apiPath}/client/auth/logout`)
             .set('Authorization', `Bearer ${token}`)
             .expect(200)
             .then((response) => {

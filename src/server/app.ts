@@ -1,7 +1,8 @@
-import cors from 'cors';
 import path from 'path';
+import cors from 'cors';
 import helmet from 'helmet';
 import express from 'express';
+import passport from 'passport';
 import favicon from 'serve-favicon';
 import bodyParser from 'body-parser';
 
@@ -9,11 +10,15 @@ import xss from '@middlewares/xss/xss';
 import morgan from '@middlewares/morgan/morgan';
 import rateLimit from '@middlewares/rate_limiter/rate_limiter';
 import handleError from '@middlewares/http_error_handler/error_handler';
+import {
+    localUserStrategy,
+    jwtUserStrategy,
+} from '@middlewares/auth/passport_strategies/passportStrategy';
 
 import config from '@config/app';
-import routesV1 from '@routes/v1';
+import routesUser from '@routes/client/v1';
+import routesAdmin from '@routes/admin/v1';
 import routes from '@routes/index';
-import globalApiPath from '@utils/global_api_path/global_api_path';
 
 const publicLogs = './logs';
 const publicFavicon = './public/assets/images/favicons/favicon.ico';
@@ -21,7 +26,7 @@ const views = '../views';
 
 export default () => {
     const app = express();
-    const apiPath = globalApiPath();
+    const baseApiUrl = '/' + config.api.prefix.replace('/', '');
     const corsOptions = { origin: config.cors.allowOrigin };
 
     app.use(helmet());
@@ -35,16 +40,18 @@ export default () => {
     app.use(bodyParser.urlencoded({ extended: config.api.extUrlencoded }));
 
     app.use(xss());
+    app.use(rateLimit.limiter);
+
+    localUserStrategy(passport);
+    jwtUserStrategy(passport);
 
     app.use(favicon(publicFavicon));
     app.use(express.static('public'));
 
-    app.use(rateLimit.limiter);
-
-    app.use(`/${apiPath}/logs`, express.static(publicLogs, { dotfiles: 'allow' }));
-    app.use(`${apiPath}/auth`, routesV1);
-    app.use(`${apiPath}/`, routesV1);
-    app.use('/', routes);
+    app.use(baseApiUrl + '/logs', express.static(publicLogs, { dotfiles: 'allow' }));
+    app.use(baseApiUrl + '/client/', routesUser);
+    app.use(baseApiUrl + '/admin/', routesAdmin);
+    app.use(baseApiUrl + '/', routes);
 
     app.set('view engine', 'ejs');
     app.set('views', path.join(__dirname, views));

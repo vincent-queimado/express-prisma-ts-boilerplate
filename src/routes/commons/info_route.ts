@@ -3,10 +3,7 @@ import CtrlCommons from '@controllers/commons_controller';
 
 const router = Router();
 
-// API Root Redirect
-router.get('/', CtrlCommons.root);
-
 // API Info
-router.get('/info', CtrlCommons.info);
+router.get('/', CtrlCommons.info);
 
 export default router;
