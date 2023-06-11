@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs';
 
-export default async (password: string, hashPassword: string) => {
-    if (!bcrypt.compareSync(password, hashPassword)) {
+export default async (plainPassword: string, hashPassword: string) => {
+    if (!bcrypt.compareSync(plainPassword, hashPassword)) {
         return {
             success: false,
             data: null,
@@ -9,5 +9,5 @@ export default async (password: string, hashPassword: string) => {
         };
     }
 
-    return { success: true, data: password, error: null };
+    return { success: true, data: plainPassword, error: null };
 };
