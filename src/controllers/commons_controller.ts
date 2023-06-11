@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import presenter from '@presenters/commons';
+import presenter from '@services/commons';
 import logger from '@utils/winston_file_logger/winston/logger';
 
 const root = (req: Request, res: Response, next: NextFunction) => {

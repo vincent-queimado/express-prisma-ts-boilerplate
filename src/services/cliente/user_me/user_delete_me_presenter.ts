@@ -1,12 +1,11 @@
 import httpMsg from '@utils/http_messages/http_msg';
-import servUpdateUser from '@services/users/user_update_service';
-import servHashPassword from '@functions/generate_hash_password';
-import servFindOneUser from '@services/users/user_get_one_service';
+import servUpdateUser from '@dao/users/user_update_service';
+import servFindOneUser from '@dao/users/user_get_one_service';
 
-const errorCod = 'ERROR_USER_UPDATE_ME';
-const errorMsg = 'Failed to update user';
+const errorCod = 'ERROR_USER_DELETE_ME';
+const errorMsg = 'Failed to delete user';
 
-export default async (id: string, data: any) => {
+export default async (id: string) => {
     // Check required user data
     if (!checkRequiredDatas(id)) return httpMsg.http422(errorMsg, errorCod);
 
@@ -14,14 +13,11 @@ export default async (id: string, data: any) => {
     const user = await getUser({ id, isDeleted: false, isRegistered: true });
     if (!user.success) return httpMsg.http422(user.error || '', errorCod);
 
-    const filtered = await filterDatas(data);
-    if (!filtered.success) return httpMsg.http422(errorMsg, errorCod);
-
     // Update the user
-    const updated = await updateUser(user.data.id, filtered.data);
+    const updated = await updateUser(user.data.id, { isDeleted: true });
     if (!updated.success) return httpMsg.http422(errorMsg, errorCod);
 
-    return httpMsg.http200(updated.data);
+    return httpMsg.http204(updated.data);
 };
 
 const checkRequiredDatas = (id: string) => /* istanbul ignore next */ {
@@ -42,8 +38,6 @@ const getUser = async (where: object) => {
 
     // Get user by email
     const result = await servFindOneUser(where, select);
-
-    // Check user status
     if (!result.success || !result.data) return { success: false, data: null, error: errorMsg };
 
     return { success: true, data: result.data, error: null };
@@ -52,12 +46,7 @@ const getUser = async (where: object) => {
 const updateUser = async (id: string, datas: any) => {
     const select = {
         id: true,
-        name: true,
-        email: true,
-        phone: true,
-        avatar: true,
-        accountType: true,
-        createdAt: true,
+        isDeleted: true,
     };
 
     const result = await servUpdateUser(id, datas, select);
@@ -66,23 +55,4 @@ const updateUser = async (id: string, datas: any) => {
     if (!result.success || !result.data) return { success: false, data: null };
 
     return { success: true, data: result.data };
-};
-
-const filterDatas = async (data: any) => {
-    const dataFiltered: any = {};
-
-    if (data.name) dataFiltered.name = data.name;
-    if (data.email) dataFiltered.email = data.email;
-
-    // Hash password
-    if (data.password) {
-        const resultHashPassword = await servHashPassword(data.password);
-        /* istanbul ignore if */
-        if (!resultHashPassword.success || !resultHashPassword.data) {
-            return { success: false, data: null };
-        }
-        dataFiltered.password = resultHashPassword.data;
-    }
-
-    return { success: true, data: dataFiltered };
 };

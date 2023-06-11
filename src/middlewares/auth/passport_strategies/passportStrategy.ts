@@ -3,7 +3,7 @@ import { Strategy as LocalStrategy } from 'passport-local';
 
 import config from '@config/app';
 import logger from '@utils/winston_file_logger/winston/logger';
-import servFindOneUser from '@services/users/user_get_one_service';
+import servFindOneUser from '@dao/users/user_get_one_service';
 import servCheckPassword from '@functions/check_password';
 
 const errorMsg = 'Invalid token';

@@ -1,5 +1,5 @@
 import httpMsg from '@utils/http_messages/http_msg';
-import findAll from '@services/users/user_get_all_service';
+import findAll from '@dao/users/user_get_all_service';
 
 const errCode = 'ERROR_USERS_GET_ALL';
 const msgError = 'Failed to get all users';
