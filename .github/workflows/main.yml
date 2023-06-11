@@ -37,7 +37,9 @@ jobs:
             - name: Run unit tests
               run: npm run test
               env:
-                  JWT_SECRET: ${{ secrets.JWT_SECRET }}
+                  JWT_SECRET_USER: ${{ secrets.JWT_SECRET_USER }}
+                  JWT_SECRET_ADMIN: ${{ secrets.JWT_SECRET_USER }}
+                  JWT_SECRET_APP: ${{ secrets.JWT_SECRET_APP }}
                   BCRYPT_SALTROUNDS: ${{ secrets.BCRYPT_SALTROUNDS }}
                   DATABASE_URL: ${{ secrets.DATABASE_URL }}
 

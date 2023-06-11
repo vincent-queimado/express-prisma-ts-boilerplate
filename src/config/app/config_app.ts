@@ -21,7 +21,9 @@ const testConfig = (env: IProcessEnv): IEnvConfig => {
             allowOrigin: env.CORS_ALLOW_ORIGIN || '*',
         },
         jwt: {
-            secret: env.JWT_SECRET || '',
+            secretUser: env.JWT_SECRET_USER || '',
+            secretAdmin: env.JWT_SECRET_ADMIN || '',
+            secretApp: env.JWT_SECRET_APP || '',
             expiredIn: env.JWT_EXPIRED_IN || '24h',
         },
         bcrypt: {
@@ -59,7 +61,9 @@ const devConfig = (env: IProcessEnv): IEnvConfig => {
             allowOrigin: env.CORS_ALLOW_ORIGIN || '*',
         },
         jwt: {
-            secret: env.JWT_SECRET || '',
+            secretUser: env.JWT_SECRET_USER || '',
+            secretAdmin: env.JWT_SECRET_ADMIN || '',
+            secretApp: env.JWT_SECRET_APP || '',
             expiredIn: env.JWT_EXPIRED_IN || '24h',
         },
         bcrypt: {
@@ -97,7 +101,9 @@ const stageConfig = (env: IProcessEnv): IEnvConfig => {
             allowOrigin: env.CORS_ALLOW_ORIGIN || '*',
         },
         jwt: {
-            secret: env.JWT_SECRET || '',
+            secretUser: env.JWT_SECRET_USER || '',
+            secretAdmin: env.JWT_SECRET_ADMIN || '',
+            secretApp: env.JWT_SECRET_APP || '',
             expiredIn: env.JWT_EXPIRED_IN || '24h',
         },
         bcrypt: {
@@ -135,7 +141,9 @@ const prodConfig = (env: IProcessEnv): IEnvConfig => {
             allowOrigin: env.CORS_ALLOW_ORIGIN || '*',
         },
         jwt: {
-            secret: env.JWT_SECRET || '',
+            secretUser: env.JWT_SECRET_USER || '',
+            secretAdmin: env.JWT_SECRET_ADMIN || '',
+            secretApp: env.JWT_SECRET_APP || '',
             expiredIn: env.JWT_EXPIRED_IN || '24h',
         },
         bcrypt: {

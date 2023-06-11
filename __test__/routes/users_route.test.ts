@@ -13,9 +13,9 @@ describe('CHECK USERS API ENDPOINTS', () => {
         app = await server(silent);
     });
 
-    it(`GET ${apiPath}/users`, async () => {
+    it(`GET ${apiPath}/admin/users`, async () => {
         await request(app)
-            .get(`${apiPath}/users`)
+            .get(`${apiPath}/admin/users`)
             .expect(200)
             .then((response) => {
                 expect(response.body).toEqual(

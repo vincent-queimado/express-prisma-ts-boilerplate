@@ -32,7 +32,7 @@ describe('CHECK USER ME API ENDPOINTS', () => {
 
         // Authorized Login
         await request(app)
-            .post(`${apiPath}/auth/login`)
+            .post(`${apiPath}/client/auth/login`)
             .send(payload)
             .expect(200)
             .then((response) => {
@@ -46,7 +46,7 @@ describe('CHECK USER ME API ENDPOINTS', () => {
 
         // Show me with correct token
         await request(app)
-            .patch(`${apiPath}/user/me`)
+            .patch(`${apiPath}/client/user/me`)
             .set('Authorization', `Bearer ${token}`)
             .send(user)
             .expect(200)

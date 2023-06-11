@@ -165,7 +165,8 @@ Obs.: Initially, the project assumes that we will use the PostgreSQL database by
 | API_JSON_LIMIT            | [String] Limits request JSON body size. By default it is **5mb**.                                                                                                                                                                                                                      |
 | API_EXT_URLENCODED        | [String] The “extended” syntax allows for rich objects and arrays to be encoded into the URL-encoded format, allowing for a JSON-like experience with URL-encoded. By default it is **false**.                                                                                         |
 | CORS_ALLOW_ORIGIN         | [String] CORS Allow Origin is a header that specifies which origins are allowed to access server resources. By default it is \*.                                                                                                                                                       |
-| JWT_SECRET                | [String] The JWT secret is a key used for signing and verifying JSON Web Tokens (JWTs)I. By default it is **randomsecret**.                                                                                                                                                            |
+| JWT_SECRET_USER           | [String] The JWT secret is a key used for signing and verifying JSON Web Tokens (JWTs)I. By default it is **mysecretuser**.                                                                                                                                                            |
+| JWT_SECRET_DEVICE         | [String] The JWT secret is a key used for signing and verifying JSON Web Tokens (JWTs)I. By default it is **mysecretdevice**.                                                                                                                                                          |
 | JWT_EXPIRED_IN            | [String] JWT expiration is a time indicating when a JWT expires. By default it is **24h**.                                                                                                                                                                                             |
 | BCRYPT_SALTROUNDS         | [String] Bcrypt's salt rounds is the number of iterations used to hash a password, determining the computational cost and strength of the resulting hash. By default it is **10**.                                                                                                     |
 | RATE_LIMIT_MAX            | [String] Max rate limiter is a mechanism that restricts the maximum number of requests allowed within a specified time period to prevent abuse or overload on a server or API. By default it is **100**.                                                                               |
@@ -220,11 +221,11 @@ src\                      # Sources
       |--email\           # Email configuration file
   |--controllers\         # Controllers
       |--plataform        # Plataform business logic
+  |--dao                  # Responsible for retrieving and sending data to the database
   |--database\            # Database connection
   |--functions\           # Functions
   |--middlewares\         # Middlewares (JWT auth, data validation schema, Morgan, and other middlewares)
   |--models\              # Models
-  |--presenters\          # Presenters (Extra layer over MVC)
   |--routes\              # Custom Routes
   |--schemas\             # Schema validation
   |--server\              # Http server using the Express framework
@@ -239,20 +240,21 @@ tests\                    # Unit test coverage with Jest
 
 Some examples of ready-made endpoints are available. When importing a [Postman](https://www.postman.com/) collection to the project folder `docs`>`postman`, an web documentation will be automatically generated via [Swagger](https://swagger.io/).
 
-| Rota                                | HTTP (Verbs) | Description             |
-| ----------------------------------- | ------------ | ----------------------- |
-| /api/v1/info                        | GET          | Api informations        |
-| /api/v1/logs                        | GET          | Api logs                |
-| /api/v1/auth/login                  | POST         | Login                   |
-| /api/v1/auth/logout                 | GET          | Logout                  |
-| /api/v1/auth/register               | POST         | Register                |
-| /api/v1/auth/register/confirmation  | GET          | Register confirmation   |
-| /api/v1/auth/forgotpassword/request | POST         | Forgot password request |
-| /api/v1/auth/forgotpassword/reset   | POST         | Forgot password reset   |
-| /api/v1/user/me                     | GET          | Show me                 |
-| /api/v1/user/me                     | PATCH        | Update me               |
-| /api/v1/user/me                     | DELETE       | Delete me               |
-| /api/v1/users                       | GET          | Show all users          |
+| Rota                                | HTTP (Verbs) | Description                     |
+| ----------------------------------- | ------------ | ------------------------------- |
+| /api/v1/info                        | GET          | Api informations                |
+| /api/v1/logs                        | GET          | Api logs                        |
+| /api/v1/docs                        | GET          | Swagger doc (not allow in prod) |
+| /api/v1/auth/login                  | POST         | Login                           |
+| /api/v1/auth/logout                 | GET          | Logout                          |
+| /api/v1/auth/register               | POST         | Register                        |
+| /api/v1/auth/register/confirmation  | GET          | Register confirmation           |
+| /api/v1/auth/forgotpassword/request | POST         | Forgot password request         |
+| /api/v1/auth/forgotpassword/reset   | POST         | Forgot password reset           |
+| /api/v1/user/me                     | GET          | Show me                         |
+| /api/v1/user/me                     | PATCH        | Update me                       |
+| /api/v1/user/me                     | DELETE       | Delete me                       |
+| /api/v1/users                       | GET          | Show all users                  |
 
 The automatically generated documentation will be accessible on the web at url http://localhost:3344/api/v1/docs.
 
