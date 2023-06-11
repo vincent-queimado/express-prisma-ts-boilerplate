@@ -4,9 +4,9 @@ import randtoken from 'rand-token';
 
 import config from '../../src/config/app';
 import server from '../../src/server/http_server';
-import getUser from '../../src/services/users/user_get_one_service';
-import createUser from '../../src/services/users/user_create_service';
-import deleteUser from '../../src/services/users/user_physical_delete_service';
+import getUser from '../../src/dao/users/user_get_one_service';
+import createUser from '../../src/dao/users/user_create_service';
+import deleteUser from '../../src/dao/users/user_physical_delete_service';
 import globalApiPath from '../../src/utils/global_api_path/global_api_path';
 
 const apiPath = globalApiPath();
