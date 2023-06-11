@@ -1,6 +1,6 @@
 import httpMsg from '@utils/http_messages/http_msg';
-import servUpdateUser from '@dao/users/user_update_service';
-import servFindOneUser from '@dao/users/user_get_one_service';
+import servUpdateUser from '@dao/users/user_update_dao';
+import servFindOneUser from '@dao/users/user_get_one_dao';
 import servHashPassword from '@functions/generate_hash_password';
 // import sendEmail from '@utils/nodemailer/nodemailer/email_verification';
 

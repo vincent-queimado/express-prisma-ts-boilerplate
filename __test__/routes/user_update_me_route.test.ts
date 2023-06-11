@@ -1,6 +1,5 @@
 import request from 'supertest';
 
-import config from '../../src/config/app';
 import server from '../../src/server/http_server';
 import globalApiPath from '../../src/utils/global_api_path/global_api_path';
 

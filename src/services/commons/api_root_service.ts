@@ -1,17 +1,15 @@
 import logger from '@utils/winston_file_logger/winston/logger';
 import httpMsg from '@utils/http_messages/http_msg';
-import apiRoot from '@dao/commons/api_root_service';
+import config from '@config/app';
 
 const lblErr = 'Root error';
 
 export default async () => {
     try {
-        const result = await apiRoot();
+        const baseApiUrl = config.api.prefix;
+        const route = '/' + baseApiUrl + '/info';
 
-        /* istanbul ignore if */
-        if (!result.success || !result.data) return httpMsg.http422('Erro ao redirecionar', lblErr);
-
-        return httpMsg.http200(result.data);
+        return httpMsg.http200(route);
     } catch (err: any) /* istanbul ignore next */ {
         logger.error(`Erro ao redicionar a url. ${err.message}`);
         return httpMsg.http422('Erro ao tentar redirecionar.', lblErr);
