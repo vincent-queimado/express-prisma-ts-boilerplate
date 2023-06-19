@@ -8,7 +8,7 @@ build/
 # coverage/
 
 # Logs
-logs/
+/logs
 
 # Keep environment variables out of version control
 .env

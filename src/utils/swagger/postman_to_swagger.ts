@@ -3,7 +3,7 @@ import yaml from 'yamljs';
 import path from 'path';
 
 import apiUri from '@utils/global_api_path/global_api_path';
-import logger from '@utils/winston_file_logger/winston/logger';
+import logger from '@utils/logger/winston/logger';
 import { name, version, description, author, license } from '@packagejson';
 
 const openApi = 'docs/openapi/swagger.yml';

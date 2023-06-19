@@ -1,3 +1,10 @@
 {
-    "recommendations": ["Prisma.prisma"]
+    "recommendations": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "mikestead.dotenv",
+        "Orta.vscode-jest",
+        "prisma.prisma",
+        "yoavbls.pretty-ts-errors"
+    ]
 }

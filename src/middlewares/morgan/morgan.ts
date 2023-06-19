@@ -1,7 +1,7 @@
 import morgan, { StreamOptions } from 'morgan';
 
 import config from '@config/app';
-import logger from '@utils/winston_file_logger/winston/logger';
+import logger from '@utils/logger/winston/logger';
 
 const stream: StreamOptions = {
     write: (message) => logger.info(message.trim()),

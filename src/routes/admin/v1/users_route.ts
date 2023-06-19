@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import CtrlUsers from '@controllers/admin/users_controller';
+import ctrlUsers from '@controllers/admin/users_controller';
 
 const router = Router();
 
 // List of All Users
-router.get('/', CtrlUsers.showAll);
+router.get('/', ctrlUsers.showAll);
 
 export default router;

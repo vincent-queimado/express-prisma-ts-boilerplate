@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import presenter from '@services/cliente/user_auth';
-import logger from '@utils/winston_file_logger/winston/logger';
+import presenter from '@services/client/user_auth';
+import logger from '@utils/logger/winston/logger';
 
 const login = (req: Request, res: Response, next: NextFunction) => {
     presenter
