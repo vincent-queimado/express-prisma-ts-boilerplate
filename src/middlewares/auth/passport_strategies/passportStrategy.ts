@@ -2,7 +2,7 @@ import { Strategy as JWTStrategy, ExtractJwt } from 'passport-jwt';
 import { Strategy as LocalStrategy } from 'passport-local';
 
 import config from '@config/app';
-import logger from '@utils/winston_file_logger/winston/logger';
+import logger from '@utils/logger/winston/logger';
 import servFindOneUser from '@dao/users/user_get_one_dao';
 import servCheckPassword from '@functions/check_password';
 

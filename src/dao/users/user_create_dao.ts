@@ -1,5 +1,5 @@
 import prisma from '../../../prisma/prisma-client';
-import logger from '@utils/winston_file_logger/winston/logger';
+import logger from '@utils/logger/winston/logger';
 
 const msgError = 'Failed to create a user.';
 

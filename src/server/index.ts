@@ -4,7 +4,7 @@ import colorTxt from 'ansi-colors';
 import pkg from '@packagejson';
 import server from '@server/http_server';
 import db from '@database/db_connection';
-import logger from '@utils/winston_file_logger/winston/logger';
+import logger from '@utils/logger/winston/logger';
 
 const startup = async (silent: boolean) => {
     if (!silent) {

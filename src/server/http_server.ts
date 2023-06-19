@@ -5,7 +5,7 @@ import colorTxt from 'ansi-colors';
 
 import app from '@server/app';
 import config from '@config/app';
-import logger from '@utils/winston_file_logger/winston/logger';
+import logger from '@utils/logger/winston/logger';
 
 export default async (silent: boolean) => {
     const serverHost = config.app.host;

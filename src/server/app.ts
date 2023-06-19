@@ -16,9 +16,9 @@ import {
 } from '@middlewares/auth/passport_strategies/passportStrategy';
 
 import config from '@config/app';
+import routes from '@routes/index';
 import routesUser from '@routes/client/v1';
 import routesAdmin from '@routes/admin/v1';
-import routes from '@routes/index';
 
 const publicLogs = './logs';
 const publicFavicon = './public/assets/images/favicons/favicon.ico';
@@ -49,9 +49,9 @@ export default () => {
     app.use(express.static('public'));
 
     app.use(baseApiUrl + '/logs', express.static(publicLogs, { dotfiles: 'allow' }));
+    app.use(baseApiUrl + '/', routes);
     app.use(baseApiUrl + '/client/', routesUser);
     app.use(baseApiUrl + '/admin/', routesAdmin);
-    app.use(baseApiUrl + '/', routes);
 
     app.set('view engine', 'ejs');
     app.set('views', path.join(__dirname, views));

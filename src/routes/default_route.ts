@@ -1,9 +1,9 @@
 import { Router } from 'express';
-import CtrlCommons from '@controllers/commons_controller';
+import ctrlCommons from '@controllers/commons/commons_controller';
 
 const router = Router();
 
 // API Root Redirect
-router.get('/', CtrlCommons.root);
+router.get('/', ctrlCommons.root);
 
 export default router;

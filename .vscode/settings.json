@@ -1,0 +1,25 @@
+{
+    "editor.tabSize": 4,
+    "editor.detectIndentation": true,
+    "search.exclude": {
+        "package-lock.json": true
+    },
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": ["source.addMissingImports", "source.fixAll.eslint"],
+    "jest.autoRun": {
+        "watch": false
+        // "onStartup": ["all-tests"]
+    },
+    "jest.showCoverageOnLoad": true,
+    "jest.autoRevealOutput": "on-exec-error",
+    "[json][jsonc][yaml]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[prisma]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "Prisma.prisma"
+    },
+    "prettier.ignorePath": ".gitignore"
+}

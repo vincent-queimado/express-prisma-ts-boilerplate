@@ -1,4 +1,4 @@
-import logger from '@utils/winston_file_logger/winston/logger';
+import logger from '@utils/logger/winston/logger';
 import httpMsg from '@utils/http_messages/http_msg';
 import pkg from '@packagejson';
 
