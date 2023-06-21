@@ -56,7 +56,7 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /auth/register:
+  /client/auth/register:
     post:
       tags:
         - Client > User > Auth > Register
@@ -84,7 +84,7 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /auth/register/confirmation:
+  /client/auth/register/confirmation:
     get:
       tags:
         - Client > User > Auth > Register
@@ -110,7 +110,7 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /auth/login:
+  /client/auth/login:
     post:
       tags:
         - Client > User > Auth > Login
@@ -134,7 +134,7 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /auth/logout:
+  /client/auth/logout:
     get:
       tags:
         - Client > User > Auth > Login
@@ -152,7 +152,7 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /auth/forgotpassword/request:
+  /client/auth/forgotpassword/request:
     post:
       tags:
         - Client > User > Auth > Forgot Password
@@ -175,7 +175,7 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /auth/forgotpassword/reset:
+  /client/auth/forgotpassword/reset:
     post:
       tags:
         - Client > User > Auth > Forgot Password
@@ -200,7 +200,7 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /user/me:
+  /client/user/me:
     get:
       tags:
         - Client > User > Me
@@ -247,7 +247,7 @@ paths:
     delete:
       tags:
         - Client > User > Me
-      summary: Delete Me (Logical delete)
+      summary: Delete Me
       security:
         - bearerAuth: []
       parameters:
@@ -261,7 +261,7 @@ paths:
           description: Successful response
           content:
             application/json: {}
-  /users:
+  /admin/users:
     get:
       tags:
         - Admin > Users Management

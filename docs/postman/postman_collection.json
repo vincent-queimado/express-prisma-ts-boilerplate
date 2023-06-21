@@ -3,7 +3,8 @@
         "_postman_id": "616fe312-2cd8-4cae-acdc-f3444f0e43cc",
         "name": "Api Boilerplate",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-        "_exporter_id": "6300836"
+        "_exporter_id": "6300836",
+        "_collection_link": "https://petcare-api.postman.co/workspace/My-Workspace~edfb3cce-46e6-4980-871a-0167d870ebe6/collection/6300836-616fe312-2cd8-4cae-acdc-f3444f0e43cc?action=share&creator=6300836&source=collection_link"
     },
     "item": [
         {
@@ -29,12 +30,15 @@
             "item": [
                 {
                     "name": "Logs",
+                    "protocolProfileBehavior": {
+                        "strictSSL": false
+                    },
                     "request": {
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{base_url}}{{api_version}}/logs",
-                            "host": ["{{base_url}}{{api_version}}"],
+                            "raw": "{{base_url}}/logs",
+                            "host": ["{{base_url}}"],
                             "path": ["logs"]
                         }
                     },
@@ -65,9 +69,6 @@
                                                     }
                                                 }
                                             ],
-                                            "protocolProfileBehavior": {
-                                                "strictSSL": true
-                                            },
                                             "request": {
                                                 "auth": {
                                                     "type": "noauth"
@@ -91,9 +92,9 @@
                                                     }
                                                 },
                                                 "url": {
-                                                    "raw": "{{base_url}}{{api_version}}/auth/register",
-                                                    "host": ["{{base_url}}{{api_version}}"],
-                                                    "path": ["auth", "register"]
+                                                    "raw": "{{base_url}}/client/auth/register",
+                                                    "host": ["{{base_url}}"],
+                                                    "path": ["client", "auth", "register"]
                                                 }
                                             },
                                             "response": []
@@ -123,9 +124,14 @@
                                                     }
                                                 },
                                                 "url": {
-                                                    "raw": "{{base_url}}{{api_version}}/auth/register/confirmation?email=johndoe10@sample.com&token=0D0G9ts1mX3Rdd6JbT2tzuiZ",
-                                                    "host": ["{{base_url}}{{api_version}}"],
-                                                    "path": ["auth", "register", "confirmation"],
+                                                    "raw": "{{base_url}}/client/auth/register/confirmation?email=johndoe10@sample.com&token=0D0G9ts1mX3Rdd6JbT2tzuiZ",
+                                                    "host": ["{{base_url}}"],
+                                                    "path": [
+                                                        "client",
+                                                        "auth",
+                                                        "register",
+                                                        "confirmation"
+                                                    ],
                                                     "query": [
                                                         {
                                                             "key": "email",
@@ -180,9 +186,9 @@
                                                     }
                                                 },
                                                 "url": {
-                                                    "raw": "{{base_url}}{{api_version}}/auth/login",
-                                                    "host": ["{{base_url}}{{api_version}}"],
-                                                    "path": ["auth", "login"]
+                                                    "raw": "{{base_url}}/client/auth/login",
+                                                    "host": ["{{base_url}}"],
+                                                    "path": ["client", "auth", "login"]
                                                 }
                                             },
                                             "response": []
@@ -231,9 +237,9 @@
                                                     }
                                                 },
                                                 "url": {
-                                                    "raw": "{{base_url}}{{api_version}}/auth/logout",
-                                                    "host": ["{{base_url}}{{api_version}}"],
-                                                    "path": ["auth", "logout"]
+                                                    "raw": "{{base_url}}/client/auth/logout",
+                                                    "host": ["{{base_url}}"],
+                                                    "path": ["client", "auth", "logout"]
                                                 }
                                             },
                                             "response": []
@@ -274,9 +280,14 @@
                                                     }
                                                 },
                                                 "url": {
-                                                    "raw": "{{base_url}}{{api_version}}/auth/forgotpassword/request",
-                                                    "host": ["{{base_url}}{{api_version}}"],
-                                                    "path": ["auth", "forgotpassword", "request"]
+                                                    "raw": "{{base_url}}/client/auth/forgotpassword/request",
+                                                    "host": ["{{base_url}}"],
+                                                    "path": [
+                                                        "client",
+                                                        "auth",
+                                                        "forgotpassword",
+                                                        "request"
+                                                    ]
                                                 }
                                             },
                                             "response": []
@@ -312,9 +323,14 @@
                                                     }
                                                 },
                                                 "url": {
-                                                    "raw": "{{base_url}}{{api_version}}/auth/forgotpassword/reset",
-                                                    "host": ["{{base_url}}{{api_version}}"],
-                                                    "path": ["auth", "forgotpassword", "reset"]
+                                                    "raw": "{{base_url}}/client/auth/forgotpassword/reset",
+                                                    "host": ["{{base_url}}"],
+                                                    "path": [
+                                                        "client",
+                                                        "auth",
+                                                        "forgotpassword",
+                                                        "reset"
+                                                    ]
                                                 }
                                             },
                                             "response": []
@@ -361,9 +377,9 @@
                                             }
                                         },
                                         "url": {
-                                            "raw": "{{base_url}}{{api_version}}/user/me",
-                                            "host": ["{{base_url}}{{api_version}}"],
-                                            "path": ["user", "me"]
+                                            "raw": "{{base_url}}/client/user/me",
+                                            "host": ["{{base_url}}"],
+                                            "path": ["client", "user", "me"]
                                         }
                                     },
                                     "response": []
@@ -401,7 +417,7 @@
                                         ],
                                         "body": {
                                             "mode": "raw",
-                                            "raw": "{\r\n    \"name\": \"johndoe\",\r\n            \"email\": \"johndoe@sample.com\",\r\n        \"password\": \"Johndoe@1234\"\r\n}",
+                                            "raw": "{\r\n    \"name\": \"johndoe\",\r\n    \"email\": \"johndoe@sample.com\",\r\n    \"password\": \"Johndoe@1234\"\r\n}",
                                             "options": {
                                                 "raw": {
                                                     "language": "json"
@@ -409,15 +425,15 @@
                                             }
                                         },
                                         "url": {
-                                            "raw": "{{base_url}}{{api_version}}/user/me",
-                                            "host": ["{{base_url}}{{api_version}}"],
-                                            "path": ["user", "me"]
+                                            "raw": "{{base_url}}/client/user/me",
+                                            "host": ["{{base_url}}"],
+                                            "path": ["client", "user", "me"]
                                         }
                                     },
                                     "response": []
                                 },
                                 {
-                                    "name": "Delete Me (Logical delete)",
+                                    "name": "Delete Me",
                                     "event": [
                                         {
                                             "listen": "test",
@@ -457,9 +473,9 @@
                                             }
                                         },
                                         "url": {
-                                            "raw": "{{base_url}}{{api_version}}/user/me",
-                                            "host": ["{{base_url}}{{api_version}}"],
-                                            "path": ["user", "me"]
+                                            "raw": "{{base_url}}/client/user/me",
+                                            "host": ["{{base_url}}"],
+                                            "path": ["client", "user", "me"]
                                         }
                                     },
                                     "response": []
@@ -482,9 +498,9 @@
                                 "method": "GET",
                                 "header": [],
                                 "url": {
-                                    "raw": "{{base_url}}{{api_version}}/users",
-                                    "host": ["{{base_url}}{{api_version}}"],
-                                    "path": ["users"]
+                                    "raw": "{{base_url}}/admin/users",
+                                    "host": ["{{base_url}}"],
+                                    "path": ["admin", "users"]
                                 }
                             },
                             "response": []
