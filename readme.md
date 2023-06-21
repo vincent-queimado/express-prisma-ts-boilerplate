@@ -160,8 +160,7 @@ Obs.: Initially, the project assumes that we will use the PostgreSQL database by
 | SSL_ALLOW                 | [String] Enable or disable SSL in the API. By default it is **false**.                                                                                                                                                                                                                 |
 | SSL_PRIVATE_KEY           | [String] SSL private key file path. By default it is empty.                                                                                                                                                                                                                            |
 | SSL_CERTIFICATE           | [String] SSL certificate file path. By default it is empty.                                                                                                                                                                                                                            |
-| API_PREFIX                | [String] Api route prefix. By default it is **api**.                                                                                                                                                                                                                                   |
-| API_VERSION               | [String] Api route version. By default it is **v1**.                                                                                                                                                                                                                                   |
+| API_PREFIX                | [String] Api route prefix. By default it is **api**.                                                                                                                                                                                                                          |
 | API_JSON_LIMIT            | [String] Limits request JSON body size. By default it is **5mb**.                                                                                                                                                                                                                      |
 | API_EXT_URLENCODED        | [String] The “extended” syntax allows for rich objects and arrays to be encoded into the URL-encoded format, allowing for a JSON-like experience with URL-encoded. By default it is **false**.                                                                                         |
 | CORS_ALLOW_ORIGIN         | [String] CORS Allow Origin is a header that specifies which origins are allowed to access server resources. By default it is \*.                                                                                                                                                       |
@@ -240,29 +239,41 @@ tests\                    # Unit test coverage with Jest
 
 Some examples of ready-made endpoints are available. When importing a [Postman](https://www.postman.com/) collection to the project folder `docs`>`postman`, an web documentation will be automatically generated via [Swagger](https://swagger.io/).
 
-| Rota                                | HTTP (Verbs) | Description                     |
-| ----------------------------------- | ------------ | ------------------------------- |
-| /api/v1/info                        | GET          | Api informations                |
-| /api/v1/logs                        | GET          | Api logs                        |
-| /api/v1/docs                        | GET          | Swagger doc (not allow in prod) |
-| /api/v1/auth/login                  | POST         | Login                           |
-| /api/v1/auth/logout                 | GET          | Logout                          |
-| /api/v1/auth/register               | POST         | Register                        |
-| /api/v1/auth/register/confirmation  | GET          | Register confirmation           |
-| /api/v1/auth/forgotpassword/request | POST         | Forgot password request         |
-| /api/v1/auth/forgotpassword/reset   | POST         | Forgot password reset           |
-| /api/v1/user/me                     | GET          | Show me                         |
-| /api/v1/user/me                     | PATCH        | Update me                       |
-| /api/v1/user/me                     | DELETE       | Delete me                       |
-| /api/v1/users                       | GET          | Show all users                  |
+| Rota                                    | HTTP (Verbs) | Description                     |
+| --------------------------------------- | ------------ | ------------------------------- |
+| /api/client/info                        | GET          | Api informations                |
+| /api/client/logs                        | GET          | Api logs                        |
+| /api/client/docs                        | GET          | Swagger doc (not allow in prod) |
+| /api/client/auth/login                  | POST         | Login                           |
+| /api/client/auth/logout                 | GET          | Logout                          |
+| /api/client/auth/register               | POST         | Register                        |
+| /api/client/auth/register/confirmation  | GET          | Register confirmation           |
+| /api/client/auth/forgotpassword/request | POST         | Forgot password request         |
+| /api/client/auth/forgotpassword/reset   | POST         | Forgot password reset           |
+| /api/client/user/me                     | GET          | Show me                         |
+| /api/client/user/me                     | PATCH        | Update me                       |
+| /api/client/user/me                     | DELETE       | Delete me                       |
+| /api/admin/users                        | GET          | Show all users                  |
 
-The automatically generated documentation will be accessible on the web at url http://localhost:3344/api/v1/docs.
+The automatically generated documentation will be accessible on the web at url http://localhost:3344/api/docs.
 
 <div align="left">
   <kbd>
     <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/readme-doc-swagger.png?raw=true" 
     width="650"
     alt="swagger-web-doc"/>
+  </kbd>
+</div>
+
+## Logger
+
+Implementation of error logs and information related to the API stored in a rotating file with standard time and size. Logs are available via web interface in development environments at url http://localhost:3344/api/logs.
+
+<div align="left">
+  <kbd>
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/readme_api_file_rotate_logs.png?raw=true" 
+    width="650"
+    alt="logs_rotate_files"/>
   </kbd>
 </div>
 
