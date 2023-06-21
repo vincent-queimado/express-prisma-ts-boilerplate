@@ -84,7 +84,7 @@
                                                 ],
                                                 "body": {
                                                     "mode": "raw",
-                                                    "raw": "{\r\n    \"email\": \"vincent.queimado@gmail.com\",\r\n    \"name\": \"vincent\",\r\n    \"phone\": \"(81) 99999-9999\",\r\n    \"password\":\"1234\"\r\n}",
+                                                    "raw": "{\r\n    \"email\": \"johndoe@sample.com\",\r\n    \"name\": \"johndoe\",\r\n    \"phone\": \"(81) 99999-9999\",\r\n    \"password\":\"Johndoe@1234\"\r\n}",
                                                     "options": {
                                                         "raw": {
                                                             "language": "json"
@@ -124,7 +124,7 @@
                                                     }
                                                 },
                                                 "url": {
-                                                    "raw": "{{base_url}}/client/auth/register/confirmation?email=johndoe10@sample.com&token=0D0G9ts1mX3Rdd6JbT2tzuiZ",
+                                                    "raw": "{{base_url}}/client/auth/register/confirmation?email=johndoe@sample.com&token=0D0G9ts1mX3Rdd6JbT2tzuiZ",
                                                     "host": ["{{base_url}}"],
                                                     "path": [
                                                         "client",
@@ -135,7 +135,7 @@
                                                     "query": [
                                                         {
                                                             "key": "email",
-                                                            "value": "johndoe10@sample.com"
+                                                            "value": "johndoe@sample.com"
                                                         },
                                                         {
                                                             "key": "token",
@@ -229,7 +229,7 @@
                                                 ],
                                                 "body": {
                                                     "mode": "raw",
-                                                    "raw": "{\r\n    \"email\": \"melibee.pe@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+                                                    "raw": "{\r\n    \"email\": \"johndoe@sample.com\",\r\n    \"password\": \"Johndoe@1234\"\r\n}",
                                                     "options": {
                                                         "raw": {
                                                             "language": "json"
