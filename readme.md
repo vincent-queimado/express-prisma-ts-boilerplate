@@ -218,6 +218,7 @@ src\                      # Sources
       |--app\             # App configuration file
       |--database\        # Database configuration file
       |--email\           # Email configuration file
+  |--constants\           # Constants
   |--controllers\         # Controllers
       |--plataform        # Plataform business logic
   |--dao\                 # Responsible for retrieving and sending data to the database
@@ -255,6 +256,8 @@ Some examples of ready-made endpoints are available. When importing a [Postman](
 | /api/client/user/me                     | DELETE       | Delete me                       |
 | /api/admin/users                        | GET          | Show all users                  |
 
+## Online Swagger doc
+
 The automatically generated documentation will be accessible on the web at url http://localhost:3344/api/docs.
 
 <div align="left">
@@ -265,7 +268,7 @@ The automatically generated documentation will be accessible on the web at url h
   </kbd>
 </div>
 
-## Logger
+## Online Logs
 
 Implementation of error logs and information related to the API stored in a rotating file with standard time and size. Logs are available via web interface in development environments at url http://localhost:3344/api/logs.
 
