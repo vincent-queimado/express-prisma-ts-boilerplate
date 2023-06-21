@@ -265,6 +265,18 @@ The automatically generated documentation will be accessible on the web at url h
   </kbd>
 </div>
 
+## Logger
+
+Implementation of error logs and information related to the API stored in a rotating file with standard time and size. Logs are available via web interface in development environments at url http://localhost:3344/api/logs.
+
+<div align="left">
+  <kbd>
+    <img src="https://github.com/vincent-queimado/typescript-express-boilerplate/blob/master/public/assets/images/readme/readme_api_file_rotate_logs.png?raw=true" 
+    width="650"
+    alt="logs_rotate_files"/>
+  </kbd>
+</div>
+
 ## Postgresql database creation example
 
 ### Option 1 - Create your database from the pgAdmin tool

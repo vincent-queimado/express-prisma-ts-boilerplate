@@ -3,8 +3,8 @@ import globalUrl from '@utils/global_http_url/global_http_url';
 const IS_NOTIFICATE = {
     welcome: true,
     emailVerify: true,
-    passwordRequest: true,
-    passwordReset: true,
+    passwordRequest: false,
+    passwordReset: false,
 };
 
 const TEMPLATE_PATH = {
