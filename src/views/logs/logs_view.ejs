@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Logs de Api</title>
+    <title>Api logs</title>
     <style type="text/css">
         .title {
             font-size: 1.8em;
@@ -101,13 +101,13 @@
     <h1 class="title"> <%= title %> </h1>
 
     <table>
-        <caption>Arquivos de logs de erros (<%= logsError.length; %>)</caption>
+        <caption>Error log files (<%= logsError.length; %>)</caption>
         <thead>
           <tr>
-            <th scope="col">Arquivo</th>
-            <th scope="col">Tamanho</th>
-            <th scope="col">Última alteração</th>
-            <th scope="col">Visualizar</th>
+            <th scope="col">File</th>
+            <th scope="col">Size</th>
+            <th scope="col">Modified</th>
+            <th scope="col">View</th>
           </tr>
         </thead>
         <tbody>
@@ -116,20 +116,20 @@
                     <td data-label="file"><%= logsError[i].name %></td>
                     <td data-label="size"><%= logsError[i].size %></td>
                     <td data-label="modified"><%= logsError[i].modified %></td>
-                    <td data-label="view"><a href="<%= logsError[i].name %>">visualizar</a></td>
+                    <td data-label="view"><a href="<%= logsError[i].name %>">view</a></td>
                   </tr>
             <% } %>
         </tbody>
       </table>
       <br>
       <table>
-        <caption>Arquivos de logs de informações (<%= logsInfo.length; %>)</caption>
+        <caption>Information log files (<%= logsInfo.length; %>)</caption>
         <thead>
           <tr>
-            <th scope="col">Arquivo</th>
-            <th scope="col">Tamanho</th>
-            <th scope="col">Última alteração</th>
-            <th scope="col">Visualizar</th>
+            <th scope="col">File</th>
+            <th scope="col">Size</th>
+            <th scope="col">Modified</th>
+            <th scope="col">View</th>
           </tr>
         </thead>
         <tbody>
@@ -138,7 +138,7 @@
                     <td data-label="file"><%= logsInfo[i].name %></td>
                     <td data-label="size"><%= logsInfo[i].size %></td>
                     <td data-label="modified"><%= logsInfo[i].modified %></td>
-                    <td data-label="view"><a href="<%= logsInfo[i].name %>">visualizar</a></td>
+                    <td data-label="view"><a href="<%= logsInfo[i].name %>">view</a></td>
                   </tr>
             <% } %>
         </tbody>
