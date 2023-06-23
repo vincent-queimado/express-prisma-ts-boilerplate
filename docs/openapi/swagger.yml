@@ -67,10 +67,10 @@ paths:
             schema:
               type: object
               example:
-                email: vincent.queimado@gmail.com
-                name: vincent
+                email: johndoe@sample.com
+                name: johndoe
                 phone: (81) 99999-9999
-                password: '1234'
+                password: Johndoe@1234
       security:
         - noauthAuth: []
       parameters:
@@ -99,7 +99,7 @@ paths:
           in: query
           schema:
             type: string
-          example: johndoe10@sample.com
+          example: johndoe@sample.com
         - name: token
           in: query
           schema:

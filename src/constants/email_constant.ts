@@ -29,11 +29,23 @@ const TEMPLATE_SUBJECT = {
 const WELCOME_REDIRECT = `${globalUrl()}/welcome.html`;
 const REGISTRATION_REDIRECT = `${globalUrl()}/api/v1/auth/register/confirmation`;
 
+const WELCOME_TEMPLATE_DATA_SAMPLE = {
+    name: 'Joe Doe',
+    url: `${globalUrl()}/api/templates/email/welcome-user`,
+};
+
+const EMAIL_VERIFY_TEMPLATE_DATA_SAMPLE = {
+    name: 'Joe Doe',
+    url: `${globalUrl()}/api/templates/email/email-verify`,
+};
+
 export default {
     IS_NOTIFICATE,
     TEMPLATE_PATH,
     TEMPLATE_FILE,
     TEMPLATE_SUBJECT,
     WELCOME_REDIRECT,
+    WELCOME_TEMPLATE_DATA_SAMPLE,
+    EMAIL_VERIFY_TEMPLATE_DATA_SAMPLE,
     REGISTRATION_REDIRECT,
 };
