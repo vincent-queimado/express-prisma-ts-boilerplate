@@ -5,7 +5,7 @@ const devConfig = (env: IProcessEnv): IEnvConfig => {
         database: {
             url:
                 env.DATABASE_URL ||
-                'postgresql://johndoe:randompassword@localhost:5432/mydb?schema=public',
+                'sqlite:///./sqlite3.db',
         },
     };
 };
