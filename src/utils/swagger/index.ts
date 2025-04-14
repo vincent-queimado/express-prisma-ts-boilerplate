@@ -14,7 +14,7 @@ const options: swaggerJSDoc.Options = {
     servers: [
       {
         url: `http://localhost:${config.app.port}`,
-        description: 'Development server',
+        description: 'Server',
       },
       {
         url: `http://localhost:${config.app.port}/api`,
@@ -22,7 +22,8 @@ const options: swaggerJSDoc.Options = {
       },
     ],
   },
-  apis: ['./src/resources/**/*.ts'], // Path to your TypeScript route files
+  //apis: ['./src/resources/**/*.ts'],
+  apis: ['./docs/**/*.yml', './docs/**/*.ts'],
 };
 
 const swaggerSpec = swaggerJSDoc(options);

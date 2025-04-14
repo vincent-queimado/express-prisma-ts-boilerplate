@@ -12,32 +12,6 @@ export class UsersControllers {
     this.router.post('/users', this.createUser);
     this.router.get('/users', this.fetchAll);
   }
-  /**
-       * @swagger
-       * /users:
-       *   get:
-       *     summary: Fetch all users
-       *     tags: [Users]
-       *     responses:
-       *       200:
-       *         description: List of users
-       *         content:
-       *           application/json:
-       *             schema:
-       *               type: object
-       *               properties:
-       *                 data:
-       *                   type: array
-       *                   items:
-       *                     type: object
-       *                     properties:
-       *                       id:
-       *                         type: integer
-       *                       name:
-       *                         type: string
-       *                       email:
-       *                         type: string
-       */
   private fetchAll = async (_req: Request, res: Response) => {
     try {
       logger.info(`fetchAll users controller`);
@@ -49,55 +23,6 @@ export class UsersControllers {
     }
   }
 
-  /**
-   * @swagger
-   * /users:
-   *   post:
-   *     summary: Create a new user
-   *     tags: [Users]
-   *     requestBody:
-   *       required: true
-   *       content:
-   *         application/json:
-   *           schema:
-   *             type: object
-   *             required:
-   *               - email
-   *               - name
-   *               - password
-   *             properties:
-   *               email:
-   *                 type: string
-   *                 format: email
-   *               name:
-   *                 type: string
-   *               password:
-   *                 type: string
-   *                 format: password
-   *     responses:
-   *       201:
-   *         description: User created successfully
-   *         content:
-   *           application/json:
-   *             schema:
-   *               type: object
-   *               properties:
-   *                 data:
-   *                   type: object
-   *                   properties:
-   *                     id:
-   *                       type: integer
-   *                     name:
-   *                       type: string
-   *                     email:
-   *                       type: string
-   *       400:
-   *         description: Missing required fields
-   *       409:
-   *         description: Email or password already exists
-   *       500:
-   *         description: Internal server error
-   */
   private createUser = async (req: Request, res: Response) => {
     try {
 

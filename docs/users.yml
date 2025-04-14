@@ -1,0 +1,103 @@
+paths:
+  /users:
+    get:
+      summary: Fetch all users
+      tags: [Users]
+      responses:
+        '200':
+          description: List of users
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  httpStatusCode:
+                    type: integer
+                    example: 200
+                  data:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                        example: true
+                      message:
+                        type: string
+                        example: Success
+                      content:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                              format: uuid
+                              example: "df6ce4fd-7798-4995-bb83-e53870c6b2a7"
+                            name:
+                              type: string
+                              example: "Sourav"
+                            email:
+                              type: string
+                              format: email
+                              example: "sourav@gmail.com"
+    post:
+      summary: Create a new user
+      tags: [Users]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - name
+                - password
+              properties:
+                email:
+                  type: string
+                  format: email
+                name:
+                  type: string
+                password:
+                  type: string
+                  format: password
+      responses:
+        '201':
+          description: User created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  httpStatusCode:
+                    type: integer
+                    example: 201
+                  data:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                        example: true
+                      message:
+                        type: string
+                        example: Created
+                      content:
+                        type: object
+                        properties:
+                          id:
+                            type: string
+                            format: uuid
+                            example: "df6ce4fd-7798-4995-bb83-e53870c6b2a7"
+                          name:
+                            type: string
+                            example: "Sourav"
+                          email:
+                            type: string
+                            format: email
+                            example: "sourav@gmail.com"
+        '400':
+          description: Missing required fields
+        '409':
+          description: Email or password already exists
+        '500':
+          description: Internal server error
