@@ -1,10 +1,35 @@
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
 paths:
+  /users/auth/me:
+    get:
+      summary: Auth Me For Users
+      tags: [Users]
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: X-Tenant-ID
+          in: header
+          description: The tenant identifier
+          required: true
+          schema:
+            type: string
+            example: tenant_123
+      responses:
+        "200":
+          description: Successful authentication
+
   /users:
     get:
       summary: Fetch all users
       tags: [Users]
       responses:
-        '200':
+        "200":
           description: List of users
           content:
             application/json:
@@ -62,7 +87,7 @@ paths:
                   type: string
                   format: password
       responses:
-        '201':
+        "201":
           description: User created successfully
           content:
             application/json:
@@ -95,9 +120,9 @@ paths:
                             type: string
                             format: email
                             example: "sourav@gmail.com"
-        '400':
+        "400":
           description: Missing required fields
-        '409':
+        "409":
           description: Email or password already exists
-        '500':
+        "500":
           description: Internal server error

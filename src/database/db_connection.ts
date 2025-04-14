@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from "@prisma/client";
 
 class PrismaSingleton {
   private static instance: PrismaSingleton | null = null;
@@ -21,7 +21,6 @@ class PrismaSingleton {
       return { success: true, error: null };
     } catch (err) {
       return { success: false, error: err };
-    } finally {
     }
   }
 
