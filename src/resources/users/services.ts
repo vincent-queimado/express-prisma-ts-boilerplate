@@ -39,7 +39,6 @@ export class JwtService {
     return { accessToken, refreshToken, tokenType: this.tokenType };
   }
 
-  // Verify access token
   verifyAccessToken(token: string): JwtPayload | string {
     try {
       const decoded = jwt.verify(token, this.secret) as JwtPayload;
@@ -54,7 +53,6 @@ export class JwtService {
     }
   }
 
-  // Refresh access token using refresh token
   refreshAccessToken(refreshToken: string) {
     try {
       const decoded = jwt.verify(refreshToken, this.secret) as JwtPayload & {
@@ -93,6 +91,30 @@ export class UsersService {
       throw new Error(`Invalid token`);
     }
     return this.findOne(user.sub);
+  }
+
+  async login(
+    data: { email: string; password: string },
+    jwtService: JwtService = new JwtService()
+  ) {
+    const user = await this.model.findUnique({
+      where: { email: data.email },
+    });
+
+    if (!user || user.isDisabled || user.isDeleted) {
+      throw new Error("Invalid email or password");
+    }
+
+    const isPasswordValid = await bcrypt.compare(data.password, user.password);
+    if (!isPasswordValid) {
+      throw new Error("Invalid email or password");
+    }
+
+    const tokens = jwtService.generateTokens({
+      id: user.id,
+      email: user.email,
+    });
+    return tokens;
   }
 
   async create(data: { email: string; name: string; password: string }) {
