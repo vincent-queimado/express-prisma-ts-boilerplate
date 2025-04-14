@@ -1,62 +1,47 @@
-import path from 'path';
 import cors from 'cors';
 import helmet from 'helmet';
 import express from 'express';
-import passport from 'passport';
-import favicon from 'serve-favicon';
 import bodyParser from 'body-parser';
+import swaggerUi from 'swagger-ui-express';
 
 import xss from '@middlewares/xss/xss';
 import morgan from '@middlewares/morgan/morgan';
-import rateLimit from '@middlewares/rate_limiter/rate_limiter';
-import handleError from '@middlewares/http_error_handler/error_handler';
-import {
-    localUserStrategy,
-    jwtUserStrategy,
-} from '@middlewares/auth/passport_strategies/passportStrategy';
+import { logContextMiddleware } from '@middlewares/morgan/contextLogger';
+import rateLimit from '@middlewares/rateLimiter/rateLimiter';
+import handleError from '@middlewares/httpErrorHandler/errorHandler';
+import swaggerSpecs from '@utils/swagger';
+
+
+import { initResourceRoutes } from '../resources';
+
+
 
 import config from '@config/app';
-import routes from '@routes/index';
-import routesUser from '@routes/client/v1';
-import routesAdmin from '@routes/admin/v1';
 
-const publicLogs = './logs';
-const publicFavicon = './public/assets/images/favicons/favicon.ico';
-const views = '../views';
 
 export default () => {
-    const app = express();
-    const baseApiUrl = '/' + config.api.prefix.replace('/', '');
-    const corsOptions = { origin: config.cors.allowOrigin };
+  const app = express();
+  const baseApiUrl = '/' + config.api.prefix.replace('/', '');
+  const corsOptions = { origin: config.cors.allowOrigin };
 
-    app.use(helmet());
 
-    app.use(cors(corsOptions));
+  app.use(helmet());
 
-    app.use(morgan.consoleLogger);
-    app.use(morgan.fileLogger);
+  app.use(cors(corsOptions));
+  app.use(logContextMiddleware);
+  app.use(morgan.consoleLogger);
+  app.use(morgan.fileLogger);
 
-    app.use(bodyParser.json({ limit: config.api.jsonLimit }));
-    app.use(bodyParser.urlencoded({ extended: config.api.extUrlencoded }));
+  app.use(bodyParser.json({ limit: config.api.jsonLimit }));
+  app.use(bodyParser.urlencoded({ extended: config.api.extUrlencoded }));
 
-    app.use(xss());
-    app.use(rateLimit.limiter);
+  app.use(xss());
+  app.use(rateLimit.limiter);
 
-    localUserStrategy(passport);
-    jwtUserStrategy(passport);
+  app.use(`${baseApiUrl}/docs`, swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
+  app.use(baseApiUrl, ...initResourceRoutes())
 
-    app.use(favicon(publicFavicon));
-    app.use(express.static('public'));
+  app.use(handleError);
 
-    app.use(baseApiUrl + '/logs', express.static(publicLogs, { dotfiles: 'allow' }));
-    app.use(baseApiUrl + '/', routes);
-    app.use(baseApiUrl + '/client/', routesUser);
-    app.use(baseApiUrl + '/admin/', routesAdmin);
-
-    app.set('view engine', 'ejs');
-    app.set('views', path.join(__dirname, views));
-
-    app.use(handleError);
-
-    return app;
+  return app;
 };

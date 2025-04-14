@@ -15,6 +15,7 @@ export interface IBaseConfig {
 
 export interface IEnvConfig {
     database: IDatabase;
+    type: string;
 }
 
 export interface IConfig extends IBaseConfig, IEnvConfig {}
